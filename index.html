@@ -147,6 +147,73 @@ ga('send', 'pageview');
       <div class="body-wrap">
         
   
+    <article id="post-geometry-in-SQL-Server" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/05/geometry-in-SQL-Server/">使用 SQL Server 存储空间要素</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转载请注明来自 <a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
+<hr>
+<p><em>写在前面 :</em><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
+<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
+<h3 id="2-构造一个-ArcGIS-可直接连接的数据表"><a href="#2-构造一个-ArcGIS-可直接连接的数据表" class="headerlink" title="2. 构造一个 ArcGIS 可直接连接的数据表"></a>2. 构造一个 ArcGIS 可直接连接的数据表</h3><p>要在 ArcGIS 内直接显示 SQL Server 数据表内的空间要素，则对数据表的结构有一定要求。<br>以点要素为例，创建的表需要以<code>int</code>类型的<code>OBJECTID</code>字段作为主键，并有一个<code>geometry</code>数据类型的字段。<br>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*****  创建包含空间数据的表 *****/</div><div class="line">USE [测试数据库]</div><div class="line">CREATE TABLE [测试数据表] (</div><div class="line">	[OBJECTID] [int] primary key not NULL,</div><div class="line">	[id] [varchar](10) NULL,</div><div class="line">	[name] [varchar](200) NULL,</div><div class="line">	[lng] [float] NULL,</div><div class="line">	[lat] [float] NULL,</div><div class="line">	[形状] [geometry] not NULL</div><div class="line">)</div><div class="line"></div><div class="line">/*****  将数据插入表中 *****/</div><div class="line">insert into [测试数据表]</div><div class="line">SELECT ROW_NUMBER()  over (order by [id]) as [OBJECTID]</div><div class="line">      ,[id]</div><div class="line">      ,[name]</div><div class="line">      ,[lng]</div><div class="line">      ,[lat]</div><div class="line">      ,geometry::STPointFromText(concat(&apos;POINT (&apos;,convert(varchar, [lng], 128), &apos; &apos;, convert(varchar, [lat], 128),  &apos;)&apos;), 4326 ) as [形状]</div><div class="line">  FROM [原数据表]</div></pre></td></tr></table></figure></p>
+<p><strong><em>Tip :</em></strong><br><em>快速获得原数据表的数据结构代码，可对原数据表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code></em></p>
+<h3 id="3-使用-ArcGIS-显示-SQL-Server-内存储的数据"><a href="#3-使用-ArcGIS-显示-SQL-Server-内存储的数据" class="headerlink" title="3. 使用 ArcGIS 显示 SQL Server 内存储的数据"></a>3. 使用 ArcGIS 显示 SQL Server 内存储的数据</h3><p>ArcGIS 软件提供了丰富的数据源方式，其中就包括 SQL Server。</p>
+<ul>
+<li>ArcMap 内，<code>目录</code>窗口，双击<code>数据库连接</code>-<code>添加数据库连接</code>。</li>
+<li>在弹出的窗口内，数据库平台选择<code>SQL Server</code>，实例填写 SQL Server 服务器名（SQL Server 安装在本机的话，可填写<code>localhost</code>或本机计算机名），身份验证类型按需选择，默认为<code>操作系统身份验证</code>，然后在下拉列表内选择数据表所在数据库，确定即可。</li>
+<li>在<code>数据库连接</code>下找到新添加的连接，双击打开，将包含空间数据的表拖到显示窗口内即可。如果数据量较大，计算范围时间过程，可选择<code>使用空间参考范围</code>跳过此步骤。</li>
+</ul>
+<p>如果只需要显示部分的数据，可在图层的<code>属性-定义查询</code>内填入筛选查询语句。筛选操作由数据库后台完成，因此效率还可以接受。</p>
+<p><font color="white">本文来自  i.xdc.at/2016/10/05/geometry-in-SQL-Server/  </font></p>
+<hr>
+<p><strong><em>Tip :</em></strong><br><em>如果想创建存储其他空间要素类型的数据表，如线要素的表，可在 ArcGIS 内将已有的线数据图层<code>右键-数据-导出数据...</code>，输出要素类的保存类型选择<code>数据库要素类</code>，将数据保存到数据库连接里的一张新表内，然后在 SQL Server 内查看这张表的结构，具体操作为对这张表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code> 。</em></p>
+<hr>
+<p>本文来自 <a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/05/geometry-in-SQL-Server/" class="archive-article-date">
+  	<time datetime="2016-10-05T07:20:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-05</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL-Server/">SQL Server</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-markdown-test" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -379,7 +446,7 @@ print time.ctime()
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/yilia/" style="font-size: 10px;">yilia</a>
+    				<a href="/tags/ArcGIS/" style="font-size: 10px;">ArcGIS</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/SQL-Server/" style="font-size: 10px;">SQL Server</a> <a href="/tags/yilia/" style="font-size: 10px;">yilia</a>
     			</div>
     	</section>
     
