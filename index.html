@@ -93,8 +93,6 @@ ga('send', 'pageview');
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://github.com/xdcxdc/" title="github">github</a>
-		        
 					<a class="mail" target="_blank" href="mailto:i@xdc.at" title="mail">mail</a>
 		        
 			</div>
@@ -134,8 +132,6 @@ ga('send', 'pageview');
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/xdcxdc/" title="github">github</a>
-			        
 						<a class="mail" target="_blank" href="mailto:i@xdc.at" title="mail">mail</a>
 			        
 				</div>
@@ -146,6 +142,51 @@ ga('send', 'pageview');
 
       <div class="body-wrap">
         
+  
+    <article id="post-top-pinned" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2048/10/24/top-pinned/">【置顶】欢迎来到本站</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>欢迎来到本站<br>目前仍在建设中… </p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2048/10/24/top-pinned/" class="archive-article-date">
+  	<time datetime="2048-10-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2048-10-24</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-geometry-in-SQL-Server" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -165,25 +206,13 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>转载请注明来自 <a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
+        <p>本文地址：<a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
 <hr>
 <p><em>写在前面 :</em><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
-<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
-<h3 id="2-构造一个-ArcGIS-可直接连接的数据表"><a href="#2-构造一个-ArcGIS-可直接连接的数据表" class="headerlink" title="2. 构造一个 ArcGIS 可直接连接的数据表"></a>2. 构造一个 ArcGIS 可直接连接的数据表</h3><p>要在 ArcGIS 内直接显示 SQL Server 数据表内的空间要素，则对数据表的结构有一定要求。<br>以点要素为例，创建的表需要以<code>int</code>类型的<code>OBJECTID</code>字段作为主键，并有一个<code>geometry</code>数据类型的字段。<br>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*****  创建包含空间数据的表 *****/</div><div class="line">USE [测试数据库]</div><div class="line">CREATE TABLE [测试数据表] (</div><div class="line">	[OBJECTID] [int] primary key not NULL,</div><div class="line">	[id] [varchar](10) NULL,</div><div class="line">	[name] [varchar](200) NULL,</div><div class="line">	[lng] [float] NULL,</div><div class="line">	[lat] [float] NULL,</div><div class="line">	[形状] [geometry] not NULL</div><div class="line">)</div><div class="line"></div><div class="line">/*****  将数据插入表中 *****/</div><div class="line">insert into [测试数据表]</div><div class="line">SELECT ROW_NUMBER()  over (order by [id]) as [OBJECTID]</div><div class="line">      ,[id]</div><div class="line">      ,[name]</div><div class="line">      ,[lng]</div><div class="line">      ,[lat]</div><div class="line">      ,geometry::STPointFromText(concat(&apos;POINT (&apos;,convert(varchar, [lng], 128), &apos; &apos;, convert(varchar, [lat], 128),  &apos;)&apos;), 4326 ) as [形状]</div><div class="line">  FROM [原数据表]</div></pre></td></tr></table></figure></p>
-<p><strong><em>Tip :</em></strong><br><em>快速获得原数据表的数据结构代码，可对原数据表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code></em></p>
-<h3 id="3-使用-ArcGIS-显示-SQL-Server-内存储的数据"><a href="#3-使用-ArcGIS-显示-SQL-Server-内存储的数据" class="headerlink" title="3. 使用 ArcGIS 显示 SQL Server 内存储的数据"></a>3. 使用 ArcGIS 显示 SQL Server 内存储的数据</h3><p>ArcGIS 软件提供了丰富的数据源方式，其中就包括 SQL Server。</p>
-<ul>
-<li>ArcMap 内，<code>目录</code>窗口，双击<code>数据库连接</code>-<code>添加数据库连接</code>。</li>
-<li>在弹出的窗口内，数据库平台选择<code>SQL Server</code>，实例填写 SQL Server 服务器名（SQL Server 安装在本机的话，可填写<code>localhost</code>或本机计算机名），身份验证类型按需选择，默认为<code>操作系统身份验证</code>，然后在下拉列表内选择数据表所在数据库，确定即可。</li>
-<li>在<code>数据库连接</code>下找到新添加的连接，双击打开，将包含空间数据的表拖到显示窗口内即可。如果数据量较大，计算范围时间过程，可选择<code>使用空间参考范围</code>跳过此步骤。</li>
-</ul>
-<p>如果只需要显示部分的数据，可在图层的<code>属性-定义查询</code>内填入筛选查询语句。筛选操作由数据库后台完成，因此效率还可以接受。</p>
-<p><font color="white">本文来自  i.xdc.at/2016/10/05/geometry-in-SQL-Server/  </font></p>
-<hr>
-<p><strong><em>Tip :</em></strong><br><em>如果想创建存储其他空间要素类型的数据表，如线要素的表，可在 ArcGIS 内将已有的线数据图层<code>右键-数据-导出数据...</code>，输出要素类的保存类型选择<code>数据库要素类</code>，将数据保存到数据库连接里的一张新表内，然后在 SQL Server 内查看这张表的结构，具体操作为对这张表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code> 。</em></p>
-<hr>
-<p>本文来自 <a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
-
+<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
+        <p class="article-more-link">
+          <a  href="/2016/10/05/geometry-in-SQL-Server/#more">继续阅读 >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -238,67 +267,10 @@ ga('send', 'pageview');
 <p>有序列表直接数字加句号加内容即可。<br>无序列表以<code>-</code>、<code>+</code>或者<code>*</code>开头</p>
 <ol>
 <li>有序列表1</li>
-<li>有序列表2</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">如果不想产生列表，则需要用\转义，如</div><div class="line">1986\. What a great season.</div><div class="line">以下字符均可加 \ 进行转义来显示为普通符号:</div><div class="line">\ ` * _ &#123;&#125; [] () # + - . !</div></pre></td></tr></table></figure>
-<ul>
-<li>无序列表1<br>测试多行</li>
-<li>无序列表2</li>
-</ul>
-<ul>
-<li>无序列表*</li>
-<li>无序列表*</li>
-</ul>
-<hr>
-<p>引用的内容以<code>&gt;</code>开头</p>
-<blockquote>
-<p>这里是引用<br>多行引用</p>
-</blockquote>
-<hr>
-<p>测试插入图片<br><code>![图片替代文字](http://i.xdc.at/assets/avatar/avatar.png &quot;图片标题&quot;)</code></p>
-<p><img src="http://i.xdc.at/assets/avatar/avatar.png" alt="avatar" title="图片标题"></p>
-<p>测试插入连接<br><code>[链接文字](http://i.xdc.at/ &quot;链接标题&quot;)</code><br><a href="http://i.xdc.at/" title="链接标题">主页</a><br>链接标题可省略</p>
-<hr>
-<p>粗体 <code>**这里是粗体**</code><br>斜体 <code>*这里是斜体*</code></p>
-<p><strong>这里是粗体</strong><br><em>这里是斜体</em></p>
-<hr>
-<p>表格</p>
-<pre><code>|表头1|表头2|表头3|
-|----|:----:|----:|
-|值1|值2|值3|
-|靠左|居中|靠右|
-</code></pre><table>
-<thead>
-<tr>
-<th>–表头1–</th>
-<th style="text-align:center">–表头2–</th>
-<th style="text-align:right">–表头3–</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>值1</td>
-<td style="text-align:center">值2</td>
-<td style="text-align:right">值3</td>
-</tr>
-<tr>
-<td>靠左</td>
-<td style="text-align:center">居中</td>
-<td style="text-align:right">靠右</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<p>代码区块<br>缩进4个空格或者一个制表符即可产生代码区块(上下要有空行)<br>或前后使用三个 <code>` </code> 。</p>
-<pre><code>import time
-print time.ctime()
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import time</div><div class="line">print time.ctime()</div></pre></td></tr></table></figure>
-<p>行内代码，使用两个`括起来。<br>测试 <code>import time</code> 。</p>
-<hr>
-<p>分割线<br>三个<code>-</code>、<code>_</code>或<code>*</code></p>
-<hr>
-<p>教程来自<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></p>
-
+<li>有序列表2
+        <p class="article-more-link">
+          <a  href="/2016/10/04/markdown-test/#more">继续阅读 >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
