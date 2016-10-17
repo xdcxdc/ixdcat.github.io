@@ -16,7 +16,7 @@
 <meta property="og:description" content="本文地址：http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
 
 写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此就">
-<meta property="og:updated_time" content="2016-10-06T04:56:10.500Z">
+<meta property="og:updated_time" content="2016-10-17T14:45:01.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 SQL Server 存储空间要素">
 <meta name="twitter:description" content="本文地址：http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
@@ -57,7 +57,7 @@ ga('send', 'pageview');
 		</a>
 
 		<hgroup>
-		  <h1 class="header-author"><a href="/">i.xdc.at</a></h1>
+		  <h1 class="header-author"><a href="/">xdc的博客</a></h1>
 		</hgroup>
 
 		
@@ -112,7 +112,7 @@ ga('send', 'pageview');
       <nav id="mobile-nav">
   	<div class="overlay">
   		<div class="slider-trigger"><i class="icon-list"></i></div>
-  		<h1 class="header-author js-mobile-header hide">i.xdc.at</h1>
+  		<h1 class="header-author js-mobile-header hide">xdc的博客</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
@@ -122,7 +122,7 @@ ga('send', 'pageview');
 				
 			</div>
 			<hgroup>
-			  <h1 class="header-author">i.xdc.at</h1>
+			  <h1 class="header-author">xdc的博客</h1>
 			</hgroup>
 			
 			<p class="header-subtitle">刷存在感的副标题</p>
@@ -169,8 +169,8 @@ ga('send', 'pageview');
         <p>本文地址：<a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
 <hr>
 <p><em>写在前面 :</em><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
-<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
+<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
 <h3 id="2-构造一个-ArcGIS-可直接连接的数据表"><a href="#2-构造一个-ArcGIS-可直接连接的数据表" class="headerlink" title="2. 构造一个 ArcGIS 可直接连接的数据表"></a>2. 构造一个 ArcGIS 可直接连接的数据表</h3><p>要在 ArcGIS 内直接显示 SQL Server 数据表内的空间要素，则对数据表的结构有一定要求。<br>以点要素为例，创建的表需要以<code>int</code>类型的<code>OBJECTID</code>字段作为主键，并有一个<code>geometry</code>数据类型的字段。<br>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*****  创建包含空间数据的表 *****/</div><div class="line">USE [测试数据库]</div><div class="line">CREATE TABLE [测试数据表] (</div><div class="line">	[OBJECTID] [int] primary key not NULL,</div><div class="line">	[id] [varchar](10) NULL,</div><div class="line">	[name] [varchar](200) NULL,</div><div class="line">	[lng] [float] NULL,</div><div class="line">	[lat] [float] NULL,</div><div class="line">	[形状] [geometry] not NULL</div><div class="line">)</div><div class="line"></div><div class="line">/*****  将数据插入表中 *****/</div><div class="line">insert into [测试数据表]</div><div class="line">SELECT ROW_NUMBER()  over (order by [id]) as [OBJECTID]</div><div class="line">      ,[id]</div><div class="line">      ,[name]</div><div class="line">      ,[lng]</div><div class="line">      ,[lat]</div><div class="line">      ,geometry::STPointFromText(concat(&apos;POINT (&apos;,convert(varchar, [lng], 128), &apos; &apos;, convert(varchar, [lat], 128),  &apos;)&apos;), 4326 ) as [形状]</div><div class="line">  FROM [原数据表]</div></pre></td></tr></table></figure></p>
 <p><strong><em>Tip :</em></strong><br><em>快速获得原数据表的数据结构代码，可对原数据表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code></em></p>
 <h3 id="3-使用-ArcGIS-显示-SQL-Server-内存储的数据"><a href="#3-使用-ArcGIS-显示-SQL-Server-内存储的数据" class="headerlink" title="3. 使用 ArcGIS 显示 SQL Server 内存储的数据"></a>3. 使用 ArcGIS 显示 SQL Server 内存储的数据</h3><p>ArcGIS 软件提供了丰富的数据源方式，其中就包括 SQL Server。</p>
@@ -210,11 +210,11 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2048/10/24/top-pinned/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/06/poi-data/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          【置顶】欢迎来到本站
+          【数据介绍】全国POI数据
         
       </div>
     </a>
@@ -242,7 +242,7 @@ ga('send', 'pageview');
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 i.xdc.at
+    		&copy; 2016 xdc的博客
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -294,7 +294,7 @@ ga('send', 'pageview');
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/ArcGIS/" style="font-size: 10px;">ArcGIS</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/SQL-Server/" style="font-size: 10px;">SQL Server</a> <a href="/tags/yilia/" style="font-size: 10px;">yilia</a>
+    				<a href="/tags/ArcGIS/" style="font-size: 10px;">ArcGIS</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 15px;">Markdown</a> <a href="/tags/POI/" style="font-size: 10px;">POI</a> <a href="/tags/SQL-Server/" style="font-size: 10px;">SQL Server</a> <a href="/tags/yilia/" style="font-size: 10px;">yilia</a> <a href="/tags/上海市/" style="font-size: 10px;">上海市</a> <a href="/tags/公交/" style="font-size: 15px;">公交</a> <a href="/tags/公交线路/" style="font-size: 15px;">公交线路</a> <a href="/tags/地铁/" style="font-size: 10px;">地铁</a> <a href="/tags/开放数据/" style="font-size: 20px;">开放数据</a> <a href="/tags/数据介绍/" style="font-size: 15px;">数据介绍</a> <a href="/tags/数据分析/" style="font-size: 10px;">数据分析</a>
     			</div>
     	</section>
     
