@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://i.xdc.at/assets/blogImg/busline-data/shanghai-busline.webp">
 <meta property="og:image" content="http://i.xdc.at/assets/blogImg/busline-data/shanghai-center-busline.webp">
 <meta property="og:image" content="http://i.xdc.at/assets/qrcode/wx-farsightj.jpg">
-<meta property="og:updated_time" content="2016-10-17T15:14:48.972Z">
+<meta property="og:updated_time" content="2016-10-27T03:08:36.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【数据介绍】全国公交线网数据">
 <meta name="twitter:description" content="本文首发于微信公众号 远见farsightj，原文链接。
@@ -49,54 +49,61 @@
 <body>
   <div id="loading" class="active"></div>
 
-  <nav id="menu"  >
-   <div class="inner flex-row-vertical">
-  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-      <i class="icon icon-lg icon-close"></i>
-  </a>
-  <div class="brand-wrap">
-    <div class="brand">
-      <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
-      <hgroup class="introduce">
-        <h5 class="nickname">xdc</h5>
-        <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
-      </hgroup>
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
+        <hgroup class="introduce">
+          <h5 class="nickname">xdc</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
     </div>
-  </div>
-  <div class="scroll-wrap flex-col">
-    <ul class="nav">
-      
-          <li class="waves-block waves-effect">
-            <a href="/"  >
-              <i class="icon icon-lg icon-home"></i>
-              主页
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/archives"  >
-              <i class="icon icon-lg icon-archives"></i>
-              所有文章
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/tags"  >
-              <i class="icon icon-lg icon-tags"></i>
-              标签
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/about/"  >
-              <i class="icon icon-lg icon-link"></i>
-              关于
-            </a>
-          </li>
-      
-    </ul>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
 
-    <footer class="footer">
+      <footer class="footer">
   <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
   <p>xdc的博客 &copy; 2016</p>
   <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
@@ -104,10 +111,9 @@
   <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
 
+    </div>
   </div>
-</div>
-
-  </nav>
+</aside>
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -120,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -133,34 +139,79 @@
         
     </div>
 </header>
-<header class="content-header">
-  <div class="container">
-    <h1 class="author">【数据介绍】全国公交线网数据</h1>
-    <h5 class="subtitle">
+<header class="content-header post-header">
+
+    <div class="container">
+        <h1 class="title">【数据介绍】全国公交线网数据</h1>
         
-            <time datetime="2016-10-06T04:21:38.000Z" itemprop="datePublished" class="page-time">
+        
+
+    </div>
+
+    
+
+</header>
+
+<div class="container body-wrap">
+    
+<article id="post-busline-data" 
+  class="post-article article-type-post" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">【数据介绍】全国公交线网数据</h1>
+        <div class="post-meta">
+            <time datetime="2016-10-06T04:21:38.000Z" itemprop="datePublished" class="post-time">
   2016-10-06
 </time>
 
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data/">数据介绍</a></li></ul>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736#rd" target="_blank" rel="external">原文链接</a>。</p>
+<hr>
+<p>新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。</p>
+<p>全国公共交通站点：<br><img src="/assets/blogImg/busline-data/busstop.webp" alt="全国公共交通站点"></p>
+<a id="more"></a>
+<p>全国公共交通线网：<br><img src="/assets/blogImg/busline-data/busline.webp" alt="全国公共交通线网"></p>
+<p>上海市公共交通线网，超精准线路哦：<br><img src="/assets/blogImg/busline-data/shanghai-busline.webp" alt="上海市公共交通线网"></p>
+<p>市中心放大：<br><img src="/assets/blogImg/busline-data/shanghai-center-busline.webp" alt="上海市中心区公共交通线网"></p>
+<p>属性包含运营时间、发车间隔、票价、是否空调车等。</p>
+<hr>
+<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
+<p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
+
+        </div>
+        
+        <blockquote class="post-copyright">
+            <div class="content">
+               本文地址：<a href="http://i.xdc.at/2016/10/06/busline-data/" target="_blank" rel="external">http://i.xdc.at/2016/10/06/busline-data/</a>
+            </div>
+            <footer>
+                <a href="http://i.xdc.at">
+                    <img src="/assets/avatar/avatar.png" alt="xdc">
+                    xdc
+                </a>
+            </footer>
+        </blockquote>
 
         
-    </h5>
-  </div>
-</header>
-
-    <div class="container body-wrap">
-      <article id="post-busline-data" 
-  class="article article-type-post" itemprop="blogPost">
-    <div class="post-meta flex-row">
+        <div class="post-reward">
+            <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+        </div>
         
+
+        <div class="post-footer">
+            
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公交/">公交</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公交线路/">公交线路</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/地铁/">地铁</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开放数据/">开放数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据介绍/">数据介绍</a></li></ul>
 
-    </div>
-    <div class="post-body">
-        <aside class="post-widget" id="post-widget">
 
             
-            <div class="post-share" id="post-share">
+            <div class="post-share-wrap">
+                <div class="post-share" id="post-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -196,50 +247,19 @@
     </ul>
  </div>
 
-            
-
-            
-            <nav class="post-toc-wrap" id="post-toc">
-            
-            </nav>
-            
-        </aside>
-
-        <div class="post-main">
-
-            <div class="post-content" id="post-content" itemprop="postContent">
-            <p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736#rd" target="_blank" rel="external">原文链接</a>。</p>
-<hr>
-<p>新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。</p>
-<p>全国公共交通站点：<br><img src="/assets/blogImg/busline-data/busstop.webp" alt="全国公共交通站点"></p>
-<a id="more"></a>
-<p>全国公共交通线网：<br><img src="/assets/blogImg/busline-data/busline.webp" alt="全国公共交通线网"></p>
-<p>上海市公共交通线网，超精准线路哦：<br><img src="/assets/blogImg/busline-data/shanghai-busline.webp" alt="上海市公共交通线网"></p>
-<p>市中心放大：<br><img src="/assets/blogImg/busline-data/shanghai-center-busline.webp" alt="上海市中心区公共交通线网"></p>
-<p>属性包含运营时间、发车间隔、票价、是否空调车等。</p>
-<hr>
-<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
-<p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
-
-
-            
-            <div class="post-reward">
-                <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+                <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+                    <i class="icon icon-share-alt icon-lg"></i>
+                </a>
             </div>
             
-            
-            <blockquote>
-                <p>
-                本文地址：
-                <a href="http://i.xdc.at/2016/10/06/busline-data/" target="_blank" rel="external">http://i.xdc.at/2016/10/06/busline-data/</a>
-                </p>
-                <footer><cite><a href="http://i.xdc.at">@xdc的博客</a></cite></footer>
-            </blockquote>
-            </div>
-            
-<nav class="post-nav">
+
+        </div>
+    </div>   
+
+    
+<nav class="post-nav flex-row flex-justify-between">
   
-    <div class="waves-block waves-effect prev fl">
+    <div class="waves-block waves-effect prev">
       <a href="/2016/10/06/shanghai-busline-analysis/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">【数据分析】上海市公交线路简要分析</h4>
@@ -248,7 +268,7 @@
   
 
   
-    <div class="waves-block waves-effect next fr">
+    <div class="waves-block waves-effect next">
       <a href="/2016/10/06/poi-data/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">【数据介绍】全国POI数据</h4>
@@ -259,16 +279,40 @@
 
 
             
-            
+    
 
 
 
-        </div>
-    </div>
 </article>
-    </div>
+
+<div id="reward" class="reward-lay">
+    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+</div>
   </main>
-<div class="mask" id="mask"></div>
+  <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 <script>
@@ -276,7 +320,7 @@ var BLOG_SHARE = {
     title: "【数据介绍】全国公交线网数据",
     pic: "/assets/avatar/avatar.png",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/2016/10/06/busline-data/index.html"
+    url: "http://i.xdc.at/2016/10/06/busline-data/"
 };
 </script>
 <div class="global-share" id="global-share">
@@ -316,33 +360,7 @@ var BLOG_SHARE = {
  </div>
 
 
-
-
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        左图关注公众号，右图支付宝转账
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <ul class="reward-items">
-        
-        <li>
-            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
-            <p>微信</p>
-        </li>
-        
-
-        
-        <li>
-            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
-            <p>支付宝</p>
-        </li>
-        
-    </ul>
-</div>
-
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
 <script src="/js/main.js"></script>
 

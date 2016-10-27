@@ -12,6 +12,9 @@ http://i.xdc.at/archives/2016/
 http://i.xdc.at/archives/2016/10/
 http://i.xdc.at/archives/2048/
 http://i.xdc.at/archives/2048/10/
+http://i.xdc.at/categories/
+http://i.xdc.at/categories/data/
+http://i.xdc.at/categories/data-analysis/
 http://i.xdc.at/tags/
 http://i.xdc.at/tags/ArcGIS/
 http://i.xdc.at/tags/Coding-net/

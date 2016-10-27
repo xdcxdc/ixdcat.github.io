@@ -30,54 +30,61 @@
 <body>
   <div id="loading" class="active"></div>
 
-  <nav id="menu"  >
-   <div class="inner flex-row-vertical">
-  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-      <i class="icon icon-lg icon-close"></i>
-  </a>
-  <div class="brand-wrap">
-    <div class="brand">
-      <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
-      <hgroup class="introduce">
-        <h5 class="nickname">xdc</h5>
-        <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
-      </hgroup>
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
+        <hgroup class="introduce">
+          <h5 class="nickname">xdc</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
     </div>
-  </div>
-  <div class="scroll-wrap flex-col">
-    <ul class="nav">
-      
-          <li class="waves-block waves-effect">
-            <a href="/"  >
-              <i class="icon icon-lg icon-home"></i>
-              主页
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/archives"  >
-              <i class="icon icon-lg icon-archives"></i>
-              所有文章
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/tags"  >
-              <i class="icon icon-lg icon-tags"></i>
-              标签
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/about/"  >
-              <i class="icon icon-lg icon-link"></i>
-              关于
-            </a>
-          </li>
-      
-    </ul>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect active">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-link"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
 
-    <footer class="footer">
+      <footer class="footer">
   <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
   <p>xdc的博客 &copy; 2016</p>
   <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
@@ -85,23 +92,22 @@
   <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
 
+    </div>
   </div>
-</div>
-
-  </nav>
+</aside>
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">xdc的博客</div>
+        <div class="flex-col header-title ellipsis">Tags: ArcGIS</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -114,33 +120,75 @@
         
     </div>
 </header>
-<header class="content-header">
-  <div class="container">
-    <h1 class="author">xdc的博客</h1>
-    <h5 class="subtitle">
+<header class="content-header tags-header">
+
+    <div class="container">
+        <h1 class="title">Tags: ArcGIS</h1>
         
-        i.xdc.at
         
-    </h5>
-  </div>
+
+    </div>
+
+     
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+         
+            <a href="/tags/公交线路/" class="tags-list-item waves-effect waves-button waves-light">公交线路</a>
+         
+            <a href="/tags/公交/" class="tags-list-item waves-effect waves-button waves-light">公交</a>
+         
+            <a href="/tags/地铁/" class="tags-list-item waves-effect waves-button waves-light">地铁</a>
+         
+            <a href="/tags/开放数据/" class="tags-list-item waves-effect waves-button waves-light">开放数据</a>
+         
+            <a href="/tags/数据介绍/" class="tags-list-item waves-effect waves-button waves-light">数据介绍</a>
+         
+            <a href="/tags/SQL-Server/" class="tags-list-item waves-effect waves-button waves-light">SQL Server</a>
+         
+            <a href="/tags/ArcGIS/" class="tags-list-item waves-effect waves-button waves-light active">ArcGIS</a>
+         
+            <a href="/tags/POI/" class="tags-list-item waves-effect waves-button waves-light">POI</a>
+         
+            <a href="/tags/Hexo/" class="tags-list-item waves-effect waves-button waves-light">Hexo</a>
+         
+            <a href="/tags/GitHub/" class="tags-list-item waves-effect waves-button waves-light">GitHub</a>
+         
+            <a href="/tags/yilia/" class="tags-list-item waves-effect waves-button waves-light">yilia</a>
+         
+            <a href="/tags/Markdown/" class="tags-list-item waves-effect waves-button waves-light">Markdown</a>
+         
+            <a href="/tags/Coding-net/" class="tags-list-item waves-effect waves-button waves-light">Coding.net</a>
+         
+            <a href="/tags/上海市/" class="tags-list-item waves-effect waves-button waves-light">上海市</a>
+         
+            <a href="/tags/数据分析/" class="tags-list-item waves-effect waves-button waves-light">数据分析</a>
+        
+    </nav>
+    <!-- PC show more-->
+    <a href="javascript:;" onclick="Blog.tabBar(this)" class="tags-list-more tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-v"></i></a>
+</div>
+
+
 </header>
 
-    <div class="container body-wrap">
+<div class="container body-wrap">
+    
+            <div class="waterfall">
+          
+
+            <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time datetime="2016-10-05T07:20:39.000Z" itemprop="datePublished" class="post-time">
+  Oct 5, 2016
+</time>
+
       
 
 
-        <h3 class="archive-separator">October, 2016</h3>
-
-
-
-     <article class="archive-article">
-  <div class="archive-article-date">
-    <time datetime="2016-10-05T07:20:39.000Z" itemprop="datePublished" class="post-time">
-  Oct 5
-</time>
-
-  </div>
-  <div class="archive-article-inner">
+    </div>
     
 
 
@@ -153,17 +201,21 @@
 
 
     
+    <div class="post-footer">
+        
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL-Server/">SQL Server</a></li></ul>
 
-  </div>
-</article>
-
-
-
-
     </div>
+    
+  </article>
+</div>
+
+        
+            </div>
+        
+</div>
   </main>
-<div class="mask" id="mask"></div>
+  <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 <script>
@@ -171,7 +223,7 @@ var BLOG_SHARE = {
     title: "xdc的博客",
     pic: "/assets/avatar/avatar.png",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/tags/ArcGIS/index.html"
+    url: "http://i.xdc.at/tags/ArcGIS/"
 };
 </script>
 <div class="global-share" id="global-share">
@@ -211,9 +263,7 @@ var BLOG_SHARE = {
  </div>
 
 
-
-
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
 <script src="/js/main.js"></script>
 

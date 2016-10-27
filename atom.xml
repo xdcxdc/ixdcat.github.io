@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://i.xdc.at/"/>
-  <updated>2016-10-27T02:14:51.221Z</updated>
+  <updated>2016-10-27T07:22:07.595Z</updated>
   <id>http://i.xdc.at/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://i.xdc.at/2048/10/24/top-pinned/"/>
     <id>http://i.xdc.at/2048/10/24/top-pinned/</id>
     <published>2048-10-23T16:00:00.000Z</published>
-    <updated>2016-10-27T02:14:51.221Z</updated>
+    <updated>2016-10-27T07:22:07.595Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到本站<br>目前仍在建设中…<br><a id="more"></a><br>关注公众号与打赏请点击下方按钮，谢谢支持~</p>
 ]]></content>
@@ -39,7 +39,7 @@
     <link href="http://i.xdc.at/2016/10/06/shanghai-busline-analysis/"/>
     <id>http://i.xdc.at/2016/10/06/shanghai-busline-analysis/</id>
     <published>2016-10-06T06:22:50.000Z</published>
-    <updated>2016-10-17T15:30:07.732Z</updated>
+    <updated>2016-10-27T03:08:51.854Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734880&amp;idx=1&amp;sn=078e80f7cec69013644fc115f5cbcfdd#rd" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
@@ -82,6 +82,8 @@
     
     </summary>
     
+      <category term="数据分析" scheme="http://i.xdc.at/categories/data-analysis/"/>
+    
     
       <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
@@ -100,7 +102,7 @@
     <link href="http://i.xdc.at/2016/10/06/busline-data/"/>
     <id>http://i.xdc.at/2016/10/06/busline-data/</id>
     <published>2016-10-06T04:21:38.000Z</published>
-    <updated>2016-10-17T15:14:48.972Z</updated>
+    <updated>2016-10-27T03:08:36.737Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736#rd" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
@@ -125,6 +127,8 @@
     
     </summary>
     
+      <category term="数据介绍" scheme="http://i.xdc.at/categories/data/"/>
+    
     
       <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
@@ -143,7 +147,7 @@
     <link href="http://i.xdc.at/2016/10/06/poi-data/"/>
     <id>http://i.xdc.at/2016/10/06/poi-data/</id>
     <published>2016-10-06T02:20:40.000Z</published>
-    <updated>2016-10-27T02:17:05.819Z</updated>
+    <updated>2016-10-27T03:08:43.763Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75#rd" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在文末。</em></p>
 <hr>
@@ -170,6 +174,8 @@
 &lt;p&gt;新鲜出炉的2016全国POI，共约4500+万条。&lt;br&gt;分类齐全，位置精准，字段完整。展示如下：&lt;/p&gt;
     
     </summary>
+    
+      <category term="数据介绍" scheme="http://i.xdc.at/categories/data/"/>
     
     
       <category term="开放数据" scheme="http://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
@@ -342,13 +348,13 @@ print time.ctime()
     </summary>
     
     
-      <category term="Markdown" scheme="http://i.xdc.at/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="http://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="http://i.xdc.at/tags/GitHub/"/>
     
       <category term="yilia" scheme="http://i.xdc.at/tags/yilia/"/>
+    
+      <category term="Markdown" scheme="http://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="http://i.xdc.at/tags/Coding-net/"/>
     
