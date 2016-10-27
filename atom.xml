@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>xdc的博客</title>
+  <subtitle>i.xdc.at</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://i.xdc.at/"/>
+  <updated>2016-10-27T02:14:51.221Z</updated>
+  <id>http://i.xdc.at/</id>
+  
+  <author>
+    <name>xdc</name>
+    <email>i@xdc.at</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【置顶】欢迎来到本站</title>
+    <link href="http://i.xdc.at/2048/10/24/top-pinned/"/>
+    <id>http://i.xdc.at/2048/10/24/top-pinned/</id>
+    <published>2048-10-23T16:00:00.000Z</published>
+    <updated>2016-10-27T02:14:51.221Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到本站<br>目前仍在建设中…<br><a id="more"></a><br>关注公众号与打赏请点击下方按钮，谢谢支持~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;欢迎来到本站&lt;br&gt;目前仍在建设中…&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【数据分析】上海市公交线路简要分析</title>
+    <link href="http://i.xdc.at/2016/10/06/shanghai-busline-analysis/"/>
+    <id>http://i.xdc.at/2016/10/06/shanghai-busline-analysis/</id>
+    <published>2016-10-06T06:22:50.000Z</published>
+    <updated>2016-10-17T15:30:07.732Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734880&amp;idx=1&amp;sn=078e80f7cec69013644fc115f5cbcfdd#rd" target="_blank" rel="external">原文链接</a>。</p>
+<hr>
+<p><em>注：以下使用的数据主要是2015年12月抓取的上海市公交线路网数据，与最新抓取的数据相比，新的数据更加完善。</em></p>
+<p>公共交通一直以来都是城市发展的重点，国务院也曾多次就发展城市公共交通下发指导意见。2016年2月24日，《上海市公共汽（电）车客运线路优化导则》编制完成，截至3月3日开始广泛的征询市民意见。那么，上海市民对市内公共交通的运营现状了解多少呢？我们下面将从公交基本服务情况、公交服务能力和区域公交联系三大方面对上海市的公交建设发展现状进行分析。</p>
+<a id="more"></a>
+<h3 id="1-线路基本服务情况"><a href="#1-线路基本服务情况" class="headerlink" title="1. 线路基本服务情况"></a>1. 线路基本服务情况</h3><p>公共汽车一般是城市中发展历史最久，覆盖面积最广的公共交通形式。公交站点分布与公交线路的布局与居民生活日常出行息息相关。城市发展的现阶段，公交作为一种公共资源在空间上的分布肯定是非均质的。那么，在上海市内哪些地区公交站点、公交线路的分布最为密集呢？于是我们计算了站点<em>(计算时使用的数据中，如果同一站点停靠了多条公交线路，则每条线路都会有一个对应的点。下文涉及站点时与此相同)</em>的点密度图与线路的线密度图<em>(同一线路的往返方向为不同的两条线)</em>。从以下两图可以看到，公交站点与公交线路主要集中在中心城区与郊区的副中心，与上海市的城镇体系结构和人口空间分布情况基本一致。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/density.webp" alt="公交站点与公交线路密度"></p>
+<p>除了站点密度和线路密度之外，公交线路的运营长度也是评价公交服务水平的重要指标，一般以不超过15公里为宜。线路过长，车辆周转率下降，为保证效率需要投入更多的运营车辆而增加成本，否则发车间隔增加，乘车不便；而线路过短，则会导致居民出行换乘次数增加，同样会给乘客带来诸多不便。统计分析显示，上海市公交运营长度主要集中在15公里左右，有大量的运营长度超过15公里的公交；线路长路超过20公里后的公交数量急剧下降。这也和上海市建成区面积的扩张有一定的关系。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.webp" alt="线路长度分布"></p>
+<p>公交线路在尽可能保证覆盖城市道路的同时，线路非直线系数（起点、终点间的路上实际距离与两点间直线距离的比值）也不宜过大，最后应该控制在1.5以下，过大则会导致居民出行距离和出行时间增加。经过分析发现，上海市一半以上线路的非直线系数超标，但不排除分析结果受到了部分环形线路干扰的情况。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/od-line.webp" alt="起点终点连线"><br><img src="/assets/blogImg/shanghai-busline-analysis/index.webp" alt="非直线系数分布"></p>
+<p>从运营时间来看，公交线路的运营时间主要集中在白天的8:00-18:00时间段，在凌晨1:00-4:00时间段运营车辆最少。公交运行一般在早上7:00时段正式开始，运行线路数在至7点-19点的时间段内一直维持在高水平。在夜间运营的车辆中，主要是从市中心开往郊区方向，徐泾镇方向有较多夜间行车。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/running-lines.gif" alt="逐时段运营线路"></p>
+<h3 id="2-服务面积与服务人口"><a href="#2-服务面积与服务人口" class="headerlink" title="2. 服务面积与服务人口"></a>2. 服务面积与服务人口</h3><p>对于公交系统的评价，一个重要的指标是其服务范围。一般公交站点的服务半径在300至500米，是步行适宜的距离，据此计算公交站点的服务面积覆盖率可以评价公交线路的服务能力。<br>就整个上海市而言，以300米来计算公交站点的服务范围，则服务面积共覆盖上海市建成区的56.40%，以500米计算服务范围，则覆盖建成区面积的78.15%，距离500米内90%的面积覆盖的目标还有很长的路要走。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/service-area.webp" alt="服务面积"></p>
+<p>以上是从服务面积的角度分析覆盖率，那么，从服务人口数角度的分析结果会是怎样呢？<br>以上海市第六次人口普查的常住人口密度作为服务人口的统计依据，计算后发现，300m和500m半径的服务人口分别占到了常住人口总数的74.95%和89.20% 。从服务人口角度计算的上海市公交服务能力更好。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/service-popu.webp" alt="服务人口"></p>
+<p>上文已提到，公交资源的空间分布是不均衡的。我们对于上海市不同的行政区的公交资源进行了比较分析。比较不同的行政区内公交站点数量发现，浦东新区、闵行区、松江区内公交站点的数量是所有行政区中最多的。然而在计算单位面积内的公交站点数量时，我们发现，黄浦区、静安区、虹口区等中心城区的单位面积的公交资源排在前列，中心城区公交站的密度仍远远大于郊区。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.webp" alt="各区公交站点数量"></p>
+<p>比较不同行政区内的公交线路里程数，我们了发现相同的情况。公交线路总里程的比较上，郊区大于中心城区；但比较单位面积内的公交里程，中心城区则远远大于郊区。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busline-length.webp" alt="各区公交里程"></p>
+<p>公共交通的建设上是中心城区占优，因此不同地区的公交服务情况也会不同。<br>我们比较了各行政区内人均的公交站点数量和公交里程。在人均公交里程上，各个行政区的差别不大。但比较每个站点平均服务人口上，中心城区所面临的服务的压力要比郊区地区大得多。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.webp" alt="每个车站平均服务人口"></p>
+<h3 id="3-公交线路空间联系"><a href="#3-公交线路空间联系" class="headerlink" title="3. 公交线路空间联系"></a>3. 公交线路空间联系</h3><p>公交线路串联起了上海市内不同的行政区和重要的地点。具体每个街道之间通过公交线路的联系程度有多强呢？<br>我们设定，一条公交线路只要同时在两个街道有停靠，那就为这两个街道间的联系强度值+1，最终生成对应的街道联系矩阵。由下图可知，联系较强的区域主要由中心城区向外呈放射状分布，陆家嘴街道和徐家汇街道分别是浦东和浦西的公交联系核心，但浦东浦西之间的公交联系较弱。</p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.webp" alt="街道间联系强度"><br><img src="/assets/blogImg/shanghai-busline-analysis/table.webp" alt="街道间联系线路数量"></p>
+<p>以上就是我们初步的分析结果，欢迎各位大侠与我们交流讨论~</p>
+<p><em>本文编辑： xdc@farsightj.cn , zyp@farsightj.cn , tjl@farsightj.cn</em></p>
+<hr>
+<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
+<p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734880&amp;amp;idx=1&amp;amp;sn=078e80f7cec69013644fc115f5cbcfdd#rd&quot;&gt;原文链接&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;注：以下使用的数据主要是2015年12月抓取的上海市公交线路网数据，与最新抓取的数据相比，新的数据更加完善。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;公共交通一直以来都是城市发展的重点，国务院也曾多次就发展城市公共交通下发指导意见。2016年2月24日，《上海市公共汽（电）车客运线路优化导则》编制完成，截至3月3日开始广泛的征询市民意见。那么，上海市民对市内公共交通的运营现状了解多少呢？我们下面将从公交基本服务情况、公交服务能力和区域公交联系三大方面对上海市的公交建设发展现状进行分析。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
+    
+      <category term="公交" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
+    
+      <category term="开放数据" scheme="http://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="上海市" scheme="http://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
+    
+      <category term="数据分析" scheme="http://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据介绍】全国公交线网数据</title>
+    <link href="http://i.xdc.at/2016/10/06/busline-data/"/>
+    <id>http://i.xdc.at/2016/10/06/busline-data/</id>
+    <published>2016-10-06T04:21:38.000Z</published>
+    <updated>2016-10-17T15:14:48.972Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736#rd" target="_blank" rel="external">原文链接</a>。</p>
+<hr>
+<p>新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。</p>
+<p>全国公共交通站点：<br><img src="/assets/blogImg/busline-data/busstop.webp" alt="全国公共交通站点"></p>
+<a id="more"></a>
+<p>全国公共交通线网：<br><img src="/assets/blogImg/busline-data/busline.webp" alt="全国公共交通线网"></p>
+<p>上海市公共交通线网，超精准线路哦：<br><img src="/assets/blogImg/busline-data/shanghai-busline.webp" alt="上海市公共交通线网"></p>
+<p>市中心放大：<br><img src="/assets/blogImg/busline-data/shanghai-center-busline.webp" alt="上海市中心区公共交通线网"></p>
+<p>属性包含运营时间、发车间隔、票价、是否空调车等。</p>
+<hr>
+<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
+<p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734834&amp;amp;idx=1&amp;amp;sn=5dd381774506bffc2edcfea63a3db736#rd&quot;&gt;原文链接&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。&lt;/p&gt;
+&lt;p&gt;全国公共交通站点：&lt;br&gt;&lt;img src=&quot;/assets/blogImg/busline-data/busstop.webp&quot; alt=&quot;全国公共交通站点&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
+    
+      <category term="公交" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
+    
+      <category term="地铁" scheme="http://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
+    
+      <category term="开放数据" scheme="http://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="http://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据介绍】全国POI数据</title>
+    <link href="http://i.xdc.at/2016/10/06/poi-data/"/>
+    <id>http://i.xdc.at/2016/10/06/poi-data/</id>
+    <published>2016-10-06T02:20:40.000Z</published>
+    <updated>2016-10-27T02:17:05.819Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75#rd" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在文末。</em></p>
+<hr>
+<p>新鲜出炉的2016全国POI，共约4500+万条。<br>分类齐全，位置精准，字段完整。展示如下：</p>
+<a id="more"></a>
+<p>全国POI密度分布：<br><img src="/assets/blogImg/poi-data/poi-density.webp" alt="全国POI密度分布"></p>
+<p>全国黄焖鸡米饭分布：<br><img src="/assets/blogImg/poi-data/poi-hmjmf.webp" alt="全国黄焖鸡米饭分布"></p>
+<p>全国沙县小吃分布:<br><img src="/assets/blogImg/poi-data/poi-sxxc.webp" alt="全国沙县小吃分布"></p>
+<p>全国公交站点分布：<br><img src="/assets/blogImg/poi-data/poi-gjzd.webp" alt="全国公交站点分布"></p>
+<p>同济大学周边全部POI：<br><img src="/assets/blogImg/poi-data/poi-tjdx.webp" alt="同济大学周边全部POI"></p>
+<p>结构化存储，任意筛选切分！<br>各位项目或研究大侠！<br>有需要请与我们公众号联系哦~</p>
+<hr>
+<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
+<p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
+<h4 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE:"></a>UPDATE:</h4><p><strong>数据字段信息：</strong><br><img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息"></p>
+<p>POI分类对照表可 <a href="/assets/blogImg/poi-data/poi-type-list.pdf">点此下载</a></p>
+<p><strong>TIP:</strong><br>高德 API 在返回 POI 结果时，并非是完整数据，而是存在一定程度的缺失。部分权重较低的 POI，如 ATM 等，在大类搜索结果里缺失就较多。<br>为了规避缺失，可采用更换不同关键词、更改搜索范围等方法交叉抓取，将得到的结果合并去重。但这样会带来较大的抓取工作量，目前已有的4500+万条数据已能满足大多数场景下的分析需求。<br>如果需要某细分类的更完整数据，可发邮件至 <code>i@xdc.at</code> 定制抓取服务。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734823&amp;amp;idx=1&amp;amp;sn=128fc0a3a68546736db59a1129ddfe75#rd&quot;&gt;原文链接&lt;/a&gt;。&lt;br&gt;&lt;em&gt;字段信息等更新在文末。&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;新鲜出炉的2016全国POI，共约4500+万条。&lt;br&gt;分类齐全，位置精准，字段完整。展示如下：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开放数据" scheme="http://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="http://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+      <category term="POI" scheme="http://i.xdc.at/tags/POI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 SQL Server 存储空间要素</title>
+    <link href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/"/>
+    <id>http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</id>
+    <published>2016-10-05T07:20:39.000Z</published>
+    <updated>2016-10-26T17:02:44.168Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文地址：<a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
+<hr>
+<p><em>写在前面 :</em><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
+<a id="more"></a>
+<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
+<h3 id="2-构造一个-ArcGIS-可直接连接的数据表"><a href="#2-构造一个-ArcGIS-可直接连接的数据表" class="headerlink" title="2. 构造一个 ArcGIS 可直接连接的数据表"></a>2. 构造一个 ArcGIS 可直接连接的数据表</h3><p>要在 ArcGIS 内直接显示 SQL Server 数据表内的空间要素，则对数据表的结构有一定要求。<br>以点要素为例，创建的表需要以<code>int</code>类型的<code>OBJECTID</code>字段作为主键，并有一个<code>geometry</code>数据类型的字段。<br>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*****  创建包含空间数据的表 *****/</div><div class="line">USE [测试数据库]</div><div class="line">CREATE TABLE [测试数据表] (</div><div class="line">	[OBJECTID] [int] primary key not NULL,</div><div class="line">	[id] [varchar](10) NULL,</div><div class="line">	[name] [varchar](200) NULL,</div><div class="line">	[lng] [float] NULL,</div><div class="line">	[lat] [float] NULL,</div><div class="line">	[形状] [geometry] not NULL</div><div class="line">)</div><div class="line"></div><div class="line">/*****  将数据插入表中 *****/</div><div class="line">insert into [测试数据表]</div><div class="line">SELECT ROW_NUMBER()  over (order by [id]) as [OBJECTID]</div><div class="line">      ,[id]</div><div class="line">      ,[name]</div><div class="line">      ,[lng]</div><div class="line">      ,[lat]</div><div class="line">      ,geometry::STPointFromText(concat(&apos;POINT (&apos;,convert(varchar, [lng], 128), &apos; &apos;, convert(varchar, [lat], 128),  &apos;)&apos;), 4326 ) as [形状]</div><div class="line">  FROM [原数据表]</div></pre></td></tr></table></figure></p>
+<p><strong><em>Tip :</em></strong><br><em>快速获得原数据表的数据结构代码，可对原数据表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code></em></p>
+<h3 id="3-使用-ArcGIS-显示-SQL-Server-内存储的数据"><a href="#3-使用-ArcGIS-显示-SQL-Server-内存储的数据" class="headerlink" title="3. 使用 ArcGIS 显示 SQL Server 内存储的数据"></a>3. 使用 ArcGIS 显示 SQL Server 内存储的数据</h3><p>ArcGIS 软件提供了丰富的数据源方式，其中就包括 SQL Server。</p>
+<ul>
+<li>ArcMap 内，<code>目录</code>窗口，双击<code>数据库连接</code>-<code>添加数据库连接</code>。</li>
+<li>在弹出的窗口内，数据库平台选择<code>SQL Server</code>，实例填写 SQL Server 服务器名（SQL Server 安装在本机的话，可填写<code>localhost</code>或本机计算机名），身份验证类型按需选择，默认为<code>操作系统身份验证</code>，然后在下拉列表内选择数据表所在数据库，确定即可。</li>
+<li>在<code>数据库连接</code>下找到新添加的连接，双击打开，将包含空间数据的表拖到显示窗口内即可。如果数据量较大，计算范围时间过程，可选择<code>使用空间参考范围</code>跳过此步骤。</li>
+</ul>
+<p>如果只需要显示部分的数据，可在图层的<code>属性-定义查询</code>内填入筛选查询语句。筛选操作由数据库后台完成，因此效率还可以接受。</p>
+<p><font color="white">本文来自  i.xdc.at/2016/10/05/geometry-in-SQL-Server/  </font></p>
+<hr>
+<p><strong><em>Tip :</em></strong><br><em>如果想创建存储其他空间要素类型的数据表，如线要素的表，可在 ArcGIS 内将已有的线数据图层<code>右键-数据-导出数据...</code>，输出要素类的保存类型选择<code>数据库要素类</code>，将数据保存到数据库连接里的一张新表内，然后在 SQL Server 内查看这张表的结构，具体操作为对这张表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code> 。</em></p>
+<h3 id="UPDATE-2016-10-06-12-53-27"><a href="#UPDATE-2016-10-06-12-53-27" class="headerlink" title="UPDATE: 2016-10-06 12:53:27"></a>UPDATE: 2016-10-06 12:53:27</h3><p>为提高数据在 ArcGIS 内显示的效率，最好对数据表创建空间索引，参见 <a href="https://msdn.microsoft.com/zh-cn/library/bb964705.aspx" target="_blank" rel="external">创建、修改和删除空间索引</a> 。</p>
+<hr>
+<p>本文来自 <a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文地址：&lt;a href=&quot;http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&quot;&gt;http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&lt;/a&gt;  &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;写在前面 :&lt;/em&gt;&lt;br&gt;&lt;strong&gt;&lt;em&gt;为什么要在 SQL Server 内创建空间要素？&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;该需求来自于千万级别POI数据的存储与可视化。&lt;br&gt;存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。&lt;br&gt;可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。&lt;br&gt;因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SQL Server" scheme="http://i.xdc.at/tags/SQL-Server/"/>
+    
+      <category term="ArcGIS" scheme="http://i.xdc.at/tags/ArcGIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown 入门</title>
+    <link href="http://i.xdc.at/2016/10/04/markdown-test/"/>
+    <id>http://i.xdc.at/2016/10/04/markdown-test/</id>
+    <published>2016-10-04T09:04:12.000Z</published>
+    <updated>2016-10-17T14:45:42.693Z</updated>
+    
+    <content type="html"><![CDATA[<p>标题</p>
+<p>标题直接以1个或多个<code>#</code>开头，表示不同等级。</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><a id="more"></a>
+<hr>
+<p>有序列表直接数字加句号加内容即可。<br>无序列表以<code>-</code>、<code>+</code>或者<code>*</code>开头</p>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">如果不想产生列表，则需要用\转义，如</div><div class="line">1986\. What a great season.</div><div class="line">以下字符均可加 \ 进行转义来显示为普通符号:</div><div class="line">\ ` * _ &#123;&#125; [] () # + - . !</div></pre></td></tr></table></figure>
+<ul>
+<li>无序列表1<br>测试多行</li>
+<li>无序列表2</li>
+</ul>
+<ul>
+<li>无序列表*</li>
+<li>无序列表*</li>
+</ul>
+<hr>
+<p>引用的内容以<code>&gt;</code>开头</p>
+<blockquote>
+<p>这里是引用<br>多行引用</p>
+</blockquote>
+<hr>
+<p>测试插入图片<br><code>![图片替代文字](http://i.xdc.at/assets/avatar/avatar.png &quot;图片标题&quot;)</code></p>
+<p><img src="http://i.xdc.at/assets/avatar/avatar.png" alt="avatar" title="图片标题"></p>
+<p>测试插入连接<br><code>[链接文字](http://i.xdc.at/ &quot;链接标题&quot;)</code><br><a href="http://i.xdc.at/" title="链接标题">主页</a><br>链接标题可省略</p>
+<hr>
+<p>粗体 <code>**这里是粗体**</code><br>斜体 <code>*这里是斜体*</code></p>
+<p><strong>这里是粗体</strong><br><em>这里是斜体</em></p>
+<hr>
+<p>表格</p>
+<pre><code>|表头1|表头2|表头3|
+|----|:----:|----:|
+|值1|值2|值3|
+|靠左|居中|靠右|
+</code></pre><table>
+<thead>
+<tr>
+<th>–表头1–</th>
+<th style="text-align:center">–表头2–</th>
+<th style="text-align:right">–表头3–</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>值1</td>
+<td style="text-align:center">值2</td>
+<td style="text-align:right">值3</td>
+</tr>
+<tr>
+<td>靠左</td>
+<td style="text-align:center">居中</td>
+<td style="text-align:right">靠右</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>代码区块<br>缩进4个空格或者一个制表符即可产生代码区块(上下要有空行)<br>或前后使用三个 <code>` </code> 。</p>
+<pre><code>import time
+print time.ctime()
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import time</div><div class="line">print time.ctime()</div></pre></td></tr></table></figure>
+<p>行内代码，使用两个`括起来。<br>测试 <code>import time</code> 。</p>
+<hr>
+<p>分割线<br>三个<code>-</code>、<code>_</code>或<code>*</code></p>
+<hr>
+<p>教程来自<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;标题&lt;/p&gt;
+&lt;p&gt;标题直接以1个或多个&lt;code&gt;#&lt;/code&gt;开头，表示不同等级。&lt;/p&gt;
+&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class=&quot;headerlink&quot; title=&quot;一级标题&quot;&gt;&lt;/a&gt;一级标题&lt;/h1&gt;&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot; title=&quot;三级标题&quot;&gt;&lt;/a&gt;三级标题&lt;/h3&gt;&lt;h4 id=&quot;四级标题&quot;&gt;&lt;a href=&quot;#四级标题&quot; class=&quot;headerlink&quot; title=&quot;四级标题&quot;&gt;&lt;/a&gt;四级标题&lt;/h4&gt;&lt;h5 id=&quot;五级标题&quot;&gt;&lt;a href=&quot;#五级标题&quot; class=&quot;headerlink&quot; title=&quot;五级标题&quot;&gt;&lt;/a&gt;五级标题&lt;/h5&gt;&lt;h6 id=&quot;六级标题&quot;&gt;&lt;a href=&quot;#六级标题&quot; class=&quot;headerlink&quot; title=&quot;六级标题&quot;&gt;&lt;/a&gt;六级标题&lt;/h6&gt;
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://i.xdc.at/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://i.xdc.at/2016/10/04/first-post/"/>
+    <id>http://i.xdc.at/2016/10/04/first-post/</id>
+    <published>2016-10-04T06:22:20.000Z</published>
+    <updated>2016-10-27T02:15:56.370Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一篇使用Hexo生成的博文。</p>
+<hr>
+<p>最初看到GitHub + Hexo的建站教程是在知乎专栏 <a href="https://zhuanlan.zhihu.com/p/22274983" target="_blank" rel="external">GitHub + Hexo (1)：在 OS X 下建立你的第一个博客——史上最靠谱教程</a> ，随后找到相应的 Windows 下教程 <a href="https://zhuanlan.zhihu.com/p/22191919" target="_blank" rel="external">用 GitHub + Hexo 建立你的第一个博客</a> 。</p>
+<p>相对Jekyll来看，Hexo似乎上手容易的多，加上已注册 GitHub 并有独立域名，因此很快就完成了部署测试。<br><a id="more"></a><br>主题选择了简洁风格的 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>，使用起来效果不错。</p>
+<p>Markdown 的编辑使用了 <a href="http://pad.haroopress.com/user.html" target="_blank" rel="external">Haroopad</a>，参照着 <a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a> 写下此文。</p>
+<hr>
+<p>感谢提供开源工具、平台以及相关教程的公司与个人，是你们让互联网更加自由和美好。</p>
+<hr>
+<p>UPDATE: 2016年10月20日11:10:29<br>将托管服务从 GitHub 迁移到 <a href="https://coding.net/" target="_blank" rel="external">Coding.net</a></p>
+<p>UPDATE: 2016年10月27日00:19:22<br>将主题更换为 <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="external">indigo</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是一篇使用Hexo生成的博文。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;最初看到GitHub + Hexo的建站教程是在知乎专栏 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/22274983&quot;&gt;GitHub + Hexo (1)：在 OS X 下建立你的第一个博客——史上最靠谱教程&lt;/a&gt; ，随后找到相应的 Windows 下教程 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/22191919&quot;&gt;用 GitHub + Hexo 建立你的第一个博客&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;相对Jekyll来看，Hexo似乎上手容易的多，加上已注册 GitHub 并有独立域名，因此很快就完成了部署测试。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Markdown" scheme="http://i.xdc.at/tags/Markdown/"/>
+    
+      <category term="Hexo" scheme="http://i.xdc.at/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="http://i.xdc.at/tags/GitHub/"/>
+    
+      <category term="yilia" scheme="http://i.xdc.at/tags/yilia/"/>
+    
+      <category term="Coding.net" scheme="http://i.xdc.at/tags/Coding-net/"/>
+    
+  </entry>
+  
+</feed>
