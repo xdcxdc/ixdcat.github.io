@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   
+  
+  
   <title>Archives: 2016 | xdc的博客 | i.xdc.at</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
@@ -24,7 +26,7 @@
   
   <meta name="summary" content="xdc的博客">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
 </head>
 
 <body>
@@ -101,7 +103,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Archives</div>
+        <div class="flex-col header-title ellipsis">所有文章</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -123,7 +125,7 @@
 <header class="content-header archives-header">
 
     <div class="container">
-        <h1 class="title">Archives</h1>
+        <h1 class="title">所有文章</h1>
         
         
 
@@ -406,15 +408,14 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<script src="/js/main.js"></script>
+<script src="/js/main.min.js?v=1.1.4"></script>
 
 
 
 <div class="search-panel" id="search-panel">
     <ul class="search-result" id="search-result"></ul>
 </div>
-<script type="text/template" id="search-tpl">
+<template id="search-tpl">
 <li class="item">
     <a href="/{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
@@ -426,9 +427,9 @@ var BLOG_SHARE = {
         </div>
     </a>
 </li>
-</script>
+</template>
 
-<script src="/js/search.js"></script>
+<script src="/js/search.min.js?v=1.1.4"></script>
 
 
 

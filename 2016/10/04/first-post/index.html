@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   
+  
+  
   <title>Hello World | xdc的博客 | i.xdc.at</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
@@ -37,7 +39,7 @@
 &lt;p&gt;最初看到GitHub + Hexo的建站教程是在知乎专栏 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/22274983&quot;&gt;GitHub + Hexo (1)：在 OS X 下建立你的第一个博客——史上最靠谱教程&lt;/a&gt; ，随后找到相应的 Windows 下教程 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/22191919&quot;&gt;用 GitHub + Hexo 建立你的第一个博客&lt;/a&gt; 。&lt;/p&gt;
 &lt;p&gt;相对Jekyll来看，Hexo似乎上手容易的多，加上已注册 GitHub 并有独立域名，因此很快就完成了部署测试。&lt;br&gt;">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
 </head>
 
 <body>
@@ -146,6 +148,7 @@
 
 </header>
 
+
 <div class="container body-wrap">
     
 <article id="post-first-post" 
@@ -178,7 +181,7 @@
         
         <blockquote class="post-copyright">
             <div class="content">
-               本文地址：<a href="http://i.xdc.at/2016/10/04/first-post/" target="_blank" rel="external">http://i.xdc.at/2016/10/04/first-post/</a>
+               本文地址：<a href="/2016/10/04/first-post/" target="_blank" rel="external">http://i.xdc.at/2016/10/04/first-post/</a>
             </div>
             <footer>
                 <a href="http://i.xdc.at">
@@ -263,6 +266,15 @@
 
             
     
+<div class="duoshuo">
+	<div class="ds-thread" data-thread-key="first-post" data-title="Hello World" data-url="http://i.xdc.at/2016/10/04/first-post/"></div>
+</div>
+<script src="/js/embed.min.js?v=1.1.4"></script>
+<script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
+<script>
+var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
+</script>
+
 
 
 
@@ -344,15 +356,14 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<script src="/js/main.js"></script>
+<script src="/js/main.min.js?v=1.1.4"></script>
 
 
 
 <div class="search-panel" id="search-panel">
     <ul class="search-result" id="search-result"></ul>
 </div>
-<script type="text/template" id="search-tpl">
+<template id="search-tpl">
 <li class="item">
     <a href="/{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
@@ -364,9 +375,9 @@ var BLOG_SHARE = {
         </div>
     </a>
 </li>
-</script>
+</template>
 
-<script src="/js/search.js"></script>
+<script src="/js/search.min.js?v=1.1.4"></script>
 
 
 
