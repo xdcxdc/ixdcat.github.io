@@ -35,6 +35,39 @@
   </entry>
   
   <entry>
+    <title>在 ArcGIS 内使用 tbx 工具箱</title>
+    <link href="http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/"/>
+    <id>http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</id>
+    <published>2016-10-31T05:59:33.000Z</published>
+    <updated>2016-10-31T06:25:59.659Z</updated>
+    
+    <content type="html"><![CDATA[<p>tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。<br><img src="/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png" alt="tbx文件"></p>
+<p>tbx 文件在 ArcGIS 内打开一般有两种方法：</p>
+<h4 id="1-直接在目录窗口打开"><a href="#1-直接在目录窗口打开" class="headerlink" title="1. 直接在目录窗口打开"></a>1. 直接在目录窗口打开</h4><p><img src="/assets/blogImg/tbx-in-ArcGIS/open-tbx.png" alt="打开tbx文件"></p>
+<p>在 ArcMap 软件的目录(Catalog) 窗口定位到该文件，并双击打开。必要时可能需要先添加文件夹连接。</p>
+<h4 id="2-添加到已有工具箱列表"><a href="#2-添加到已有工具箱列表" class="headerlink" title="2. 添加到已有工具箱列表"></a>2. 添加到已有工具箱列表</h4><p><img src="/assets/blogImg/tbx-in-ArcGIS/add-tbx.png" alt="添加tbx文件"></p>
+<p>在 ArcMap 软件的工具箱(ArcToolbox) 窗口，对窗口内的 <code>ArcToolbox</code>右键单击，再 <code>添加工具箱...</code> ，找到 tbx 文件并选中，点 <code>打开</code> ，该工具箱即被添加到默认的工具箱列表内，下次使用不必再到原文件夹内去寻找。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。&lt;br&gt;&lt;img src=&quot;/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png&quot; alt=&quot;tbx文件&quot;&gt;&lt;/p&gt;
+&lt;p&gt;tbx 文件在 ArcG
+    
+    </summary>
+    
+      <category term="软件工具" scheme="http://i.xdc.at/categories/software/"/>
+    
+    
+      <category term="ArcGIS" scheme="http://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="tbx" scheme="http://i.xdc.at/tags/tbx/"/>
+    
+      <category term="工具箱" scheme="http://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【数据分析】上海市公交线路简要分析</title>
     <link href="http://i.xdc.at/2016/10/06/shanghai-busline-analysis/"/>
     <id>http://i.xdc.at/2016/10/06/shanghai-busline-analysis/</id>
