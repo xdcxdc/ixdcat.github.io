@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="Hexo,GitHub,yilia,Markdown,Coding.net">
+  <meta name="keywords" content="Markdown,Hexo,GitHub,yilia,Coding.net">
   <meta name="description" content="这是一篇使用Hexo生成的博文。
 
 最初看到GitHub + Hexo的建站教程是在知乎专栏 GitHub + Hexo (1)：在 OS X 下建立你的第一个博客——史上最靠谱教程 ，随后找到相应的 Windows 下教程 用 GitHub + Hexo 建立你的第一个博客 。
@@ -34,12 +34,12 @@
   
     <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
   
-  <meta name="summary" content="&lt;p&gt;这是一篇使用Hexo生成的博文。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;最初看到GitHub + Hexo的建站教程是在知乎专栏 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/22274983&quot;&gt;GitHub + Hexo (1)：在 OS X 下建立你的第一个博客——史上最靠谱教程&lt;/a&gt; ，随后找到相应的 Windows 下教程 &lt;a href=&quot;https://zhuanlan.zhihu.com/p/22191919&quot;&gt;用 GitHub + Hexo 建立你的第一个博客&lt;/a&gt; 。&lt;/p&gt;
-&lt;p&gt;相对Jekyll来看，Hexo似乎上手容易的多，加上已注册 GitHub 并有独立域名，因此很快就完成了部署测试。&lt;br&gt;">
+  <meta name="summary" content="这是一篇使用Hexo生成的博文。
+
+最初看到GitHub + Hexo的建站教程是在知乎专栏 GitHub + Hexo (1)：在 OS X 下建立你的第一个博客——史上最靠谱教程 ，随后找到相应的 Windows 下教程 用 GitHub + Hexo 建立你的第一个博客 。
+相对Jekyll来看，Hexo似乎上手容易的多，加上已注册 GitHub 并有独立域名，因此很快就完成了部署测试。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
 </head>
 
 <body>
@@ -269,7 +269,7 @@
 <div class="duoshuo">
 	<div class="ds-thread" data-thread-key="first-post" data-title="Hello World" data-url="http://i.xdc.at/2016/10/04/first-post/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.4"></script>
+<script src="/js/embed.min.js?v=1.1.7"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -310,13 +310,12 @@ var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "Hello World",
-    pic: "/assets/avatar/avatar.png",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/2016/10/04/first-post/"
-};
+<script>var BLOG = { ROOT: '/' };
+BLOG.SHARE = {
+title: "Hello World",
+pic: "/assets/avatar/avatar.png",
+summary: document.getElementsByName('summary')[0].content,
+url: "http://i.xdc.at/2016/10/04/first-post/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -356,7 +355,7 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.4"></script>
+<script src="/js/main.min.js?v=1.1.7"></script>
 
 
 
@@ -365,7 +364,7 @@ var BLOG_SHARE = {
 </div>
 <template id="search-tpl">
 <li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
+    <a href="{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
             <div class="tags ellipsis">
@@ -377,7 +376,7 @@ var BLOG_SHARE = {
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.4"></script>
+<script src="/js/search.min.js?v=1.1.7"></script>
 
 
 

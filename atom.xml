@@ -118,13 +118,13 @@
       <category term="数据分析" scheme="http://i.xdc.at/categories/data-analysis/"/>
     
     
-      <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
-    
       <category term="公交" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
-      <category term="开放数据" scheme="http://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+      <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="上海市" scheme="http://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
+    
+      <category term="开放数据" scheme="http://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据分析" scheme="http://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
@@ -163,13 +163,13 @@
       <category term="数据介绍" scheme="http://i.xdc.at/categories/data/"/>
     
     
-      <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
-    
       <category term="公交" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
-      <category term="地铁" scheme="http://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
+      <category term="公交线路" scheme="http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="开放数据" scheme="http://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="地铁" scheme="http://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
     
       <category term="数据介绍" scheme="http://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
     
@@ -381,13 +381,13 @@ print time.ctime()
     </summary>
     
     
+      <category term="Markdown" scheme="http://i.xdc.at/tags/Markdown/"/>
+    
       <category term="Hexo" scheme="http://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="http://i.xdc.at/tags/GitHub/"/>
     
       <category term="yilia" scheme="http://i.xdc.at/tags/yilia/"/>
-    
-      <category term="Markdown" scheme="http://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="http://i.xdc.at/tags/Coding-net/"/>
     

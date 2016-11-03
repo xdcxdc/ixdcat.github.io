@@ -27,7 +27,7 @@
   
   <meta name="summary" content="xdc的博客">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
 </head>
 
 <body>
@@ -135,18 +135,26 @@
      
 <div class="tabs-bar container">
     <nav class="tags-list">
-        <a href="/categories" class="tags-list-item waves-effect waves-button waves-light
+        <a href="/categories" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
              active">全部</a>
          
-            <a href="/categories/data/" class="tags-list-item waves-effect waves-button waves-light">数据介绍</a>
+
+            <a href="/categories/data-analysis/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">数据分析</a>
+
          
-            <a href="/categories/data-analysis/" class="tags-list-item waves-effect waves-button waves-light">数据分析</a>
+
+            <a href="/categories/data/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">数据介绍</a>
+
          
-            <a href="/categories/software/" class="tags-list-item waves-effect waves-button waves-light">软件工具</a>
+
+            <a href="/categories/software/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">软件工具</a>
+
         
     </nav>
     <!-- PC show more-->
-    <a href="javascript:;" onclick="Blog.tabBar(this)" class="tags-list-more tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-v"></i></a>
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
 </div>
 
 
@@ -154,6 +162,48 @@
 
 <div class="container body-wrap">
     
+
+            <h3 class="archive-separator" id="tag-数据分析">数据分析</h3>
+
+            <div class="waterfall">
+             
+                
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time datetime="2016-10-06T06:22:50.000Z" itemprop="datePublished" class="post-time">
+  Oct 6, 2016
+</time>
+
+      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
+
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/10/06/shanghai-busline-analysis/">【数据分析】上海市公交线路简要分析</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/上海市/">上海市</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公交/">公交</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公交线路/">公交线路</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开放数据/">开放数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据分析/">数据分析</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+            
+            </div>
+        
 
             <h3 class="archive-separator" id="tag-数据介绍">数据介绍</h3>
 
@@ -232,48 +282,6 @@
             </div>
         
 
-            <h3 class="archive-separator" id="tag-数据分析">数据分析</h3>
-
-            <div class="waterfall">
-             
-                
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time datetime="2016-10-06T06:22:50.000Z" itemprop="datePublished" class="post-time">
-  Oct 6, 2016
-</time>
-
-      
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
-
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/10/06/shanghai-busline-analysis/">【数据分析】上海市公交线路简要分析</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/上海市/">上海市</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公交/">公交</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公交线路/">公交线路</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开放数据/">开放数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据分析/">数据分析</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-            
-            </div>
-        
-
             <h3 class="archive-separator" id="tag-软件工具">软件工具</h3>
 
             <div class="waterfall">
@@ -315,18 +323,18 @@
             
             </div>
         
+    
 </div>
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "xdc的博客",
-    pic: "/assets/avatar/avatar.png",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/categories/"
-};
+<script>var BLOG = { ROOT: '/' };
+BLOG.SHARE = {
+title: "xdc的博客",
+pic: "/assets/avatar/avatar.png",
+summary: document.getElementsByName('summary')[0].content,
+url: "http://i.xdc.at/categories/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -366,7 +374,7 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.4"></script>
+<script src="/js/main.min.js?v=1.1.7"></script>
 
 
 
@@ -375,7 +383,7 @@ var BLOG_SHARE = {
 </div>
 <template id="search-tpl">
 <li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
+    <a href="{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
             <div class="tags ellipsis">
@@ -387,7 +395,7 @@ var BLOG_SHARE = {
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.4"></script>
+<script src="/js/search.min.js?v=1.1.7"></script>
 
 
 

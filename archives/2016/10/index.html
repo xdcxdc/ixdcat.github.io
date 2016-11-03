@@ -26,7 +26,7 @@
   
   <meta name="summary" content="xdc的博客">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
 </head>
 
 <body>
@@ -398,13 +398,12 @@
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "xdc的博客",
-    pic: "/assets/avatar/avatar.png",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/archives/2016/10/"
-};
+<script>var BLOG = { ROOT: '/' };
+BLOG.SHARE = {
+title: "xdc的博客",
+pic: "/assets/avatar/avatar.png",
+summary: document.getElementsByName('summary')[0].content,
+url: "http://i.xdc.at/archives/2016/10/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -444,7 +443,7 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.4"></script>
+<script src="/js/main.min.js?v=1.1.7"></script>
 
 
 
@@ -453,7 +452,7 @@ var BLOG_SHARE = {
 </div>
 <template id="search-tpl">
 <li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
+    <a href="{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
             <div class="tags ellipsis">
@@ -465,7 +464,7 @@ var BLOG_SHARE = {
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.4"></script>
+<script src="/js/search.min.js?v=1.1.7"></script>
 
 
 

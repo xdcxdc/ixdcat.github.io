@@ -33,11 +33,11 @@
   
     <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
   
-  <meta name="summary" content="&lt;p&gt;标题&lt;/p&gt;
-&lt;p&gt;标题直接以1个或多个&lt;code&gt;#&lt;/code&gt;开头，表示不同等级。&lt;/p&gt;
-&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class=&quot;headerlink&quot; title=&quot;一级标题&quot;&gt;&lt;/a&gt;一级标题&lt;/h1&gt;&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot; title=&quot;三级标题&quot;&gt;&lt;/a&gt;三级标题&lt;/h3&gt;&lt;h4 id=&quot;四级标题&quot;&gt;&lt;a href=&quot;#四级标题&quot; class=&quot;headerlink&quot; title=&quot;四级标题&quot;&gt;&lt;/a&gt;四级标题&lt;/h4&gt;&lt;h5 id=&quot;五级标题&quot;&gt;&lt;a href=&quot;#五级标题&quot; class=&quot;headerlink&quot; title=&quot;五级标题&quot;&gt;&lt;/a&gt;五级标题&lt;/h5&gt;&lt;h6 id=&quot;六级标题&quot;&gt;&lt;a href=&quot;#六级标题&quot; class=&quot;headerlink&quot; title=&quot;六级标题&quot;&gt;&lt;/a&gt;六级标题&lt;/h6&gt;">
+  <meta name="summary" content="标题
+标题直接以1个或多个#开头，表示不同等级。
+一级标题二级标题三级标题四级标题五级标题六级标题">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
 </head>
 
 <body>
@@ -338,7 +338,7 @@ print time.ctime()
 <div class="duoshuo">
 	<div class="ds-thread" data-thread-key="markdown-test" data-title="Markdown 入门" data-url="http://i.xdc.at/2016/10/04/markdown-test/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.4"></script>
+<script src="/js/embed.min.js?v=1.1.7"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -379,13 +379,12 @@ var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "Markdown 入门",
-    pic: "/assets/avatar/avatar.png",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/2016/10/04/markdown-test/"
-};
+<script>var BLOG = { ROOT: '/' };
+BLOG.SHARE = {
+title: "Markdown 入门",
+pic: "/assets/avatar/avatar.png",
+summary: document.getElementsByName('summary')[0].content,
+url: "http://i.xdc.at/2016/10/04/markdown-test/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -425,7 +424,7 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.4"></script>
+<script src="/js/main.min.js?v=1.1.7"></script>
 
 
 
@@ -434,7 +433,7 @@ var BLOG_SHARE = {
 </div>
 <template id="search-tpl">
 <li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
+    <a href="{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
             <div class="tags ellipsis">
@@ -446,7 +445,7 @@ var BLOG_SHARE = {
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.4"></script>
+<script src="/js/search.min.js?v=1.1.7"></script>
 
 
 

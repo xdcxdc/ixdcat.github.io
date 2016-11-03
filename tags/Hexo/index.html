@@ -26,7 +26,7 @@
   
   <meta name="summary" content="xdc的博客">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
 </head>
 
 <body>
@@ -134,46 +134,82 @@
      
 <div class="tabs-bar container">
     <nav class="tags-list">
-        <a href="/tags" class="tags-list-item waves-effect waves-button waves-light
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
             ">全部</a>
          
-            <a href="/tags/公交线路/" class="tags-list-item waves-effect waves-button waves-light">公交线路</a>
+
+            <a href="/tags/Markdown/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">Markdown</a>
+
          
-            <a href="/tags/公交/" class="tags-list-item waves-effect waves-button waves-light">公交</a>
+
+            <a href="/tags/Hexo/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">Hexo</a>
+
          
-            <a href="/tags/地铁/" class="tags-list-item waves-effect waves-button waves-light">地铁</a>
+
+            <a href="/tags/GitHub/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">GitHub</a>
+
          
-            <a href="/tags/开放数据/" class="tags-list-item waves-effect waves-button waves-light">开放数据</a>
+
+            <a href="/tags/yilia/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">yilia</a>
+
          
-            <a href="/tags/数据介绍/" class="tags-list-item waves-effect waves-button waves-light">数据介绍</a>
+
+            <a href="/tags/Coding-net/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Coding.net</a>
+
          
-            <a href="/tags/SQL-Server/" class="tags-list-item waves-effect waves-button waves-light">SQL Server</a>
+
+            <a href="/tags/公交/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">公交</a>
+
          
-            <a href="/tags/ArcGIS/" class="tags-list-item waves-effect waves-button waves-light">ArcGIS</a>
+
+            <a href="/tags/公交线路/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">公交线路</a>
+
          
-            <a href="/tags/Hexo/" class="tags-list-item waves-effect waves-button waves-light active">Hexo</a>
+
+            <a href="/tags/上海市/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">上海市</a>
+
          
-            <a href="/tags/GitHub/" class="tags-list-item waves-effect waves-button waves-light">GitHub</a>
+
+            <a href="/tags/开放数据/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">开放数据</a>
+
          
-            <a href="/tags/yilia/" class="tags-list-item waves-effect waves-button waves-light">yilia</a>
+
+            <a href="/tags/数据分析/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">数据分析</a>
+
          
-            <a href="/tags/Markdown/" class="tags-list-item waves-effect waves-button waves-light">Markdown</a>
+
+            <a href="/tags/地铁/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">地铁</a>
+
          
-            <a href="/tags/Coding-net/" class="tags-list-item waves-effect waves-button waves-light">Coding.net</a>
+
+            <a href="/tags/数据介绍/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">数据介绍</a>
+
          
-            <a href="/tags/POI/" class="tags-list-item waves-effect waves-button waves-light">POI</a>
+
+            <a href="/tags/SQL-Server/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">SQL Server</a>
+
          
-            <a href="/tags/上海市/" class="tags-list-item waves-effect waves-button waves-light">上海市</a>
+
+            <a href="/tags/ArcGIS/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">ArcGIS</a>
+
          
-            <a href="/tags/数据分析/" class="tags-list-item waves-effect waves-button waves-light">数据分析</a>
+
+            <a href="/tags/tbx/" style="-webkit-order:14;order:14" class="tags-list-item waves-effect waves-button waves-light">tbx</a>
+
          
-            <a href="/tags/tbx/" class="tags-list-item waves-effect waves-button waves-light">tbx</a>
+
+            <a href="/tags/工具箱/" style="-webkit-order:15;order:15" class="tags-list-item waves-effect waves-button waves-light">工具箱</a>
+
          
-            <a href="/tags/工具箱/" class="tags-list-item waves-effect waves-button waves-light">工具箱</a>
+
+            <a href="/tags/POI/" style="-webkit-order:16;order:16" class="tags-list-item waves-effect waves-button waves-light">POI</a>
+
         
     </nav>
     <!-- PC show more-->
-    <a href="javascript:;" onclick="Blog.tabBar(this)" class="tags-list-more tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-v"></i></a>
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
 </div>
 
 
@@ -219,18 +255,18 @@
         
             </div>
         
+    
 </div>
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "xdc的博客",
-    pic: "/assets/avatar/avatar.png",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/tags/Hexo/"
-};
+<script>var BLOG = { ROOT: '/' };
+BLOG.SHARE = {
+title: "xdc的博客",
+pic: "/assets/avatar/avatar.png",
+summary: document.getElementsByName('summary')[0].content,
+url: "http://i.xdc.at/tags/Hexo/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -270,7 +306,7 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.4"></script>
+<script src="/js/main.min.js?v=1.1.7"></script>
 
 
 
@@ -279,7 +315,7 @@ var BLOG_SHARE = {
 </div>
 <template id="search-tpl">
 <li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
+    <a href="{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
             <div class="tags ellipsis">
@@ -291,7 +327,7 @@ var BLOG_SHARE = {
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.4"></script>
+<script src="/js/search.min.js?v=1.1.7"></script>
 
 
 

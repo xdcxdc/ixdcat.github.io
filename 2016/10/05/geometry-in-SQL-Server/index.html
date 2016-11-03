@@ -31,11 +31,11 @@
   
     <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
   
-  <meta name="summary" content="&lt;p&gt;本文地址：&lt;a href=&quot;http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&quot;&gt;http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&lt;/a&gt;  &lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;写在前面 :&lt;/em&gt;&lt;br&gt;&lt;strong&gt;&lt;em&gt;为什么要在 SQL Server 内创建空间要素？&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;该需求来自于千万级别POI数据的存储与可视化。&lt;br&gt;存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。&lt;br&gt;可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。&lt;br&gt;因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。&lt;/p&gt;">
+  <meta name="summary" content="本文地址：http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
+
+写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.4">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
 </head>
 
 <body>
@@ -289,7 +289,7 @@
 <div class="duoshuo">
 	<div class="ds-thread" data-thread-key="geometry-in-SQL-Server" data-title="使用 SQL Server 存储空间要素" data-url="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.4"></script>
+<script src="/js/embed.min.js?v=1.1.7"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -330,13 +330,12 @@ var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "使用 SQL Server 存储空间要素",
-    pic: "/assets/avatar/avatar.png",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/"
-};
+<script>var BLOG = { ROOT: '/' };
+BLOG.SHARE = {
+title: "使用 SQL Server 存储空间要素",
+pic: "/assets/avatar/avatar.png",
+summary: document.getElementsByName('summary')[0].content,
+url: "http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -376,7 +375,7 @@ var BLOG_SHARE = {
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.4"></script>
+<script src="/js/main.min.js?v=1.1.7"></script>
 
 
 
@@ -385,7 +384,7 @@ var BLOG_SHARE = {
 </div>
 <template id="search-tpl">
 <li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
+    <a href="{path}" class="waves-block waves-effect">
         <div class="title ellipsis" title="{title}">{title}</div>
         <div class="flex-row flex-middle">
             <div class="tags ellipsis">
@@ -397,7 +396,7 @@ var BLOG_SHARE = {
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.4"></script>
+<script src="/js/search.min.js?v=1.1.7"></script>
 
 
 
