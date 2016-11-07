@@ -2,7 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
+<script type="text/javascript">
+var targetProtocol = "https:";
+if (window.location.protocol != targetProtocol)
+ window.location.href = targetProtocol +
+  window.location.href.substring(window.location.protocol.length);
+</script>
   
+  
+  <link rel="canonical" href="https://i.xdc.at/2016/10/06/poi-data/">
   
   
   <title>【数据介绍】全国POI数据 | xdc的博客 | i.xdc.at</title>
@@ -17,25 +25,25 @@
 新鲜出炉的2016全国POI，共约4500+万条。分类齐全，位置精准，字段完整。展示如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【数据介绍】全国POI数据">
-<meta property="og:url" content="http://i.xdc.at/2016/10/06/poi-data/index.html">
+<meta property="og:url" content="https://i.xdc.at/2016/10/06/poi-data/index.html">
 <meta property="og:site_name" content="xdc的博客">
 <meta property="og:description" content="本文首发于微信公众号 远见farsightj，原文链接。字段信息等更新在文末。
 
 新鲜出炉的2016全国POI，共约4500+万条。分类齐全，位置精准，字段完整。展示如下：">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/poi-data/poi-density.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/poi-data/poi-hmjmf.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/poi-data/poi-sxxc.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/poi-data/poi-gjzd.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/poi-data/poi-tjdx.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/qrcode/wx-farsightj.jpg">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/poi-data/poi-data-info.png">
-<meta property="og:updated_time" content="2016-10-28T07:04:19.103Z">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/poi-data/poi-density.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/poi-data/poi-hmjmf.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/poi-data/poi-sxxc.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/poi-data/poi-gjzd.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/poi-data/poi-tjdx.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/qrcode/wx-farsightj.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/poi-data/poi-data-info.png">
+<meta property="og:updated_time" content="2016-11-03T03:02:14.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【数据介绍】全国POI数据">
 <meta name="twitter:description" content="本文首发于微信公众号 远见farsightj，原文链接。字段信息等更新在文末。
 
 新鲜出炉的2016全国POI，共约4500+万条。分类齐全，位置精准，字段完整。展示如下：">
-<meta name="twitter:image" content="http://i.xdc.at/assets/blogImg/poi-data/poi-density.webp">
+<meta name="twitter:image" content="https://i.xdc.at/assets/blogImg/poi-data/poi-density.webp">
   
     <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
   
@@ -43,7 +51,7 @@
 
 新鲜出炉的2016全国POI，共约4500+万条。分类齐全，位置精准，字段完整。展示如下：">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
 </head>
 
 <body>
@@ -56,7 +64,7 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/assets/avatar/avatar.png"></a>
         <hgroup class="introduce">
           <h5 class="nickname">xdc</h5>
           <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
@@ -81,7 +89,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags/"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
               </a>
@@ -96,7 +104,7 @@
         
             <li class="waves-block waves-effect">
               <a href="/about/"  >
-                <i class="icon icon-lg icon-link"></i>
+                <i class="icon icon-lg icon-file"></i>
                 关于
               </a>
             </li>
@@ -145,7 +153,6 @@
         <h1 class="title">【数据介绍】全国POI数据</h1>
         
         
-
     </div>
 
     
@@ -158,7 +165,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#UPDATE"><span class="post-toc-text">UPDATE:</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#UPDATE"><span class="post-toc-text">UPDATE:</span></a></li></ol>
         </nav>
     </aside>
     
@@ -179,7 +186,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在文末。</em></p>
+            <p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在<a href="#UPDATE">文末</a>。</em></p>
 <hr>
 <p>新鲜出炉的2016全国POI，共约4500+万条。<br>分类齐全，位置精准，字段完整。展示如下：</p>
 <a id="more"></a>
@@ -192,29 +199,28 @@
 <hr>
 <p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
 <p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
-<h4 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE:"></a>UPDATE:</h4><p><strong>数据字段信息：</strong><br><img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息"></p>
+<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE:"></a>UPDATE:</h3><p><strong>数据字段信息：</strong><br><img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息"></p>
 <p>POI分类对照表可 <a href="/assets/blogImg/poi-data/poi-type-list.pdf">点此下载</a></p>
 <p><strong>TIP:</strong><br>高德 API 在返回 POI 结果时，并非是完整数据，而是存在一定程度的缺失。部分权重较低的 POI，如 ATM 等，在大类搜索结果里缺失就较多。<br>为了规避缺失，可采用更换不同关键词、更改搜索范围等方法交叉抓取，将得到的结果合并去重。但这样会带来较大的抓取工作量，目前已有的4500+万条数据已能满足大多数场景下的分析需求。<br>如果需要某细分类的更完整数据，可发邮件至 <code>i@xdc.at</code> 定制抓取服务。</p>
 
         </div>
         
         <blockquote class="post-copyright">
-            <div class="content">
-               本文地址：<a href="/2016/10/06/poi-data/" target="_blank" rel="external">http://i.xdc.at/2016/10/06/poi-data/</a>
-            </div>
-            <footer>
-                <a href="http://i.xdc.at">
-                    <img src="/assets/avatar/avatar.png" alt="xdc">
-                    xdc
-                </a>
-            </footer>
-        </blockquote>
+    <div class="content">
+        本文地址：<a href="/2016/10/06/poi-data/" target="_blank" rel="external">https://i.xdc.at/2016/10/06/poi-data/</a>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.png" alt="xdc">
+            xdc
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="post-reward">
+    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
 
-        
-        <div class="post-reward">
-            <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
-        </div>
-        
 
         <div class="post-footer">
             
@@ -222,8 +228,8 @@
 
 
             
-            <div class="post-share-wrap">
-                <div class="post-share" id="post-share">
+<div class="post-share-wrap">
+    <div class="post-share" id="post-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -259,11 +265,11 @@
     </ul>
  </div>
 
-                <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
-                    <i class="icon icon-share-alt icon-lg"></i>
-                </a>
-            </div>
-            
+    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
         </div>
     </div>   
@@ -293,9 +299,9 @@
             
     
 <div class="duoshuo">
-	<div class="ds-thread" data-thread-key="poi-data" data-title="【数据介绍】全国POI数据" data-url="http://i.xdc.at/2016/10/06/poi-data/"></div>
+	<div class="ds-thread" data-thread-key="poi-data" data-title="【数据介绍】全国POI数据" data-url="https://i.xdc.at/2016/10/06/poi-data/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.7"></script>
+<script src="/js/embed.min.js?v=1.1.9"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -341,7 +347,7 @@ BLOG.SHARE = {
 title: "【数据介绍】全国POI数据",
 pic: "/assets/avatar/avatar.png",
 summary: document.getElementsByName('summary')[0].content,
-url: "http://i.xdc.at/2016/10/06/poi-data/" }
+url: "https://i.xdc.at/2016/10/06/poi-data/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -381,7 +387,7 @@ url: "http://i.xdc.at/2016/10/06/poi-data/" }
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.7"></script>
+<script src="/js/main.min.js?v=1.1.9"></script>
 
 
 
@@ -402,7 +408,7 @@ url: "http://i.xdc.at/2016/10/06/poi-data/" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.7"></script>
+<script src="/js/search.min.js?v=1.1.9"></script>
 
 
 

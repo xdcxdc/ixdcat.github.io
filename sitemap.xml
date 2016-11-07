@@ -2,77 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</loc>
+    <loc>https://i.xdc.at/about/index.html</loc>
     
-    <lastmod>2016-10-31T06:25:59.659Z</lastmod>
+    <lastmod>2016-11-06T16:47:36.398Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://i.xdc.at/2016/10/06/busline-data/</loc>
+    <loc>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</loc>
+    
+    <lastmod>2016-11-06T05:37:55.918Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</loc>
+    
+    <lastmod>2016-11-05T13:53:23.831Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/archives/index.html</loc>
+    
+    <lastmod>2016-11-04T13:27:21.235Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/categories/index.html</loc>
+    
+    <lastmod>2016-11-04T13:22:21.171Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/tags/index.html</loc>
+    
+    <lastmod>2016-11-04T13:20:57.553Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2016/10/06/poi-data/</loc>
+    
+    <lastmod>2016-11-03T03:02:14.197Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2016/10/06/busline-data/</loc>
     
     <lastmod>2016-10-28T07:05:00.829Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://i.xdc.at/2016/10/06/shanghai-busline-analysis/</loc>
+    <loc>https://i.xdc.at/2016/10/06/shanghai-busline-analysis/</loc>
     
     <lastmod>2016-10-28T07:04:49.836Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://i.xdc.at/2016/10/06/poi-data/</loc>
-    
-    <lastmod>2016-10-28T07:04:19.103Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://i.xdc.at/about/index.html</loc>
-    
-    <lastmod>2016-10-28T01:58:01.466Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://i.xdc.at/2048/10/24/top-pinned/</loc>
+    <loc>https://i.xdc.at/2048/10/24/top-pinned/</loc>
     
     <lastmod>2016-10-27T07:22:07.595Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://i.xdc.at/categories/index.html</loc>
-    
-    <lastmod>2016-10-27T03:10:26.777Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://i.xdc.at/2016/10/04/first-post/</loc>
+    <loc>https://i.xdc.at/2016/10/04/first-post/</loc>
     
     <lastmod>2016-10-27T02:15:56.370Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</loc>
-    
-    <lastmod>2016-10-26T17:02:44.168Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://i.xdc.at/tags/index.html</loc>
-    
-    <lastmod>2016-10-26T16:25:06.535Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://i.xdc.at/2016/10/04/markdown-test/</loc>
+    <loc>https://i.xdc.at/2016/10/04/markdown-test/</loc>
     
     <lastmod>2016-10-17T14:45:42.693Z</lastmod>
     

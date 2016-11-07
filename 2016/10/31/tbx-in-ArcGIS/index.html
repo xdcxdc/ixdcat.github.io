@@ -2,7 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
+<script type="text/javascript">
+var targetProtocol = "https:";
+if (window.location.protocol != targetProtocol)
+ window.location.href = targetProtocol +
+  window.location.href.substring(window.location.protocol.length);
+</script>
   
+  
+  <link rel="canonical" href="https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/">
   
   
   <title>在 ArcGIS 内使用 tbx 工具箱 | xdc的博客 | i.xdc.at</title>
@@ -20,7 +28,7 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
 在 ArcMap 软件的工具箱(ArcToolbox) 窗口，对窗口内的 ArcTo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 ArcGIS 内使用 tbx 工具箱">
-<meta property="og:url" content="http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/index.html">
+<meta property="og:url" content="https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/index.html">
 <meta property="og:site_name" content="xdc的博客">
 <meta property="og:description" content="tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。
 tbx 文件在 ArcGIS 内打开一般有两种方法：
@@ -28,10 +36,10 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
 在 ArcMap 软件的目录(Catalog) 窗口定位到该文件，并双击打开。必要时可能需要先添加文件夹连接。
 2. 添加到已有工具箱列表
 在 ArcMap 软件的工具箱(ArcToolbox) 窗口，对窗口内的 ArcTo">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/open-tbx.png">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/add-tbx.png">
-<meta property="og:updated_time" content="2016-10-31T06:25:59.659Z">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/open-tbx.png">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/add-tbx.png">
+<meta property="og:updated_time" content="2016-11-05T13:53:23.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 ArcGIS 内使用 tbx 工具箱">
 <meta name="twitter:description" content="tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。
@@ -40,13 +48,13 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
 在 ArcMap 软件的目录(Catalog) 窗口定位到该文件，并双击打开。必要时可能需要先添加文件夹连接。
 2. 添加到已有工具箱列表
 在 ArcMap 软件的工具箱(ArcToolbox) 窗口，对窗口内的 ArcTo">
-<meta name="twitter:image" content="http://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png">
+<meta name="twitter:image" content="https://i.xdc.at/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png">
   
     <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
   
   <meta name="summary" content="xdc的博客">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
 </head>
 
 <body>
@@ -59,7 +67,7 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/assets/avatar/avatar.png"></a>
         <hgroup class="introduce">
           <h5 class="nickname">xdc</h5>
           <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
@@ -84,7 +92,7 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags/"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
               </a>
@@ -99,7 +107,7 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
         
             <li class="waves-block waves-effect">
               <a href="/about/"  >
-                <i class="icon icon-lg icon-link"></i>
+                <i class="icon icon-lg icon-file"></i>
                 关于
               </a>
             </li>
@@ -148,7 +156,6 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
         <h1 class="title">在 ArcGIS 内使用 tbx 工具箱</h1>
         
         
-
     </div>
 
     
@@ -192,22 +199,21 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
         </div>
         
         <blockquote class="post-copyright">
-            <div class="content">
-               本文地址：<a href="/2016/10/31/tbx-in-ArcGIS/" target="_blank" rel="external">http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</a>
-            </div>
-            <footer>
-                <a href="http://i.xdc.at">
-                    <img src="/assets/avatar/avatar.png" alt="xdc">
-                    xdc
-                </a>
-            </footer>
-        </blockquote>
+    <div class="content">
+        本文地址：<a href="/2016/10/31/tbx-in-ArcGIS/" target="_blank" rel="external">https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</a>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.png" alt="xdc">
+            xdc
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="post-reward">
+    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
 
-        
-        <div class="post-reward">
-            <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
-        </div>
-        
 
         <div class="post-footer">
             
@@ -215,8 +221,8 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
 
 
             
-            <div class="post-share-wrap">
-                <div class="post-share" id="post-share">
+<div class="post-share-wrap">
+    <div class="post-share" id="post-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -252,11 +258,11 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
     </ul>
  </div>
 
-                <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
-                    <i class="icon icon-share-alt icon-lg"></i>
-                </a>
-            </div>
-            
+    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
         </div>
     </div>   
@@ -286,9 +292,9 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
             
     
 <div class="duoshuo">
-	<div class="ds-thread" data-thread-key="tbx-in-ArcGIS" data-title="在 ArcGIS 内使用 tbx 工具箱" data-url="http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/"></div>
+	<div class="ds-thread" data-thread-key="tbx-in-ArcGIS" data-title="在 ArcGIS 内使用 tbx 工具箱" data-url="https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.7"></script>
+<script src="/js/embed.min.js?v=1.1.9"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -334,7 +340,7 @@ BLOG.SHARE = {
 title: "在 ArcGIS 内使用 tbx 工具箱",
 pic: "/assets/avatar/avatar.png",
 summary: document.getElementsByName('summary')[0].content,
-url: "http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" }
+url: "https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -374,7 +380,7 @@ url: "http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" }
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.7"></script>
+<script src="/js/main.min.js?v=1.1.9"></script>
 
 
 
@@ -395,7 +401,7 @@ url: "http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.7"></script>
+<script src="/js/search.min.js?v=1.1.9"></script>
 
 
 

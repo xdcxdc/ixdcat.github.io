@@ -2,7 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
+<script type="text/javascript">
+var targetProtocol = "https:";
+if (window.location.protocol != targetProtocol)
+ window.location.href = targetProtocol +
+  window.location.href.substring(window.location.protocol.length);
+</script>
   
+  
+  <link rel="canonical" href="https://i.xdc.at/2016/10/06/busline-data/">
   
   
   <title>【数据介绍】全国公交线网数据 | xdc的博客 | i.xdc.at</title>
@@ -11,24 +19,24 @@
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="公交,公交线路,开放数据,地铁,数据介绍">
+  <meta name="keywords" content="公交线路,公交,地铁,开放数据,数据介绍">
   <meta name="description" content="本文首发于微信公众号 远见farsightj，原文链接。
 
 新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。
 全国公共交通站点：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【数据介绍】全国公交线网数据">
-<meta property="og:url" content="http://i.xdc.at/2016/10/06/busline-data/index.html">
+<meta property="og:url" content="https://i.xdc.at/2016/10/06/busline-data/index.html">
 <meta property="og:site_name" content="xdc的博客">
 <meta property="og:description" content="本文首发于微信公众号 远见farsightj，原文链接。
 
 新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。
 全国公共交通站点：">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/busline-data/busstop.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/busline-data/busline.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/busline-data/shanghai-busline.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/blogImg/busline-data/shanghai-center-busline.webp">
-<meta property="og:image" content="http://i.xdc.at/assets/qrcode/wx-farsightj.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/busline-data/busstop.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/busline-data/busline.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/busline-data/shanghai-busline.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/busline-data/shanghai-center-busline.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/qrcode/wx-farsightj.jpg">
 <meta property="og:updated_time" content="2016-10-28T07:05:00.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【数据介绍】全国公交线网数据">
@@ -36,7 +44,7 @@
 
 新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。
 全国公共交通站点：">
-<meta name="twitter:image" content="http://i.xdc.at/assets/blogImg/busline-data/busstop.webp">
+<meta name="twitter:image" content="https://i.xdc.at/assets/blogImg/busline-data/busstop.webp">
   
     <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
   
@@ -45,7 +53,7 @@
 新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。
 全国公共交通站点：">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
 </head>
 
 <body>
@@ -58,7 +66,7 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/assets/avatar/avatar.png"></a>
         <hgroup class="introduce">
           <h5 class="nickname">xdc</h5>
           <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
@@ -83,7 +91,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags/"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
               </a>
@@ -98,7 +106,7 @@
         
             <li class="waves-block waves-effect">
               <a href="/about/"  >
-                <i class="icon icon-lg icon-link"></i>
+                <i class="icon icon-lg icon-file"></i>
                 关于
               </a>
             </li>
@@ -147,7 +155,6 @@
         <h1 class="title">【数据介绍】全国公交线网数据</h1>
         
         
-
     </div>
 
     
@@ -190,22 +197,21 @@
         </div>
         
         <blockquote class="post-copyright">
-            <div class="content">
-               本文地址：<a href="/2016/10/06/busline-data/" target="_blank" rel="external">http://i.xdc.at/2016/10/06/busline-data/</a>
-            </div>
-            <footer>
-                <a href="http://i.xdc.at">
-                    <img src="/assets/avatar/avatar.png" alt="xdc">
-                    xdc
-                </a>
-            </footer>
-        </blockquote>
+    <div class="content">
+        本文地址：<a href="/2016/10/06/busline-data/" target="_blank" rel="external">https://i.xdc.at/2016/10/06/busline-data/</a>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.png" alt="xdc">
+            xdc
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="post-reward">
+    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
 
-        
-        <div class="post-reward">
-            <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
-        </div>
-        
 
         <div class="post-footer">
             
@@ -213,8 +219,8 @@
 
 
             
-            <div class="post-share-wrap">
-                <div class="post-share" id="post-share">
+<div class="post-share-wrap">
+    <div class="post-share" id="post-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -250,11 +256,11 @@
     </ul>
  </div>
 
-                <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
-                    <i class="icon icon-share-alt icon-lg"></i>
-                </a>
-            </div>
-            
+    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
         </div>
     </div>   
@@ -284,9 +290,9 @@
             
     
 <div class="duoshuo">
-	<div class="ds-thread" data-thread-key="busline-data" data-title="【数据介绍】全国公交线网数据" data-url="http://i.xdc.at/2016/10/06/busline-data/"></div>
+	<div class="ds-thread" data-thread-key="busline-data" data-title="【数据介绍】全国公交线网数据" data-url="https://i.xdc.at/2016/10/06/busline-data/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.7"></script>
+<script src="/js/embed.min.js?v=1.1.9"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -332,7 +338,7 @@ BLOG.SHARE = {
 title: "【数据介绍】全国公交线网数据",
 pic: "/assets/avatar/avatar.png",
 summary: document.getElementsByName('summary')[0].content,
-url: "http://i.xdc.at/2016/10/06/busline-data/" }
+url: "https://i.xdc.at/2016/10/06/busline-data/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -372,7 +378,7 @@ url: "http://i.xdc.at/2016/10/06/busline-data/" }
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.7"></script>
+<script src="/js/main.min.js?v=1.1.9"></script>
 
 
 
@@ -393,7 +399,7 @@ url: "http://i.xdc.at/2016/10/06/busline-data/" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.7"></script>
+<script src="/js/search.min.js?v=1.1.9"></script>
 
 
 

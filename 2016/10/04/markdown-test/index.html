@@ -2,7 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
+<script type="text/javascript">
+var targetProtocol = "https:";
+if (window.location.protocol != targetProtocol)
+ window.location.href = targetProtocol +
+  window.location.href.substring(window.location.protocol.length);
+</script>
   
+  
+  <link rel="canonical" href="https://i.xdc.at/2016/10/04/markdown-test/">
   
   
   <title>Markdown 入门 | xdc的博客 | i.xdc.at</title>
@@ -17,7 +25,7 @@
 一级标题二级标题三级标题四级标题五级标题六级标题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown 入门">
-<meta property="og:url" content="http://i.xdc.at/2016/10/04/markdown-test/index.html">
+<meta property="og:url" content="https://i.xdc.at/2016/10/04/markdown-test/index.html">
 <meta property="og:site_name" content="xdc的博客">
 <meta property="og:description" content="标题
 标题直接以1个或多个#开头，表示不同等级。
@@ -37,7 +45,7 @@
 标题直接以1个或多个#开头，表示不同等级。
 一级标题二级标题三级标题四级标题五级标题六级标题">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
 </head>
 
 <body>
@@ -50,7 +58,7 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/assets/avatar/avatar.png"></a>
         <hgroup class="introduce">
           <h5 class="nickname">xdc</h5>
           <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
@@ -75,7 +83,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags/"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
               </a>
@@ -90,7 +98,7 @@
         
             <li class="waves-block waves-effect">
               <a href="/about/"  >
-                <i class="icon icon-lg icon-link"></i>
+                <i class="icon icon-lg icon-file"></i>
                 关于
               </a>
             </li>
@@ -139,7 +147,6 @@
         <h1 class="title">Markdown 入门</h1>
         
         
-
     </div>
 
     
@@ -242,22 +249,21 @@ print time.ctime()
         </div>
         
         <blockquote class="post-copyright">
-            <div class="content">
-               本文地址：<a href="/2016/10/04/markdown-test/" target="_blank" rel="external">http://i.xdc.at/2016/10/04/markdown-test/</a>
-            </div>
-            <footer>
-                <a href="http://i.xdc.at">
-                    <img src="/assets/avatar/avatar.png" alt="xdc">
-                    xdc
-                </a>
-            </footer>
-        </blockquote>
+    <div class="content">
+        本文地址：<a href="/2016/10/04/markdown-test/" target="_blank" rel="external">https://i.xdc.at/2016/10/04/markdown-test/</a>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.png" alt="xdc">
+            xdc
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="post-reward">
+    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
 
-        
-        <div class="post-reward">
-            <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
-        </div>
-        
 
         <div class="post-footer">
             
@@ -265,8 +271,8 @@ print time.ctime()
 
 
             
-            <div class="post-share-wrap">
-                <div class="post-share" id="post-share">
+<div class="post-share-wrap">
+    <div class="post-share" id="post-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -302,11 +308,11 @@ print time.ctime()
     </ul>
  </div>
 
-                <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
-                    <i class="icon icon-share-alt icon-lg"></i>
-                </a>
-            </div>
-            
+    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
         </div>
     </div>   
@@ -336,9 +342,9 @@ print time.ctime()
             
     
 <div class="duoshuo">
-	<div class="ds-thread" data-thread-key="markdown-test" data-title="Markdown 入门" data-url="http://i.xdc.at/2016/10/04/markdown-test/"></div>
+	<div class="ds-thread" data-thread-key="markdown-test" data-title="Markdown 入门" data-url="https://i.xdc.at/2016/10/04/markdown-test/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.7"></script>
+<script src="/js/embed.min.js?v=1.1.9"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -384,7 +390,7 @@ BLOG.SHARE = {
 title: "Markdown 入门",
 pic: "/assets/avatar/avatar.png",
 summary: document.getElementsByName('summary')[0].content,
-url: "http://i.xdc.at/2016/10/04/markdown-test/" }
+url: "https://i.xdc.at/2016/10/04/markdown-test/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -424,7 +430,7 @@ url: "http://i.xdc.at/2016/10/04/markdown-test/" }
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.7"></script>
+<script src="/js/main.min.js?v=1.1.9"></script>
 
 
 
@@ -445,7 +451,7 @@ url: "http://i.xdc.at/2016/10/04/markdown-test/" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.7"></script>
+<script src="/js/search.min.js?v=1.1.9"></script>
 
 
 

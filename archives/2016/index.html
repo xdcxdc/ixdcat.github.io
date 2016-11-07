@@ -2,10 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
+<script type="text/javascript">
+var targetProtocol = "https:";
+if (window.location.protocol != targetProtocol)
+ window.location.href = targetProtocol +
+  window.location.href.substring(window.location.protocol.length);
+</script>
   
   
+  <link rel="canonical" href="https://i.xdc.at/archives/2016/">
   
-  <title>Archives: 2016 | xdc的博客 | i.xdc.at</title>
+  
+  <title>所有文章: 2016 | xdc的博客 | i.xdc.at</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
@@ -15,7 +23,7 @@
   <meta name="description" content="xdc的博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="xdc的博客">
-<meta property="og:url" content="http://i.xdc.at/archives/2016/index.html">
+<meta property="og:url" content="https://i.xdc.at/archives/2016/index.html">
 <meta property="og:site_name" content="xdc的博客">
 <meta property="og:description" content="xdc的博客">
 <meta name="twitter:card" content="summary">
@@ -26,7 +34,7 @@
   
   <meta name="summary" content="xdc的博客">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.7">
+  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
 </head>
 
 <body>
@@ -39,7 +47,7 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar"><img src="/assets/avatar/avatar.png"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/assets/avatar/avatar.png"></a>
         <hgroup class="introduce">
           <h5 class="nickname">xdc</h5>
           <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
@@ -64,7 +72,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags/"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
               </a>
@@ -79,7 +87,7 @@
         
             <li class="waves-block waves-effect">
               <a href="/about/"  >
-                <i class="icon icon-lg icon-link"></i>
+                <i class="icon icon-lg icon-file"></i>
                 关于
               </a>
             </li>
@@ -128,7 +136,6 @@
         <h1 class="title">所有文章</h1>
         
         
-
     </div>
 
     
@@ -403,7 +410,7 @@ BLOG.SHARE = {
 title: "xdc的博客",
 pic: "/assets/avatar/avatar.png",
 summary: document.getElementsByName('summary')[0].content,
-url: "http://i.xdc.at/archives/2016/" }
+url: "https://i.xdc.at/archives/2016/" }
 </script>
 <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
@@ -443,7 +450,7 @@ url: "http://i.xdc.at/archives/2016/" }
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.7"></script>
+<script src="/js/main.min.js?v=1.1.9"></script>
 
 
 
@@ -464,7 +471,7 @@ url: "http://i.xdc.at/archives/2016/" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.7"></script>
+<script src="/js/search.min.js?v=1.1.9"></script>
 
 
 
