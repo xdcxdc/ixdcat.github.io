@@ -32,27 +32,27 @@ if (window.location.protocol != targetProtocol)
 
 注：以下使用的数据主要是2015年12月抓取的上海市公交线路网数据，与最新抓取的数据相比，新的数据更加完善。
 公共交通一直以来都是城市发展的重点，国务院也曾多次就发展城市公共交通下发指导意见。2016年2月24日，《上海市公共汽（电）车客运线路优化导则》编制完成，截至3月3日开始广泛的征询市民意见。那么，上海市民对市内公共交通的运营现状了">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/density.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/distribution-of-length.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/od-line.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/index.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/density.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/distribution-of-length.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/od-line.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/index.jpg">
 <meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/running-lines.gif">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/service-area.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/service-popu.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/busstop-num.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/busline-length.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/busstop-pop.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/jiedao-od.webp">
-<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/table.webp">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/service-area.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/service-popu.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/busstop-num.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/busline-length.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/busstop-pop.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/jiedao-od.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/table.jpg">
 <meta property="og:image" content="https://i.xdc.at/assets/qrcode/wx-farsightj.jpg">
-<meta property="og:updated_time" content="2016-10-28T07:04:49.836Z">
+<meta property="og:updated_time" content="2016-11-07T04:19:39.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【数据分析】上海市公交线路简要分析">
 <meta name="twitter:description" content="本文首发于微信公众号 远见farsightj，原文链接。
 
 注：以下使用的数据主要是2015年12月抓取的上海市公交线路网数据，与最新抓取的数据相比，新的数据更加完善。
 公共交通一直以来都是城市发展的重点，国务院也曾多次就发展城市公共交通下发指导意见。2016年2月24日，《上海市公共汽（电）车客运线路优化导则》编制完成，截至3月3日开始广泛的征询市民意见。那么，上海市民对市内公共交通的运营现状了">
-<meta name="twitter:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/density.webp">
+<meta name="twitter:image" content="https://i.xdc.at/assets/blogImg/shanghai-busline-analysis/density.jpg">
   
     <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
   
@@ -202,25 +202,25 @@ if (window.location.protocol != targetProtocol)
 <p>公共交通一直以来都是城市发展的重点，国务院也曾多次就发展城市公共交通下发指导意见。2016年2月24日，《上海市公共汽（电）车客运线路优化导则》编制完成，截至3月3日开始广泛的征询市民意见。那么，上海市民对市内公共交通的运营现状了解多少呢？我们下面将从公交基本服务情况、公交服务能力和区域公交联系三大方面对上海市的公交建设发展现状进行分析。</p>
 <a id="more"></a>
 <h3 id="1-线路基本服务情况"><a href="#1-线路基本服务情况" class="headerlink" title="1. 线路基本服务情况"></a>1. 线路基本服务情况</h3><p>公共汽车一般是城市中发展历史最久，覆盖面积最广的公共交通形式。公交站点分布与公交线路的布局与居民生活日常出行息息相关。城市发展的现阶段，公交作为一种公共资源在空间上的分布肯定是非均质的。那么，在上海市内哪些地区公交站点、公交线路的分布最为密集呢？于是我们计算了站点<em>(计算时使用的数据中，如果同一站点停靠了多条公交线路，则每条线路都会有一个对应的点。下文涉及站点时与此相同)</em>的点密度图与线路的线密度图<em>(同一线路的往返方向为不同的两条线)</em>。从以下两图可以看到，公交站点与公交线路主要集中在中心城区与郊区的副中心，与上海市的城镇体系结构和人口空间分布情况基本一致。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/density.webp" alt="公交站点与公交线路密度"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/density.jpg" alt="公交站点与公交线路密度"></p>
 <p>除了站点密度和线路密度之外，公交线路的运营长度也是评价公交服务水平的重要指标，一般以不超过15公里为宜。线路过长，车辆周转率下降，为保证效率需要投入更多的运营车辆而增加成本，否则发车间隔增加，乘车不便；而线路过短，则会导致居民出行换乘次数增加，同样会给乘客带来诸多不便。统计分析显示，上海市公交运营长度主要集中在15公里左右，有大量的运营长度超过15公里的公交；线路长路超过20公里后的公交数量急剧下降。这也和上海市建成区面积的扩张有一定的关系。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.webp" alt="线路长度分布"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.jpg" alt="线路长度分布"></p>
 <p>公交线路在尽可能保证覆盖城市道路的同时，线路非直线系数（起点、终点间的路上实际距离与两点间直线距离的比值）也不宜过大，最后应该控制在1.5以下，过大则会导致居民出行距离和出行时间增加。经过分析发现，上海市一半以上线路的非直线系数超标，但不排除分析结果受到了部分环形线路干扰的情况。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/od-line.webp" alt="起点终点连线"><br><img src="/assets/blogImg/shanghai-busline-analysis/index.webp" alt="非直线系数分布"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/od-line.jpg" alt="起点终点连线"><br><img src="/assets/blogImg/shanghai-busline-analysis/index.jpg" alt="非直线系数分布"></p>
 <p>从运营时间来看，公交线路的运营时间主要集中在白天的8:00-18:00时间段，在凌晨1:00-4:00时间段运营车辆最少。公交运行一般在早上7:00时段正式开始，运行线路数在至7点-19点的时间段内一直维持在高水平。在夜间运营的车辆中，主要是从市中心开往郊区方向，徐泾镇方向有较多夜间行车。</p>
 <p><img src="/assets/blogImg/shanghai-busline-analysis/running-lines.gif" alt="逐时段运营线路"></p>
 <h3 id="2-服务面积与服务人口"><a href="#2-服务面积与服务人口" class="headerlink" title="2. 服务面积与服务人口"></a>2. 服务面积与服务人口</h3><p>对于公交系统的评价，一个重要的指标是其服务范围。一般公交站点的服务半径在300至500米，是步行适宜的距离，据此计算公交站点的服务面积覆盖率可以评价公交线路的服务能力。<br>就整个上海市而言，以300米来计算公交站点的服务范围，则服务面积共覆盖上海市建成区的56.40%，以500米计算服务范围，则覆盖建成区面积的78.15%，距离500米内90%的面积覆盖的目标还有很长的路要走。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/service-area.webp" alt="服务面积"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/service-area.jpg" alt="服务面积"></p>
 <p>以上是从服务面积的角度分析覆盖率，那么，从服务人口数角度的分析结果会是怎样呢？<br>以上海市第六次人口普查的常住人口密度作为服务人口的统计依据，计算后发现，300m和500m半径的服务人口分别占到了常住人口总数的74.95%和89.20% 。从服务人口角度计算的上海市公交服务能力更好。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/service-popu.webp" alt="服务人口"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/service-popu.jpg" alt="服务人口"></p>
 <p>上文已提到，公交资源的空间分布是不均衡的。我们对于上海市不同的行政区的公交资源进行了比较分析。比较不同的行政区内公交站点数量发现，浦东新区、闵行区、松江区内公交站点的数量是所有行政区中最多的。然而在计算单位面积内的公交站点数量时，我们发现，黄浦区、静安区、虹口区等中心城区的单位面积的公交资源排在前列，中心城区公交站的密度仍远远大于郊区。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.webp" alt="各区公交站点数量"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.jpg" alt="各区公交站点数量"></p>
 <p>比较不同行政区内的公交线路里程数，我们了发现相同的情况。公交线路总里程的比较上，郊区大于中心城区；但比较单位面积内的公交里程，中心城区则远远大于郊区。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busline-length.webp" alt="各区公交里程"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busline-length.jpg" alt="各区公交里程"></p>
 <p>公共交通的建设上是中心城区占优，因此不同地区的公交服务情况也会不同。<br>我们比较了各行政区内人均的公交站点数量和公交里程。在人均公交里程上，各个行政区的差别不大。但比较每个站点平均服务人口上，中心城区所面临的服务的压力要比郊区地区大得多。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.webp" alt="每个车站平均服务人口"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.jpg" alt="每个车站平均服务人口"></p>
 <h3 id="3-公交线路空间联系"><a href="#3-公交线路空间联系" class="headerlink" title="3. 公交线路空间联系"></a>3. 公交线路空间联系</h3><p>公交线路串联起了上海市内不同的行政区和重要的地点。具体每个街道之间通过公交线路的联系程度有多强呢？<br>我们设定，一条公交线路只要同时在两个街道有停靠，那就为这两个街道间的联系强度值+1，最终生成对应的街道联系矩阵。由下图可知，联系较强的区域主要由中心城区向外呈放射状分布，陆家嘴街道和徐家汇街道分别是浦东和浦西的公交联系核心，但浦东浦西之间的公交联系较弱。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.webp" alt="街道间联系强度"><br><img src="/assets/blogImg/shanghai-busline-analysis/table.webp" alt="街道间联系线路数量"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.jpg" alt="街道间联系强度"><br><img src="/assets/blogImg/shanghai-busline-analysis/table.jpg" alt="街道间联系线路数量"></p>
 <p>以上就是我们初步的分析结果，欢迎各位大侠与我们交流讨论~</p>
 <p><em>本文编辑： xdc@farsightj.cn , zyp@farsightj.cn , tjl@farsightj.cn</em></p>
 <hr>
@@ -452,6 +452,15 @@ ga('send', 'pageview');
 
 </script>
 <!-- End Google Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 
 

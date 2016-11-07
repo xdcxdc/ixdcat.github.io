@@ -72,7 +72,7 @@
     <link href="https://i.xdc.at/2016/10/06/shanghai-busline-analysis/"/>
     <id>https://i.xdc.at/2016/10/06/shanghai-busline-analysis/</id>
     <published>2016-10-06T06:22:50.000Z</published>
-    <updated>2016-10-28T07:04:49.836Z</updated>
+    <updated>2016-11-07T04:19:39.100Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734880&amp;idx=1&amp;sn=078e80f7cec69013644fc115f5cbcfdd" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
@@ -80,25 +80,25 @@
 <p>公共交通一直以来都是城市发展的重点，国务院也曾多次就发展城市公共交通下发指导意见。2016年2月24日，《上海市公共汽（电）车客运线路优化导则》编制完成，截至3月3日开始广泛的征询市民意见。那么，上海市民对市内公共交通的运营现状了解多少呢？我们下面将从公交基本服务情况、公交服务能力和区域公交联系三大方面对上海市的公交建设发展现状进行分析。</p>
 <a id="more"></a>
 <h3 id="1-线路基本服务情况"><a href="#1-线路基本服务情况" class="headerlink" title="1. 线路基本服务情况"></a>1. 线路基本服务情况</h3><p>公共汽车一般是城市中发展历史最久，覆盖面积最广的公共交通形式。公交站点分布与公交线路的布局与居民生活日常出行息息相关。城市发展的现阶段，公交作为一种公共资源在空间上的分布肯定是非均质的。那么，在上海市内哪些地区公交站点、公交线路的分布最为密集呢？于是我们计算了站点<em>(计算时使用的数据中，如果同一站点停靠了多条公交线路，则每条线路都会有一个对应的点。下文涉及站点时与此相同)</em>的点密度图与线路的线密度图<em>(同一线路的往返方向为不同的两条线)</em>。从以下两图可以看到，公交站点与公交线路主要集中在中心城区与郊区的副中心，与上海市的城镇体系结构和人口空间分布情况基本一致。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/density.webp" alt="公交站点与公交线路密度"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/density.jpg" alt="公交站点与公交线路密度"></p>
 <p>除了站点密度和线路密度之外，公交线路的运营长度也是评价公交服务水平的重要指标，一般以不超过15公里为宜。线路过长，车辆周转率下降，为保证效率需要投入更多的运营车辆而增加成本，否则发车间隔增加，乘车不便；而线路过短，则会导致居民出行换乘次数增加，同样会给乘客带来诸多不便。统计分析显示，上海市公交运营长度主要集中在15公里左右，有大量的运营长度超过15公里的公交；线路长路超过20公里后的公交数量急剧下降。这也和上海市建成区面积的扩张有一定的关系。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.webp" alt="线路长度分布"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.jpg" alt="线路长度分布"></p>
 <p>公交线路在尽可能保证覆盖城市道路的同时，线路非直线系数（起点、终点间的路上实际距离与两点间直线距离的比值）也不宜过大，最后应该控制在1.5以下，过大则会导致居民出行距离和出行时间增加。经过分析发现，上海市一半以上线路的非直线系数超标，但不排除分析结果受到了部分环形线路干扰的情况。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/od-line.webp" alt="起点终点连线"><br><img src="/assets/blogImg/shanghai-busline-analysis/index.webp" alt="非直线系数分布"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/od-line.jpg" alt="起点终点连线"><br><img src="/assets/blogImg/shanghai-busline-analysis/index.jpg" alt="非直线系数分布"></p>
 <p>从运营时间来看，公交线路的运营时间主要集中在白天的8:00-18:00时间段，在凌晨1:00-4:00时间段运营车辆最少。公交运行一般在早上7:00时段正式开始，运行线路数在至7点-19点的时间段内一直维持在高水平。在夜间运营的车辆中，主要是从市中心开往郊区方向，徐泾镇方向有较多夜间行车。</p>
 <p><img src="/assets/blogImg/shanghai-busline-analysis/running-lines.gif" alt="逐时段运营线路"></p>
 <h3 id="2-服务面积与服务人口"><a href="#2-服务面积与服务人口" class="headerlink" title="2. 服务面积与服务人口"></a>2. 服务面积与服务人口</h3><p>对于公交系统的评价，一个重要的指标是其服务范围。一般公交站点的服务半径在300至500米，是步行适宜的距离，据此计算公交站点的服务面积覆盖率可以评价公交线路的服务能力。<br>就整个上海市而言，以300米来计算公交站点的服务范围，则服务面积共覆盖上海市建成区的56.40%，以500米计算服务范围，则覆盖建成区面积的78.15%，距离500米内90%的面积覆盖的目标还有很长的路要走。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/service-area.webp" alt="服务面积"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/service-area.jpg" alt="服务面积"></p>
 <p>以上是从服务面积的角度分析覆盖率，那么，从服务人口数角度的分析结果会是怎样呢？<br>以上海市第六次人口普查的常住人口密度作为服务人口的统计依据，计算后发现，300m和500m半径的服务人口分别占到了常住人口总数的74.95%和89.20% 。从服务人口角度计算的上海市公交服务能力更好。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/service-popu.webp" alt="服务人口"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/service-popu.jpg" alt="服务人口"></p>
 <p>上文已提到，公交资源的空间分布是不均衡的。我们对于上海市不同的行政区的公交资源进行了比较分析。比较不同的行政区内公交站点数量发现，浦东新区、闵行区、松江区内公交站点的数量是所有行政区中最多的。然而在计算单位面积内的公交站点数量时，我们发现，黄浦区、静安区、虹口区等中心城区的单位面积的公交资源排在前列，中心城区公交站的密度仍远远大于郊区。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.webp" alt="各区公交站点数量"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.jpg" alt="各区公交站点数量"></p>
 <p>比较不同行政区内的公交线路里程数，我们了发现相同的情况。公交线路总里程的比较上，郊区大于中心城区；但比较单位面积内的公交里程，中心城区则远远大于郊区。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busline-length.webp" alt="各区公交里程"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busline-length.jpg" alt="各区公交里程"></p>
 <p>公共交通的建设上是中心城区占优，因此不同地区的公交服务情况也会不同。<br>我们比较了各行政区内人均的公交站点数量和公交里程。在人均公交里程上，各个行政区的差别不大。但比较每个站点平均服务人口上，中心城区所面临的服务的压力要比郊区地区大得多。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.webp" alt="每个车站平均服务人口"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.jpg" alt="每个车站平均服务人口"></p>
 <h3 id="3-公交线路空间联系"><a href="#3-公交线路空间联系" class="headerlink" title="3. 公交线路空间联系"></a>3. 公交线路空间联系</h3><p>公交线路串联起了上海市内不同的行政区和重要的地点。具体每个街道之间通过公交线路的联系程度有多强呢？<br>我们设定，一条公交线路只要同时在两个街道有停靠，那就为这两个街道间的联系强度值+1，最终生成对应的街道联系矩阵。由下图可知，联系较强的区域主要由中心城区向外呈放射状分布，陆家嘴街道和徐家汇街道分别是浦东和浦西的公交联系核心，但浦东浦西之间的公交联系较弱。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.webp" alt="街道间联系强度"><br><img src="/assets/blogImg/shanghai-busline-analysis/table.webp" alt="街道间联系线路数量"></p>
+<p><img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.jpg" alt="街道间联系强度"><br><img src="/assets/blogImg/shanghai-busline-analysis/table.jpg" alt="街道间联系线路数量"></p>
 <p>以上就是我们初步的分析结果，欢迎各位大侠与我们交流讨论~</p>
 <p><em>本文编辑： xdc@farsightj.cn , zyp@farsightj.cn , tjl@farsightj.cn</em></p>
 <hr>
@@ -135,16 +135,16 @@
     <link href="https://i.xdc.at/2016/10/06/busline-data/"/>
     <id>https://i.xdc.at/2016/10/06/busline-data/</id>
     <published>2016-10-06T04:21:38.000Z</published>
-    <updated>2016-10-28T07:05:00.829Z</updated>
+    <updated>2016-11-07T04:06:16.405Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
 <p>新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。</p>
-<p>全国公共交通站点：<br><img src="/assets/blogImg/busline-data/busstop.webp" alt="全国公共交通站点"></p>
+<p>全国公共交通站点：<br><img src="/assets/blogImg/busline-data/busstop.jpg" alt="全国公共交通站点"></p>
 <a id="more"></a>
-<p>全国公共交通线网：<br><img src="/assets/blogImg/busline-data/busline.webp" alt="全国公共交通线网"></p>
-<p>上海市公共交通线网，超精准线路哦：<br><img src="/assets/blogImg/busline-data/shanghai-busline.webp" alt="上海市公共交通线网"></p>
-<p>市中心放大：<br><img src="/assets/blogImg/busline-data/shanghai-center-busline.webp" alt="上海市中心区公共交通线网"></p>
+<p>全国公共交通线网：<br><img src="/assets/blogImg/busline-data/busline.jpg" alt="全国公共交通线网"></p>
+<p>上海市公共交通线网，超精准线路哦：<br><img src="/assets/blogImg/busline-data/shanghai-busline.jpg" alt="上海市公共交通线网"></p>
+<p>市中心放大：<br><img src="/assets/blogImg/busline-data/shanghai-center-busline.jpg" alt="上海市中心区公共交通线网"></p>
 <p>属性包含运营时间、发车间隔、票价、是否空调车等。</p>
 <hr>
 <p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
@@ -156,7 +156,7 @@
       &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734834&amp;amp;idx=1&amp;amp;sn=5dd381774506bffc2edcfea63a3db736&quot;&gt;原文链接&lt;/a&gt;。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。&lt;/p&gt;
-&lt;p&gt;全国公共交通站点：&lt;br&gt;&lt;img src=&quot;/assets/blogImg/busline-data/busstop.webp&quot; alt=&quot;全国公共交通站点&quot;&gt;&lt;/p&gt;
+&lt;p&gt;全国公共交通站点：&lt;br&gt;&lt;img src=&quot;/assets/blogImg/busline-data/busstop.jpg&quot; alt=&quot;全国公共交通站点&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -180,17 +180,17 @@
     <link href="https://i.xdc.at/2016/10/06/poi-data/"/>
     <id>https://i.xdc.at/2016/10/06/poi-data/</id>
     <published>2016-10-06T02:20:40.000Z</published>
-    <updated>2016-11-03T03:02:14.197Z</updated>
+    <updated>2016-11-07T04:11:32.702Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在<a href="#UPDATE">文末</a>。</em></p>
 <hr>
 <p>新鲜出炉的2016全国POI，共约4500+万条。<br>分类齐全，位置精准，字段完整。展示如下：</p>
 <a id="more"></a>
-<p>全国POI密度分布：<br><img src="/assets/blogImg/poi-data/poi-density.webp" alt="全国POI密度分布"></p>
-<p>全国黄焖鸡米饭分布：<br><img src="/assets/blogImg/poi-data/poi-hmjmf.webp" alt="全国黄焖鸡米饭分布"></p>
-<p>全国沙县小吃分布:<br><img src="/assets/blogImg/poi-data/poi-sxxc.webp" alt="全国沙县小吃分布"></p>
-<p>全国公交站点分布：<br><img src="/assets/blogImg/poi-data/poi-gjzd.webp" alt="全国公交站点分布"></p>
-<p>同济大学周边全部POI：<br><img src="/assets/blogImg/poi-data/poi-tjdx.webp" alt="同济大学周边全部POI"></p>
+<p>全国POI密度分布：<br><img src="/assets/blogImg/poi-data/poi-density.jpg" alt="全国POI密度分布"></p>
+<p>全国黄焖鸡米饭分布：<br><img src="/assets/blogImg/poi-data/poi-hmjmf.jpg" alt="全国黄焖鸡米饭分布"></p>
+<p>全国沙县小吃分布:<br><img src="/assets/blogImg/poi-data/poi-sxxc.jpg" alt="全国沙县小吃分布"></p>
+<p>全国公交站点分布：<br><img src="/assets/blogImg/poi-data/poi-gjzd.jpg" alt="全国公交站点分布"></p>
+<p>同济大学周边全部POI：<br><img src="/assets/blogImg/poi-data/poi-tjdx.jpg" alt="同济大学周边全部POI"></p>
 <p>结构化存储，任意筛选切分！<br>各位项目或研究大侠！<br>有需要请与我们公众号联系哦~</p>
 <hr>
 <p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
@@ -224,9 +224,9 @@
     <link href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/"/>
     <id>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</id>
     <published>2016-10-05T07:20:39.000Z</published>
-    <updated>2016-11-06T05:37:55.918Z</updated>
+    <updated>2016-11-07T05:14:38.221Z</updated>
     
-    <content type="html"><![CDATA[<p>本文地址：<a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
+    <content type="html"><![CDATA[<p>本文地址：<a href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
 <hr>
 <p><em>写在前面 :</em><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
 <a id="more"></a>
@@ -245,12 +245,12 @@
 <p><strong>Tip :</strong><br>如果想创建存储其他空间要素类型的数据表，如线要素的表，可在 ArcGIS 内将已有的线数据图层<code>右键-数据-导出数据...</code>，输出要素类的保存类型选择<code>数据库要素类</code>，将数据保存到数据库连接里的一张新表内，然后在 SQL Server 内查看这张表的结构，具体操作为对这张表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code> 。</p>
 <h3 id="UPDATE-2016-10-06"><a href="#UPDATE-2016-10-06" class="headerlink" title="UPDATE: 2016-10-06"></a>UPDATE: 2016-10-06</h3><p>为提高数据在 ArcGIS 内显示的效率，最好对数据表创建空间索引，参见 <a href="https://msdn.microsoft.com/zh-cn/library/bb964705.aspx" target="_blank" rel="external">创建、修改和删除空间索引</a> 。</p>
 <hr>
-<p>本文来自 <a href="http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
+<p>本文来自 <a href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文地址：&lt;a href=&quot;http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&quot;&gt;http://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&lt;/a&gt;  &lt;/p&gt;
+      &lt;p&gt;本文地址：&lt;a href=&quot;https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&quot;&gt;https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&lt;/a&gt;  &lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;写在前面 :&lt;/em&gt;&lt;br&gt;&lt;strong&gt;&lt;em&gt;为什么要在 SQL Server 内创建空间要素？&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;该需求来自于千万级别POI数据的存储与可视化。&lt;br&gt;存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。&lt;br&gt;可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。&lt;br&gt;因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。&lt;/p&gt;
     
@@ -381,13 +381,13 @@ print time.ctime()
     </summary>
     
     
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
     
       <category term="yilia" scheme="https://i.xdc.at/tags/yilia/"/>
+    
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     
