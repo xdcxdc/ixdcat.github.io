@@ -35,6 +35,51 @@
   </entry>
   
   <entry>
+    <title>利用SSH的端口转发实现内网穿透</title>
+    <link href="https://i.xdc.at/2016/11/15/port-forward-by-ssh/"/>
+    <id>https://i.xdc.at/2016/11/15/port-forward-by-ssh/</id>
+    <published>2016-11-15T15:08:52.000Z</published>
+    <updated>2016-11-15T16:55:45.189Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><p>在一个内网内有两台设备：路由器 A 和 B 。</p>
+<p>路由器 A 有固定 IP，不受我控制。但在路由器 A 下的一台 Windows 主机 A1 上有一个账户（无权限在 A1 上添加更多新用户）。 A1 的远程桌面端口 3389 在由 A 的管理员在 A 上做了端口映射，因此我可以通过远程桌面协议去访问 A1 。A1 上运行有 SQL Server 。</p>
+<p>路由器 B 是一台基于 Linux 的路由器，没有固定 IP ，但受我控制。 B 下有多台 Windows 主机 B1, B2, B3, B4…</p>
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>目前的状况下，B 下同时最多有一台机器连接到 A1 的远程桌面，使用 A1 的数据库服务。<br>希望可以实现 B 下的多台设备（或 B1 上的多个用户 ）同时使用 A1 的数据库服务。<br>B1 上使用 RDPWrap 破解了 Windows 专业版远程桌面同时连接用户数的限制，因此可以多用户同时使用 B1。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>B1 上安装 SQL Server Management Studio 作为前端，连接到 A1 上的 SQL Server 服务后端（TCP 1433 端口）。但因为 A1 在路由器的后面，因此必须进行<strong>内网穿透</strong>才能从 B1 连接到 A1 的 1433 端口。</p>
+<p>对于两个均是在内网里面的设备互相连接，一种方法是借助于公网的服务，如 Teamviewer 的 VPN 功能，可以将两台内网里的设备组件在一个虚拟子网内。但测试发现连接速度十分不理想。</p>
+<p>由于路由器 B 受我控制，且是 Linux 的系统，因此就可以拿来灵活利用，这里就需要使用到路由器 B 的 SSH 服务。</p>
+<ol>
+<li>首先 A1 和 B1 都通过 SSH 客户端连接到 B。因为 B 没有固定 IP，所以最好使用一个第三方的 DDNS 服务。SSH 客户端我使用的是 Bitvise，这里有一个<a href="/assets/blogImg/port-forward-by-ssh/BitviseSSHClientPortable_6.04_Rev_3.0.paf.exe">便携版本</a>。</li>
+<li>在 B1 上的 Bitvise 里，添加 C2S 转发，监听 1111（自己修改，避免和本机已有的 1433 端口重复）端口，目标端口为 B 内部的 1433 端口。</li>
+<li>在 A1 上的 Bitvise 里，添加 S2C 转发，监听 B 的 1433 的端口，目标为 A1 的 1433 端口。</li>
+<li>此时，B1 上发向 1111 端口的请求，就会被转发到 B 的 1433 端口，再转发到 A1 的1433 端口。</li>
+<li>在 B1 的 SQL Server Management Studio 内，连接数据库引擎的服务器名称填写<code>127.0.0.1,1111</code>，选择<code>SQL Server 身份验证</code>，填写 A1 上 SQL Server 服务的登录名密码即可连接。</li>
+</ol>
+<p>实现以上过程还需要一些前提条件，如 A1 上 SQL Server 服务允许 TCP连接、路由器 B 上的 ssh 服务接受端口转发请求。</p>
+<p>顺利的话，通过以上步骤，B1 上的多个用户就可以同时打开 SQL Server Management Studio 连接到 A1 的数据库上去了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;现状&quot;&gt;&lt;a href=&quot;#现状&quot; class=&quot;headerlink&quot; title=&quot;现状&quot;&gt;&lt;/a&gt;现状&lt;/h3&gt;&lt;p&gt;在一个内网内有两台设备：路由器 A 和 B 。&lt;/p&gt;
+&lt;p&gt;路由器 A 有固定 IP，不受我控制。但在路由器 A 下的一台 Windows
+    
+    </summary>
+    
+    
+      <category term="SQL Server" scheme="https://i.xdc.at/tags/SQL-Server/"/>
+    
+      <category term="ssh" scheme="https://i.xdc.at/tags/ssh/"/>
+    
+      <category term="Linux" scheme="https://i.xdc.at/tags/Linux/"/>
+    
+      <category term="内网穿透" scheme="https://i.xdc.at/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+      <category term="端口转发" scheme="https://i.xdc.at/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在 ArcGIS 内使用 tbx 工具箱</title>
     <link href="https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/"/>
     <id>https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</id>
@@ -381,13 +426,13 @@ print time.ctime()
     </summary>
     
     
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
     
       <category term="yilia" scheme="https://i.xdc.at/tags/yilia/"/>
+    
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     
