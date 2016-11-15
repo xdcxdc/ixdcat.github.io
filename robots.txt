@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: http://i.xdc.at/sitemap.xml
