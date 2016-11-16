@@ -7,7 +7,7 @@
   <link rel="canonical" href="https://i.xdc.at/2016/11/15/port-forward-by-ssh/">
   
   
-  <title>利用SSH的端口转发实现内网穿透 | xdc的博客 | i.xdc.at</title>
+  <title>利用SSH的端口转发实现内网穿透 | 谢栋灿&#39;s Blog | i.xdc.at</title>
 <script type="text/javascript">
 var targetProtocol = "https:";
 if (window.location.protocol != targetProtocol)
@@ -19,27 +19,27 @@ if (window.location.protocol != targetProtocol)
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="SQL Server,ssh,Linux,内网穿透,端口转发">
+  <meta name="keywords" content="SSH,Linux,内网穿透,端口转发,SQL Server">
   <meta name="description" content="现状在一个内网内有两台设备：路由器 A 和 B 。
 路由器 A 有固定 IP，不受我控制。但在路由器 A 下的一台 Windows 主机 A1 上有一个账户（无权限在 A1 上添加更多新用户）。 A1 的远程桌面端口 3389 在由 A 的管理员在 A 上做了端口映射，因此我可以通过远程桌面协议去访问 A1 。A1 上运行有 SQL Server 。
 路由器 B 是一台基于 Linux 的路由器，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用SSH的端口转发实现内网穿透">
 <meta property="og:url" content="https://i.xdc.at/2016/11/15/port-forward-by-ssh/index.html">
-<meta property="og:site_name" content="xdc的博客">
+<meta property="og:site_name" content="谢栋灿's Blog">
 <meta property="og:description" content="现状在一个内网内有两台设备：路由器 A 和 B 。
 路由器 A 有固定 IP，不受我控制。但在路由器 A 下的一台 Windows 主机 A1 上有一个账户（无权限在 A1 上添加更多新用户）。 A1 的远程桌面端口 3389 在由 A 的管理员在 A 上做了端口映射，因此我可以通过远程桌面协议去访问 A1 。A1 上运行有 SQL Server 。
 路由器 B 是一台基于 Linux 的路由器，">
-<meta property="og:updated_time" content="2016-11-15T16:55:45.189Z">
+<meta property="og:updated_time" content="2016-11-15T18:10:55.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用SSH的端口转发实现内网穿透">
 <meta name="twitter:description" content="现状在一个内网内有两台设备：路由器 A 和 B 。
 路由器 A 有固定 IP，不受我控制。但在路由器 A 下的一台 Windows 主机 A1 上有一个账户（无权限在 A1 上添加更多新用户）。 A1 的远程桌面端口 3389 在由 A 的管理员在 A 上做了端口映射，因此我可以通过远程桌面协议去访问 A1 。A1 上运行有 SQL Server 。
 路由器 B 是一台基于 Linux 的路由器，">
   
-    <link rel="alternative" href="/atom.xml" title="xdc的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="xdc的博客">
+  <meta name="summary" content="谢栋灿的博客">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css?v=1.1.10">
 </head>
@@ -54,9 +54,9 @@ if (window.location.protocol != targetProtocol)
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/assets/avatar/avatar.png"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/assets/avatar/avatar.jpg"></a>
         <hgroup class="introduce">
-          <h5 class="nickname">xdc</h5>
+          <h5 class="nickname">谢栋灿</h5>
           <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
         </hgroup>
       </div>
@@ -103,7 +103,7 @@ if (window.location.protocol != targetProtocol)
 
       <footer class="footer">
   <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
-  <p>xdc的博客 &copy; 2016</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016</p>
   <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
   <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
   <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
@@ -206,8 +206,8 @@ if (window.location.protocol != targetProtocol)
     </div>
     <footer>
         <a href="https://i.xdc.at">
-            <img src="/assets/avatar/avatar.png" alt="xdc">
-            xdc
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
         </a>
     </footer>
 </blockquote>
@@ -219,7 +219,7 @@ if (window.location.protocol != targetProtocol)
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL-Server/">SQL Server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内网穿透/">内网穿透</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/端口转发/">端口转发</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL-Server/">SQL Server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/">SSH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内网穿透/">内网穿透</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/端口转发/">端口转发</a></li></ul>
 
 
             
@@ -340,7 +340,7 @@ var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
 <script>var BLOG = { ROOT: '/' };
 BLOG.SHARE = {
 title: "利用SSH的端口转发实现内网穿透",
-pic: "/assets/avatar/avatar.png",
+pic: "/assets/avatar/avatar.jpg",
 summary: document.getElementsByName('summary')[0].content,
 url: "https://i.xdc.at/2016/11/15/port-forward-by-ssh/" }
 </script>
