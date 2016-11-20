@@ -35,6 +35,36 @@
   </entry>
   
   <entry>
+    <title>【数据介绍】全国POI数据2016年11月份更新</title>
+    <link href="https://i.xdc.at/2016/11/20/poi-data-update-201611/"/>
+    <id>https://i.xdc.at/2016/11/20/poi-data-update-201611/</id>
+    <published>2016-11-20T14:46:40.000Z</published>
+    <updated>2016-11-20T16:12:30.522Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="/2016/10/06/poi-data/">上篇对 POI 数据的介绍</a> 中提到，由于高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。</p>
+<p>因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围抓取。统计后发现，补漏与更新的效果还是比较明显的。</p>
+<p>数量上，从上次的 4500w+ 扩充到了 5600w+，这个数量已经超过了网络上有人所称的5000w 。并且，对超过 1000w 的数据进行了内容更新，更新包括名称的更改、位置的微调、分类的调整、地址的修改等。<br><img src="/assets/blogImg/poi-data-update-201611/change-of-location-and-name.png" alt="名称更改与位置微调" title="名称更改与位置微调"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;/2016/10/06/poi-data/&quot;&gt;上篇对 POI 数据的介绍&lt;/a&gt; 中提到，由于高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。&lt;/p&gt;
+&lt;p&gt;因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围
+    
+    </summary>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
+    
+    
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用SSH的端口转发实现内网穿透</title>
     <link href="https://i.xdc.at/2016/11/15/port-forward-by-ssh/"/>
     <id>https://i.xdc.at/2016/11/15/port-forward-by-ssh/</id>
