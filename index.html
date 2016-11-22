@@ -33,7 +33,7 @@ if (window.location.protocol != targetProtocol)
     <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
   
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.2">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -222,9 +222,9 @@ if (window.location.protocol != targetProtocol)
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-        上篇对 POI 数据的介绍 中提到，由于高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。
+        上篇对 POI 数据的介绍 中提到，高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。
 因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围抓取。统计后发现，补漏与更新的效果还是比较明显的。
-数量上，从上次的 4500w+ 扩充到了 5600w+，这个数量已经超过了网络上有人所称的5000w 。并且，对超过 1000w 的数据进行了内容更新，更...
+数量上，从上次的 4500w+ 扩充到了 5600w+，这个数量已经超过了网络上有人所称的5000w 。并且，对超过 1000w 的数据进行了内容更新，更新包...
     
     
         <a href="/2016/11/20/poi-data-update-201611/" class="post-more waves-effect waves-button">
@@ -338,6 +338,58 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tbx/">tbx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具箱/">工具箱</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item">
+            <article id="post-transportation-contour-line-tbx"
+  class="article-card article-type-post" itemprop="blogPost">
+     
+    <div class="post-meta">
+        <time datetime="2016-10-30T05:59:33.000Z" itemprop="datePublished" class="post-time">
+  2016-10-30
+</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/software/">软件工具</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/10/30/transportation-contour-line-tbx/">基于高德 API 的交通等时线划分工具</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent" >
+
+    
+        
+该软件最早于 2016-04-06 发布在城市数据派网站(http://www.udparty.com/topic/1758.html)。
+
+软件介绍该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。支持驾车、公...
+    
+    
+        <a href="/2016/10/30/transportation-contour-line-tbx/" class="post-more waves-effect waves-button">
+            阅读全文...
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tbx/">tbx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/交通等时线/">交通等时线</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具箱/">工具箱</a></li></ul>
 
     </div>
     
@@ -598,59 +650,15 @@ tbx 文件在 ArcGIS 内打开一般有两种方法：
 
         </li>
     
-        <li class="post-list-item">
-            <article id="post-first-post"
-  class="article-card article-type-post" itemprop="blogPost">
-     
-    <div class="post-meta">
-        <time datetime="2016-10-04T06:22:20.000Z" itemprop="datePublished" class="post-time">
-  2016-10-04
-</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/10/04/first-post/">Hello World</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent" >
-
-    
-        这是一篇使用Hexo生成的博文。
-
-最初看到GitHub + Hexo的建站教程是在知乎专栏 GitHub + Hexo (1)：在 OS X 下建立你的第一个博客——史上最靠谱教程 ，随后找到相应的 Windows 下教程 用 GitHub + Hexo 建立你的第一个博客 。
-相对Jekyll来看，Hexo似乎上手容易的多，加上已注册 GitHub 并有独立域名，因此很快就完成了部署测试。
-    
-    
-        <a href="/2016/10/04/first-post/" class="post-more waves-effect waves-button">
-            阅读全文...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Coding-net/">Coding.net</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yilia/">yilia</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
     </ul>
 
     
+<nav id="page-nav">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    </div>
+</nav>
+
 
 </div>
 
@@ -702,14 +710,14 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false }</script>
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="http://s.jiathis.com/qrcode.php?url=https://i.xdc.at/" alt="微信分享二维码"/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABU0lEQVR42u3aQQ7DIBBD0dz/0qnUXRcQewYqBX9WVZqWt4mZDFyXPO7vmF9X7lk8YME6iHVPx2j60RX9t6P7YcFKZrkPvz5ZMURgwYIlhIISDa3lHBYsWHJA6EsyLFiwFJayxOrl8l9reViwjmC5jaTO5439LViwXsu6S8Mtr+3/hwUrjDV/Nd0RJUZwwIIVw9rdKnKL45/cggUrkjV/TdXvUVpOD9/CghXG6jR2ldbSgoIAFqwAlrsAK3/qRsbDiyssWAEs5alcy7VfaGHBimTVWkJuHLQqCFiwDmXpEaA3m5QCWjr6AwtWPMvd1HQPGTzgYMGKYdWOArhT2uU4LFhhrH7DV1nO3aYwLFiZrFoo9Ke3m7mwYAWw9A3O1uKqN5hgwYJlsmrHgLYHBCxYh7LcTcrahigsWMkspWh2m03uhigsWMksN0RqG5l60MCCFcb6ANUhDTTl3f0IAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.2"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -730,7 +738,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false }</script>
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.2"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 
