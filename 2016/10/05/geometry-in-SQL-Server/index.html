@@ -20,27 +20,21 @@ if (window.location.protocol != targetProtocol)
   
   
   <meta name="keywords" content="SQL Server,ArcGIS">
-  <meta name="description" content="本文地址：https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
-
-写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此">
+  <meta name="description" content="写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 SQL Server 存储空间要素">
 <meta property="og:url" content="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/index.html">
 <meta property="og:site_name" content="谢栋灿's Blog">
-<meta property="og:description" content="本文地址：https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
-
-写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此">
-<meta property="og:updated_time" content="2016-11-07T05:14:38.221Z">
+<meta property="og:description" content="写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决">
+<meta property="og:updated_time" content="2016-11-24T02:00:17.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 SQL Server 存储空间要素">
-<meta name="twitter:description" content="本文地址：https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
-
-写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此">
+<meta name="twitter:description" content="写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决">
   
     <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
   
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.5">
 </head>
 
 <body>
@@ -103,7 +97,7 @@ if (window.location.protocol != targetProtocol)
       </ul>
 
       <footer class="footer">
-  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>沪ICP备<a onclick="window.open('http://u.farsightj.cn/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
   <p>谢栋灿&#39;s Blog &copy; 2016</p>
   <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
   <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
@@ -140,7 +134,7 @@ if (window.location.protocol != targetProtocol)
 </header>
 <header class="content-header post-header">
 
-    <div class="container">
+    <div class="container fade-scale">
         <h1 class="title">使用 SQL Server 存储空间要素</h1>
         <h5 class="subtitle">
             
@@ -167,8 +161,8 @@ if (window.location.protocol != targetProtocol)
         </nav>
     </aside>
     
-<article id="post-geometry-in-SQL-Server" 
-  class="post-article article-type-post" itemprop="blogPost">
+<article id="post-geometry-in-SQL-Server"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">使用 SQL Server 存储空间要素</h1>
@@ -182,9 +176,7 @@ if (window.location.protocol != targetProtocol)
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>本文地址：<a href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
-<hr>
-<p><em>写在前面 :</em><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
+            <p><strong>写在前面 :</strong><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
 <a id="more"></a>
 <h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
 <h3 id="2-构造一个-ArcGIS-可直接连接的数据表"><a href="#2-构造一个-ArcGIS-可直接连接的数据表" class="headerlink" title="2. 构造一个 ArcGIS 可直接连接的数据表"></a>2. 构造一个 ArcGIS 可直接连接的数据表</h3><p>要在 ArcGIS 内直接显示 SQL Server 数据表内的空间要素，则对数据表的结构有一定要求。<br>以点要素为例，创建的表需要以<code>int</code>类型的<code>OBJECTID</code>字段作为主键，并有一个<code>geometry</code>数据类型的字段。<br>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*****  创建包含空间数据的表 *****/</div><div class="line">USE [测试数据库]</div><div class="line">CREATE TABLE [测试数据表] (</div><div class="line">	[OBJECTID] [int] primary key not NULL,</div><div class="line">	[id] [varchar](10) NULL,</div><div class="line">	[name] [varchar](200) NULL,</div><div class="line">	[lng] [float] NULL,</div><div class="line">	[lat] [float] NULL,</div><div class="line">	[形状] [geometry] not NULL</div><div class="line">)</div><div class="line"></div><div class="line">/*****  将数据插入表中 *****/</div><div class="line">insert into [测试数据表]</div><div class="line">SELECT ROW_NUMBER()  over (order by [id]) as [OBJECTID]</div><div class="line">      ,[id]</div><div class="line">      ,[name]</div><div class="line">      ,[lng]</div><div class="line">      ,[lat]</div><div class="line">      ,geometry::STPointFromText(concat(&apos;POINT (&apos;,convert(varchar, [lng], 128), &apos; &apos;, convert(varchar, [lat], 128),  &apos;)&apos;), 4326 ) as [形状]</div><div class="line">  FROM [原数据表]</div></pre></td></tr></table></figure></p>
@@ -200,11 +192,9 @@ if (window.location.protocol != targetProtocol)
 <hr>
 <p><strong>Tip :</strong><br>如果想创建存储其他空间要素类型的数据表，如线要素的表，可在 ArcGIS 内将已有的线数据图层<code>右键-数据-导出数据...</code>，输出要素类的保存类型选择<code>数据库要素类</code>，将数据保存到数据库连接里的一张新表内，然后在 SQL Server 内查看这张表的结构，具体操作为对这张表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code> 。</p>
 <h3 id="UPDATE-2016-10-06"><a href="#UPDATE-2016-10-06" class="headerlink" title="UPDATE: 2016-10-06"></a>UPDATE: 2016-10-06</h3><p>为提高数据在 ArcGIS 内显示的效率，最好对数据表创建空间索引，参见 <a href="https://msdn.microsoft.com/zh-cn/library/bb964705.aspx" target="_blank" rel="external">创建、修改和删除空间索引</a> 。</p>
-<hr>
-<p>本文来自 <a href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
 
         </div>
-        
+
         <blockquote class="post-copyright">
     <div class="content">
         本文地址：<a href="/2016/10/05/geometry-in-SQL-Server/" target="_blank" rel="external">https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>
@@ -246,9 +236,7 @@ if (window.location.protocol != targetProtocol)
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&title=《使用 SQL Server 存储空间要素》 — 谢栋灿's Blog&source=本文地址：https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
-
-写在前面 :为什么要在 SQL S..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&title=《使用 SQL Server 存储空间要素》 — 谢栋灿's Blog&source=写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -280,7 +268,7 @@ if (window.location.protocol != targetProtocol)
 
 
         </div>
-    </div>   
+    </div>
 
     
 <nav class="post-nav flex-row flex-justify-between">
@@ -304,12 +292,12 @@ if (window.location.protocol != targetProtocol)
 </nav>
 
 
-            
+
     
 <div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="geometry-in-SQL-Server" data-title="使用 SQL Server 存储空间要素" data-url="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.2.1"></script>
+<script src="/js/embed.min.js?v=1.2.5"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -369,9 +357,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&title=《使用 SQL Server 存储空间要素》 — 谢栋灿's Blog&source=本文地址：https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/  
-
-写在前面 :为什么要在 SQL S..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&title=《使用 SQL Server 存储空间要素》 — 谢栋灿's Blog&source=写在前面 :为什么要在 SQL Server 内创建空间要素？该需求来自于千万级别POI数据的存储与可视化。存储部分使用 SQL Server 即可，并且..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -404,7 +390,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.2.1"></script>
+<script src="/js/main.min.js?v=1.2.5"></script>
 
 
 
@@ -425,7 +411,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.2.1"></script>
+<script src="/js/search.min.js?v=1.2.5"></script>
 
 
 

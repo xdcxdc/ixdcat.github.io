@@ -35,11 +35,11 @@
   </entry>
   
   <entry>
-    <title>【数据介绍】全国POI数据2016年11月份更新</title>
+    <title>【数据介绍】全国POI数据2016年11月更新</title>
     <link href="https://i.xdc.at/2016/11/20/poi-data-update-201611/"/>
     <id>https://i.xdc.at/2016/11/20/poi-data-update-201611/</id>
     <published>2016-11-20T14:46:40.000Z</published>
-    <updated>2016-11-20T17:21:43.069Z</updated>
+    <updated>2016-11-24T01:49:21.517Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/2016/10/06/poi-data/">上篇对 POI 数据的介绍</a> 中提到，高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。</p>
 <p>因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围抓取。统计后发现，补漏与更新的效果还是比较明显的。</p>
@@ -56,11 +56,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
   </entry>
   
@@ -147,7 +147,7 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2016-11-22T07:31:22.809Z</updated>
+    <updated>2016-11-24T01:51:09.052Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br>(<a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">http://www.udparty.com/topic/1758.html</a>)。</p>
@@ -173,8 +173,8 @@
 </blockquote>
 <p>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>获取激活码时请提供运行时显示的机器码。</p>
 <h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1.    如果运行过程中，在创建完采样点shp之后，无法创建栅格文件。可能原因是 地理处理-环境-处理范围 不是“默认”，请修改后重试。<br>2.    无法对采样点shp文件进行投影。可能原因是选择的投影坐标系不适合输入的地点，请修改后重试。<br>3.    其他错误的话请检查输出文件路径内是否有空格、下划线等。</p>
-<h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://www.cnki.net/KCMS/detail/detail.aspx?filename=ZHCG201609005064&amp;dbname=CPFDTEMP&amp;dbcode=CPFD" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例</a></p>
-<p>引用格式：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
+<h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://www.cnki.net/KCMS/detail/detail.aspx?filename=ZHCG201609005064&amp;dbname=CPFDTEMP&amp;dbcode=CPFD" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
+<p>引用格式参考：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
 <p>使用该工具的公开研究成果，请注明以上引用，和/或附上本页面网址 <code>http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</code> 。</p>
 <h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/blogImg/transportation-contourline-tbx/交通等时线v1.2.3.tbx">交通等时线v1.2.3.tbx</a></p>
 ]]></content>
@@ -250,11 +250,11 @@
       <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
@@ -295,15 +295,15 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
       <category term="地铁" scheme="https://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
     
   </entry>
   
@@ -312,7 +312,7 @@
     <link href="https://i.xdc.at/2016/10/06/poi-data/"/>
     <id>https://i.xdc.at/2016/10/06/poi-data/</id>
     <published>2016-10-06T02:20:40.000Z</published>
-    <updated>2016-11-07T04:11:32.702Z</updated>
+    <updated>2016-11-24T01:58:47.826Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在<a href="#UPDATE">文末</a>。</em></p>
 <hr>
@@ -327,9 +327,9 @@
 <hr>
 <p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
 <p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
-<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE:"></a>UPDATE:</h3><p><strong>数据字段信息：</strong><br><img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息"></p>
+<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h3><p><strong>数据字段信息：</strong><br><img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息"></p>
 <p>POI分类对照表可 <a href="/assets/blogImg/poi-data/poi-type-list.pdf">点此下载</a></p>
-<p><strong>TIP:</strong><br>高德 API 在返回 POI 结果时，并非是完整数据，而是存在一定程度的缺失。部分权重较低的 POI，如 ATM 等，在大类搜索结果里缺失就较多。<br>为了规避缺失，可采用更换不同关键词、更改搜索范围等方法交叉抓取，将得到的结果合并去重。但这样会带来较大的抓取工作量，目前已有的4500+万条数据已能满足大多数场景下的分析需求。<br>如果需要某细分类的更完整数据，可发邮件至 <code>i@xdc.at</code> 定制抓取服务。</p>
+<p><strong>TIP:</strong><br>高德 API 在返回 POI 结果时，并非是完整数据，而是存在一定程度的缺失。部分权重较低的 POI，如 ATM 等，在大类搜索结果里缺失就较多。<br>为了规避缺失，可采用更换不同关键词、更改搜索范围等方法交叉抓取，将得到的结果合并去重。但这样会带来较大的抓取工作量，目前已有的4500+万条数据已能满足大多数场景下的分析需求。（<a href="/2016/11/20/poi-data-update-201611/">已更新至 5600 万数据量</a>）<br>如果需要某细分类的更完整数据，可发邮件至 <code>i@xdc.at</code> 定制抓取服务。</p>
 ]]></content>
     
     <summary type="html">
@@ -343,11 +343,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
   </entry>
   
@@ -356,11 +356,9 @@
     <link href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/"/>
     <id>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</id>
     <published>2016-10-05T07:20:39.000Z</published>
-    <updated>2016-11-07T05:14:38.221Z</updated>
+    <updated>2016-11-24T02:00:17.441Z</updated>
     
-    <content type="html"><![CDATA[<p>本文地址：<a href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
-<hr>
-<p><em>写在前面 :</em><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
+    <content type="html"><![CDATA[<p><strong>写在前面 :</strong><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
 <a id="more"></a>
 <h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
 <h3 id="2-构造一个-ArcGIS-可直接连接的数据表"><a href="#2-构造一个-ArcGIS-可直接连接的数据表" class="headerlink" title="2. 构造一个 ArcGIS 可直接连接的数据表"></a>2. 构造一个 ArcGIS 可直接连接的数据表</h3><p>要在 ArcGIS 内直接显示 SQL Server 数据表内的空间要素，则对数据表的结构有一定要求。<br>以点要素为例，创建的表需要以<code>int</code>类型的<code>OBJECTID</code>字段作为主键，并有一个<code>geometry</code>数据类型的字段。<br>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*****  创建包含空间数据的表 *****/</div><div class="line">USE [测试数据库]</div><div class="line">CREATE TABLE [测试数据表] (</div><div class="line">	[OBJECTID] [int] primary key not NULL,</div><div class="line">	[id] [varchar](10) NULL,</div><div class="line">	[name] [varchar](200) NULL,</div><div class="line">	[lng] [float] NULL,</div><div class="line">	[lat] [float] NULL,</div><div class="line">	[形状] [geometry] not NULL</div><div class="line">)</div><div class="line"></div><div class="line">/*****  将数据插入表中 *****/</div><div class="line">insert into [测试数据表]</div><div class="line">SELECT ROW_NUMBER()  over (order by [id]) as [OBJECTID]</div><div class="line">      ,[id]</div><div class="line">      ,[name]</div><div class="line">      ,[lng]</div><div class="line">      ,[lat]</div><div class="line">      ,geometry::STPointFromText(concat(&apos;POINT (&apos;,convert(varchar, [lng], 128), &apos; &apos;, convert(varchar, [lat], 128),  &apos;)&apos;), 4326 ) as [形状]</div><div class="line">  FROM [原数据表]</div></pre></td></tr></table></figure></p>
@@ -376,15 +374,11 @@
 <hr>
 <p><strong>Tip :</strong><br>如果想创建存储其他空间要素类型的数据表，如线要素的表，可在 ArcGIS 内将已有的线数据图层<code>右键-数据-导出数据...</code>，输出要素类的保存类型选择<code>数据库要素类</code>，将数据保存到数据库连接里的一张新表内，然后在 SQL Server 内查看这张表的结构，具体操作为对这张表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code> 。</p>
 <h3 id="UPDATE-2016-10-06"><a href="#UPDATE-2016-10-06" class="headerlink" title="UPDATE: 2016-10-06"></a>UPDATE: 2016-10-06</h3><p>为提高数据在 ArcGIS 内显示的效率，最好对数据表创建空间索引，参见 <a href="https://msdn.microsoft.com/zh-cn/library/bb964705.aspx" target="_blank" rel="external">创建、修改和删除空间索引</a> 。</p>
-<hr>
-<p>本文来自 <a href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/">https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</a>  </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文地址：&lt;a href=&quot;https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&quot;&gt;https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/&lt;/a&gt;  &lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;写在前面 :&lt;/em&gt;&lt;br&gt;&lt;strong&gt;&lt;em&gt;为什么要在 SQL Server 内创建空间要素？&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;该需求来自于千万级别POI数据的存储与可视化。&lt;br&gt;存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。&lt;br&gt;可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。&lt;br&gt;因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;写在前面 :&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;&lt;em&gt;为什么要在 SQL Server 内创建空间要素？&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;该需求来自于千万级别POI数据的存储与可视化。&lt;br&gt;存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。&lt;br&gt;可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。&lt;br&gt;因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。&lt;/p&gt;
     
     </summary>
     
@@ -513,11 +507,11 @@ print time.ctime()
     </summary>
     
     
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
+    
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     
