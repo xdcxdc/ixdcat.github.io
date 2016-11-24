@@ -56,11 +56,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
-    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
   </entry>
   
@@ -147,7 +147,7 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2016-11-24T01:51:09.052Z</updated>
+    <updated>2016-11-24T10:49:02.474Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br>(<a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">http://www.udparty.com/topic/1758.html</a>)。</p>
@@ -164,13 +164,15 @@
 <p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="/assets/blogImg/transportation-contourline-tbx/PcArcBruTile_0.4.rar">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
 </blockquote>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入过激活码时，可在任意机器上使用到2016年4月15日（该工具最早发布于2016年4月初）。之后使用需要输入与机器码对应的激活码，试用运行时，会在运行过程中显示出机器码。在Win7以上系统中，激活码可自动写入到用户文件夹，因此输入一次即可。</p>
-<blockquote>
-<p>输入激活码时<br><img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图" title="输入激活码时的截图"></p>
-</blockquote>
+<figure class="image-bubble">
+                <img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图">
+                <div class="image-caption">输入激活码时的截图</div>
+            </figure>
 <hr>
-<blockquote>
-<p>输入过激活码时<br><img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图" title="输入过激活码时的截图"></p>
-</blockquote>
+<figure class="image-bubble">
+                <img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图">
+                <div class="image-caption">输入过激活码时的截图</div>
+            </figure>
 <p>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>获取激活码时请提供运行时显示的机器码。</p>
 <h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1.    如果运行过程中，在创建完采样点shp之后，无法创建栅格文件。可能原因是 地理处理-环境-处理范围 不是“默认”，请修改后重试。<br>2.    无法对采样点shp文件进行投影。可能原因是选择的投影坐标系不适合输入的地点，请修改后重试。<br>3.    其他错误的话请检查输出文件路径内是否有空格、下划线等。</p>
 <h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://www.cnki.net/KCMS/detail/detail.aspx?filename=ZHCG201609005064&amp;dbname=CPFDTEMP&amp;dbcode=CPFD" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
@@ -191,11 +193,11 @@
     
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
-      <category term="交通等时线" scheme="https://i.xdc.at/tags/%E4%BA%A4%E9%80%9A%E7%AD%89%E6%97%B6%E7%BA%BF/"/>
-    
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="交通等时线" scheme="https://i.xdc.at/tags/%E4%BA%A4%E9%80%9A%E7%AD%89%E6%97%B6%E7%BA%BF/"/>
     
   </entry>
   
@@ -250,11 +252,11 @@
       <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
     
     
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
-    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
+    
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
@@ -295,15 +297,15 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
       <category term="地铁" scheme="https://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
+    
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
     
   </entry>
   
@@ -343,11 +345,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
-    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
   </entry>
   

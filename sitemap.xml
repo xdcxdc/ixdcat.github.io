@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</loc>
+    
+    <lastmod>2016-11-24T10:49:02.474Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</loc>
     
     <lastmod>2016-11-24T02:00:17.441Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://i.xdc.at/2016/10/06/poi-data/</loc>
     
     <lastmod>2016-11-24T01:58:47.826Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</loc>
-    
-    <lastmod>2016-11-24T01:51:09.052Z</lastmod>
     
   </url>
   

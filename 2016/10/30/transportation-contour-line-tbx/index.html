@@ -19,7 +19,7 @@ if (window.location.protocol != targetProtocol)
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="ArcGIS,交通等时线,tbx,工具箱">
+  <meta name="keywords" content="ArcGIS,tbx,工具箱,交通等时线">
   <meta name="description" content="该软件最早于 2016-04-06 发布在城市数据派网站(http://www.udparty.com/topic/1758.html)。
 
 软件介绍该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。支持驾车、公共交通">
@@ -37,7 +37,7 @@ if (window.location.protocol != targetProtocol)
 <meta property="og:image" content="https://i.xdc.at/assets/blogImg/transportation-contourline-tbx/result.png">
 <meta property="og:image" content="https://i.xdc.at/assets/blogImg/transportation-contourline-tbx/running-3.png">
 <meta property="og:image" content="https://i.xdc.at/assets/blogImg/transportation-contourline-tbx/running-4.png">
-<meta property="og:updated_time" content="2016-11-24T01:51:09.052Z">
+<meta property="og:updated_time" content="2016-11-24T10:49:02.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于高德 API 的交通等时线划分工具">
 <meta name="twitter:description" content="该软件最早于 2016-04-06 发布在城市数据派网站(http://www.udparty.com/topic/1758.html)。
@@ -48,7 +48,7 @@ if (window.location.protocol != targetProtocol)
     <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
   
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.2.5">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.6">
 </head>
 
 <body>
@@ -103,7 +103,7 @@ if (window.location.protocol != targetProtocol)
         
             <li class="waves-block waves-effect">
               <a href="/about/"  >
-                <i class="icon icon-lg icon-file"></i>
+                <i class="icon icon-lg icon-user-o"></i>
                 关于
               </a>
             </li>
@@ -209,13 +209,15 @@ if (window.location.protocol != targetProtocol)
 <p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="/assets/blogImg/transportation-contourline-tbx/PcArcBruTile_0.4.rar">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
 </blockquote>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入过激活码时，可在任意机器上使用到2016年4月15日（该工具最早发布于2016年4月初）。之后使用需要输入与机器码对应的激活码，试用运行时，会在运行过程中显示出机器码。在Win7以上系统中，激活码可自动写入到用户文件夹，因此输入一次即可。</p>
-<blockquote>
-<p>输入激活码时<br><img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图" title="输入激活码时的截图"></p>
-</blockquote>
+<figure class="image-bubble">
+                <img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图">
+                <div class="image-caption">输入激活码时的截图</div>
+            </figure>
 <hr>
-<blockquote>
-<p>输入过激活码时<br><img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图" title="输入过激活码时的截图"></p>
-</blockquote>
+<figure class="image-bubble">
+                <img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图">
+                <div class="image-caption">输入过激活码时的截图</div>
+            </figure>
 <p>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>获取激活码时请提供运行时显示的机器码。</p>
 <h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1.    如果运行过程中，在创建完采样点shp之后，无法创建栅格文件。可能原因是 地理处理-环境-处理范围 不是“默认”，请修改后重试。<br>2.    无法对采样点shp文件进行投影。可能原因是选择的投影坐标系不适合输入的地点，请修改后重试。<br>3.    其他错误的话请检查输出文件路径内是否有空格、下划线等。</p>
 <h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://www.cnki.net/KCMS/detail/detail.aspx?filename=ZHCG201609005064&amp;dbname=CPFDTEMP&amp;dbcode=CPFD" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
@@ -327,7 +329,7 @@ if (window.location.protocol != targetProtocol)
 <div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="transportation-contour-line-tbx" data-title="基于高德 API 的交通等时线划分工具" data-url="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.2.5"></script>
+<script src="/js/embed.min.js?v=1.2.6"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
@@ -420,7 +422,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.2.5"></script>
+<script src="/js/main.min.js?v=1.2.6"></script>
 
 
 
@@ -441,7 +443,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.2.5"></script>
+<script src="/js/search.min.js?v=1.2.6"></script>
 
 
 
