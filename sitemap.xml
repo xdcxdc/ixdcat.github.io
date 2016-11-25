@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://i.xdc.at/2016/11/20/poi-data-update-201611/</loc>
+    
+    <lastmod>2016-11-25T15:39:35.815Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://i.xdc.at/about/index.html</loc>
     
-    <lastmod>2016-11-24T11:52:20.660Z</lastmod>
+    <lastmod>2016-11-24T12:31:09.542Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>https://i.xdc.at/2016/10/06/poi-data/</loc>
     
     <lastmod>2016-11-24T01:58:47.826Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://i.xdc.at/2016/11/20/poi-data-update-201611/</loc>
-    
-    <lastmod>2016-11-24T01:49:21.517Z</lastmod>
     
   </url>
   
