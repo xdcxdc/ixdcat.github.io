@@ -39,12 +39,15 @@
     <link href="https://i.xdc.at/2016/11/20/poi-data-update-201611/"/>
     <id>https://i.xdc.at/2016/11/20/poi-data-update-201611/</id>
     <published>2016-11-20T14:46:40.000Z</published>
-    <updated>2016-11-25T15:39:35.815Z</updated>
+    <updated>2016-11-28T14:45:16.208Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/2016/10/06/poi-data/">上篇对 POI 数据的介绍</a> 中提到，高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。</p>
 <p>因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围抓取。统计后发现，补漏与更新的效果还是比较明显的。</p>
 <p>数量上，从上次的 4500w+ 扩充到了 5600w+，这个数量已经超过了网络上有人所称的5000w 。并且，对超过 1000w 的数据进行了内容更新，更新包括名称的更改、位置的微调、分类的调整、地址的修改等。<br><figure class="image-bubble">
-                <img src="/assets/blogImg/poi-data-update-201611/change-of-location-and-name.png" alt="名称更改与位置微调">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data-update-201611/change-of-location-and-name.png" alt="名称更改与位置微调" title="">
+                </div>
                 <div class="image-caption">名称更改与位置微调</div>
             </figure></p>
 <p><strong>各省份 与 TOP 30 城市的 POI 数量</strong></p>
@@ -53,7 +56,7 @@
 <tr>
 <th style="text-align:center">省份</th>
 <th style="text-align:center">数量</th>
-<th style="text-align:center"></th>
+<th></th>
 <th style="text-align:center">城市</th>
 <th style="text-align:center">数量</th>
 </tr>
@@ -62,243 +65,250 @@
 <tr>
 <td style="text-align:center">广东省</td>
 <td style="text-align:center">620万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">上海市</td>
 <td style="text-align:center">180万+</td>
 </tr>
 <tr>
 <td style="text-align:center">江苏省</td>
 <td style="text-align:center">475万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">北京市</td>
 <td style="text-align:center">150万+</td>
 </tr>
 <tr>
 <td style="text-align:center">浙江省</td>
 <td style="text-align:center">385万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">广州市</td>
 <td style="text-align:center">120万+</td>
 </tr>
 <tr>
 <td style="text-align:center">山东省</td>
 <td style="text-align:center">380万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">成都市</td>
 <td style="text-align:center">115万+</td>
 </tr>
 <tr>
 <td style="text-align:center">四川省</td>
 <td style="text-align:center">305万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">深圳市</td>
 <td style="text-align:center">110万+</td>
 </tr>
 <tr>
 <td style="text-align:center">河南省</td>
 <td style="text-align:center">300万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">重庆市</td>
 <td style="text-align:center">105万+</td>
 </tr>
 <tr>
 <td style="text-align:center">河北省</td>
 <td style="text-align:center">235万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">苏州市</td>
 <td style="text-align:center">100万+</td>
 </tr>
 <tr>
 <td style="text-align:center">湖北省</td>
 <td style="text-align:center">210万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">杭州市</td>
 <td style="text-align:center">85万+</td>
 </tr>
 <tr>
 <td style="text-align:center">湖南省</td>
 <td style="text-align:center">205万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">东莞市</td>
 <td style="text-align:center">75万+</td>
 </tr>
 <tr>
 <td style="text-align:center">安徽省</td>
 <td style="text-align:center">190万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">武汉市</td>
 <td style="text-align:center">70万+</td>
 </tr>
 <tr>
 <td style="text-align:center">辽宁省</td>
 <td style="text-align:center">180万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">天津市</td>
 <td style="text-align:center">70万+</td>
 </tr>
 <tr>
 <td style="text-align:center">上海市</td>
 <td style="text-align:center">180万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">佛山市</td>
 <td style="text-align:center">60万+</td>
 </tr>
 <tr>
 <td style="text-align:center">福建省</td>
 <td style="text-align:center">170万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">西安市</td>
 <td style="text-align:center">60万+</td>
 </tr>
 <tr>
 <td style="text-align:center">广西壮族自治区</td>
 <td style="text-align:center">155万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">宁波市</td>
 <td style="text-align:center">60万+</td>
 </tr>
 <tr>
 <td style="text-align:center">北京市</td>
 <td style="text-align:center">150万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">南京市</td>
 <td style="text-align:center">55万+</td>
 </tr>
 <tr>
 <td style="text-align:center">陕西省</td>
 <td style="text-align:center">150万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">郑州市</td>
 <td style="text-align:center">55万+</td>
 </tr>
 <tr>
 <td style="text-align:center">江西省</td>
 <td style="text-align:center">140万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">无锡市</td>
 <td style="text-align:center">55万+</td>
 </tr>
 <tr>
 <td style="text-align:center">云南省</td>
 <td style="text-align:center">140万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">青岛市</td>
 <td style="text-align:center">55万+</td>
 </tr>
 <tr>
 <td style="text-align:center">山西省</td>
 <td style="text-align:center">120万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">长沙市</td>
 <td style="text-align:center">50万+</td>
 </tr>
 <tr>
 <td style="text-align:center">黑龙江省</td>
 <td style="text-align:center">115万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">温州市</td>
 <td style="text-align:center">45万+</td>
 </tr>
 <tr>
 <td style="text-align:center">重庆市</td>
 <td style="text-align:center">105万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">沈阳市</td>
 <td style="text-align:center">45万+</td>
 </tr>
 <tr>
 <td style="text-align:center">内蒙古自治区</td>
 <td style="text-align:center">100万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">石家庄市</td>
 <td style="text-align:center">45万+</td>
 </tr>
 <tr>
 <td style="text-align:center">贵州省</td>
 <td style="text-align:center">95万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">金华市</td>
 <td style="text-align:center">40万+</td>
 </tr>
 <tr>
 <td style="text-align:center">吉林省</td>
 <td style="text-align:center">95万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">昆明市</td>
 <td style="text-align:center">40万+</td>
 </tr>
 <tr>
 <td style="text-align:center">甘肃省</td>
 <td style="text-align:center">75万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">哈尔滨市</td>
 <td style="text-align:center">40万+</td>
 </tr>
 <tr>
 <td style="text-align:center">天津市</td>
 <td style="text-align:center">70万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">合肥市</td>
 <td style="text-align:center">40万+</td>
 </tr>
 <tr>
 <td style="text-align:center">新疆维吾尔自治区</td>
 <td style="text-align:center">70万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">常州市</td>
 <td style="text-align:center">35万+</td>
 </tr>
 <tr>
 <td style="text-align:center">宁夏回族自治区</td>
 <td style="text-align:center">30万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">南宁市</td>
 <td style="text-align:center">35万+</td>
 </tr>
 <tr>
 <td style="text-align:center">海南省</td>
 <td style="text-align:center">30万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">济南市</td>
 <td style="text-align:center">35万+</td>
 </tr>
 <tr>
 <td style="text-align:center">香港特别行政区</td>
 <td style="text-align:center">25万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center">泉州市</td>
 <td style="text-align:center">35万+</td>
 </tr>
 <tr>
 <td style="text-align:center">青海省</td>
 <td style="text-align:center">20万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">西藏自治区</td>
 <td style="text-align:center">20万+</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">澳门特别行政区</td>
 <td style="text-align:center">5万以下</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">台湾省</td>
 <td style="text-align:center">5万以下</td>
-<td style="text-align:center"></td>
+<td></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
+<p><strong>数据字段信息：</strong><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息" title="">
+                </div>
+                <div class="image-caption">数据字段信息</div>
+            </figure></p>
 ]]></content>
     
     <summary type="html">
@@ -371,18 +381,37 @@
     <published>2016-10-31T05:59:33.000Z</published>
     <updated>2016-11-05T13:53:23.831Z</updated>
     
-    <content type="html"><![CDATA[<p>tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。<br><img src="/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png" alt="tbx文件"></p>
+    <content type="html"><![CDATA[<p>tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png" alt="tbx文件" title="">
+                </div>
+                <div class="image-caption">tbx文件</div>
+            </figure></p>
 <p>tbx 文件在 ArcGIS 内打开一般有两种方法：</p>
-<h4 id="1-直接在目录窗口打开"><a href="#1-直接在目录窗口打开" class="headerlink" title="1. 直接在目录窗口打开"></a>1. 直接在目录窗口打开</h4><p><img src="/assets/blogImg/tbx-in-ArcGIS/open-tbx.png" alt="打开tbx文件"></p>
+<h4 id="1-直接在目录窗口打开"><a href="#1-直接在目录窗口打开" class="headerlink" title="1. 直接在目录窗口打开"></a>1. 直接在目录窗口打开</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/tbx-in-ArcGIS/open-tbx.png" alt="打开tbx文件" title="">
+                </div>
+                <div class="image-caption">打开tbx文件</div>
+            </figure>
 <p>在 ArcMap 软件的目录(Catalog) 窗口定位到该文件，并双击打开。必要时可能需要先添加文件夹连接。</p>
-<h4 id="2-添加到已有工具箱列表"><a href="#2-添加到已有工具箱列表" class="headerlink" title="2. 添加到已有工具箱列表"></a>2. 添加到已有工具箱列表</h4><p><img src="/assets/blogImg/tbx-in-ArcGIS/add-tbx.png" alt="添加tbx文件"></p>
+<h4 id="2-添加到已有工具箱列表"><a href="#2-添加到已有工具箱列表" class="headerlink" title="2. 添加到已有工具箱列表"></a>2. 添加到已有工具箱列表</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/tbx-in-ArcGIS/add-tbx.png" alt="添加tbx文件" title="">
+                </div>
+                <div class="image-caption">添加tbx文件</div>
+            </figure>
 <p>在 ArcMap 软件的工具箱(ArcToolbox) 窗口，对窗口内的 <code>ArcToolbox</code>右键单击，再 <code>添加工具箱...</code> ，找到 tbx 文件并选中，点 <code>打开</code> ，该工具箱即被添加到默认的工具箱列表内，下次使用不必再到原文件夹内去寻找。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。&lt;br&gt;&lt;img src=&quot;/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png&quot; alt=&quot;tbx文件&quot;&gt;&lt;/p&gt;
-&lt;p&gt;tbx 文件在 ArcG
+      &lt;p&gt;tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。&lt;br&gt;&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+             
     
     </summary>
     
@@ -402,30 +431,65 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2016-11-24T10:49:02.474Z</updated>
+    <updated>2016-11-28T14:47:41.372Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br>(<a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">http://www.udparty.com/topic/1758.html</a>)。</p>
 </blockquote>
 <h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
-<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><img src="/assets/blogImg/transportation-contourline-tbx/main-window.png" alt="主窗口" title="主窗口"><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），在点击每一输入项时可以显示详细介绍（下图）。<br><img src="/assets/blogImg/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="帮助窗口"><br>各项输入的介绍请参考软件内的帮助信息。</p>
-<p>运行截图：<br><img src="/assets/blogImg/transportation-contourline-tbx/running-1.png" alt="运行截图1" title="运行截图1"></p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/main-window.png" alt="主窗口" title="">
+                </div>
+                <div class="image-caption">主窗口</div>
+            </figure><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），在点击每一输入项时可以显示详细介绍（下图）。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="">
+                </div>
+                <div class="image-caption">帮助窗口</div>
+            </figure><br>各项输入的介绍请参考软件内的帮助信息。</p>
+<p>运行截图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-1.png" alt="运行截图1" title="">
+                </div>
+                <div class="image-caption">运行截图1</div>
+            </figure></p>
 <blockquote>
 <p>上图是未输入激活码时的运行情况，关于激活码参见 <a href="#获取激活码">获取激活码</a></p>
 </blockquote>
-<p><img src="/assets/blogImg/transportation-contourline-tbx/running-2.png" alt="运行截图2" title="运行截图2"></p>
-<p>运行结果：<br>执行结果图： 驾车30分钟等时线（ArcMap添加的新图层默认为黑白配色，下图为加了底图和调节过图层显示颜色后的效果图）<br><img src="/assets/blogImg/transportation-contourline-tbx/result.png" alt="运行结果" title="运行结果"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-2.png" alt="运行截图2" title="">
+                </div>
+                <div class="image-caption">运行截图2</div>
+            </figure>
+<p>运行结果：<br>执行结果图： 驾车30分钟等时线（ArcMap添加的新图层默认为黑白配色，下图为加了底图和调节过图层显示颜色后的效果图）<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/result.png" alt="运行结果" title="">
+                </div>
+                <div class="image-caption">运行结果</div>
+            </figure></p>
 <blockquote>
 <p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="/assets/blogImg/transportation-contourline-tbx/PcArcBruTile_0.4.rar">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
 </blockquote>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入过激活码时，可在任意机器上使用到2016年4月15日（该工具最早发布于2016年4月初）。之后使用需要输入与机器码对应的激活码，试用运行时，会在运行过程中显示出机器码。在Win7以上系统中，激活码可自动写入到用户文件夹，因此输入一次即可。</p>
 <figure class="image-bubble">
-                <img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图" title="">
+                </div>
                 <div class="image-caption">输入激活码时的截图</div>
             </figure>
-<hr>
 <figure class="image-bubble">
-                <img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图" title="">
+                </div>
                 <div class="image-caption">输入过激活码时的截图</div>
             </figure>
 <p>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>获取激活码时请提供运行时显示的机器码。</p>
@@ -469,29 +533,109 @@
 <p>公共交通一直以来都是城市发展的重点，国务院也曾多次就发展城市公共交通下发指导意见。2016年2月24日，《上海市公共汽（电）车客运线路优化导则》编制完成，截至3月3日开始广泛的征询市民意见。那么，上海市民对市内公共交通的运营现状了解多少呢？我们下面将从公交基本服务情况、公交服务能力和区域公交联系三大方面对上海市的公交建设发展现状进行分析。</p>
 <a id="more"></a>
 <h3 id="1-线路基本服务情况"><a href="#1-线路基本服务情况" class="headerlink" title="1. 线路基本服务情况"></a>1. 线路基本服务情况</h3><p>公共汽车一般是城市中发展历史最久，覆盖面积最广的公共交通形式。公交站点分布与公交线路的布局与居民生活日常出行息息相关。城市发展的现阶段，公交作为一种公共资源在空间上的分布肯定是非均质的。那么，在上海市内哪些地区公交站点、公交线路的分布最为密集呢？于是我们计算了站点<em>(计算时使用的数据中，如果同一站点停靠了多条公交线路，则每条线路都会有一个对应的点。下文涉及站点时与此相同)</em>的点密度图与线路的线密度图<em>(同一线路的往返方向为不同的两条线)</em>。从以下两图可以看到，公交站点与公交线路主要集中在中心城区与郊区的副中心，与上海市的城镇体系结构和人口空间分布情况基本一致。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/density.jpg" alt="公交站点与公交线路密度"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/density.jpg" alt="公交站点与公交线路密度" title="">
+                </div>
+                <div class="image-caption">公交站点与公交线路密度</div>
+            </figure>
 <p>除了站点密度和线路密度之外，公交线路的运营长度也是评价公交服务水平的重要指标，一般以不超过15公里为宜。线路过长，车辆周转率下降，为保证效率需要投入更多的运营车辆而增加成本，否则发车间隔增加，乘车不便；而线路过短，则会导致居民出行换乘次数增加，同样会给乘客带来诸多不便。统计分析显示，上海市公交运营长度主要集中在15公里左右，有大量的运营长度超过15公里的公交；线路长路超过20公里后的公交数量急剧下降。这也和上海市建成区面积的扩张有一定的关系。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.jpg" alt="线路长度分布"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.jpg" alt="线路长度分布" title="">
+                </div>
+                <div class="image-caption">线路长度分布</div>
+            </figure>
 <p>公交线路在尽可能保证覆盖城市道路的同时，线路非直线系数（起点、终点间的路上实际距离与两点间直线距离的比值）也不宜过大，最后应该控制在1.5以下，过大则会导致居民出行距离和出行时间增加。经过分析发现，上海市一半以上线路的非直线系数超标，但不排除分析结果受到了部分环形线路干扰的情况。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/od-line.jpg" alt="起点终点连线"><br><img src="/assets/blogImg/shanghai-busline-analysis/index.jpg" alt="非直线系数分布"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/od-line.jpg" alt="起点终点连线" title="">
+                </div>
+                <div class="image-caption">起点终点连线</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/index.jpg" alt="非直线系数分布" title="">
+                </div>
+                <div class="image-caption">非直线系数分布</div>
+            </figure>
 <p>从运营时间来看，公交线路的运营时间主要集中在白天的8:00-18:00时间段，在凌晨1:00-4:00时间段运营车辆最少。公交运行一般在早上7:00时段正式开始，运行线路数在至7点-19点的时间段内一直维持在高水平。在夜间运营的车辆中，主要是从市中心开往郊区方向，徐泾镇方向有较多夜间行车。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/running-lines.gif" alt="逐时段运营线路"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/running-lines.gif" alt="逐时段运营线路" title="">
+                </div>
+                <div class="image-caption">逐时段运营线路</div>
+            </figure>
 <h3 id="2-服务面积与服务人口"><a href="#2-服务面积与服务人口" class="headerlink" title="2. 服务面积与服务人口"></a>2. 服务面积与服务人口</h3><p>对于公交系统的评价，一个重要的指标是其服务范围。一般公交站点的服务半径在300至500米，是步行适宜的距离，据此计算公交站点的服务面积覆盖率可以评价公交线路的服务能力。<br>就整个上海市而言，以300米来计算公交站点的服务范围，则服务面积共覆盖上海市建成区的56.40%，以500米计算服务范围，则覆盖建成区面积的78.15%，距离500米内90%的面积覆盖的目标还有很长的路要走。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/service-area.jpg" alt="服务面积"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/service-area.jpg" alt="服务面积" title="">
+                </div>
+                <div class="image-caption">服务面积</div>
+            </figure>
 <p>以上是从服务面积的角度分析覆盖率，那么，从服务人口数角度的分析结果会是怎样呢？<br>以上海市第六次人口普查的常住人口密度作为服务人口的统计依据，计算后发现，300m和500m半径的服务人口分别占到了常住人口总数的74.95%和89.20% 。从服务人口角度计算的上海市公交服务能力更好。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/service-popu.jpg" alt="服务人口"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/service-popu.jpg" alt="服务人口" title="">
+                </div>
+                <div class="image-caption">服务人口</div>
+            </figure>
 <p>上文已提到，公交资源的空间分布是不均衡的。我们对于上海市不同的行政区的公交资源进行了比较分析。比较不同的行政区内公交站点数量发现，浦东新区、闵行区、松江区内公交站点的数量是所有行政区中最多的。然而在计算单位面积内的公交站点数量时，我们发现，黄浦区、静安区、虹口区等中心城区的单位面积的公交资源排在前列，中心城区公交站的密度仍远远大于郊区。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.jpg" alt="各区公交站点数量"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.jpg" alt="各区公交站点数量" title="">
+                </div>
+                <div class="image-caption">各区公交站点数量</div>
+            </figure>
 <p>比较不同行政区内的公交线路里程数，我们了发现相同的情况。公交线路总里程的比较上，郊区大于中心城区；但比较单位面积内的公交里程，中心城区则远远大于郊区。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busline-length.jpg" alt="各区公交里程"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/busline-length.jpg" alt="各区公交里程" title="">
+                </div>
+                <div class="image-caption">各区公交里程</div>
+            </figure>
 <p>公共交通的建设上是中心城区占优，因此不同地区的公交服务情况也会不同。<br>我们比较了各行政区内人均的公交站点数量和公交里程。在人均公交里程上，各个行政区的差别不大。但比较每个站点平均服务人口上，中心城区所面临的服务的压力要比郊区地区大得多。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.jpg" alt="每个车站平均服务人口"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.jpg" alt="每个车站平均服务人口" title="">
+                </div>
+                <div class="image-caption">每个车站平均服务人口</div>
+            </figure>
 <h3 id="3-公交线路空间联系"><a href="#3-公交线路空间联系" class="headerlink" title="3. 公交线路空间联系"></a>3. 公交线路空间联系</h3><p>公交线路串联起了上海市内不同的行政区和重要的地点。具体每个街道之间通过公交线路的联系程度有多强呢？<br>我们设定，一条公交线路只要同时在两个街道有停靠，那就为这两个街道间的联系强度值+1，最终生成对应的街道联系矩阵。由下图可知，联系较强的区域主要由中心城区向外呈放射状分布，陆家嘴街道和徐家汇街道分别是浦东和浦西的公交联系核心，但浦东浦西之间的公交联系较弱。</p>
-<p><img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.jpg" alt="街道间联系强度"><br><img src="/assets/blogImg/shanghai-busline-analysis/table.jpg" alt="街道间联系线路数量"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.jpg" alt="街道间联系强度" title="">
+                </div>
+                <div class="image-caption">街道间联系强度</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/shanghai-busline-analysis/table.jpg" alt="街道间联系线路数量" title="">
+                </div>
+                <div class="image-caption">街道间联系线路数量</div>
+            </figure>
 <p>以上就是我们初步的分析结果，欢迎各位大侠与我们交流讨论~</p>
 <p><em>本文编辑： xdc@farsightj.cn , zyp@farsightj.cn , tjl@farsightj.cn</em></p>
 <hr>
-<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
+<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号" title="">
+                </div>
+                <div class="image-caption">远见公众号</div>
+            </figure></p>
 <p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
 ]]></content>
     
@@ -529,14 +673,44 @@
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
 <p>新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。</p>
-<p>全国公共交通站点：<br><img src="/assets/blogImg/busline-data/busstop.jpg" alt="全国公共交通站点"></p>
+<p>全国公共交通站点：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/busline-data/busstop.jpg" alt="全国公共交通站点" title="">
+                </div>
+                <div class="image-caption">全国公共交通站点</div>
+            </figure></p>
 <a id="more"></a>
-<p>全国公共交通线网：<br><img src="/assets/blogImg/busline-data/busline.jpg" alt="全国公共交通线网"></p>
-<p>上海市公共交通线网，超精准线路哦：<br><img src="/assets/blogImg/busline-data/shanghai-busline.jpg" alt="上海市公共交通线网"></p>
-<p>市中心放大：<br><img src="/assets/blogImg/busline-data/shanghai-center-busline.jpg" alt="上海市中心区公共交通线网"></p>
+<p>全国公共交通线网：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/busline-data/busline.jpg" alt="全国公共交通线网" title="">
+                </div>
+                <div class="image-caption">全国公共交通线网</div>
+            </figure></p>
+<p>上海市公共交通线网，超精准线路哦：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/busline-data/shanghai-busline.jpg" alt="上海市公共交通线网" title="">
+                </div>
+                <div class="image-caption">上海市公共交通线网</div>
+            </figure></p>
+<p>市中心放大：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/busline-data/shanghai-center-busline.jpg" alt="上海市中心区公共交通线网" title="">
+                </div>
+                <div class="image-caption">上海市中心区公共交通线网</div>
+            </figure></p>
 <p>属性包含运营时间、发车间隔、票价、是否空调车等。</p>
 <hr>
-<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
+<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号" title="">
+                </div>
+                <div class="image-caption">远见公众号</div>
+            </figure></p>
 <p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
 ]]></content>
     
@@ -545,7 +719,13 @@
       &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734834&amp;amp;idx=1&amp;amp;sn=5dd381774506bffc2edcfea63a3db736&quot;&gt;原文链接&lt;/a&gt;。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。&lt;/p&gt;
-&lt;p&gt;全国公共交通站点：&lt;br&gt;&lt;img src=&quot;/assets/blogImg/busline-data/busstop.jpg&quot; alt=&quot;全国公共交通站点&quot;&gt;&lt;/p&gt;
+&lt;p&gt;全国公共交通站点：&lt;br&gt;&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/assets/blogImg/busline-data/busstop.jpg&quot; alt=&quot;全国公共交通站点&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;全国公共交通站点&lt;/div&gt;
+            &lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
@@ -575,16 +755,58 @@
 <hr>
 <p>新鲜出炉的2016全国POI，共约4500+万条。<br>分类齐全，位置精准，字段完整。展示如下：</p>
 <a id="more"></a>
-<p>全国POI密度分布：<br><img src="/assets/blogImg/poi-data/poi-density.jpg" alt="全国POI密度分布"></p>
-<p>全国黄焖鸡米饭分布：<br><img src="/assets/blogImg/poi-data/poi-hmjmf.jpg" alt="全国黄焖鸡米饭分布"></p>
-<p>全国沙县小吃分布:<br><img src="/assets/blogImg/poi-data/poi-sxxc.jpg" alt="全国沙县小吃分布"></p>
-<p>全国公交站点分布：<br><img src="/assets/blogImg/poi-data/poi-gjzd.jpg" alt="全国公交站点分布"></p>
-<p>同济大学周边全部POI：<br><img src="/assets/blogImg/poi-data/poi-tjdx.jpg" alt="同济大学周边全部POI"></p>
+<p>全国POI密度分布：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data/poi-density.jpg" alt="全国POI密度分布" title="">
+                </div>
+                <div class="image-caption">全国POI密度分布</div>
+            </figure></p>
+<p>全国黄焖鸡米饭分布：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data/poi-hmjmf.jpg" alt="全国黄焖鸡米饭分布" title="">
+                </div>
+                <div class="image-caption">全国黄焖鸡米饭分布</div>
+            </figure></p>
+<p>全国沙县小吃分布:<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data/poi-sxxc.jpg" alt="全国沙县小吃分布" title="">
+                </div>
+                <div class="image-caption">全国沙县小吃分布</div>
+            </figure></p>
+<p>全国公交站点分布：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data/poi-gjzd.jpg" alt="全国公交站点分布" title="">
+                </div>
+                <div class="image-caption">全国公交站点分布</div>
+            </figure></p>
+<p>同济大学周边全部POI：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data/poi-tjdx.jpg" alt="同济大学周边全部POI" title="">
+                </div>
+                <div class="image-caption">同济大学周边全部POI</div>
+            </figure></p>
 <p>结构化存储，任意筛选切分！<br>各位项目或研究大侠！<br>有需要请与我们公众号联系哦~</p>
 <hr>
-<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号"></p>
+<p>欲了解更多数据与分析情况，欢迎关注公众号“远见”与我们联系。扫描下面的二维码识别关注。<br>手机端微信外看到此文章，可在微信搜索“farsightj”添加我们的公众号。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/qrcode/wx-farsightj.jpg" alt="远见公众号" title="">
+                </div>
+                <div class="image-caption">远见公众号</div>
+            </figure></p>
 <p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
-<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h3><p><strong>数据字段信息：</strong><br><img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息"></p>
+<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h3><p><strong>数据字段信息：</strong><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息" title="">
+                </div>
+                <div class="image-caption">数据字段信息</div>
+            </figure></p>
 <p>POI分类对照表可 <a href="/assets/blogImg/poi-data/poi-type-list.pdf">点此下载</a></p>
 <p><strong>TIP:</strong><br>高德 API 在返回 POI 结果时，并非是完整数据，而是存在一定程度的缺失。部分权重较低的 POI，如 ATM 等，在大类搜索结果里缺失就较多。<br>为了规避缺失，可采用更换不同关键词、更改搜索范围等方法交叉抓取，将得到的结果合并去重。但这样会带来较大的抓取工作量，目前已有的4500+万条数据已能满足大多数场景下的分析需求。（<a href="/2016/11/20/poi-data-update-201611/">已更新至 5600 万数据量</a>）<br>如果需要某细分类的更完整数据，可发邮件至 <code>i@xdc.at</code> 定制抓取服务。</p>
 ]]></content>
@@ -651,7 +873,7 @@
     <link href="https://i.xdc.at/2016/10/04/markdown-test/"/>
     <id>https://i.xdc.at/2016/10/04/markdown-test/</id>
     <published>2016-10-04T09:04:12.000Z</published>
-    <updated>2016-10-17T14:45:42.693Z</updated>
+    <updated>2016-11-26T01:51:13.263Z</updated>
     
     <content type="html"><![CDATA[<p>标题</p>
 <p>标题直接以1个或多个<code>#</code>开头，表示不同等级。</p>
@@ -677,8 +899,15 @@
 <p>这里是引用<br>多行引用</p>
 </blockquote>
 <hr>
-<p>测试插入图片<br><code>![图片替代文字](http://i.xdc.at/assets/avatar/avatar.png &quot;图片标题&quot;)</code></p>
-<p><img src="http://i.xdc.at/assets/avatar/avatar.png" alt="avatar" title="图片标题"></p>
+<p>测试插入图片</p>
+<p><code>![图片替代文字](http://i.xdc.at/assets/avatar/avatar.png &quot;图片标题&quot;)</code></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://i.xdc.at/assets/avatar/avatar.png" alt="avatar" title="">
+                </div>
+                <div class="image-caption">avatar</div>
+            </figure>
 <p>测试插入连接<br><code>[链接文字](http://i.xdc.at/ &quot;链接标题&quot;)</code><br><a href="http://i.xdc.at/" title="链接标题">主页</a><br>链接标题可省略</p>
 <hr>
 <p>粗体 <code>**这里是粗体**</code><br>斜体 <code>*这里是斜体*</code></p>

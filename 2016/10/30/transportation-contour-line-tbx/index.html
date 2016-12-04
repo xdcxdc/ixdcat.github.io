@@ -37,7 +37,7 @@ if (window.location.protocol != targetProtocol)
 <meta property="og:image" content="https://i.xdc.at/assets/blogImg/transportation-contourline-tbx/result.png">
 <meta property="og:image" content="https://i.xdc.at/assets/blogImg/transportation-contourline-tbx/running-3.png">
 <meta property="og:image" content="https://i.xdc.at/assets/blogImg/transportation-contourline-tbx/running-4.png">
-<meta property="og:updated_time" content="2016-11-24T10:49:02.474Z">
+<meta property="og:updated_time" content="2016-11-28T14:47:41.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于高德 API 的交通等时线划分工具">
 <meta name="twitter:description" content="该软件最早于 2016-04-06 发布在城市数据派网站(http://www.udparty.com/topic/1758.html)。
@@ -48,7 +48,19 @@ if (window.location.protocol != targetProtocol)
     <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
   
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.2.7">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-85156693-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+
 </head>
 
 <body>
@@ -117,6 +129,15 @@ if (window.location.protocol != targetProtocol)
   <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
   <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
     </div>
   </div>
@@ -198,24 +219,59 @@ if (window.location.protocol != targetProtocol)
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br>(<a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">http://www.udparty.com/topic/1758.html</a>)。</p>
 </blockquote>
 <h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
-<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><img src="/assets/blogImg/transportation-contourline-tbx/main-window.png" alt="主窗口" title="主窗口"><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），在点击每一输入项时可以显示详细介绍（下图）。<br><img src="/assets/blogImg/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="帮助窗口"><br>各项输入的介绍请参考软件内的帮助信息。</p>
-<p>运行截图：<br><img src="/assets/blogImg/transportation-contourline-tbx/running-1.png" alt="运行截图1" title="运行截图1"></p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/main-window.png" alt="主窗口" title="">
+                </div>
+                <div class="image-caption">主窗口</div>
+            </figure><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），在点击每一输入项时可以显示详细介绍（下图）。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="">
+                </div>
+                <div class="image-caption">帮助窗口</div>
+            </figure><br>各项输入的介绍请参考软件内的帮助信息。</p>
+<p>运行截图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-1.png" alt="运行截图1" title="">
+                </div>
+                <div class="image-caption">运行截图1</div>
+            </figure></p>
 <blockquote>
 <p>上图是未输入激活码时的运行情况，关于激活码参见 <a href="#获取激活码">获取激活码</a></p>
 </blockquote>
-<p><img src="/assets/blogImg/transportation-contourline-tbx/running-2.png" alt="运行截图2" title="运行截图2"></p>
-<p>运行结果：<br>执行结果图： 驾车30分钟等时线（ArcMap添加的新图层默认为黑白配色，下图为加了底图和调节过图层显示颜色后的效果图）<br><img src="/assets/blogImg/transportation-contourline-tbx/result.png" alt="运行结果" title="运行结果"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-2.png" alt="运行截图2" title="">
+                </div>
+                <div class="image-caption">运行截图2</div>
+            </figure>
+<p>运行结果：<br>执行结果图： 驾车30分钟等时线（ArcMap添加的新图层默认为黑白配色，下图为加了底图和调节过图层显示颜色后的效果图）<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/result.png" alt="运行结果" title="">
+                </div>
+                <div class="image-caption">运行结果</div>
+            </figure></p>
 <blockquote>
 <p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="/assets/blogImg/transportation-contourline-tbx/PcArcBruTile_0.4.rar">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
 </blockquote>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入过激活码时，可在任意机器上使用到2016年4月15日（该工具最早发布于2016年4月初）。之后使用需要输入与机器码对应的激活码，试用运行时，会在运行过程中显示出机器码。在Win7以上系统中，激活码可自动写入到用户文件夹，因此输入一次即可。</p>
 <figure class="image-bubble">
-                <img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图" title="">
+                </div>
                 <div class="image-caption">输入激活码时的截图</div>
             </figure>
-<hr>
 <figure class="image-bubble">
-                <img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图" title="">
+                </div>
                 <div class="image-caption">输入过激活码时的截图</div>
             </figure>
 <p>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>获取激活码时请提供运行时显示的机器码。</p>
@@ -329,11 +385,12 @@ if (window.location.protocol != targetProtocol)
 <div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="transportation-contour-line-tbx" data-title="基于高德 API 的交通等时线划分工具" data-url="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"></div>
 </div>
-<script src="/js/embed.min.js?v=1.2.7"></script>
-<script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
+<script src="/js/embed.min.js?v=1.3.3" async></script>
 <script>
 var duoshuoQuery = {short_name:'i-xdc-at', theme: 'none'}
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js')
 </script>
+
 
 
 
@@ -422,7 +479,13 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
 
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.2.7"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
 
 
 
@@ -443,36 +506,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.2.7"></script>
-
-
-
-
-
-
-
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-85156693-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
+<script src="/js/search.min.js?v=1.3.3" async></script>
 
 
 </body>
