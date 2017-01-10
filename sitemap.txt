@@ -22,7 +22,9 @@ http://i.xdc.at/categories/
 http://i.xdc.at/categories/data/
 http://i.xdc.at/categories/data-analysis/
 http://i.xdc.at/categories/software/
-http://i.xdc.at/commute/
+http://i.xdc.at/demo/
+http://i.xdc.at/demo/commute/
+http://i.xdc.at/demo/monitor/
 http://i.xdc.at/page/2/
 http://i.xdc.at/tags/
 http://i.xdc.at/tags/ArcGIS/
