@@ -9,12 +9,15 @@ http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/
 http://i.xdc.at/2016/10/31/tbx-in-ArcGIS/
 http://i.xdc.at/2016/11/15/port-forward-by-ssh/
 http://i.xdc.at/2016/11/20/poi-data-update-201611/
+http://i.xdc.at/2017/02/21/poi-data-update-201702/
 http://i.xdc.at/2048/10/24/top-pinned/
 http://i.xdc.at/about/
 http://i.xdc.at/archives/
 http://i.xdc.at/archives/2016/
 http://i.xdc.at/archives/2016/10/
 http://i.xdc.at/archives/2016/11/
+http://i.xdc.at/archives/2017/
+http://i.xdc.at/archives/2017/02/
 http://i.xdc.at/archives/2048/
 http://i.xdc.at/archives/2048/10/
 http://i.xdc.at/archives/page/2/
@@ -22,9 +25,11 @@ http://i.xdc.at/categories/
 http://i.xdc.at/categories/data/
 http://i.xdc.at/categories/data-analysis/
 http://i.xdc.at/categories/software/
+http://i.xdc.at/commute/
 http://i.xdc.at/demo/
 http://i.xdc.at/demo/commute/
 http://i.xdc.at/demo/monitor/
+http://i.xdc.at/demo/monitor/vendor/
 http://i.xdc.at/page/2/
 http://i.xdc.at/tags/
 http://i.xdc.at/tags/ArcGIS/
