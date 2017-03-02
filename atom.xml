@@ -39,7 +39,7 @@
     <link href="https://i.xdc.at/2017/02/21/poi-data-update-201702/"/>
     <id>https://i.xdc.at/2017/02/21/poi-data-update-201702/</id>
     <published>2017-02-21T04:08:55.000Z</published>
-    <updated>2017-02-23T05:30:57.903Z</updated>
+    <updated>2017-03-01T06:08:09.584Z</updated>
     
     <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2016/11/20/poi-data-update-201611/">2016年11月</a> 的基础上，主要更新内容如下：</p>
 <ol>
@@ -334,6 +334,7 @@
 </tbody>
 </table>
 <h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><p><a href="/2016/11/20/poi-data-update-201611/#数据字段信息">数据字段信息</a></p>
+<h3 id="样例下载"><a href="#样例下载" class="headerlink" title="样例下载"></a>样例下载</h3><p><a href="/assets/downloads/poi-data-update-201702/" target="_blank">点此下载样例文件(shp格式)</a></p>
 <p>如需了解更多，可发邮件至 <i class="icon icon-lg icon-envelope" onclick="window.open('mailto:i@xdc.at');" style="cursor:pointer"></i><code>i@xdc.at</code> 与我联系。</p>
 ]]></content>
     
@@ -680,6 +681,8 @@
     </summary>
     
     
+      <category term="SQL Server" scheme="https://i.xdc.at/tags/SQL-Server/"/>
+    
       <category term="SSH" scheme="https://i.xdc.at/tags/SSH/"/>
     
       <category term="Linux" scheme="https://i.xdc.at/tags/Linux/"/>
@@ -687,8 +690,6 @@
       <category term="内网穿透" scheme="https://i.xdc.at/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
       <category term="端口转发" scheme="https://i.xdc.at/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
-    
-      <category term="SQL Server" scheme="https://i.xdc.at/tags/SQL-Server/"/>
     
   </entry>
   
@@ -749,10 +750,10 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2016-11-28T14:47:41.372Z</updated>
+    <updated>2017-03-01T05:40:09.578Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>该软件最早于 2016-04-06 发布在城市数据派网站<br>(<a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">http://www.udparty.com/topic/1758.html</a>)。</p>
+<p>该软件最早于 2016-04-06 发布在城市数据派网站<br>(<a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a>)。</p>
 </blockquote>
 <h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><figure class="image-bubble">
@@ -815,13 +816,13 @@
 <h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://www.cnki.net/KCMS/detail/detail.aspx?filename=ZHCG201609005064&amp;dbname=CPFDTEMP&amp;dbcode=CPFD" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
 <p>引用格式参考：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
 <p>使用该工具的公开研究成果，请注明以上引用，和/或附上本页面网址 <code>http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</code> 。</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/blogImg/transportation-contourline-tbx/交通等时线v1.2.3.tbx">交通等时线v1.2.3.tbx</a></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/transportation-contourline-tbx/" target="_blank">交通等时线v1.2.3.tbx</a></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;该软件最早于 2016-04-06 发布在城市数据派网站&lt;br&gt;(&lt;a href=&quot;http://www.udparty.com/topic/1758.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.
+&lt;p&gt;该软件最早于 2016-04-06 发布在城市数据派网站&lt;br&gt;(&lt;a href=&quot;http://www.udparty.com/topic/1758.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xdc交通等时线工具箱
     
     </summary>
     
@@ -1180,9 +1181,9 @@
     </summary>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="SQL Server" scheme="https://i.xdc.at/tags/SQL-Server/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
   </entry>
   

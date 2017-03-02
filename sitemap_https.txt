@@ -21,6 +21,8 @@ https://i.xdc.at/archives/2017/02/
 https://i.xdc.at/archives/2048/
 https://i.xdc.at/archives/2048/10/
 https://i.xdc.at/archives/page/2/
+https://i.xdc.at/assets/downloads/poi-data-update-201702/
+https://i.xdc.at/assets/downloads/transportation-contourline-tbx/
 https://i.xdc.at/categories/
 https://i.xdc.at/categories/data/
 https://i.xdc.at/categories/data-analysis/
