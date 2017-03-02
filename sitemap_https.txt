@@ -10,6 +10,7 @@ https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/
 https://i.xdc.at/2016/11/15/port-forward-by-ssh/
 https://i.xdc.at/2016/11/20/poi-data-update-201611/
 https://i.xdc.at/2017/02/21/poi-data-update-201702/
+https://i.xdc.at/2017/03/02/tianditu-poi-tbx/
 https://i.xdc.at/2048/10/24/top-pinned/
 https://i.xdc.at/about/
 https://i.xdc.at/archives/
@@ -18,10 +19,12 @@ https://i.xdc.at/archives/2016/10/
 https://i.xdc.at/archives/2016/11/
 https://i.xdc.at/archives/2017/
 https://i.xdc.at/archives/2017/02/
+https://i.xdc.at/archives/2017/03/
 https://i.xdc.at/archives/2048/
 https://i.xdc.at/archives/2048/10/
 https://i.xdc.at/archives/page/2/
 https://i.xdc.at/assets/downloads/poi-data-update-201702/
+https://i.xdc.at/assets/downloads/tianditu-poi-tbx/
 https://i.xdc.at/assets/downloads/transportation-contourline-tbx/
 https://i.xdc.at/categories/
 https://i.xdc.at/categories/data/
@@ -50,6 +53,7 @@ https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/
 https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/
 https://i.xdc.at/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
 https://i.xdc.at/tags/%E5%9C%B0%E9%93%81/
+https://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/
 https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/
 https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/
 https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/

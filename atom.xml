@@ -35,11 +35,77 @@
   </entry>
   
   <entry>
-    <title>【数据介绍】全国POI数据2017年2月更新</title>
+    <title>天地图POI下载工具</title>
+    <link href="https://i.xdc.at/2017/03/02/tianditu-poi-tbx/"/>
+    <id>https://i.xdc.at/2017/03/02/tianditu-poi-tbx/</id>
+    <published>2017-03-02T08:14:12.000Z</published>
+    <updated>2017-03-02T08:49:49.922Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>该工具最早发布于远见网站 <a href="http://farsightj.cn/blog/?p=185" target="_blank" rel="external">http://farsightj.cn/blog/?p=185</a><br>此版本为与<a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a>的合作版本。</p>
+</blockquote>
+<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件工具通过天地图的数据接口，可按地级市级别下载天地图POI数据，支持自定义搜索关键词。<br>由于天地图POI数据在量上较少，因此下载效率比较高。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>输入字段说明：</p>
+<ol>
+<li><p>城市名称（地级市名称）：</p>
+<blockquote>
+<p>如果输入的名称与标准行政区名不一致，运行时会有提示，请根据提示进一步修改。</p>
+</blockquote>
+</li>
+<li><p>输出txt文件位置 (可选)：</p>
+<blockquote>
+<p>请选择输出txt文件的位置。根据ArcGIS版本的不同，可能需要手动输入.txt后缀名。</p>
+</blockquote>
+</li>
+<li><p>输出shp文件位置 (可选)：</p>
+<blockquote>
+<p>请选择输出文件的位置。输出文件为shapefile，请不要放在地理数据库内。<br>txt输出与shp输出至少二选一。</p>
+</blockquote>
+</li>
+<li><p>激活码(可选)：</p>
+<blockquote>
+<p>详见 <a href="#获取激活码">获取激活码</a></p>
+</blockquote>
+</li>
+<li><p>自定义搜索关键词(可选)：</p>
+<blockquote>
+<p>支持自定义搜索关键词，多个关键词之间请使用逗号（全角半角均可）分隔，输入的空格将被忽略。<br>留空则使用默认关键词。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入激活码时可进行试用，试用过程中运行窗口会显示您的机器码。ArcGIS默认情况下运行窗口较小，您可能需要手动拉大窗口尺寸才能看到全部输出信息。<br>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>激活码只需输入一次，后续使用无需再次输入。</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 如果遇到输出文件错误，请尝试使用纯字母的文件名。<br>2. 如果连续多次使用均无法正常得到结果，则可能是数据结构变更，请发邮件至<code>i@xdc.at</code>与我联系。</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/tianditu-poi-tbx/" target="_blank">天地图POI下载v1.0.2.tbx</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;该工具最早发布于远见网站 &lt;a href=&quot;http://farsightj.cn/blog/?p=185&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://farsightj.cn/blog/?p=185&lt;/a&gt;&lt;br
+    
+    </summary>
+    
+      <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
+    
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
+      <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
+    
+      <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="天地图" scheme="https://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>全国POI数据2017年2月更新</title>
     <link href="https://i.xdc.at/2017/02/21/poi-data-update-201702/"/>
     <id>https://i.xdc.at/2017/02/21/poi-data-update-201702/</id>
     <published>2017-02-21T04:08:55.000Z</published>
-    <updated>2017-03-01T06:08:09.584Z</updated>
+    <updated>2017-03-02T08:33:29.888Z</updated>
     
     <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2016/11/20/poi-data-update-201611/">2016年11月</a> 的基础上，主要更新内容如下：</p>
 <ol>
@@ -356,11 +422,11 @@
   </entry>
   
   <entry>
-    <title>【数据介绍】全国POI数据2016年11月更新</title>
+    <title>全国POI数据2016年11月更新</title>
     <link href="https://i.xdc.at/2016/11/20/poi-data-update-201611/"/>
     <id>https://i.xdc.at/2016/11/20/poi-data-update-201611/</id>
     <published>2016-11-20T14:46:40.000Z</published>
-    <updated>2017-02-23T04:35:25.507Z</updated>
+    <updated>2017-03-02T08:33:37.553Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/2016/10/06/poi-data/">上篇对 POI 数据的介绍</a> 中提到，高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。</p>
 <p>因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围抓取。统计后发现，补漏与更新的效果还是比较明显的。</p>
@@ -750,10 +816,10 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2017-03-01T05:40:09.578Z</updated>
+    <updated>2017-03-02T03:07:30.626Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>该软件最早于 2016-04-06 发布在城市数据派网站<br>(<a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a>)。</p>
+<p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
 </blockquote>
 <h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><figure class="image-bubble">
@@ -822,7 +888,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;该软件最早于 2016-04-06 发布在城市数据派网站&lt;br&gt;(&lt;a href=&quot;http://www.udparty.com/topic/1758.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xdc交通等时线工具箱
+&lt;p&gt;该软件最早于 2016-04-06 发布在城市数据派网站&lt;br&gt;&lt;a href=&quot;http://www.udparty.com/topic/1758.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xdc交通等时线工具箱&lt;
     
     </summary>
     
@@ -840,11 +906,11 @@
   </entry>
   
   <entry>
-    <title>【数据分析】上海市公交线路简要分析</title>
+    <title>上海市公交线路简要分析</title>
     <link href="https://i.xdc.at/2016/10/06/shanghai-busline-analysis/"/>
     <id>https://i.xdc.at/2016/10/06/shanghai-busline-analysis/</id>
     <published>2016-10-06T06:22:50.000Z</published>
-    <updated>2016-11-07T04:19:39.100Z</updated>
+    <updated>2017-03-02T08:34:05.808Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734880&amp;idx=1&amp;sn=078e80f7cec69013644fc115f5cbcfdd" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
@@ -983,11 +1049,11 @@
   </entry>
   
   <entry>
-    <title>【数据介绍】全国公交线网数据</title>
+    <title>全国公交线网数据</title>
     <link href="https://i.xdc.at/2016/10/06/busline-data/"/>
     <id>https://i.xdc.at/2016/10/06/busline-data/</id>
     <published>2016-10-06T04:21:38.000Z</published>
-    <updated>2016-11-07T04:06:16.405Z</updated>
+    <updated>2017-03-02T08:34:12.629Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
@@ -1064,11 +1130,11 @@
   </entry>
   
   <entry>
-    <title>【数据介绍】全国POI数据</title>
+    <title>全国POI数据</title>
     <link href="https://i.xdc.at/2016/10/06/poi-data/"/>
     <id>https://i.xdc.at/2016/10/06/poi-data/</id>
     <published>2016-10-06T02:20:40.000Z</published>
-    <updated>2016-11-24T01:58:47.826Z</updated>
+    <updated>2017-03-02T08:33:56.058Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在<a href="#UPDATE">文末</a>。</em></p>
 <hr>
@@ -1312,11 +1378,11 @@ print time.ctime()
     </summary>
     
     
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
+    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
-    
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     
