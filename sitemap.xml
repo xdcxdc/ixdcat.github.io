@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</loc>
+    
+    <lastmod>2017-03-03T05:17:47.392Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://i.xdc.at/2017/03/02/tianditu-poi-tbx/</loc>
     
-    <lastmod>2017-03-02T08:49:49.922Z</lastmod>
+    <lastmod>2017-03-03T05:12:05.490Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>https://i.xdc.at/2017/02/21/poi-data-update-201702/</loc>
     
     <lastmod>2017-03-02T08:33:29.888Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</loc>
-    
-    <lastmod>2017-03-02T03:07:30.626Z</lastmod>
     
   </url>
   

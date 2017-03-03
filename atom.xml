@@ -39,7 +39,7 @@
     <link href="https://i.xdc.at/2017/03/02/tianditu-poi-tbx/"/>
     <id>https://i.xdc.at/2017/03/02/tianditu-poi-tbx/</id>
     <published>2017-03-02T08:14:12.000Z</published>
-    <updated>2017-03-02T08:49:49.922Z</updated>
+    <updated>2017-03-03T05:12:05.490Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该工具最早发布于远见网站 <a href="http://farsightj.cn/blog/?p=185" target="_blank" rel="external">http://farsightj.cn/blog/?p=185</a><br>此版本为与<a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a>的合作版本。</p>
@@ -74,8 +74,8 @@
 </li>
 </ol>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入激活码时可进行试用，试用过程中运行窗口会显示您的机器码。ArcGIS默认情况下运行窗口较小，您可能需要手动拉大窗口尺寸才能看到全部输出信息。<br>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>激活码只需输入一次，后续使用无需再次输入。</p>
-<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 如果遇到输出文件错误，请尝试使用纯字母的文件名。<br>2. 如果连续多次使用均无法正常得到结果，则可能是数据结构变更，请发邮件至<code>i@xdc.at</code>与我联系。</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/tianditu-poi-tbx/" target="_blank">天地图POI下载v1.0.2.tbx</a></p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 如果遇到输出文件错误，请尝试使用纯字母的文件名。<br>2. 如果连续多次使用均无法正常得到结果，则可能是数据接口变更，请发邮件至<code>i@xdc.at</code>与我联系。</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/tianditu-poi-tbx/" target="_blank">天地图POI下载v1.0.3.tbx</a></p>
 ]]></content>
     
     <summary type="html">
@@ -816,7 +816,7 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2017-03-02T03:07:30.626Z</updated>
+    <updated>2017-03-03T05:17:47.392Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
@@ -882,7 +882,7 @@
 <h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://www.cnki.net/KCMS/detail/detail.aspx?filename=ZHCG201609005064&amp;dbname=CPFDTEMP&amp;dbcode=CPFD" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
 <p>引用格式参考：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
 <p>使用该工具的公开研究成果，请注明以上引用，和/或附上本页面网址 <code>http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</code> 。</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/transportation-contourline-tbx/" target="_blank">交通等时线v1.2.3.tbx</a></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/transportation-contourline-tbx/" target="_blank">xdc交通等时线工具箱v1.2.4.tbx</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1378,11 +1378,11 @@ print time.ctime()
     </summary>
     
     
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
+    
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     
