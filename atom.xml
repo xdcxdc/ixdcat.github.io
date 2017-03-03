@@ -88,9 +88,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -105,7 +105,7 @@
     <link href="https://i.xdc.at/2017/02/21/poi-data-update-201702/"/>
     <id>https://i.xdc.at/2017/02/21/poi-data-update-201702/</id>
     <published>2017-02-21T04:08:55.000Z</published>
-    <updated>2017-03-02T08:33:29.888Z</updated>
+    <updated>2017-03-03T08:17:04.007Z</updated>
     
     <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2016/11/20/poi-data-update-201611/">2016年11月</a> 的基础上，主要更新内容如下：</p>
 <ol>
@@ -123,28 +123,28 @@
 <h3 id="更新内容示例"><a href="#更新内容示例" class="headerlink" title="更新内容示例"></a>更新内容示例</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data-update-201702/add.png" alt="新增的条目" title="">
+                    <img src="/assets/images/poi-data-update-201702/add.png" alt="新增的条目" title="">
                 </div>
                 <div class="image-caption">新增的条目</div>
             </figure>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data-update-201702/delete.png" alt="删除的条目" title="">
+                    <img src="/assets/images/poi-data-update-201702/delete.png" alt="删除的条目" title="">
                 </div>
                 <div class="image-caption">删除的条目</div>
             </figure>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data-update-201702/name_change.png" alt="名称更新" title="">
+                    <img src="/assets/images/poi-data-update-201702/name_change.png" alt="名称更新" title="">
                 </div>
                 <div class="image-caption">名称更新</div>
             </figure>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data-update-201702/type_change.png" alt="类型信息更新" title="">
+                    <img src="/assets/images/poi-data-update-201702/type_change.png" alt="类型信息更新" title="">
                 </div>
                 <div class="image-caption">类型信息更新</div>
             </figure>
@@ -413,11 +413,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
   </entry>
   
@@ -426,14 +426,14 @@
     <link href="https://i.xdc.at/2016/11/20/poi-data-update-201611/"/>
     <id>https://i.xdc.at/2016/11/20/poi-data-update-201611/</id>
     <published>2016-11-20T14:46:40.000Z</published>
-    <updated>2017-03-02T08:33:37.553Z</updated>
+    <updated>2017-03-03T08:43:53.396Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/2016/10/06/poi-data/">上篇对 POI 数据的介绍</a> 中提到，高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。</p>
 <p>因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围抓取。统计后发现，补漏与更新的效果还是比较明显的。</p>
 <p>数量上，从上次的 4500w+ 扩充到了 5600w+，这个数量已经超过了网络上有人所称的5000w 。并且，对超过 1000w 的数据进行了内容更新，更新包括名称的更改、位置的微调、分类的调整、地址的修改等。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data-update-201611/change-of-location-and-name.png" alt="名称更改与位置微调" title="">
+                    <img src="/assets/images/poi-data-update-201611/change-of-location-and-name.png" alt="名称更改与位置微调" title="">
                 </div>
                 <div class="image-caption">名称更改与位置微调</div>
             </figure></p>
@@ -691,7 +691,7 @@
 <h3 id="数据字段信息"><a href="#数据字段信息" class="headerlink" title="数据字段信息"></a>数据字段信息</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息" title="">
+                    <img src="/assets/images/poi-data/poi-data-info.png" alt="数据字段信息" title="">
                 </div>
                 <div class="image-caption">数据字段信息</div>
             </figure>]]></content>
@@ -706,11 +706,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
   </entry>
   
@@ -719,7 +719,7 @@
     <link href="https://i.xdc.at/2016/11/15/port-forward-by-ssh/"/>
     <id>https://i.xdc.at/2016/11/15/port-forward-by-ssh/</id>
     <published>2016-11-15T15:08:52.000Z</published>
-    <updated>2016-11-15T18:10:55.608Z</updated>
+    <updated>2017-03-03T08:17:04.648Z</updated>
     
     <content type="html"><![CDATA[<h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><p>在一个内网内有两台设备：路由器 A 和 B 。</p>
 <p>路由器 A 有固定 IP，不受我控制。但在路由器 A 下的一台 Windows 主机 A1 上有一个账户（无权限在 A1 上添加更多新用户）。 A1 的远程桌面端口 3389 在由 A 的管理员在 A 上做了端口映射，因此我可以通过远程桌面协议去访问 A1 。A1 上运行有 SQL Server 。</p>
@@ -729,7 +729,7 @@
 <p>对于两个均是在内网里面的设备互相连接，一种方法是借助于公网的服务，如 Teamviewer 的 VPN 功能，可以将两台内网里的设备组件在一个虚拟子网内。但测试发现连接速度十分不理想。</p>
 <p>由于路由器 B 受我控制，且是 Linux 的系统，因此就可以拿来灵活利用，这里就需要使用到路由器 B 的 SSH 服务。</p>
 <ol>
-<li>首先 A1 和 B1 都通过 SSH 客户端连接到 B。因为 B 没有固定 IP，所以最好使用一个第三方的 DDNS 服务。SSH 客户端我使用的是 Bitvise，这里有一个<a href="/assets/blogImg/port-forward-by-ssh/BitviseSSHClientPortable_6.04_Rev_3.0.paf.exe">便携版本</a>。</li>
+<li>首先 A1 和 B1 都通过 SSH 客户端连接到 B。因为 B 没有固定 IP，所以最好使用一个第三方的 DDNS 服务。SSH 客户端我使用的是 Bitvise，这里有一个<a href="/assets/images/port-forward-by-ssh/BitviseSSHClientPortable_6.04_Rev_3.0.paf.exe">便携版本</a>。</li>
 <li>在 B1 上的 Bitvise 里，添加 C2S 转发，监听 1111（自己修改，避免和本机已有的 1433 端口重复）端口，目标端口为 B 内部的 1433 端口。</li>
 <li>在 A1 上的 Bitvise 里，添加 S2C 转发，监听 B 的 1433 的端口，目标为 A1 的 1433 端口。</li>
 <li>此时，B1 上发向 1111 端口的请求，就会被转发到 B 的 1433 端口，再转发到 A1 的1433 端口。</li>
@@ -764,12 +764,12 @@
     <link href="https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/"/>
     <id>https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</id>
     <published>2016-10-31T05:59:33.000Z</published>
-    <updated>2016-11-05T13:53:23.831Z</updated>
+    <updated>2017-03-03T08:17:05.304Z</updated>
     
     <content type="html"><![CDATA[<p>tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/tbx-in-ArcGIS/tbx-icon.png" alt="tbx文件" title="">
+                    <img src="/assets/images/tbx-in-ArcGIS/tbx-icon.png" alt="tbx文件" title="">
                 </div>
                 <div class="image-caption">tbx文件</div>
             </figure></p>
@@ -777,7 +777,7 @@
 <h4 id="1-直接在目录窗口打开"><a href="#1-直接在目录窗口打开" class="headerlink" title="1. 直接在目录窗口打开"></a>1. 直接在目录窗口打开</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/tbx-in-ArcGIS/open-tbx.png" alt="打开tbx文件" title="">
+                    <img src="/assets/images/tbx-in-ArcGIS/open-tbx.png" alt="打开tbx文件" title="">
                 </div>
                 <div class="image-caption">打开tbx文件</div>
             </figure>
@@ -785,7 +785,7 @@
 <h4 id="2-添加到已有工具箱列表"><a href="#2-添加到已有工具箱列表" class="headerlink" title="2. 添加到已有工具箱列表"></a>2. 添加到已有工具箱列表</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/tbx-in-ArcGIS/add-tbx.png" alt="添加tbx文件" title="">
+                    <img src="/assets/images/tbx-in-ArcGIS/add-tbx.png" alt="添加tbx文件" title="">
                 </div>
                 <div class="image-caption">添加tbx文件</div>
             </figure>
@@ -816,7 +816,7 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2017-03-03T05:17:47.392Z</updated>
+    <updated>2017-03-03T08:40:18.427Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
@@ -825,20 +825,20 @@
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/transportation-contourline-tbx/main-window.png" alt="主窗口" title="">
+                    <img src="/assets/images/transportation-contourline-tbx/main-window.png" alt="主窗口" title="">
                 </div>
                 <div class="image-caption">主窗口</div>
             </figure><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），在点击每一输入项时可以显示详细介绍（下图）。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="">
+                    <img src="/assets/images/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="">
                 </div>
                 <div class="image-caption">帮助窗口</div>
             </figure><br>各项输入的介绍请参考软件内的帮助信息。</p>
 <p>运行截图：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/transportation-contourline-tbx/running-1.png" alt="运行截图1" title="">
+                    <img src="/assets/images/transportation-contourline-tbx/running-1.png" alt="运行截图1" title="">
                 </div>
                 <div class="image-caption">运行截图1</div>
             </figure></p>
@@ -848,32 +848,32 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/transportation-contourline-tbx/running-2.png" alt="运行截图2" title="">
+                    <img src="/assets/images/transportation-contourline-tbx/running-2.png" alt="运行截图2" title="">
                 </div>
                 <div class="image-caption">运行截图2</div>
             </figure>
 <p>运行结果：<br>执行结果图： 驾车30分钟等时线（ArcMap添加的新图层默认为黑白配色，下图为加了底图和调节过图层显示颜色后的效果图）<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/transportation-contourline-tbx/result.png" alt="运行结果" title="">
+                    <img src="/assets/images/transportation-contourline-tbx/result.png" alt="运行结果" title="">
                 </div>
                 <div class="image-caption">运行结果</div>
             </figure></p>
 <blockquote>
-<p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="/assets/blogImg/transportation-contourline-tbx/PcArcBruTile_0.4.rar">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
+<p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="/assets/downloads/transportation-contourline-tbx/PcArcBruTile_0.4.rar" target="_blank">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
 </blockquote>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入过激活码时，可在任意机器上使用到2016年4月15日（该工具最早发布于2016年4月初）。之后使用需要输入与机器码对应的激活码，试用运行时，会在运行过程中显示出机器码。在Win7以上系统中，激活码可自动写入到用户文件夹，因此输入一次即可。</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图" title="">
+                    <img src="/assets/images/transportation-contourline-tbx/running-3.png" alt="输入激活码时的截图" title="">
                 </div>
                 <div class="image-caption">输入激活码时的截图</div>
             </figure>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图" title="">
+                    <img src="/assets/images/transportation-contourline-tbx/running-4.png" alt="输入过激活码时的截图" title="">
                 </div>
                 <div class="image-caption">输入过激活码时的截图</div>
             </figure>
@@ -910,7 +910,7 @@
     <link href="https://i.xdc.at/2016/10/06/shanghai-busline-analysis/"/>
     <id>https://i.xdc.at/2016/10/06/shanghai-busline-analysis/</id>
     <published>2016-10-06T06:22:50.000Z</published>
-    <updated>2017-03-02T08:34:05.808Z</updated>
+    <updated>2017-03-03T08:17:07.538Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734880&amp;idx=1&amp;sn=078e80f7cec69013644fc115f5cbcfdd" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
@@ -921,7 +921,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/density.jpg" alt="公交站点与公交线路密度" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/density.jpg" alt="公交站点与公交线路密度" title="">
                 </div>
                 <div class="image-caption">公交站点与公交线路密度</div>
             </figure>
@@ -929,7 +929,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/distribution-of-length.jpg" alt="线路长度分布" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/distribution-of-length.jpg" alt="线路长度分布" title="">
                 </div>
                 <div class="image-caption">线路长度分布</div>
             </figure>
@@ -937,14 +937,14 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/od-line.jpg" alt="起点终点连线" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/od-line.jpg" alt="起点终点连线" title="">
                 </div>
                 <div class="image-caption">起点终点连线</div>
             </figure>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/index.jpg" alt="非直线系数分布" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/index.jpg" alt="非直线系数分布" title="">
                 </div>
                 <div class="image-caption">非直线系数分布</div>
             </figure>
@@ -952,7 +952,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/running-lines.gif" alt="逐时段运营线路" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/running-lines.gif" alt="逐时段运营线路" title="">
                 </div>
                 <div class="image-caption">逐时段运营线路</div>
             </figure>
@@ -960,7 +960,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/service-area.jpg" alt="服务面积" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/service-area.jpg" alt="服务面积" title="">
                 </div>
                 <div class="image-caption">服务面积</div>
             </figure>
@@ -968,7 +968,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/service-popu.jpg" alt="服务人口" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/service-popu.jpg" alt="服务人口" title="">
                 </div>
                 <div class="image-caption">服务人口</div>
             </figure>
@@ -976,7 +976,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/busstop-num.jpg" alt="各区公交站点数量" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/busstop-num.jpg" alt="各区公交站点数量" title="">
                 </div>
                 <div class="image-caption">各区公交站点数量</div>
             </figure>
@@ -984,7 +984,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/busline-length.jpg" alt="各区公交里程" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/busline-length.jpg" alt="各区公交里程" title="">
                 </div>
                 <div class="image-caption">各区公交里程</div>
             </figure>
@@ -992,7 +992,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/busstop-pop.jpg" alt="每个车站平均服务人口" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/busstop-pop.jpg" alt="每个车站平均服务人口" title="">
                 </div>
                 <div class="image-caption">每个车站平均服务人口</div>
             </figure>
@@ -1000,14 +1000,14 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/jiedao-od.jpg" alt="街道间联系强度" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/jiedao-od.jpg" alt="街道间联系强度" title="">
                 </div>
                 <div class="image-caption">街道间联系强度</div>
             </figure>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/shanghai-busline-analysis/table.jpg" alt="街道间联系线路数量" title="">
+                    <img src="/assets/images/shanghai-busline-analysis/table.jpg" alt="街道间联系线路数量" title="">
                 </div>
                 <div class="image-caption">街道间联系线路数量</div>
             </figure>
@@ -1036,11 +1036,11 @@
       <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
@@ -1053,7 +1053,7 @@
     <link href="https://i.xdc.at/2016/10/06/busline-data/"/>
     <id>https://i.xdc.at/2016/10/06/busline-data/</id>
     <published>2016-10-06T04:21:38.000Z</published>
-    <updated>2017-03-02T08:34:12.629Z</updated>
+    <updated>2017-03-03T08:17:06.949Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
@@ -1061,7 +1061,7 @@
 <p>全国公共交通站点：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/busline-data/busstop.jpg" alt="全国公共交通站点" title="">
+                    <img src="/assets/images/busline-data/busstop.jpg" alt="全国公共交通站点" title="">
                 </div>
                 <div class="image-caption">全国公共交通站点</div>
             </figure></p>
@@ -1069,21 +1069,21 @@
 <p>全国公共交通线网：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/busline-data/busline.jpg" alt="全国公共交通线网" title="">
+                    <img src="/assets/images/busline-data/busline.jpg" alt="全国公共交通线网" title="">
                 </div>
                 <div class="image-caption">全国公共交通线网</div>
             </figure></p>
 <p>上海市公共交通线网，超精准线路哦：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/busline-data/shanghai-busline.jpg" alt="上海市公共交通线网" title="">
+                    <img src="/assets/images/busline-data/shanghai-busline.jpg" alt="上海市公共交通线网" title="">
                 </div>
                 <div class="image-caption">上海市公共交通线网</div>
             </figure></p>
 <p>市中心放大：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/busline-data/shanghai-center-busline.jpg" alt="上海市中心区公共交通线网" title="">
+                    <img src="/assets/images/busline-data/shanghai-center-busline.jpg" alt="上海市中心区公共交通线网" title="">
                 </div>
                 <div class="image-caption">上海市中心区公共交通线网</div>
             </figure></p>
@@ -1107,7 +1107,7 @@
 &lt;p&gt;全国公共交通站点：&lt;br&gt;&lt;figure class=&quot;image-bubble&quot;&gt;
                 &lt;div class=&quot;img-lightbox&quot;&gt;
                     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/assets/blogImg/busline-data/busstop.jpg&quot; alt=&quot;全国公共交通站点&quot; title=&quot;&quot;&gt;
+                    &lt;img src=&quot;/assets/images/busline-data/busstop.jpg&quot; alt=&quot;全国公共交通站点&quot; title=&quot;&quot;&gt;
                 &lt;/div&gt;
                 &lt;div class=&quot;image-caption&quot;&gt;全国公共交通站点&lt;/div&gt;
             &lt;/figure&gt;&lt;/p&gt;
@@ -1117,15 +1117,15 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
       <category term="地铁" scheme="https://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
     
   </entry>
   
@@ -1134,7 +1134,7 @@
     <link href="https://i.xdc.at/2016/10/06/poi-data/"/>
     <id>https://i.xdc.at/2016/10/06/poi-data/</id>
     <published>2016-10-06T02:20:40.000Z</published>
-    <updated>2017-03-02T08:33:56.058Z</updated>
+    <updated>2017-03-03T08:17:10.543Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在<a href="#UPDATE">文末</a>。</em></p>
 <hr>
@@ -1143,35 +1143,35 @@
 <p>全国POI密度分布：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data/poi-density.jpg" alt="全国POI密度分布" title="">
+                    <img src="/assets/images/poi-data/poi-density.jpg" alt="全国POI密度分布" title="">
                 </div>
                 <div class="image-caption">全国POI密度分布</div>
             </figure></p>
 <p>全国黄焖鸡米饭分布：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data/poi-hmjmf.jpg" alt="全国黄焖鸡米饭分布" title="">
+                    <img src="/assets/images/poi-data/poi-hmjmf.jpg" alt="全国黄焖鸡米饭分布" title="">
                 </div>
                 <div class="image-caption">全国黄焖鸡米饭分布</div>
             </figure></p>
 <p>全国沙县小吃分布:<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data/poi-sxxc.jpg" alt="全国沙县小吃分布" title="">
+                    <img src="/assets/images/poi-data/poi-sxxc.jpg" alt="全国沙县小吃分布" title="">
                 </div>
                 <div class="image-caption">全国沙县小吃分布</div>
             </figure></p>
 <p>全国公交站点分布：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data/poi-gjzd.jpg" alt="全国公交站点分布" title="">
+                    <img src="/assets/images/poi-data/poi-gjzd.jpg" alt="全国公交站点分布" title="">
                 </div>
                 <div class="image-caption">全国公交站点分布</div>
             </figure></p>
 <p>同济大学周边全部POI：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data/poi-tjdx.jpg" alt="同济大学周边全部POI" title="">
+                    <img src="/assets/images/poi-data/poi-tjdx.jpg" alt="同济大学周边全部POI" title="">
                 </div>
                 <div class="image-caption">同济大学周边全部POI</div>
             </figure></p>
@@ -1188,11 +1188,11 @@
 <h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h3><p><strong>数据字段信息：</strong><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/blogImg/poi-data/poi-data-info.png" alt="数据字段信息" title="">
+                    <img src="/assets/images/poi-data/poi-data-info.png" alt="数据字段信息" title="">
                 </div>
                 <div class="image-caption">数据字段信息</div>
             </figure></p>
-<p>POI分类对照表可 <a href="/assets/blogImg/poi-data/poi-type-list.pdf">点此下载</a></p>
+<p>POI分类对照表可 <a href="/assets/images/poi-data/poi-type-list.pdf">点此下载</a></p>
 <p><strong>TIP:</strong><br>高德 API 在返回 POI 结果时，并非是完整数据，而是存在一定程度的缺失。部分权重较低的 POI，如 ATM 等，在大类搜索结果里缺失就较多。<br>为了规避缺失，可采用更换不同关键词、更改搜索范围等方法交叉抓取，将得到的结果合并去重。但这样会带来较大的抓取工作量，目前已有的4500+万条数据已能满足大多数场景下的分析需求。（<a href="/2016/11/20/poi-data-update-201611/">已更新至 5600 万数据量</a>）<br>如果需要某细分类的更完整数据，可发邮件至 <code>i@xdc.at</code> 定制抓取服务。</p>
 ]]></content>
     
@@ -1207,11 +1207,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
   </entry>
   
@@ -1378,11 +1378,11 @@ print time.ctime()
     </summary>
     
     
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
+    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
-    
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     
