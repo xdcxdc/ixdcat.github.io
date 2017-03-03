@@ -24,7 +24,7 @@
 <meta property="og:description" content="现状在一个内网内有两台设备：路由器 A 和 B 。
 路由器 A 有固定 IP，不受我控制。但在路由器 A 下的一台 Windows 主机 A1 上有一个账户（无权限在 A1 上添加更多新用户）。 A1 的远程桌面端口 3389 在由 A 的管理员在 A 上做了端口映射，因此我可以通过远程桌面协议去访问 A1 。A1 上运行有 SQL Server 。
 路由器 B 是一台基于 Linux 的路由器，">
-<meta property="og:updated_time" content="2016-11-15T18:10:55.608Z">
+<meta property="og:updated_time" content="2017-03-03T08:17:04.648Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用SSH的端口转发实现内网穿透">
 <meta name="twitter:description" content="现状在一个内网内有两台设备：路由器 A 和 B 。
@@ -197,7 +197,7 @@ var _hmt = _hmt || [];
 <p>对于两个均是在内网里面的设备互相连接，一种方法是借助于公网的服务，如 Teamviewer 的 VPN 功能，可以将两台内网里的设备组件在一个虚拟子网内。但测试发现连接速度十分不理想。</p>
 <p>由于路由器 B 受我控制，且是 Linux 的系统，因此就可以拿来灵活利用，这里就需要使用到路由器 B 的 SSH 服务。</p>
 <ol>
-<li>首先 A1 和 B1 都通过 SSH 客户端连接到 B。因为 B 没有固定 IP，所以最好使用一个第三方的 DDNS 服务。SSH 客户端我使用的是 Bitvise，这里有一个<a href="/assets/blogImg/port-forward-by-ssh/BitviseSSHClientPortable_6.04_Rev_3.0.paf.exe">便携版本</a>。</li>
+<li>首先 A1 和 B1 都通过 SSH 客户端连接到 B。因为 B 没有固定 IP，所以最好使用一个第三方的 DDNS 服务。SSH 客户端我使用的是 Bitvise，这里有一个<a href="/assets/images/port-forward-by-ssh/BitviseSSHClientPortable_6.04_Rev_3.0.paf.exe">便携版本</a>。</li>
 <li>在 B1 上的 Bitvise 里，添加 C2S 转发，监听 1111（自己修改，避免和本机已有的 1433 端口重复）端口，目标端口为 B 内部的 1433 端口。</li>
 <li>在 A1 上的 Bitvise 里，添加 S2C 转发，监听 B 的 1433 的端口，目标为 A1 的 1433 端口。</li>
 <li>此时，B1 上发向 1111 端口的请求，就会被转发到 B 的 1433 端口，再转发到 A1 的1433 端口。</li>
