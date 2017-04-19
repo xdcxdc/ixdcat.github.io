@@ -11,6 +11,7 @@ https://i.xdc.at/2016/11/15/port-forward-by-ssh/
 https://i.xdc.at/2016/11/20/poi-data-update-201611/
 https://i.xdc.at/2017/02/21/poi-data-update-201702/
 https://i.xdc.at/2017/03/02/tianditu-poi-tbx/
+https://i.xdc.at/2017/04/19/aoi-data/
 https://i.xdc.at/2048/10/24/top-pinned/
 https://i.xdc.at/about/
 https://i.xdc.at/archives/
@@ -20,6 +21,7 @@ https://i.xdc.at/archives/2016/11/
 https://i.xdc.at/archives/2017/
 https://i.xdc.at/archives/2017/02/
 https://i.xdc.at/archives/2017/03/
+https://i.xdc.at/archives/2017/04/
 https://i.xdc.at/archives/2048/
 https://i.xdc.at/archives/2048/10/
 https://i.xdc.at/archives/page/2/
@@ -37,6 +39,7 @@ https://i.xdc.at/demo/monitor/
 https://i.xdc.at/demo/monitor/vendor/
 https://i.xdc.at/page/2/
 https://i.xdc.at/tags/
+https://i.xdc.at/tags/AOI/
 https://i.xdc.at/tags/ArcGIS/
 https://i.xdc.at/tags/Coding-net/
 https://i.xdc.at/tags/GitHub/

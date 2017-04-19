@@ -35,6 +35,62 @@
   </entry>
   
   <entry>
+    <title>AOI（兴趣区）数据获取尝试</title>
+    <link href="https://i.xdc.at/2017/04/19/aoi-data/"/>
+    <id>https://i.xdc.at/2017/04/19/aoi-data/</id>
+    <published>2017-04-19T12:04:25.000Z</published>
+    <updated>2017-04-19T13:12:31.565Z</updated>
+    
+    <content type="html"><![CDATA[<p>AOI（Area of Interest），区别于POI（Point of Interest），一般指小区、公园等的边界信息。 <a href="http://ditu.amap.com/place/B00155K8FL" target="_blank" rel="external">高德地图</a> 中，尤其是在一线城市，点击小区名称，就可显示小区边界。<br>通过构造爬虫，即可获取一定范围内的AOI数据。以下是部分区域的抓取结果。一般中心城区的完整性较好，而郊区数据缺失较多。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/aoi-data/aoi-data-yangpu.png" alt="杨浦区局部" title="">
+                </div>
+                <div class="image-caption">杨浦区局部</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/aoi-data/aoi-data-shanghai.png" alt="上海外环线内" title="">
+                </div>
+                <div class="image-caption">上海外环线内</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/aoi-data/aoi-data-beijing.png" alt="北京六环内" title="">
+                </div>
+                <div class="image-caption">北京六环内</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/aoi-data/aoi-data-guangzhou.png" alt="广州局部" title="">
+                </div>
+                <div class="image-caption">广州局部</div>
+            </figure>
+<p>欢迎交流~  （E-mail: <code>i@xdc.at</code>）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;AOI（Area of Interest），区别于POI（Point of Interest），一般指小区、公园等的边界信息。 &lt;a href=&quot;http://ditu.amap.com/place/B00155K8FL&quot; target=&quot;_blank&quot; rel=&quot;exte
+    
+    </summary>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
+    
+    
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+      <category term="AOI" scheme="https://i.xdc.at/tags/AOI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>天地图POI下载工具</title>
     <link href="https://i.xdc.at/2017/03/02/tianditu-poi-tbx/"/>
     <id>https://i.xdc.at/2017/03/02/tianditu-poi-tbx/</id>
@@ -92,11 +148,11 @@
     
       <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
+      <category term="天地图" scheme="https://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/"/>
+    
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
-    
-      <category term="天地图" scheme="https://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/"/>
     
   </entry>
   
