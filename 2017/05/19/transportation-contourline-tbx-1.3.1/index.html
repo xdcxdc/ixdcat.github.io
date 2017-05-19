@@ -4,54 +4,34 @@
   <meta charset="utf-8">
   
   
-  <link rel="canonical" href="https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/">
+  <link rel="canonical" href="https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/">
   
   
-  <title>在 ArcGIS 内使用 tbx 工具箱 | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <title>【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1 | 谢栋灿&#39;s Blog | i.xdc.at</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="ArcGIS,tbx,工具箱">
-  <meta name="description" content="tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。
-                
-                    
-                    
-                
-                tbx文件
-            
-tbx 文件在 ArcGIS 内打开一般有两种方法：
-1. 直接在目录窗口打开">
+  <meta name="keywords" content="ArcGIS,tbx,工具箱,交通等时线">
+  <meta name="description" content="软件介绍见 基于高德 API 的交通等时线划分工具 。
+
+本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范围方式二选一）。输入的面必须为 GCS_WGS_1984 坐标系，可通过创建一个新的shapefile等方法获得。输入的中心点不一定要在输入的边界面内。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在 ArcGIS 内使用 tbx 工具箱">
-<meta property="og:url" content="https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/index.html">
+<meta property="og:title" content="【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1">
+<meta property="og:url" content="https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/index.html">
 <meta property="og:site_name" content="谢栋灿's Blog">
-<meta property="og:description" content="tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。
-                
-                    
-                    
-                
-                tbx文件
-            
-tbx 文件在 ArcGIS 内打开一般有两种方法：
-1. 直接在目录窗口打开">
-<meta property="og:image" content="https://i.xdc.at/assets/images/tbx-in-ArcGIS/tbx-icon.png">
-<meta property="og:image" content="https://i.xdc.at/assets/images/tbx-in-ArcGIS/open-tbx.png">
-<meta property="og:image" content="https://i.xdc.at/assets/images/tbx-in-ArcGIS/add-tbx.png">
-<meta property="og:updated_time" content="2017-03-03T08:17:05.304Z">
+<meta property="og:description" content="软件介绍见 基于高德 API 的交通等时线划分工具 。
+
+本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范围方式二选一）。输入的面必须为 GCS_WGS_1984 坐标系，可通过创建一个新的shapefile等方法获得。输入的中心点不一定要在输入的边界面内。">
+<meta property="og:image" content="https://i.xdc.at/assets/images/transportation-contourline-tbx-1.3.1/interface.png">
+<meta property="og:updated_time" content="2017-05-19T06:08:32.588Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 ArcGIS 内使用 tbx 工具箱">
-<meta name="twitter:description" content="tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。
-                
-                    
-                    
-                
-                tbx文件
-            
-tbx 文件在 ArcGIS 内打开一般有两种方法：
-1. 直接在目录窗口打开">
-<meta name="twitter:image" content="https://i.xdc.at/assets/images/tbx-in-ArcGIS/tbx-icon.png">
+<meta name="twitter:title" content="【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1">
+<meta name="twitter:description" content="软件介绍见 基于高德 API 的交通等时线划分工具 。
+
+本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范围方式二选一）。输入的面必须为 GCS_WGS_1984 坐标系，可通过创建一个新的shapefile等方法获得。输入的中心点不一定要在输入的边界面内。">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images/transportation-contourline-tbx-1.3.1/interface.png">
   
     <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
   
@@ -148,7 +128,7 @@ var _hmt = _hmt || [];
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">在 ArcGIS 内使用 tbx 工具箱</div>
+        <div class="flex-col header-title ellipsis">【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -170,11 +150,11 @@ var _hmt = _hmt || [];
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">在 ArcGIS 内使用 tbx 工具箱</h1>
+        <h1 class="title">【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1</h1>
         <h5 class="subtitle">
             
-                <time datetime="2016-10-31T05:59:33.000Z" itemprop="datePublished" class="page-time">
-  2016-10-31
+                <time datetime="2017-05-19T05:54:35.000Z" itemprop="datePublished" class="page-time">
+  2017-05-19
 </time>
 
 
@@ -191,21 +171,14 @@ var _hmt = _hmt || [];
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-直接在目录窗口打开"><span class="post-toc-text">1. 直接在目录窗口打开</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-添加到已有工具箱列表"><span class="post-toc-text">2. 添加到已有工具箱列表</span></a></li></ol>
-        </nav>
-    </aside>
-    
-<article id="post-tbx-in-ArcGIS"
+<article id="post-transportation-contourline-tbx-1.3.1"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">在 ArcGIS 内使用 tbx 工具箱</h1>
+        <h1 class="post-card-title">【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1</h1>
         <div class="post-meta">
-            <time datetime="2016-10-31T05:59:33.000Z" itemprop="datePublished" class="post-time">
-  2016-10-31
+            <time datetime="2017-05-19T05:54:35.000Z" itemprop="datePublished" class="post-time">
+  2017-05-19
 </time>
 
             
@@ -215,36 +188,24 @@ var _hmt = _hmt || [];
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>tbx 文件是 ArcGIS 的工具箱文件（如下图），因此首先需要安装有 ArcGIS 软件。<br><figure class="image-bubble">
+            <p> 软件介绍见 <a href="/2016/10/30/transportation-contour-line-tbx/">基于高德 API 的交通等时线划分工具</a> 。</p>
+<hr>
+<p>本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范围方式二选一）。<br>输入的面必须为 GCS_WGS_1984 坐标系，可通过创建一个新的shapefile等方法获得。<br>输入的中心点不一定要在输入的边界面内。</p>
+<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/images/tbx-in-ArcGIS/tbx-icon.png" alt="tbx文件" title="">
+                    <img src="/assets/images/transportation-contourline-tbx-1.3.1/interface.png" alt="新版输入界面" title="">
                 </div>
-                <div class="image-caption">tbx文件</div>
-            </figure></p>
-<p>tbx 文件在 ArcGIS 内打开一般有两种方法：</p>
-<h4 id="1-直接在目录窗口打开"><a href="#1-直接在目录窗口打开" class="headerlink" title="1. 直接在目录窗口打开"></a>1. 直接在目录窗口打开</h4><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/assets/images/tbx-in-ArcGIS/open-tbx.png" alt="打开tbx文件" title="">
-                </div>
-                <div class="image-caption">打开tbx文件</div>
+                <div class="image-caption">新版输入界面</div>
             </figure>
-<p>在 ArcMap 软件的目录(Catalog) 窗口定位到该文件，并双击打开。必要时可能需要先添加文件夹连接。</p>
-<h4 id="2-添加到已有工具箱列表"><a href="#2-添加到已有工具箱列表" class="headerlink" title="2. 添加到已有工具箱列表"></a>2. 添加到已有工具箱列表</h4><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="/assets/images/tbx-in-ArcGIS/add-tbx.png" alt="添加tbx文件" title="">
-                </div>
-                <div class="image-caption">添加tbx文件</div>
-            </figure>
-<p>在 ArcMap 软件的工具箱(ArcToolbox) 窗口，对窗口内的 <code>ArcToolbox</code>右键单击，再 <code>添加工具箱...</code> ，找到 tbx 文件并选中，点 <code>打开</code> ，该工具箱即被添加到默认的工具箱列表内，下次使用不必再到原文件夹内去寻找。</p>
+<hr>
+<p>下载地址仍在 <a href="/2016/10/30/transportation-contour-line-tbx/#下载">原软件介绍页面</a>。</p>
 
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
-        本文地址：<a href="/2016/10/31/tbx-in-ArcGIS/" target="_blank" rel="external">https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/</a>
+        本文地址：<a href="/2017/05/19/transportation-contourline-tbx-1.3.1/" target="_blank" rel="external">https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/</a>
     </div>
     <footer>
         <a href="https://i.xdc.at">
@@ -262,7 +223,7 @@ var _hmt = _hmt || [];
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tbx/">tbx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具箱/">工具箱</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tbx/">tbx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/交通等时线/">交通等时线</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具箱/">工具箱</a></li></ul>
 
 
             
@@ -273,7 +234,7 @@ var _hmt = _hmt || [];
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/&title=《在 ArcGIS 内使用 tbx 工具箱》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/&title=《【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -283,22 +244,22 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/&title=《在 ArcGIS 内使用 tbx 工具箱》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/&title=《【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《在 ArcGIS 内使用 tbx 工具箱》 — 谢栋灿's Blog&url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/&via=https://i.xdc.at" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/&via=https://i.xdc.at" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -321,18 +282,18 @@ var _hmt = _hmt || [];
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2016/11/15/port-forward-by-ssh/" id="post-prev" class="post-nav-link">
+      <a href="/2048/10/24/top-pinned/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">利用SSH的端口转发实现内网穿透</h4>
+        <h4 class="title">【置顶】欢迎来到本站</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2016/10/30/transportation-contour-line-tbx/" id="post-next" class="post-nav-link">
+      <a href="/2017/04/19/aoi-data/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">基于高德 API 的交通等时线划分工具</h4>
+        <h4 class="title">AOI（兴趣区）数据获取尝试</h4>
       </a>
     </div>
   
@@ -385,7 +346,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/&title=《在 ArcGIS 内使用 tbx 工具箱》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/&title=《【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -395,22 +356,22 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/&title=《在 ArcGIS 内使用 tbx 工具箱》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/&title=《【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《在 ArcGIS 内使用 tbx 工具箱》 — 谢栋灿's Blog&url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/&via=https://i.xdc.at" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/&via=https://i.xdc.at" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2016/10/31/tbx-in-ArcGIS/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -421,7 +382,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aO3LDMAwFwNz/0kqbIqYfCBLxZJaVxpbFlQsOfl9f8Xp+rPU9r67XnxxeuLi4be6zXOst1+jkNXIDLi7uPDc/mNb3rBGd5+Pi4n4yNw9N1k/GxcX9T9xqgnQ2YMLFxZ3kJslPtSCSJDkXczVcXNwGtxqs3Li+Ut/FxcXd4j7FtT6qCmHK3u64uLgj3E5is9dGPZBQ4eLijnM7rDx1SVKpqMmKi4t7gVsdtqgWLPKjLdoLFxd3hJuULfYOnX4x9GUwhIuLO8LdS2b6yU8Sf7XiMlxc3C1u3v48WyJpJT+4uLgj3DwEyYcnOiHRm4MMFxd3hJunK/3wJf8jfrHh4uIOcquPO9tkLYRTuLi4I9ykNJm3TKovc6xUiouLe41bLY8mm3UGON4cZLi4uCPcPBWJBiuLAxaFogkuLu4gN2FV26KdgGlze1xc3Db3Ka7qaOZmMzX/AS4u7gVuvk69RqH8EQRPuLi497gJpXpdLXkkbRhcXNx5bn4M7YVE1eSq/DUuLu6fcnN0MoqxmbHh4uJ+GLcT4lSTn6jzg4uLe41bTVSqQxXJKEb0Mri4uCPcvGBaHb/YG7kolEhwcXHPc78BFJ/YV+7r1UMAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aUU7DMBAEUO5/6XKClJlduyrS81cFIfYLUuzO7s9PPF4P4+ma9z9JPiczHht4eHh4h5aeL/Tpnk9Xvr//7PrHR4CHh4d3jdcu8f0LPbl/fp/84eLh4eF9J+8VjGTi2WaAh4eH9x95+RLrpeDh4eH9K14SRrw/OueH42Szye98LGvBw8PDu1BF+p7PV+p7eHh4eOuqehIWbA7H7Vz1avHw8PAu8NoCVXJsPVW42hTS8PDw8D7JSwpRbevA+wfUbj91swIeHh7eUV4S2raRxOpJL1KFn/aJ4uHh4Y14swJ/u+i2MSvfbIrjPh4eHt5R3uz13R52859sQo06HcHDw8Mree3LOmnM2hydZ8iivoeHh4e35m2aANo4IHkoOSP/SoCHh4d3g9fmn6fC2VlAnEcYeHh4eDd4SWNoQs2P2u0DymPiP3oi8PDw8A7xkgJVsqvM4tfkr471lOHh4eEd4rUF/nahbcltVgwbToOHh4c34uUxax4E5L9ta/2veODh4eHd420CgiS0nR2ak80mWjkeHh7eZV4bPWwiiXzbyNsIHnvK8PDw8I7y2tal2QH6bMSwarrCw8PDO8Rr26pONRYkL/c8XMbDw8P7DK/Oeo/GDZstKvr34OHh4V3gtV/+25JV/rqfhRqrKh8eHh7egpfHqbPyf17uao/O0ZaDh4eHd403m6Yt/OebwSzswMPDw/skbxbdtjFEHlK0scjj9oCHh4d3lPcqxyy6bccs+HjsKcPDw8M7ymunnB2+2w2jjR5mBTY8PDy8Da/dDJLp96/+duOJCmB4eHh4R3ltQ9W+deBeexYeHh7et/E2paxk0fm2VByp8fDw8L6Mly8lX+4sYq7P73h4eHgLXn7wnYW/bdtBfoz+YxY8PDy8C7z2C3++3P320F45HHh4eHgp7xdne5xxJEck3AAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 

@@ -35,6 +35,48 @@
   </entry>
   
   <entry>
+    <title>【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1</title>
+    <link href="https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/"/>
+    <id>https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/</id>
+    <published>2017-05-19T05:54:35.000Z</published>
+    <updated>2017-05-19T06:08:32.588Z</updated>
+    
+    <content type="html"><![CDATA[<p> 软件介绍见 <a href="/2016/10/30/transportation-contour-line-tbx/">基于高德 API 的交通等时线划分工具</a> 。</p>
+<hr>
+<p>本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范围方式二选一）。<br>输入的面必须为 GCS_WGS_1984 坐标系，可通过创建一个新的shapefile等方法获得。<br>输入的中心点不一定要在输入的边界面内。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/transportation-contourline-tbx-1.3.1/interface.png" alt="新版输入界面" title="">
+                </div>
+                <div class="image-caption">新版输入界面</div>
+            </figure>
+<hr>
+<p>下载地址仍在 <a href="/2016/10/30/transportation-contour-line-tbx/#下载">原软件介绍页面</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 软件介绍见 &lt;a href=&quot;/2016/10/30/transportation-contour-line-tbx/&quot;&gt;基于高德 API 的交通等时线划分工具&lt;/a&gt; 。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范
+    
+    </summary>
+    
+      <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
+    
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
+    
+      <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="交通等时线" scheme="https://i.xdc.at/tags/%E4%BA%A4%E9%80%9A%E7%AD%89%E6%97%B6%E7%BA%BF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AOI（兴趣区）数据获取尝试</title>
     <link href="https://i.xdc.at/2017/04/19/aoi-data/"/>
     <id>https://i.xdc.at/2017/04/19/aoi-data/</id>
@@ -82,11 +124,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="AOI" scheme="https://i.xdc.at/tags/AOI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="AOI" scheme="https://i.xdc.at/tags/AOI/"/>
     
   </entry>
   
@@ -872,7 +914,7 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2017-03-26T07:03:51.702Z</updated>
+    <updated>2017-05-19T05:14:49.805Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
@@ -938,7 +980,7 @@
 <h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://r.cnki.net/kcms/detail/detail.aspx?filename=ZHCG201609004064&amp;dbcode=JZYP&amp;dbname=JZYPTEMP&amp;v=MDU0MzZJMThkUHlYSWFiRzRIOWZNcG85RllPc0pDQk5JeUJVUzZ6ZDVQbjJVcW1CQUQ3dVFLcmlmWnVGdkZTdmlVN3JM" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
 <p>引用格式参考：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
 <p>使用该工具的公开研究成果，请注明以上引用，和/或附上本页面网址 <code>http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</code> 。</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/transportation-contourline-tbx/" target="_blank">xdc交通等时线工具箱v1.2.5.tbx</a></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/transportation-contourline-tbx/" target="_blank">xdc交通等时线工具箱v1.2.5.tbx</a><br><a href="/assets/downloads/transportation-contourline-tbx/v1.3.1/" target="_blank">xdc交通等时线工具箱v1.3.1.tbx（测试版）</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1092,11 +1134,11 @@
       <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
@@ -1173,15 +1215,15 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
       <category term="地铁" scheme="https://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
     
   </entry>
   
