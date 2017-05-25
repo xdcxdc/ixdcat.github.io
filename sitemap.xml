@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://i.xdc.at/2017/05/24/poi-data-update-201705/</loc>
+    
+    <lastmod>2017-05-25T13:21:43.063Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2017/02/21/poi-data-update-201702/</loc>
+    
+    <lastmod>2017-05-25T05:31:08.264Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/</loc>
     
     <lastmod>2017-05-19T06:08:32.588Z</lastmod>
@@ -61,13 +75,6 @@
     <loc>https://i.xdc.at/2016/11/15/port-forward-by-ssh/</loc>
     
     <lastmod>2017-03-03T08:17:04.648Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://i.xdc.at/2017/02/21/poi-data-update-201702/</loc>
-    
-    <lastmod>2017-03-03T08:17:04.007Z</lastmod>
     
   </url>
   

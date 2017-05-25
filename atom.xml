@@ -35,6 +35,299 @@
   </entry>
   
   <entry>
+    <title>全国POI数据2017年5月更新</title>
+    <link href="https://i.xdc.at/2017/05/24/poi-data-update-201705/"/>
+    <id>https://i.xdc.at/2017/05/24/poi-data-update-201705/</id>
+    <published>2017-05-24T11:38:44.000Z</published>
+    <updated>2017-05-25T13:21:43.063Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2017/02/21/poi-data-update-201702/">2017年2月</a> 的基础上，主要更新内容如下：</p>
+<ol>
+<li>新增条目 485万+条</li>
+<li>删除自2017年2月到现在没再出现的条目 385万+条</li>
+<li>详情信息更新 共955万+条，其中<ul>
+<li>名称更新 110万+条</li>
+<li>坐标更新 470万+条</li>
+<li>地址字段更新 370万+条</li>
+<li>类型信息更新 100万+条</li>
+</ul>
+</li>
+</ol>
+<p>经过此次更新，整理后 POI 数据条目总数达到了 5970万+ 。</p>
+<h3 id="各省份-与-TOP-30-城市的-POI-数量"><a href="#各省份-与-TOP-30-城市的-POI-数量" class="headerlink" title="各省份 与 TOP 30 城市的 POI 数量"></a>各省份 与 TOP 30 城市的 POI 数量</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">省份</th>
+<th style="text-align:center">数量</th>
+<th></th>
+<th style="text-align:center">城市</th>
+<th style="text-align:center">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">广东省</td>
+<td style="text-align:center">665万+</td>
+<td></td>
+<td style="text-align:center">上海市</td>
+<td style="text-align:center">190万+</td>
+</tr>
+<tr>
+<td style="text-align:center">江苏省</td>
+<td style="text-align:center">500万+</td>
+<td></td>
+<td style="text-align:center">北京市</td>
+<td style="text-align:center">160万+</td>
+</tr>
+<tr>
+<td style="text-align:center">浙江省</td>
+<td style="text-align:center">415万+</td>
+<td></td>
+<td style="text-align:center">广州市</td>
+<td style="text-align:center">130万+</td>
+</tr>
+<tr>
+<td style="text-align:center">山东省</td>
+<td style="text-align:center">405万+</td>
+<td></td>
+<td style="text-align:center">成都市</td>
+<td style="text-align:center">120万+</td>
+</tr>
+<tr>
+<td style="text-align:center">河南省</td>
+<td style="text-align:center">325万+</td>
+<td></td>
+<td style="text-align:center">重庆市</td>
+<td style="text-align:center">115万+</td>
+</tr>
+<tr>
+<td style="text-align:center">四川省</td>
+<td style="text-align:center">310万+</td>
+<td></td>
+<td style="text-align:center">深圳市</td>
+<td style="text-align:center">115万+</td>
+</tr>
+<tr>
+<td style="text-align:center">河北省</td>
+<td style="text-align:center">250万+</td>
+<td></td>
+<td style="text-align:center">苏州市</td>
+<td style="text-align:center">100万+</td>
+</tr>
+<tr>
+<td style="text-align:center">湖北省</td>
+<td style="text-align:center">225万+</td>
+<td></td>
+<td style="text-align:center">杭州市</td>
+<td style="text-align:center">90万+</td>
+</tr>
+<tr>
+<td style="text-align:center">湖南省</td>
+<td style="text-align:center">215万+</td>
+<td></td>
+<td style="text-align:center">东莞市</td>
+<td style="text-align:center">85万+</td>
+</tr>
+<tr>
+<td style="text-align:center">安徽省</td>
+<td style="text-align:center">205万+</td>
+<td></td>
+<td style="text-align:center">武汉市</td>
+<td style="text-align:center">75万+</td>
+</tr>
+<tr>
+<td style="text-align:center">辽宁省</td>
+<td style="text-align:center">190万+</td>
+<td></td>
+<td style="text-align:center">天津市</td>
+<td style="text-align:center">75万+</td>
+</tr>
+<tr>
+<td style="text-align:center">上海市</td>
+<td style="text-align:center">190万+</td>
+<td></td>
+<td style="text-align:center">佛山市</td>
+<td style="text-align:center">65万+</td>
+</tr>
+<tr>
+<td style="text-align:center">福建省</td>
+<td style="text-align:center">185万+</td>
+<td></td>
+<td style="text-align:center">西安市</td>
+<td style="text-align:center">65万+</td>
+</tr>
+<tr>
+<td style="text-align:center">广西壮族自治区</td>
+<td style="text-align:center">160万+</td>
+<td></td>
+<td style="text-align:center">宁波市</td>
+<td style="text-align:center">65万+</td>
+</tr>
+<tr>
+<td style="text-align:center">北京市</td>
+<td style="text-align:center">160万+</td>
+<td></td>
+<td style="text-align:center">南京市</td>
+<td style="text-align:center">60万+</td>
+</tr>
+<tr>
+<td style="text-align:center">江西省</td>
+<td style="text-align:center">155万+</td>
+<td></td>
+<td style="text-align:center">青岛市</td>
+<td style="text-align:center">60万+</td>
+</tr>
+<tr>
+<td style="text-align:center">陕西省</td>
+<td style="text-align:center">155万+</td>
+<td></td>
+<td style="text-align:center">郑州市</td>
+<td style="text-align:center">60万+</td>
+</tr>
+<tr>
+<td style="text-align:center">云南省</td>
+<td style="text-align:center">145万+</td>
+<td></td>
+<td style="text-align:center">无锡市</td>
+<td style="text-align:center">60万+</td>
+</tr>
+<tr>
+<td style="text-align:center">山西省</td>
+<td style="text-align:center">125万+</td>
+<td></td>
+<td style="text-align:center">长沙市</td>
+<td style="text-align:center">55万+</td>
+</tr>
+<tr>
+<td style="text-align:center">黑龙江省</td>
+<td style="text-align:center">120万+</td>
+<td></td>
+<td style="text-align:center">温州市</td>
+<td style="text-align:center">55万+</td>
+</tr>
+<tr>
+<td style="text-align:center">重庆市</td>
+<td style="text-align:center">115万+</td>
+<td></td>
+<td style="text-align:center">沈阳市</td>
+<td style="text-align:center">45万+</td>
+</tr>
+<tr>
+<td style="text-align:center">内蒙古自治区</td>
+<td style="text-align:center">105万+</td>
+<td></td>
+<td style="text-align:center">石家庄市</td>
+<td style="text-align:center">45万+</td>
+</tr>
+<tr>
+<td style="text-align:center">贵州省</td>
+<td style="text-align:center">100万+</td>
+<td></td>
+<td style="text-align:center">昆明市</td>
+<td style="text-align:center">45万+</td>
+</tr>
+<tr>
+<td style="text-align:center">吉林省</td>
+<td style="text-align:center">100万+</td>
+<td></td>
+<td style="text-align:center">金华市</td>
+<td style="text-align:center">45万+</td>
+</tr>
+<tr>
+<td style="text-align:center">甘肃省</td>
+<td style="text-align:center">75万+</td>
+<td></td>
+<td style="text-align:center">合肥市</td>
+<td style="text-align:center">45万+</td>
+</tr>
+<tr>
+<td style="text-align:center">天津市</td>
+<td style="text-align:center">75万+</td>
+<td></td>
+<td style="text-align:center">哈尔滨市</td>
+<td style="text-align:center">40万+</td>
+</tr>
+<tr>
+<td style="text-align:center">新疆维吾尔自治区</td>
+<td style="text-align:center">65万+</td>
+<td></td>
+<td style="text-align:center">常州市</td>
+<td style="text-align:center">40万+</td>
+</tr>
+<tr>
+<td style="text-align:center">台湾省</td>
+<td style="text-align:center">50万+</td>
+<td></td>
+<td style="text-align:center">泉州市</td>
+<td style="text-align:center">40万+</td>
+</tr>
+<tr>
+<td style="text-align:center">宁夏回族自治区</td>
+<td style="text-align:center">30万+</td>
+<td></td>
+<td style="text-align:center">济南市</td>
+<td style="text-align:center">40万+</td>
+</tr>
+<tr>
+<td style="text-align:center">海南省</td>
+<td style="text-align:center">30万+</td>
+<td></td>
+<td style="text-align:center">南宁市</td>
+<td style="text-align:center">40万+</td>
+</tr>
+<tr>
+<td style="text-align:center">香港特别行政区</td>
+<td style="text-align:center">30万+</td>
+<td></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">青海省</td>
+<td style="text-align:center">20万+</td>
+<td></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">西藏自治区</td>
+<td style="text-align:center">15万+</td>
+<td></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">澳门特别行政区</td>
+<td style="text-align:center">5万以下</td>
+<td></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><p><a href="/2016/11/20/poi-data-update-201611/#数据字段信息">数据字段信息</a></p>
+<h3 id="样例下载"><a href="#样例下载" class="headerlink" title="样例下载"></a>样例下载</h3><p><a href="/assets/downloads/poi-data-update-201705/" target="_blank">点此下载样例文件(shp格式)</a></p>
+<p>如需了解更多，可发邮件至 <i class="icon icon-lg icon-envelope" onclick="window.open('mailto:i@xdc.at');" style="cursor:pointer"></i><code>i@xdc.at</code> 与我联系。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;主要更新内容&quot;&gt;&lt;a href=&quot;#主要更新内容&quot; class=&quot;headerlink&quot; title=&quot;主要更新内容&quot;&gt;&lt;/a&gt;主要更新内容&lt;/h3&gt;&lt;p&gt;本次 POI 数据在 &lt;a href=&quot;/2017/02/21/poi-data-update-201702
+    
+    </summary>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
+    
+    
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1</title>
     <link href="https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/"/>
     <id>https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/</id>
@@ -190,11 +483,11 @@
     
       <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
-      <category term="天地图" scheme="https://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/"/>
-    
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="天地图" scheme="https://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/"/>
     
   </entry>
   
@@ -203,12 +496,12 @@
     <link href="https://i.xdc.at/2017/02/21/poi-data-update-201702/"/>
     <id>https://i.xdc.at/2017/02/21/poi-data-update-201702/</id>
     <published>2017-02-21T04:08:55.000Z</published>
-    <updated>2017-03-03T08:17:04.007Z</updated>
+    <updated>2017-05-25T05:31:08.264Z</updated>
     
     <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2016/11/20/poi-data-update-201611/">2016年11月</a> 的基础上，主要更新内容如下：</p>
 <ol>
 <li>新增条目 620w条</li>
-<li>删除自2016年9月到现在没再出现的条目 380w条</li>
+<li>删除自2016年11月到现在没再出现的条目 380w条</li>
 <li>详情信息更新 共1100w+ 条，其中<ul>
 <li>名称更新 140w条</li>
 <li>坐标更新 410w条</li>

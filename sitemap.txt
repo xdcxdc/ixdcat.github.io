@@ -12,6 +12,7 @@ http://i.xdc.at/2016/11/20/poi-data-update-201611/
 http://i.xdc.at/2017/02/21/poi-data-update-201702/
 http://i.xdc.at/2017/03/02/tianditu-poi-tbx/
 http://i.xdc.at/2017/04/19/aoi-data/
+http://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/
 http://i.xdc.at/2048/10/24/top-pinned/
 http://i.xdc.at/about/
 http://i.xdc.at/archives/
@@ -22,12 +23,14 @@ http://i.xdc.at/archives/2017/
 http://i.xdc.at/archives/2017/02/
 http://i.xdc.at/archives/2017/03/
 http://i.xdc.at/archives/2017/04/
+http://i.xdc.at/archives/2017/05/
 http://i.xdc.at/archives/2048/
 http://i.xdc.at/archives/2048/10/
 http://i.xdc.at/archives/page/2/
 http://i.xdc.at/assets/downloads/poi-data-update-201702/
 http://i.xdc.at/assets/downloads/tianditu-poi-tbx/
 http://i.xdc.at/assets/downloads/transportation-contourline-tbx/
+http://i.xdc.at/assets/downloads/transportation-contourline-tbx/v1.3.1/
 http://i.xdc.at/categories/
 http://i.xdc.at/categories/data/
 http://i.xdc.at/categories/data-analysis/
