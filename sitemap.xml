@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://i.xdc.at/2017/05/24/poi-data-update-201705/</loc>
+    <loc>https://i.xdc.at/2017/06/23/poi-data-update-201706/</loc>
     
-    <lastmod>2017-05-25T13:21:43.063Z</lastmod>
+    <lastmod>2017-06-23T00:57:38.664Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</loc>
+    
+    <lastmod>2017-06-17T08:28:14.135Z</lastmod>
     
   </url>
   
@@ -96,13 +103,6 @@
     <loc>https://i.xdc.at/about/index.html</loc>
     
     <lastmod>2016-11-26T01:41:14.180Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</loc>
-    
-    <lastmod>2016-11-24T02:00:17.441Z</lastmod>
     
   </url>
   

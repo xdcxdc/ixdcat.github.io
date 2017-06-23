@@ -35,25 +35,25 @@
   </entry>
   
   <entry>
-    <title>全国POI数据2017年5月更新</title>
-    <link href="https://i.xdc.at/2017/05/24/poi-data-update-201705/"/>
-    <id>https://i.xdc.at/2017/05/24/poi-data-update-201705/</id>
-    <published>2017-05-24T11:38:44.000Z</published>
-    <updated>2017-05-25T13:21:43.063Z</updated>
+    <title>全国POI数据2017年6月更新</title>
+    <link href="https://i.xdc.at/2017/06/23/poi-data-update-201706/"/>
+    <id>https://i.xdc.at/2017/06/23/poi-data-update-201706/</id>
+    <published>2017-06-23T02:14:00.000Z</published>
+    <updated>2017-06-23T00:57:38.664Z</updated>
     
     <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2017/02/21/poi-data-update-201702/">2017年2月</a> 的基础上，主要更新内容如下：</p>
 <ol>
-<li>新增条目 485万+条</li>
+<li>新增条目 690万+条</li>
 <li>删除自2017年2月到现在没再出现的条目 385万+条</li>
-<li>详情信息更新 共955万+条，其中<ul>
-<li>名称更新 110万+条</li>
-<li>坐标更新 470万+条</li>
-<li>地址字段更新 370万+条</li>
-<li>类型信息更新 100万+条</li>
+<li>详情信息更新 共945万+条，其中<ul>
+<li>名称更新 135万+条</li>
+<li>坐标更新 385万+条</li>
+<li>地址字段更新 430万+条</li>
+<li>类型信息更新 120万+条</li>
 </ul>
 </li>
 </ol>
-<p>经过此次更新，整理后 POI 数据条目总数达到了 5970万+ 。</p>
+<p>经过此次更新，整理后 POI 数据条目总数达到了 6180万+ 。</p>
 <h3 id="各省份-与-TOP-30-城市的-POI-数量"><a href="#各省份-与-TOP-30-城市的-POI-数量" class="headerlink" title="各省份 与 TOP 30 城市的 POI 数量"></a>各省份 与 TOP 30 城市的 POI 数量</h3><table>
 <thead>
 <tr>
@@ -67,140 +67,140 @@
 <tbody>
 <tr>
 <td style="text-align:center">广东省</td>
-<td style="text-align:center">665万+</td>
+<td style="text-align:center">690万+</td>
 <td></td>
 <td style="text-align:center">上海市</td>
-<td style="text-align:center">190万+</td>
+<td style="text-align:center">195万+</td>
 </tr>
 <tr>
 <td style="text-align:center">江苏省</td>
-<td style="text-align:center">500万+</td>
+<td style="text-align:center">515万+</td>
 <td></td>
 <td style="text-align:center">北京市</td>
-<td style="text-align:center">160万+</td>
+<td style="text-align:center">170万+</td>
 </tr>
 <tr>
 <td style="text-align:center">浙江省</td>
-<td style="text-align:center">415万+</td>
+<td style="text-align:center">435万+</td>
 <td></td>
 <td style="text-align:center">广州市</td>
-<td style="text-align:center">130万+</td>
+<td style="text-align:center">135万+</td>
 </tr>
 <tr>
 <td style="text-align:center">山东省</td>
-<td style="text-align:center">405万+</td>
+<td style="text-align:center">420万+</td>
 <td></td>
 <td style="text-align:center">成都市</td>
-<td style="text-align:center">120万+</td>
+<td style="text-align:center">125万+</td>
 </tr>
 <tr>
 <td style="text-align:center">河南省</td>
-<td style="text-align:center">325万+</td>
+<td style="text-align:center">335万+</td>
+<td></td>
+<td style="text-align:center">深圳市</td>
+<td style="text-align:center">120万+</td>
+</tr>
+<tr>
+<td style="text-align:center">四川省</td>
+<td style="text-align:center">320万+</td>
 <td></td>
 <td style="text-align:center">重庆市</td>
 <td style="text-align:center">115万+</td>
 </tr>
 <tr>
-<td style="text-align:center">四川省</td>
-<td style="text-align:center">310万+</td>
-<td></td>
-<td style="text-align:center">深圳市</td>
-<td style="text-align:center">115万+</td>
-</tr>
-<tr>
 <td style="text-align:center">河北省</td>
-<td style="text-align:center">250万+</td>
+<td style="text-align:center">260万+</td>
 <td></td>
 <td style="text-align:center">苏州市</td>
-<td style="text-align:center">100万+</td>
+<td style="text-align:center">105万+</td>
 </tr>
 <tr>
 <td style="text-align:center">湖北省</td>
-<td style="text-align:center">225万+</td>
+<td style="text-align:center">230万+</td>
 <td></td>
 <td style="text-align:center">杭州市</td>
-<td style="text-align:center">90万+</td>
+<td style="text-align:center">95万+</td>
 </tr>
 <tr>
 <td style="text-align:center">湖南省</td>
-<td style="text-align:center">215万+</td>
+<td style="text-align:center">220万+</td>
 <td></td>
 <td style="text-align:center">东莞市</td>
-<td style="text-align:center">85万+</td>
+<td style="text-align:center">90万+</td>
 </tr>
 <tr>
 <td style="text-align:center">安徽省</td>
-<td style="text-align:center">205万+</td>
+<td style="text-align:center">210万+</td>
 <td></td>
 <td style="text-align:center">武汉市</td>
-<td style="text-align:center">75万+</td>
+<td style="text-align:center">80万+</td>
 </tr>
 <tr>
-<td style="text-align:center">辽宁省</td>
-<td style="text-align:center">190万+</td>
+<td style="text-align:center">上海市</td>
+<td style="text-align:center">195万+</td>
 <td></td>
 <td style="text-align:center">天津市</td>
 <td style="text-align:center">75万+</td>
 </tr>
 <tr>
-<td style="text-align:center">上海市</td>
-<td style="text-align:center">190万+</td>
+<td style="text-align:center">辽宁省</td>
+<td style="text-align:center">195万+</td>
 <td></td>
 <td style="text-align:center">佛山市</td>
 <td style="text-align:center">65万+</td>
 </tr>
 <tr>
 <td style="text-align:center">福建省</td>
-<td style="text-align:center">185万+</td>
-<td></td>
-<td style="text-align:center">西安市</td>
-<td style="text-align:center">65万+</td>
-</tr>
-<tr>
-<td style="text-align:center">广西壮族自治区</td>
-<td style="text-align:center">160万+</td>
+<td style="text-align:center">190万+</td>
 <td></td>
 <td style="text-align:center">宁波市</td>
 <td style="text-align:center">65万+</td>
 </tr>
 <tr>
 <td style="text-align:center">北京市</td>
-<td style="text-align:center">160万+</td>
+<td style="text-align:center">170万+</td>
 <td></td>
-<td style="text-align:center">南京市</td>
-<td style="text-align:center">60万+</td>
+<td style="text-align:center">西安市</td>
+<td style="text-align:center">65万+</td>
 </tr>
 <tr>
-<td style="text-align:center">江西省</td>
-<td style="text-align:center">155万+</td>
+<td style="text-align:center">广西壮族自治区</td>
+<td style="text-align:center">165万+</td>
 <td></td>
 <td style="text-align:center">青岛市</td>
 <td style="text-align:center">60万+</td>
 </tr>
 <tr>
 <td style="text-align:center">陕西省</td>
-<td style="text-align:center">155万+</td>
+<td style="text-align:center">160万+</td>
 <td></td>
 <td style="text-align:center">郑州市</td>
 <td style="text-align:center">60万+</td>
 </tr>
 <tr>
+<td style="text-align:center">江西省</td>
+<td style="text-align:center">155万+</td>
+<td></td>
+<td style="text-align:center">南京市</td>
+<td style="text-align:center">60万+</td>
+</tr>
+<tr>
 <td style="text-align:center">云南省</td>
-<td style="text-align:center">145万+</td>
+<td style="text-align:center">150万+</td>
 <td></td>
 <td style="text-align:center">无锡市</td>
 <td style="text-align:center">60万+</td>
 </tr>
 <tr>
 <td style="text-align:center">山西省</td>
-<td style="text-align:center">125万+</td>
+<td style="text-align:center">130万+</td>
 <td></td>
 <td style="text-align:center">长沙市</td>
-<td style="text-align:center">55万+</td>
+<td style="text-align:center">60万+</td>
 </tr>
 <tr>
 <td style="text-align:center">黑龙江省</td>
-<td style="text-align:center">120万+</td>
+<td style="text-align:center">125万+</td>
 <td></td>
 <td style="text-align:center">温州市</td>
 <td style="text-align:center">55万+</td>
@@ -210,20 +210,20 @@
 <td style="text-align:center">115万+</td>
 <td></td>
 <td style="text-align:center">沈阳市</td>
-<td style="text-align:center">45万+</td>
+<td style="text-align:center">50万+</td>
 </tr>
 <tr>
 <td style="text-align:center">内蒙古自治区</td>
 <td style="text-align:center">105万+</td>
 <td></td>
-<td style="text-align:center">石家庄市</td>
+<td style="text-align:center">昆明市</td>
 <td style="text-align:center">45万+</td>
 </tr>
 <tr>
 <td style="text-align:center">贵州省</td>
 <td style="text-align:center">100万+</td>
 <td></td>
-<td style="text-align:center">昆明市</td>
+<td style="text-align:center">石家庄市</td>
 <td style="text-align:center">45万+</td>
 </tr>
 <tr>
@@ -235,7 +235,7 @@
 </tr>
 <tr>
 <td style="text-align:center">甘肃省</td>
-<td style="text-align:center">75万+</td>
+<td style="text-align:center">80万+</td>
 <td></td>
 <td style="text-align:center">合肥市</td>
 <td style="text-align:center">45万+</td>
@@ -249,21 +249,21 @@
 </tr>
 <tr>
 <td style="text-align:center">新疆维吾尔自治区</td>
-<td style="text-align:center">65万+</td>
+<td style="text-align:center">70万+</td>
 <td></td>
-<td style="text-align:center">常州市</td>
+<td style="text-align:center">泉州市</td>
 <td style="text-align:center">40万+</td>
 </tr>
 <tr>
 <td style="text-align:center">台湾省</td>
 <td style="text-align:center">50万+</td>
 <td></td>
-<td style="text-align:center">泉州市</td>
+<td style="text-align:center">常州市</td>
 <td style="text-align:center">40万+</td>
 </tr>
 <tr>
 <td style="text-align:center">宁夏回族自治区</td>
-<td style="text-align:center">30万+</td>
+<td style="text-align:center">35万+</td>
 <td></td>
 <td style="text-align:center">济南市</td>
 <td style="text-align:center">40万+</td>
@@ -272,7 +272,7 @@
 <td style="text-align:center">海南省</td>
 <td style="text-align:center">30万+</td>
 <td></td>
-<td style="text-align:center">南宁市</td>
+<td style="text-align:center">大连市</td>
 <td style="text-align:center">40万+</td>
 </tr>
 <tr>
@@ -306,7 +306,7 @@
 </tbody>
 </table>
 <h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><p><a href="/2016/11/20/poi-data-update-201611/#数据字段信息">数据字段信息</a></p>
-<h3 id="样例下载"><a href="#样例下载" class="headerlink" title="样例下载"></a>样例下载</h3><p><a href="/assets/downloads/poi-data-update-201705/" target="_blank">点此下载样例文件(shp格式)</a></p>
+<h3 id="样例下载"><a href="#样例下载" class="headerlink" title="样例下载"></a>样例下载</h3><p><a href="/assets/downloads/poi-data-update-201706/" target="_blank">点此下载样例文件(shp格式)</a></p>
 <p>如需了解更多，可发邮件至 <i class="icon icon-lg icon-envelope" onclick="window.open('mailto:i@xdc.at');" style="cursor:pointer"></i><code>i@xdc.at</code> 与我联系。</p>
 ]]></content>
     
@@ -1611,11 +1611,11 @@
     <link href="https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/"/>
     <id>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</id>
     <published>2016-10-05T07:20:39.000Z</published>
-    <updated>2016-11-24T02:00:17.441Z</updated>
+    <updated>2017-06-17T08:28:14.135Z</updated>
     
     <content type="html"><![CDATA[<p><strong>写在前面 :</strong><br><strong><em>为什么要在 SQL Server 内创建空间要素？</em></strong><br>该需求来自于千万级别POI数据的存储与可视化。<br>存储部分使用 SQL Server 即可，并且筛选查询的效率也比较高。<br>可视化方面用的比较多的是 ArcGIS , 分析起来也比较方便，但对于大批量数据的处理效率比较低。<br>因此就希望能够把数据库的存储与查询能力，和 ArcGIS 的空间数据可视化与分析能力结合起来。经过一番搜索，得到了以下的解决方案。</p>
 <a id="more"></a>
-<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545, 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
+<h3 id="1-在-SQL-Server-内创建空间要素"><a href="#1-在-SQL-Server-内创建空间要素" class="headerlink" title="1. 在 SQL Server 内创建空间要素"></a>1. 在 SQL Server 内创建空间要素</h3><p>在数据库内创建空间要素的方法来自于微软官方文档 <a href="https://msdn.microsoft.com/zh-cn/library/bb895270.aspx" target="_blank" rel="external">创建、构造和查询几何图形实例</a>，在 SQL Server 2014 上测试可用。<br>此处以创建点要素为例: <code>geometry::STPointFromText(&#39;POINT (x y)&#39;, SRID)</code><br>其中 x, y 为坐标值。SRID为空间参考编号，可在 ArcGIS 内空间参考设置处找到不同坐标系的ID， WGS 1984 坐标系的 SRID 为 4326 。<br>因此可用以下代码创建一个经纬度为<code>121.15545, 31.65894</code>的点。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select geometry::STPointFromText(&apos;POINT (121.15545 31.65894)&apos;, 4326)</div></pre></td></tr></table></figure></p>
 <h3 id="2-构造一个-ArcGIS-可直接连接的数据表"><a href="#2-构造一个-ArcGIS-可直接连接的数据表" class="headerlink" title="2. 构造一个 ArcGIS 可直接连接的数据表"></a>2. 构造一个 ArcGIS 可直接连接的数据表</h3><p>要在 ArcGIS 内直接显示 SQL Server 数据表内的空间要素，则对数据表的结构有一定要求。<br>以点要素为例，创建的表需要以<code>int</code>类型的<code>OBJECTID</code>字段作为主键，并有一个<code>geometry</code>数据类型的字段。<br>示例代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*****  创建包含空间数据的表 *****/</div><div class="line">USE [测试数据库]</div><div class="line">CREATE TABLE [测试数据表] (</div><div class="line">	[OBJECTID] [int] primary key not NULL,</div><div class="line">	[id] [varchar](10) NULL,</div><div class="line">	[name] [varchar](200) NULL,</div><div class="line">	[lng] [float] NULL,</div><div class="line">	[lat] [float] NULL,</div><div class="line">	[形状] [geometry] not NULL</div><div class="line">)</div><div class="line"></div><div class="line">/*****  将数据插入表中 *****/</div><div class="line">insert into [测试数据表]</div><div class="line">SELECT ROW_NUMBER()  over (order by [id]) as [OBJECTID]</div><div class="line">      ,[id]</div><div class="line">      ,[name]</div><div class="line">      ,[lng]</div><div class="line">      ,[lat]</div><div class="line">      ,geometry::STPointFromText(concat(&apos;POINT (&apos;,convert(varchar, [lng], 128), &apos; &apos;, convert(varchar, [lat], 128),  &apos;)&apos;), 4326 ) as [形状]</div><div class="line">  FROM [原数据表]</div></pre></td></tr></table></figure></p>
 <p><strong>Tip :</strong><br>快速获得原数据表的数据结构代码，可对原数据表<code>右键-编写表脚本为-CREATE 到-新查询编辑器窗口</code></p>
 <h3 id="3-使用-ArcGIS-显示-SQL-Server-内存储的数据"><a href="#3-使用-ArcGIS-显示-SQL-Server-内存储的数据" class="headerlink" title="3. 使用 ArcGIS 显示 SQL Server 内存储的数据"></a>3. 使用 ArcGIS 显示 SQL Server 内存储的数据</h3><p>ArcGIS 软件提供了丰富的数据源方式，其中就包括 SQL Server。</p>
@@ -1769,11 +1769,11 @@ print time.ctime()
     </summary>
     
     
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
+    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
-    
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     
