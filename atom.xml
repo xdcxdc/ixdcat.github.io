@@ -35,6 +35,143 @@
   </entry>
   
   <entry>
+    <title>利用mapbox进行地图在线可视化</title>
+    <link href="https://i.xdc.at/2017/08/05/map-by-mapbox/"/>
+    <id>https://i.xdc.at/2017/08/05/map-by-mapbox/</id>
+    <published>2017-08-05T12:48:00.000Z</published>
+    <updated>2017-08-06T06:40:24.525Z</updated>
+    
+    <content type="html"><![CDATA[<p>mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。</p>
+<p>此处为几个测试成果：</p>
+<h3 id="全国公交线路"><a href="#全国公交线路" class="headerlink" title="全国公交线路"></a>全国公交线路</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/map-by-mapbox/busline.png" alt="全国公交线路在线可视化" title="">
+                </div>
+                <div class="image-caption">全国公交线路在线可视化</div>
+            </figure>
+<p><a href="http://xdc.at/map/busline.html" target="_blank" rel="external">全国公交线路在线可视化 点此查看</a></p>
+<h3 id="全国县至上海路线"><a href="#全国县至上海路线" class="headerlink" title="全国县至上海路线"></a>全国县至上海路线</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/map-by-mapbox/routes2shanghai.png" alt="全国县至上海路线可视化" title="">
+                </div>
+                <div class="image-caption">全国县至上海路线可视化</div>
+            </figure>
+<p><a href="http://xdc.at/map/routes2shanghai.html" target="_blank" rel="external">全国县至上海路线在线可视化 点此查看</a></p>
+<p>如有其它成果，将更新在以下页面：<br><a href="http://xdc.at/map/" target="_blank" rel="external">地图在线可视化 | 谢栋灿</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。&lt;/p&gt;
+&lt;p&gt;此处为几个测试成果：&lt;/p&gt;
+&lt;h3 id=&quot;全国公交线路&quot;&gt;&lt;a href=&quot;#全国公交线路&quot; class=&quot;headerlink&quot; title=&quot;全国公交线路&quot;&gt;&lt;/a
+    
+    </summary>
+    
+      <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
+    
+    
+      <category term="mapbox" scheme="https://i.xdc.at/tags/mapbox/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高德导航路径与时耗获取工具</title>
+    <link href="https://i.xdc.at/2017/07/29/amap-routes-tool/"/>
+    <id>https://i.xdc.at/2017/07/29/amap-routes-tool/</id>
+    <published>2017-07-29T12:32:33.000Z</published>
+    <updated>2017-08-06T06:11:43.696Z</updated>
+    
+    <content type="html"><![CDATA[<p>该工具利用高德地图的路线规划获取OD点之间的交通导航线路与时耗，并输出shapefile。</p>
+<h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/map-by-mapbox/routes2shanghai.png" alt="全国县至上海路线可视化" title="">
+                </div>
+                <div class="image-caption">全国县至上海路线可视化</div>
+            </figure>
+<p><a href="http://xdc.at/map/routes2shanghai.html" target="_blank" rel="external">全国县至上海路线在线可视化 点此查看</a></p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="http://xdc.at/d/?d=route1.1.0" target="_blank" rel="external">xdc交通线路与时耗抓取v1.1.0.tbx</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;该工具利用高德地图的路线规划获取OD点之间的交通导航线路与时耗，并输出shapefile。&lt;/p&gt;
+&lt;h3 id=&quot;使用案例&quot;&gt;&lt;a href=&quot;#使用案例&quot; class=&quot;headerlink&quot; title=&quot;使用案例&quot;&gt;&lt;/a&gt;使用案例&lt;/h3&gt;&lt;figure clas
+    
+    </summary>
+    
+      <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
+    
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="路径规划" scheme="https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
+    
+      <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据分析】沙县小吃与兰州拉面之争</title>
+    <link href="https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/"/>
+    <id>https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/</id>
+    <published>2017-06-27T03:53:00.000Z</published>
+    <updated>2017-08-06T05:52:06.209Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.zhihu.com/question/20349372/answer/189819493" target="_blank" rel="external">兰州拉面和沙县小吃，哪个是中国最火的餐饮？ - 知乎</a><br><a href="https://www.zhihu.com/question/46653861/answer/189820105" target="_blank" rel="external">为什么兰州拉面旁边必定有一家沙县小吃？ - 知乎</a><br>以下分析主要是对上面两个知乎问题的回答，所使用的数据来自 <a href="/2017/06/23/poi-data-update-201706/">全国POI数据2017年6月更新</a>。</p>
+<h3 id="沙县小吃与兰州拉面火热程度对比"><a href="#沙县小吃与兰州拉面火热程度对比" class="headerlink" title="沙县小吃与兰州拉面火热程度对比"></a>沙县小吃与兰州拉面火热程度对比</h3><p>以当前2017年上半年的情况来看，还是沙县小吃更胜一筹。</p>
+<p>通过在全国POI数据中进行检索，名字符合<code>*沙县*小吃*</code>、 <code>*兰州*拉面*</code>/<code>*兰州*牛肉面*</code>的餐饮类店铺分别有5.73万、5.15万。而以上两家的竞争者黄焖鸡米饭以<code>*黄焖鸡*米饭*</code>检索共有4.32万。</p>
+<p>但以上三者都比不上麻辣烫，<code>*麻辣烫*</code>的检索结果达到了11.08万之多。</p>
+<p>以下是四类店铺在全国的分布情况（点击查看大图效果更佳）。</p>
+<p>1. 沙县小吃：<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-f8085c1c9ac00c5b5116319e5a2220c9" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-f8085c1c9ac00c5b5116319e5a2220c9_b.png" alt="点击查看大图"></a></p>
+<p>2. 兰州拉面/兰州牛肉面<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-33c6411b9c248c3555e59d13381a465f" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-33c6411b9c248c3555e59d13381a465f_b.png" alt="点击查看大图"></a></p>
+<p>3. 黄焖鸡米饭<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-1272cfe071483d18b6b36b0d1f5a7f81" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-1272cfe071483d18b6b36b0d1f5a7f81_b.png" alt="点击查看大图"></a></p>
+<p>4. 麻辣烫<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-6fa0276661d74ffa8fd45a9ed3331809" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-6fa0276661d74ffa8fd45a9ed3331809_b.png" alt="点击查看大图"></a></p>
+<p>对比来看，前三者中虽然沙县小吃数量最多，但在分布上不够广泛，并没有普及到乡镇级别。对比之下，兰州拉面/兰州牛肉面、黄焖鸡米饭则做到了从大城市到小乡镇的普及，从图中看，冀豫鲁徽苏一带分布密密麻麻。其中，兰州拉面/牛肉面的分布重心比黄焖鸡米饭略偏南。</p>
+<p>而麻辣烫的分布不必言则更为广泛，尤其是东北一带终于在图上亮起来了。</p>
+<h3 id="沙县小吃与兰州拉面相邻关系分析"><a href="#沙县小吃与兰州拉面相邻关系分析" class="headerlink" title="沙县小吃与兰州拉面相邻关系分析"></a>沙县小吃与兰州拉面相邻关系分析</h3><p>兰州拉面旁边一定会有沙县小吃吗？这里我用全国POI数据来验证一下。</p>
+<p>通过检索，兰州拉面店铺在全国共有4.56万家，沙县小吃店铺共有5.73万家。</p>
+<p>以下是两者在全国的分布图（点击放大查看效果更佳）。</p>
+<p>1. 兰州拉面<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-f1cdefc3dbfb7ccb361d22e6a69b51f6" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-f1cdefc3dbfb7ccb361d22e6a69b51f6_b.png" alt="点击查看大图"></a></p>
+<p>2. 沙县小吃<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-7e142bf3d0d4a6055592243fb7e27407" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-7e142bf3d0d4a6055592243fb7e27407_b.png" alt="点击查看大图"></a></p>
+<p>可以看到，沙县小吃虽然数量上更多，但却没有兰州拉面那种从一线城市到小乡镇的普及性，尤其是在冀鲁豫一带差异非常明显。</p>
+<p>下面对两者之间的临近情况进行分析，分别计算每家店铺离自己最近的对家的距离。结果显示，3.23万家兰州拉面附近1000m内有沙县小吃，占比约70.7%。4.90万家沙县小吃附近1000m内有兰州拉面，占比约85.4%。</p>
+<p>以下是附近1000m内有对家的店铺分布图（点击放大查看效果更佳）。其中兰州拉面为绿色点，沙县小吃为红色点，两者叠加显示则为黄色，下同。<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-7dfabd15581717ef1bb43ce05f64a955" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-7dfabd15581717ef1bb43ce05f64a955_b.png" alt="点击查看大图"></a></p>
+<p>只有以上地区才有兰州拉面旁边有沙县小吃，沙县小吃旁边有兰州拉面的现象出现，从分布上看已经覆盖全国很大范围了（距离取1000m其实挺大的了）。但是仍有约15%的沙县小吃旁没有兰州拉面，以及约30%的兰州拉面旁边没有沙县小吃。</p>
+<p>以下是孤立（附近1000m内无对家）的店铺分布图（点击放大查看效果更佳）。</p>
+<p>1. 孤立的兰州拉面<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-f75f1c7934d68e737027864d738bcf8e" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-f75f1c7934d68e737027864d738bcf8e_b.png" alt="点击查看大图"></a></p>
+<p>2. 孤立的沙县小吃<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-9f3b0ad59004e691e31c7515fdac106b" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-9f3b0ad59004e691e31c7515fdac106b_b.png" alt="点击查看大图"></a></p>
+<p>3. 孤立的兰州拉面与孤立的沙县小吃叠加<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-cc63d0190f92a616df8ebf07b6f0f92f" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-cc63d0190f92a616df8ebf07b6f0f92f_b.png" alt="点击查看大图"></a></p>
+<p>从图上来看，有大量孤立的兰州拉面存在于冀鲁豫的基层乡镇，而沙县小吃的基层普及程度则差了不少，这也是兰州拉面孤立比例更高的原因之一。另外，两者的分布存在明显的南北差异。四川、湖北、河南、山东及以北地区以兰州拉面的孤立分布为主，而重庆、湖南、江西、浙江及以南则以沙县小吃的孤立分布为主。安徽、江苏则存在着省内的南北差异。</p>
+<p>最后来个粗略的总结：</p>
+<p>首先，题目中提到的“兰州拉面旁边有沙县小吃”在较多地方还是成立的。</p>
+<p>至于两者相邻的原因很简单，因为两者都有很高的普及性，并且价格较为相近，存在一定的竞争关系，产生集聚现象很正常。</p>
+<p>孤立分布上，一方面兰州拉面做到了更加基层更加广泛的普及，而沙县小吃则欠缺一些。另外，南北方饮食差异，导致两者在不同地区的受欢迎程度不一样，必然会导致有其中一家而没有另外一家的情况。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/20349372/answer/189819493&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;兰州拉面和沙县小吃，哪个是中国最火的餐饮？ - 知乎&lt;/a&gt;&lt;br&gt;&lt;a hr
+    
+    </summary>
+    
+      <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
+    
+    
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
+    
+      <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>全国POI数据2017年6月更新</title>
     <link href="https://i.xdc.at/2017/06/23/poi-data-update-201706/"/>
     <id>https://i.xdc.at/2017/06/23/poi-data-update-201706/</id>
@@ -331,10 +468,10 @@
     <title>【软件更新】基于高德 API 的交通等时线划分工具 v1.3.1</title>
     <link href="https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/"/>
     <id>https://i.xdc.at/2017/05/19/transportation-contourline-tbx-1.3.1/</id>
-    <published>2017-05-19T05:54:35.000Z</published>
-    <updated>2017-05-19T06:08:32.588Z</updated>
+    <published>2017-05-19T05:54:00.000Z</published>
+    <updated>2017-08-05T14:37:52.122Z</updated>
     
-    <content type="html"><![CDATA[<p> 软件介绍见 <a href="/2016/10/30/transportation-contour-line-tbx/">基于高德 API 的交通等时线划分工具</a> 。</p>
+    <content type="html"><![CDATA[<p>软件介绍见 <a href="/2016/10/30/transportation-contour-line-tbx/">基于高德 API 的交通等时线划分工具</a> 。</p>
 <hr>
 <p>本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范围方式二选一）。<br>输入的面必须为 GCS_WGS_1984 坐标系，可通过创建一个新的shapefile等方法获得。<br>输入的中心点不一定要在输入的边界面内。</p>
 <figure class="image-bubble">
@@ -344,20 +481,23 @@
                 </div>
                 <div class="image-caption">新版输入界面</div>
             </figure>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>v1.3.1 支持自定义采样空间边界<br>v1.3.3 更新公交方式数据接口<br>v1.4.1 测试加入多线程支持</p>
 <hr>
 <p>下载地址仍在 <a href="/2016/10/30/transportation-contour-line-tbx/#下载">原软件介绍页面</a>。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt; 软件介绍见 &lt;a href=&quot;/2016/10/30/transportation-contour-line-tbx/&quot;&gt;基于高德 API 的交通等时线划分工具&lt;/a&gt; 。&lt;/p&gt;
+      &lt;p&gt;软件介绍见 &lt;a href=&quot;/2016/10/30/transportation-contour-line-tbx/&quot;&gt;基于高德 API 的交通等时线划分工具&lt;/a&gt; 。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范
+&lt;p&gt;本测试版主要增加功能为可以输入一个面作为采样点的空间四至边界（与输入时间范围
     
     </summary>
     
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
@@ -430,7 +570,7 @@
     <link href="https://i.xdc.at/2017/03/02/tianditu-poi-tbx/"/>
     <id>https://i.xdc.at/2017/03/02/tianditu-poi-tbx/</id>
     <published>2017-03-02T08:14:12.000Z</published>
-    <updated>2017-03-03T05:12:05.490Z</updated>
+    <updated>2017-08-05T14:23:39.541Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该工具最早发布于远见网站 <a href="http://farsightj.cn/blog/?p=185" target="_blank" rel="external">http://farsightj.cn/blog/?p=185</a><br>此版本为与<a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a>的合作版本。</p>
@@ -466,7 +606,7 @@
 </ol>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入激活码时可进行试用，试用过程中运行窗口会显示您的机器码。ArcGIS默认情况下运行窗口较小，您可能需要手动拉大窗口尺寸才能看到全部输出信息。<br>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>激活码只需输入一次，后续使用无需再次输入。</p>
 <h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 如果遇到输出文件错误，请尝试使用纯字母的文件名。<br>2. 如果连续多次使用均无法正常得到结果，则可能是数据接口变更，请发邮件至<code>i@xdc.at</code>与我联系。</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/tianditu-poi-tbx/" target="_blank">天地图POI下载v1.0.3.tbx</a></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=tdt1.0.3" target="_blank">天地图POI下载v1.0.3.tbx</a></p>
 ]]></content>
     
     <summary type="html">
@@ -481,11 +621,11 @@
     
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
-      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
-    
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="POI" scheme="https://i.xdc.at/tags/POI/"/>
     
       <category term="天地图" scheme="https://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/"/>
     
@@ -1206,8 +1346,8 @@
     <title>基于高德 API 的交通等时线划分工具</title>
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
-    <published>2016-10-30T05:59:33.000Z</published>
-    <updated>2017-05-19T05:14:49.805Z</updated>
+    <published>2016-10-30T05:59:00.000Z</published>
+    <updated>2017-08-05T14:59:54.233Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
@@ -1251,7 +1391,7 @@
                 <div class="image-caption">运行结果</div>
             </figure></p>
 <blockquote>
-<p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="/assets/downloads/transportation-contourline-tbx/PcArcBruTile_0.4.rar" target="_blank">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
+<p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="http://xdc.at/d/?d=PcArcBruTile" target="_blank">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
 </blockquote>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入过激活码时，可在任意机器上使用到2016年4月15日（该工具最早发布于2016年4月初）。之后使用需要输入与机器码对应的激活码，试用运行时，会在运行过程中显示出机器码。在Win7以上系统中，激活码可自动写入到用户文件夹，因此输入一次即可。</p>
 <figure class="image-bubble">
@@ -1270,10 +1410,11 @@
             </figure>
 <p>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>获取激活码时请提供运行时显示的机器码。</p>
 <h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1.    如果运行过程中，在创建完采样点shp之后，无法创建栅格文件。可能原因是 地理处理-环境-处理范围 不是“默认”，请修改后重试。<br>2.    无法对采样点shp文件进行投影。可能原因是选择的投影坐标系不适合输入的地点，请修改后重试。<br>3.    其他错误的话请检查输出文件路径内是否有空格、下划线等。</p>
-<h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://r.cnki.net/kcms/detail/detail.aspx?filename=ZHCG201609004064&amp;dbcode=JZYP&amp;dbname=JZYPTEMP&amp;v=MDU0MzZJMThkUHlYSWFiRzRIOWZNcG85RllPc0pDQk5JeUJVUzZ6ZDVQbjJVcW1CQUQ3dVFLcmlmWnVGdkZTdmlVN3JM" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
+<h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CPFD&amp;dbname=CPFDLAST2017&amp;filename=ZHCG201609004064" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
 <p>引用格式参考：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
 <p>使用该工具的公开研究成果，请注明以上引用，和/或附上本页面网址 <code>http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</code> 。</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="/assets/downloads/transportation-contourline-tbx/" target="_blank">xdc交通等时线工具箱v1.2.5.tbx</a><br><a href="/assets/downloads/transportation-contourline-tbx/v1.3.1/" target="_blank">xdc交通等时线工具箱v1.3.1.tbx（测试版）</a></p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>v1.2.5 稳定版本发布<br>v1.3.1 支持自定义采样空间边界<br>v1.3.3 更新公交方式数据接口<br>v1.4.1 测试加入多线程支持</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=dsx1.3.3" target="_blank">xdc交通等时线工具箱v1.3.3.tbx</a><br><a href="http://xdc.at/d/?d=dsx1.4.1" target="_blank">xdc交通等时线工具箱v1.4.1.tbx（多线程测试版）</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1285,6 +1426,8 @@
     
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
@@ -1433,9 +1576,9 @@
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
-      <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
-    
       <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
   </entry>
   
@@ -1444,11 +1587,11 @@
     <link href="https://i.xdc.at/2016/10/06/busline-data/"/>
     <id>https://i.xdc.at/2016/10/06/busline-data/</id>
     <published>2016-10-06T04:21:38.000Z</published>
-    <updated>2017-03-03T08:17:06.949Z</updated>
+    <updated>2017-08-05T15:17:14.948Z</updated>
     
     <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734834&amp;idx=1&amp;sn=5dd381774506bffc2edcfea63a3db736" target="_blank" rel="external">原文链接</a>。</p>
 <hr>
-<p>新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。</p>
+<h3 id="数据概况"><a href="#数据概况" class="headerlink" title="数据概况"></a>数据概况</h3><p>新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。</p>
 <p>全国公共交通站点：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -1488,13 +1631,14 @@
                 <div class="image-caption">远见公众号</div>
             </figure></p>
 <p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
+<h3 id="在线可视化"><a href="#在线可视化" class="headerlink" title="在线可视化"></a>在线可视化</h3><p>基于mapbox的全国公交线路在线可视化，<a href="http://xdc.at/map/busline.html" target="_blank" rel="external">点此查看</a></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734834&amp;amp;idx=1&amp;amp;sn=5dd381774506bffc2edcfea63a3db736&quot;&gt;原文链接&lt;/a&gt;。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。&lt;/p&gt;
+&lt;h3 id=&quot;数据概况&quot;&gt;&lt;a href=&quot;#数据概况&quot; class=&quot;headerlink&quot; title=&quot;数据概况&quot;&gt;&lt;/a&gt;数据概况&lt;/h3&gt;&lt;p&gt;新鲜出炉的全国公共交通（公交、地铁、部分长途线路）站点与线网数据，线路约8万条。&lt;/p&gt;
 &lt;p&gt;全国公共交通站点：&lt;br&gt;&lt;figure class=&quot;image-bubble&quot;&gt;
                 &lt;div class=&quot;img-lightbox&quot;&gt;
                     &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
@@ -1638,9 +1782,9 @@
     </summary>
     
     
-      <category term="SQL Server" scheme="https://i.xdc.at/tags/SQL-Server/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="SQL Server" scheme="https://i.xdc.at/tags/SQL-Server/"/>
     
   </entry>
   
@@ -1769,11 +1913,11 @@ print time.ctime()
     </summary>
     
     
-      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
-    
       <category term="Hexo" scheme="https://i.xdc.at/tags/Hexo/"/>
     
       <category term="GitHub" scheme="https://i.xdc.at/tags/GitHub/"/>
+    
+      <category term="Markdown" scheme="https://i.xdc.at/tags/Markdown/"/>
     
       <category term="Coding.net" scheme="https://i.xdc.at/tags/Coding-net/"/>
     

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <link rel="canonical" href="https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/">
+  
+  
+  <title>【数据分析】沙县小吃与兰州拉面之争 | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="POI,数据分析">
+  <meta name="description" content="兰州拉面和沙县小吃，哪个是中国最火的餐饮？ - 知乎为什么兰州拉面旁边必定有一家沙县小吃？ - 知乎以下分析主要是对上面两个知乎问题的回答，所使用的数据来自 全国POI数据2017年6月更新。
+沙县小吃与兰州拉面火热程度对比以当前2017年上半年的情况来看，还是沙县小吃更胜一筹。
+通过在全国POI数据中进行检索，名字符合*沙县*小吃*、 *兰州*拉面*/*兰州*牛肉面*的餐饮类店铺分别有5.73万">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【数据分析】沙县小吃与兰州拉面之争">
+<meta property="og:url" content="https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/index.html">
+<meta property="og:site_name" content="谢栋灿's Blog">
+<meta property="og:description" content="兰州拉面和沙县小吃，哪个是中国最火的餐饮？ - 知乎为什么兰州拉面旁边必定有一家沙县小吃？ - 知乎以下分析主要是对上面两个知乎问题的回答，所使用的数据来自 全国POI数据2017年6月更新。
+沙县小吃与兰州拉面火热程度对比以当前2017年上半年的情况来看，还是沙县小吃更胜一筹。
+通过在全国POI数据中进行检索，名字符合*沙县*小吃*、 *兰州*拉面*/*兰州*牛肉面*的餐饮类店铺分别有5.73万">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-f8085c1c9ac00c5b5116319e5a2220c9_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-33c6411b9c248c3555e59d13381a465f_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-1272cfe071483d18b6b36b0d1f5a7f81_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-6fa0276661d74ffa8fd45a9ed3331809_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-f1cdefc3dbfb7ccb361d22e6a69b51f6_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-7e142bf3d0d4a6055592243fb7e27407_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-7dfabd15581717ef1bb43ce05f64a955_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-f75f1c7934d68e737027864d738bcf8e_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-9f3b0ad59004e691e31c7515fdac106b_b.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-cc63d0190f92a616df8ebf07b6f0f92f_b.png">
+<meta property="og:updated_time" content="2017-08-06T05:52:06.209Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【数据分析】沙县小吃与兰州拉面之争">
+<meta name="twitter:description" content="兰州拉面和沙县小吃，哪个是中国最火的餐饮？ - 知乎为什么兰州拉面旁边必定有一家沙县小吃？ - 知乎以下分析主要是对上面两个知乎问题的回答，所使用的数据来自 全国POI数据2017年6月更新。
+沙县小吃与兰州拉面火热程度对比以当前2017年上半年的情况来看，还是沙县小吃更胜一筹。
+通过在全国POI数据中进行检索，名字符合*沙县*小吃*、 *兰州*拉面*/*兰州*牛肉面*的餐饮类店铺分别有5.73万">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images/shaxian-vs-lanzhou/v2-f8085c1c9ac00c5b5116319e5a2220c9_b.png">
+  
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/avatar/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢栋灿</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+
+      <footer class="footer">
+  <p>沪ICP备<a onclick="window.open('http://xdc.at/u/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016 - 2017</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+  </div>
+</aside>
+
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">【数据分析】沙县小吃与兰州拉面之争</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">【数据分析】沙县小吃与兰州拉面之争</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-27T03:53:00.000Z" itemprop="datePublished" class="page-time">
+  2017-06-27
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#沙县小吃与兰州拉面火热程度对比"><span class="post-toc-text">沙县小吃与兰州拉面火热程度对比</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#沙县小吃与兰州拉面相邻关系分析"><span class="post-toc-text">沙县小吃与兰州拉面相邻关系分析</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-shaxian-vs-lanzhou"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">【数据分析】沙县小吃与兰州拉面之争</h1>
+        <div class="post-meta">
+            <time datetime="2017-06-27T03:53:00.000Z" itemprop="datePublished" class="post-time">
+  2017-06-27
+</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p><a href="https://www.zhihu.com/question/20349372/answer/189819493" target="_blank" rel="external">兰州拉面和沙县小吃，哪个是中国最火的餐饮？ - 知乎</a><br><a href="https://www.zhihu.com/question/46653861/answer/189820105" target="_blank" rel="external">为什么兰州拉面旁边必定有一家沙县小吃？ - 知乎</a><br>以下分析主要是对上面两个知乎问题的回答，所使用的数据来自 <a href="/2017/06/23/poi-data-update-201706/">全国POI数据2017年6月更新</a>。</p>
+<h3 id="沙县小吃与兰州拉面火热程度对比"><a href="#沙县小吃与兰州拉面火热程度对比" class="headerlink" title="沙县小吃与兰州拉面火热程度对比"></a>沙县小吃与兰州拉面火热程度对比</h3><p>以当前2017年上半年的情况来看，还是沙县小吃更胜一筹。</p>
+<p>通过在全国POI数据中进行检索，名字符合<code>*沙县*小吃*</code>、 <code>*兰州*拉面*</code>/<code>*兰州*牛肉面*</code>的餐饮类店铺分别有5.73万、5.15万。而以上两家的竞争者黄焖鸡米饭以<code>*黄焖鸡*米饭*</code>检索共有4.32万。</p>
+<p>但以上三者都比不上麻辣烫，<code>*麻辣烫*</code>的检索结果达到了11.08万之多。</p>
+<p>以下是四类店铺在全国的分布情况（点击查看大图效果更佳）。</p>
+<p>1. 沙县小吃：<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-f8085c1c9ac00c5b5116319e5a2220c9" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-f8085c1c9ac00c5b5116319e5a2220c9_b.png" alt="点击查看大图"></a></p>
+<p>2. 兰州拉面/兰州牛肉面<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-33c6411b9c248c3555e59d13381a465f" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-33c6411b9c248c3555e59d13381a465f_b.png" alt="点击查看大图"></a></p>
+<p>3. 黄焖鸡米饭<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-1272cfe071483d18b6b36b0d1f5a7f81" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-1272cfe071483d18b6b36b0d1f5a7f81_b.png" alt="点击查看大图"></a></p>
+<p>4. 麻辣烫<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-6fa0276661d74ffa8fd45a9ed3331809" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-6fa0276661d74ffa8fd45a9ed3331809_b.png" alt="点击查看大图"></a></p>
+<p>对比来看，前三者中虽然沙县小吃数量最多，但在分布上不够广泛，并没有普及到乡镇级别。对比之下，兰州拉面/兰州牛肉面、黄焖鸡米饭则做到了从大城市到小乡镇的普及，从图中看，冀豫鲁徽苏一带分布密密麻麻。其中，兰州拉面/牛肉面的分布重心比黄焖鸡米饭略偏南。</p>
+<p>而麻辣烫的分布不必言则更为广泛，尤其是东北一带终于在图上亮起来了。</p>
+<h3 id="沙县小吃与兰州拉面相邻关系分析"><a href="#沙县小吃与兰州拉面相邻关系分析" class="headerlink" title="沙县小吃与兰州拉面相邻关系分析"></a>沙县小吃与兰州拉面相邻关系分析</h3><p>兰州拉面旁边一定会有沙县小吃吗？这里我用全国POI数据来验证一下。</p>
+<p>通过检索，兰州拉面店铺在全国共有4.56万家，沙县小吃店铺共有5.73万家。</p>
+<p>以下是两者在全国的分布图（点击放大查看效果更佳）。</p>
+<p>1. 兰州拉面<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-f1cdefc3dbfb7ccb361d22e6a69b51f6" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-f1cdefc3dbfb7ccb361d22e6a69b51f6_b.png" alt="点击查看大图"></a></p>
+<p>2. 沙县小吃<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-7e142bf3d0d4a6055592243fb7e27407" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-7e142bf3d0d4a6055592243fb7e27407_b.png" alt="点击查看大图"></a></p>
+<p>可以看到，沙县小吃虽然数量上更多，但却没有兰州拉面那种从一线城市到小乡镇的普及性，尤其是在冀鲁豫一带差异非常明显。</p>
+<p>下面对两者之间的临近情况进行分析，分别计算每家店铺离自己最近的对家的距离。结果显示，3.23万家兰州拉面附近1000m内有沙县小吃，占比约70.7%。4.90万家沙县小吃附近1000m内有兰州拉面，占比约85.4%。</p>
+<p>以下是附近1000m内有对家的店铺分布图（点击放大查看效果更佳）。其中兰州拉面为绿色点，沙县小吃为红色点，两者叠加显示则为黄色，下同。<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-7dfabd15581717ef1bb43ce05f64a955" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-7dfabd15581717ef1bb43ce05f64a955_b.png" alt="点击查看大图"></a></p>
+<p>只有以上地区才有兰州拉面旁边有沙县小吃，沙县小吃旁边有兰州拉面的现象出现，从分布上看已经覆盖全国很大范围了（距离取1000m其实挺大的了）。但是仍有约15%的沙县小吃旁没有兰州拉面，以及约30%的兰州拉面旁边没有沙县小吃。</p>
+<p>以下是孤立（附近1000m内无对家）的店铺分布图（点击放大查看效果更佳）。</p>
+<p>1. 孤立的兰州拉面<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-f75f1c7934d68e737027864d738bcf8e" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-f75f1c7934d68e737027864d738bcf8e_b.png" alt="点击查看大图"></a></p>
+<p>2. 孤立的沙县小吃<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-9f3b0ad59004e691e31c7515fdac106b" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-9f3b0ad59004e691e31c7515fdac106b_b.png" alt="点击查看大图"></a></p>
+<p>3. 孤立的兰州拉面与孤立的沙县小吃叠加<br><a href="http://zhihu-pics.oss-cn-beijing.aliyuncs.com//v2-cc63d0190f92a616df8ebf07b6f0f92f" target="_blank"><img src="/assets/images/shaxian-vs-lanzhou/v2-cc63d0190f92a616df8ebf07b6f0f92f_b.png" alt="点击查看大图"></a></p>
+<p>从图上来看，有大量孤立的兰州拉面存在于冀鲁豫的基层乡镇，而沙县小吃的基层普及程度则差了不少，这也是兰州拉面孤立比例更高的原因之一。另外，两者的分布存在明显的南北差异。四川、湖北、河南、山东及以北地区以兰州拉面的孤立分布为主，而重庆、湖南、江西、浙江及以南则以沙县小吃的孤立分布为主。安徽、江苏则存在着省内的南北差异。</p>
+<p>最后来个粗略的总结：</p>
+<p>首先，题目中提到的“兰州拉面旁边有沙县小吃”在较多地方还是成立的。</p>
+<p>至于两者相邻的原因很简单，因为两者都有很高的普及性，并且价格较为相近，存在一定的竞争关系，产生集聚现象很正常。</p>
+<p>孤立分布上，一方面兰州拉面做到了更加基层更加广泛的普及，而沙县小吃则欠缺一些。另外，南北方饮食差异，导致两者在不同地区的受欢迎程度不一样，必然会导致有其中一家而没有另外一家的情况。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        本文地址：<a href="/2017/06/27/shaxian-vs-lanzhou/" target="_blank" rel="external">https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/</a>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/POI/">POI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据分析/">数据分析</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/&title=《【数据分析】沙县小吃与兰州拉面之争》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/&title=《【数据分析】沙县小吃与兰州拉面之争》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【数据分析】沙县小吃与兰州拉面之争》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/07/29/amap-routes-tool/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">高德导航路径与时耗获取工具</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/23/poi-data-update-201706/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">全国POI数据2017年6月更新</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
+
+
+
+<div class="global-share" id="globalShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/&title=《【数据分析】沙县小吃与兰州拉面之争》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/&title=《【数据分析】沙县小吃与兰州拉面之争》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【数据分析】沙县小吃与兰州拉面之争》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aQZLCMAwEQP7/afa6W1s4IykcYndOFATizkFoIr9e8fFuHb+/u/61/5++vnFgYGA8lpEv5dMF8mWtX6+vu74KBgbGCYxPi8uLYHL5vHLma8PAwMDoFcfknbwQY2BgYMwLbl6O83CLgYGB0QuxvUdv61+oFvcbsjgGBsYDGZNg+e3XX5lvYGBgPIrxvZFkb6jQXBUGBsbWjF4EbYbM+JxeJMbAwDiBsd4qUQXMt1ysYVEWx8DA2IKRNHx3ZeWkQawOJ/50uBgYGJsyckBUuVuRNd+ocYHHwMA4gFEdOvYavuT95m3CwMDYmtELlr2RwORmRS0pBgbGAYw8rFapyfizOiS4+PfAwMDYgjEvdtUA3Nt+erEqDAyMrRnV0nbv6LH6n7AOvRgYGOcwesudh9vJ7cDAwNibkW9kz5u5vFms/v7FnhEMDIytGdXBQG+cmQ8s820WGBgYpzEm4fPeEWa5fcTAwNiakX9h0jhOSm1htICBgXEAowrrnTkZGFzcPgwMjGMY1QXlRTN5iFaNvq/8TmBgYGzBqC632gImBXR0PgYGxqaMd/HIi+b6W0msLRRuDAyMrRn50SvKvVavF30xMDD2Zkwe/eflcl5wL66OgYFxAOOux3AT2KT0Y2BgYORjxWo5robnwmYLDAyMgxmFdq01Ck0y9w0FFwMD44GMJMTOhwR5+5jHYAwMjBMYeXScn5mE3rzcY2BgHMD4AbLvdHJnq63RAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.3.3" async></script>
+
+
+</body>
+</html>

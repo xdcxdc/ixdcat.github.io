@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <link rel="canonical" href="https://i.xdc.at/2017/08/05/map-by-mapbox/">
+  
+  
+  <title>利用mapbox进行地图在线可视化 | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="mapbox">
+  <meta name="description" content="mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。
+此处为几个测试成果：
+全国公交线路
+                
+                    
+                    
+                
+                全国公交线路在线可视化
+            
+全国公交线路在线可视化 点此查看
+全国县至">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用mapbox进行地图在线可视化">
+<meta property="og:url" content="https://i.xdc.at/2017/08/05/map-by-mapbox/index.html">
+<meta property="og:site_name" content="谢栋灿's Blog">
+<meta property="og:description" content="mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。
+此处为几个测试成果：
+全国公交线路
+                
+                    
+                    
+                
+                全国公交线路在线可视化
+            
+全国公交线路在线可视化 点此查看
+全国县至">
+<meta property="og:image" content="https://i.xdc.at/assets/images/map-by-mapbox/busline.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/map-by-mapbox/routes2shanghai.png">
+<meta property="og:updated_time" content="2017-08-06T06:40:24.525Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用mapbox进行地图在线可视化">
+<meta name="twitter:description" content="mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。
+此处为几个测试成果：
+全国公交线路
+                
+                    
+                    
+                
+                全国公交线路在线可视化
+            
+全国公交线路在线可视化 点此查看
+全国县至">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images/map-by-mapbox/busline.png">
+  
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/avatar/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢栋灿</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+
+      <footer class="footer">
+  <p>沪ICP备<a onclick="window.open('http://xdc.at/u/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016 - 2017</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+  </div>
+</aside>
+
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">利用mapbox进行地图在线可视化</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">利用mapbox进行地图在线可视化</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-05T12:48:00.000Z" itemprop="datePublished" class="page-time">
+  2017-08-05
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全国公交线路"><span class="post-toc-text">全国公交线路</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全国县至上海路线"><span class="post-toc-text">全国县至上海路线</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-map-by-mapbox"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">利用mapbox进行地图在线可视化</h1>
+        <div class="post-meta">
+            <time datetime="2017-08-05T12:48:00.000Z" itemprop="datePublished" class="post-time">
+  2017-08-05
+</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。</p>
+<p>此处为几个测试成果：</p>
+<h3 id="全国公交线路"><a href="#全国公交线路" class="headerlink" title="全国公交线路"></a>全国公交线路</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/map-by-mapbox/busline.png" alt="全国公交线路在线可视化" title="">
+                </div>
+                <div class="image-caption">全国公交线路在线可视化</div>
+            </figure>
+<p><a href="http://xdc.at/map/busline.html" target="_blank" rel="external">全国公交线路在线可视化 点此查看</a></p>
+<h3 id="全国县至上海路线"><a href="#全国县至上海路线" class="headerlink" title="全国县至上海路线"></a>全国县至上海路线</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/map-by-mapbox/routes2shanghai.png" alt="全国县至上海路线可视化" title="">
+                </div>
+                <div class="image-caption">全国县至上海路线可视化</div>
+            </figure>
+<p><a href="http://xdc.at/map/routes2shanghai.html" target="_blank" rel="external">全国县至上海路线在线可视化 点此查看</a></p>
+<p>如有其它成果，将更新在以下页面：<br><a href="http://xdc.at/map/" target="_blank" rel="external">地图在线可视化 | 谢栋灿</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        本文地址：<a href="/2017/08/05/map-by-mapbox/" target="_blank" rel="external">https://i.xdc.at/2017/08/05/map-by-mapbox/</a>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mapbox/">mapbox</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/08/05/map-by-mapbox/&title=《利用mapbox进行地图在线可视化》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/08/05/map-by-mapbox/&title=《利用mapbox进行地图在线可视化》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/08/05/map-by-mapbox/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《利用mapbox进行地图在线可视化》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/08/05/map-by-mapbox/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/08/05/map-by-mapbox/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2048/10/24/top-pinned/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">【置顶】欢迎来到本站</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/07/29/amap-routes-tool/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">高德导航路径与时耗获取工具</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
+
+
+
+<div class="global-share" id="globalShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/08/05/map-by-mapbox/&title=《利用mapbox进行地图在线可视化》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/08/05/map-by-mapbox/&title=《利用mapbox进行地图在线可视化》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/08/05/map-by-mapbox/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《利用mapbox进行地图在线可视化》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/08/05/map-by-mapbox/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/08/05/map-by-mapbox/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwklEQVR42u3aQW6EMAwF0Ln/pemmi0qjgW+bpLR6WaEZEl5YWLHN6xWP4238/P39+nzWp/tvG7i4uGPucToSVoI45yYGXFzc/dzzByTBKH/k+eu4sOHi4j6S++lhOR0XF/c/catJTjILFxf3ydw8VP2ZXA0XF3fAzauU666X1HdxcXFb3OOmkQeyXoL0PQsXF3cLtxp0qmnSpEP6cU1cXNzF3Cq0d/+kuTJ6r7i4uC3uJDnJS6h5MyZKinBxcX+Jm5+PJg2S3mZwcXFXc/ODRS+vumud8jkIFxf3Jm6PnlCqcy9yNVxc3MXcZKFk0fye6uZfOQUXF/dWbhJ0kibKBF0ou+Di4i7m5mFlclip/nuR/ODi4m7h9hqo+QqTTV7kari4uAu4vRZpfoipNlaTQxUuLu5qbg9UboEE3ZCoWYuLi7uF2/tgokosVG2ToIaLi7uYexRHUsjI1ylvHhcXdws3Hz1EkmIl/+Li4u7nThDJwSh/Bbi4uE/jVlue8wLKDbkaLi7uA7grGrHlsxguLu7DuNXrans1+oQLFxd3I7da3EwKnZOG60WTFRcXdzG31xw9Dz1JYMoDX7O+i4uL2+F+AbZt02rXpT2RAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.3.3" async></script>
+
+
+</body>
+</html>
