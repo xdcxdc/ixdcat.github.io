@@ -35,11 +35,75 @@
   </entry>
   
   <entry>
+    <title>给右键菜单添加“在此处打开 Anaconda 命令行”</title>
+    <link href="https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/"/>
+    <id>https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/</id>
+    <published>2017-08-13T03:26:08.000Z</published>
+    <updated>2017-08-13T14:53:32.409Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>出于种种需要，系统内可能安装了多了python运行环境，如：</p>
+<ol>
+<li>python.org 上下载的 Python 2.7 32bit（用于使用某些只支持32位的第三方库）</li>
+<li>ArcGIS 所用的 Python 2.7 32bit（以及 Python 2.7 64bit，如果安装了64位后台地理处理）</li>
+<li>Anaconda with Python 2 和/或 Anaconda with Python 3</li>
+<li>WinPython 等其他 Python 发行版</li>
+</ol>
+<p>而默认情况下，即使系统变量<code>PATH</code>内填写了多了<code>python.exe</code>所在的路径，cmd内执行<code>python</code>的时候也只会执行所找到的第一个。另外，为了避免与ArcGIS冲突、影响ArcGIS内Python环境的使用，在安装Anaconda的时候取消勾选 <code>Add Anaconda to my PATH environment varialbe</code> 和 <code>Register Anaconda as my default Python 2.7</code>。这样的话，运行Anaconda命令行就只能从开始菜单打开相应的快捷方式了，而不能直接在文件夹内Shift+鼠标右键，打开命令行即用了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/anaconda_install.png" alt="Anaconda" title="">
+                </div>
+                <div class="image-caption">Anaconda</div>
+            </figure>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>通过添加相应的注册表项，可以在右键菜单内添加一项“在此处打开 Anaconda 命令行”<code>Anaconda2 Prompt Here</code>。<br>具体步骤如下（假设Anaconda安装在 <code>D:\Anaconda2\</code> ）：<br>1. 在注册表 <code>HKEY_CLASSES_ROOT\Directory\Background\shell\</code> 下新建一项 <code>Anaconda2</code>，默认值为 <code>Anaconda2 Prompt Here</code> (此值为菜单项显示名称，可以自行修改)。在<code>Anaconda2</code>下新建字符串值<code>Icon</code>，数据为<code>D:\Anaconda2\Menu\Iconleak-Atrous-Console.ico</code>。<br>如果想要在同时按下Shift和鼠标右键才出现菜单项，而不是直接鼠标右键就出现，就在<code>Anaconda2</code>下新建字符串值<code>Extended</code>，数据留空。<br>2. 在<code>Anaconda2</code>下新建一项<code>command</code>，默认值填入<code>cmd.exe /s /k &quot;title Anaconda2&quot; &amp;&amp; D:\Anaconda2\Scripts\activate.bat D:\Anaconda2</code>。</p>
+<p>除了手动打开regedit.exe注册表编辑器执行以上操作的方法外，也可以将以下代码用记事本保存到<code>.reg</code>后缀的文件中，然后双击打开reg文件即可自动导入相应注册表内容。注意根据Anaconda的实际安装路径进行修改。</p>
+<blockquote>
+<p>Windows Registry Editor Version 5.00</p>
+<p></p><p></p><p><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2]<br>@=”Anaconda2 Prompt Here”<br>“Icon”=”D:\Anaconda2\Menu\Iconleak-Atrous-Console.ico”</p>
+<p></p><p></p><p><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2\command]<br>@=”cmd.exe /s /k \”title Anaconda2\” &amp;&amp; D:\Anaconda2\Scripts\activate.bat D:\Anaconda2”</p>
+</blockquote>
+<h3 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h3><p>在任意文件夹内空白处点击鼠标右键，效果如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/context-menu.png" alt="文件夹右键菜单" title="">
+                </div>
+                <div class="image-caption">文件夹右键菜单</div>
+            </figure>
+<p>点击<code>Anaconda2 Prompt Here</code>后，在打开的窗口内执行<code>python</code>，打开的就是Anaconda的python解释器了。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/anaconda-prompt-windows.png" alt="Anaconda命令提示行窗口" title="">
+                </div>
+                <div class="image-caption">Anaconda命令提示行窗口</div>
+            </figure></p>
+<p>而如果此时在文件夹右键菜单内打开系统的命令行并执行<code>python</code>，则打开的是在系统变量<code>PATH</code>内所指定的python解释器，与新添加的Anaconda命令行两者独立。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;出于种种需要，系统内可能安装了多了python运行环境，如：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;python.org 上下载的 Py
+    
+    </summary>
+    
+    
+      <category term="注册表" scheme="https://i.xdc.at/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
+    
+      <category term="Anaconda" scheme="https://i.xdc.at/tags/Anaconda/"/>
+    
+      <category term="Python" scheme="https://i.xdc.at/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用mapbox进行地图在线可视化</title>
     <link href="https://i.xdc.at/2017/08/05/map-by-mapbox/"/>
     <id>https://i.xdc.at/2017/08/05/map-by-mapbox/</id>
     <published>2017-08-05T12:48:00.000Z</published>
-    <updated>2017-08-06T06:40:24.525Z</updated>
+    <updated>2017-08-11T15:02:18.128Z</updated>
     
     <content type="html"><![CDATA[<p>mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。</p>
 <p>此处为几个测试成果：</p>
@@ -82,10 +146,10 @@
     <link href="https://i.xdc.at/2017/07/29/amap-routes-tool/"/>
     <id>https://i.xdc.at/2017/07/29/amap-routes-tool/</id>
     <published>2017-07-29T12:32:33.000Z</published>
-    <updated>2017-08-06T06:11:43.696Z</updated>
+    <updated>2017-08-11T15:05:16.121Z</updated>
     
     <content type="html"><![CDATA[<p>该工具利用高德地图的路线规划获取OD点之间的交通导航线路与时耗，并输出shapefile。</p>
-<h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="image-bubble">
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/assets/images/map-by-mapbox/routes2shanghai.png" alt="全国县至上海路线可视化" title="">
@@ -93,13 +157,22 @@
                 <div class="image-caption">全国县至上海路线可视化</div>
             </figure>
 <p><a href="http://xdc.at/map/routes2shanghai.html" target="_blank" rel="external">全国县至上海路线在线可视化 点此查看</a></p>
+<h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 运行错误</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>32位程序</p>
+</blockquote>
+<p>333</p>
+</blockquote>
+</blockquote>
 <h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="http://xdc.at/d/?d=route1.1.0" target="_blank" rel="external">xdc交通线路与时耗抓取v1.1.0.tbx</a></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;该工具利用高德地图的路线规划获取OD点之间的交通导航线路与时耗，并输出shapefile。&lt;/p&gt;
-&lt;h3 id=&quot;使用案例&quot;&gt;&lt;a href=&quot;#使用案例&quot; class=&quot;headerlink&quot; title=&quot;使用案例&quot;&gt;&lt;/a&gt;使用案例&lt;/h3&gt;&lt;figure clas
+&lt;h3 id=&quot;使用说明&quot;&gt;&lt;a href=&quot;#使用说明&quot; class=&quot;headerlink&quot; title=&quot;使用说明&quot;&gt;&lt;/a&gt;使用说明&lt;/h3&gt;&lt;h3 id=&quot;使用案例
     
     </summary>
     
@@ -176,7 +249,7 @@
     <link href="https://i.xdc.at/2017/06/23/poi-data-update-201706/"/>
     <id>https://i.xdc.at/2017/06/23/poi-data-update-201706/</id>
     <published>2017-06-23T02:14:00.000Z</published>
-    <updated>2017-06-23T00:57:38.664Z</updated>
+    <updated>2017-08-13T23:44:20.353Z</updated>
     
     <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2017/02/21/poi-data-update-201702/">2017年2月</a> 的基础上，主要更新内容如下：</p>
 <ol>
@@ -442,7 +515,13 @@
 </tr>
 </tbody>
 </table>
-<h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><p><a href="/2016/11/20/poi-data-update-201611/#数据字段信息">数据字段信息</a></p>
+<h3 id="数据字段信息"><a href="#数据字段信息" class="headerlink" title="数据字段信息"></a>数据字段信息</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/poi-data/poi-data-info.jpg" alt="数据字段信息" title="">
+                </div>
+                <div class="image-caption">数据字段信息</div>
+            </figure>
 <h3 id="样例下载"><a href="#样例下载" class="headerlink" title="样例下载"></a>样例下载</h3><p><a href="/assets/downloads/poi-data-update-201706/" target="_blank">点此下载样例文件(shp格式)</a></p>
 <p>如需了解更多，可发邮件至 <i class="icon icon-lg icon-envelope" onclick="window.open('mailto:i@xdc.at');" style="cursor:pointer"></i><code>i@xdc.at</code> 与我联系。</p>
 ]]></content>
@@ -636,7 +715,7 @@
     <link href="https://i.xdc.at/2017/02/21/poi-data-update-201702/"/>
     <id>https://i.xdc.at/2017/02/21/poi-data-update-201702/</id>
     <published>2017-02-21T04:08:55.000Z</published>
-    <updated>2017-05-25T05:31:08.264Z</updated>
+    <updated>2017-08-13T23:44:09.198Z</updated>
     
     <content type="html"><![CDATA[<h3 id="主要更新内容"><a href="#主要更新内容" class="headerlink" title="主要更新内容"></a>主要更新内容</h3><p>本次 POI 数据在 <a href="/2016/11/20/poi-data-update-201611/">2016年11月</a> 的基础上，主要更新内容如下：</p>
 <ol>
@@ -930,9 +1009,16 @@
 </tr>
 </tbody>
 </table>
-<h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><p><a href="/2016/11/20/poi-data-update-201611/#数据字段信息">数据字段信息</a></p>
+<h3 id="数据字段信息"><a href="#数据字段信息" class="headerlink" title="数据字段信息"></a>数据字段信息</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/poi-data/poi-data-info.jpg" alt="数据字段信息" title="">
+                </div>
+                <div class="image-caption">数据字段信息</div>
+            </figure>
 <h3 id="样例下载"><a href="#样例下载" class="headerlink" title="样例下载"></a>样例下载</h3><p><a href="/assets/downloads/poi-data-update-201702/" target="_blank">点此下载样例文件(shp格式)</a></p>
 <p>如需了解更多，可发邮件至 <i class="icon icon-lg icon-envelope" onclick="window.open('mailto:i@xdc.at');" style="cursor:pointer"></i><code>i@xdc.at</code> 与我联系。</p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p><a href="/2017/06/23/poi-data-update-201706/">全国POI数据2017年6月更新</a></p>
 ]]></content>
     
     <summary type="html">
@@ -957,7 +1043,7 @@
     <link href="https://i.xdc.at/2016/11/20/poi-data-update-201611/"/>
     <id>https://i.xdc.at/2016/11/20/poi-data-update-201611/</id>
     <published>2016-11-20T14:46:40.000Z</published>
-    <updated>2017-03-03T08:43:53.396Z</updated>
+    <updated>2017-08-13T23:43:15.590Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/2016/10/06/poi-data/">上篇对 POI 数据的介绍</a> 中提到，高德的 API 接口返回的并非是完整的 POI 数据，而是存在一定的缺失。</p>
 <p>因此为了补漏，距上次抓取两个月后，再次对全国的 POI 数据进行了全范围抓取。统计后发现，补漏与更新的效果还是比较明显的。</p>
@@ -1222,10 +1308,12 @@
 <h3 id="数据字段信息"><a href="#数据字段信息" class="headerlink" title="数据字段信息"></a>数据字段信息</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/images/poi-data/poi-data-info.png" alt="数据字段信息" title="">
+                    <img src="/assets/images/poi-data/poi-data-info.jpg" alt="数据字段信息" title="">
                 </div>
                 <div class="image-caption">数据字段信息</div>
-            </figure>]]></content>
+            </figure>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p><a href="/2017/02/21/poi-data-update-201702/">全国POI数据2017年2月更新</a><br><a href="/2017/06/23/poi-data-update-201706/">全国POI数据2017年6月更新</a></p>
+]]></content>
     
     <summary type="html">
     
@@ -1576,9 +1664,9 @@
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
-      <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
       <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
+    
+      <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -1669,10 +1757,10 @@
     <link href="https://i.xdc.at/2016/10/06/poi-data/"/>
     <id>https://i.xdc.at/2016/10/06/poi-data/</id>
     <published>2016-10-06T02:20:40.000Z</published>
-    <updated>2017-03-03T08:17:10.543Z</updated>
+    <updated>2017-08-13T23:42:46.573Z</updated>
     
-    <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在<a href="#UPDATE">文末</a>。</em></p>
-<hr>
+    <content type="html"><![CDATA[<p>本文首发于微信公众号 远见<code>farsightj</code>，<a href="https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;mid=2651734823&amp;idx=1&amp;sn=128fc0a3a68546736db59a1129ddfe75" target="_blank" rel="external">原文链接</a>。<br><em>字段信息等更新在<a href="#补充信息">文末</a>。</em></p>
+<h3 id="微信原文"><a href="#微信原文" class="headerlink" title="微信原文"></a>微信原文</h3><hr>
 <p>新鲜出炉的2016全国POI，共约4500+万条。<br>分类齐全，位置精准，字段完整。展示如下：</p>
 <a id="more"></a>
 <p>全国POI密度分布：<br><figure class="image-bubble">
@@ -1720,21 +1808,22 @@
                 <div class="image-caption">远见公众号</div>
             </figure></p>
 <p>也欢迎持续关注远见网站 <a href="http://farsightj.cn" target="_blank" rel="external">http://farsightj.cn</a> 。</p>
-<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h3><p><strong>数据字段信息：</strong><br><figure class="image-bubble">
+<h3 id="补充信息"><a href="#补充信息" class="headerlink" title="补充信息"></a>补充信息</h3><p><strong>数据字段信息：</strong><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/assets/images/poi-data/poi-data-info.png" alt="数据字段信息" title="">
+                    <img src="/assets/images/poi-data/poi-data-info.jpg" alt="数据字段信息" title="">
                 </div>
                 <div class="image-caption">数据字段信息</div>
             </figure></p>
 <p>POI分类对照表可 <a href="/assets/images/poi-data/poi-type-list.pdf">点此下载</a></p>
 <p><strong>TIP:</strong><br>高德 API 在返回 POI 结果时，并非是完整数据，而是存在一定程度的缺失。部分权重较低的 POI，如 ATM 等，在大类搜索结果里缺失就较多。<br>为了规避缺失，可采用更换不同关键词、更改搜索范围等方法交叉抓取，将得到的结果合并去重。但这样会带来较大的抓取工作量，目前已有的4500+万条数据已能满足大多数场景下的分析需求。（<a href="/2016/11/20/poi-data-update-201611/">已更新至 5600 万数据量</a>）<br>如果需要某细分类的更完整数据，可发邮件至 <code>i@xdc.at</code> 定制抓取服务。</p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p><a href="/2016/11/20/poi-data-update-201611/">全国POI数据2016年11月更新</a><br><a href="/2017/02/21/poi-data-update-201702/">全国POI数据2017年2月更新</a><br><a href="/2017/06/23/poi-data-update-201706/">全国POI数据2017年6月更新</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734823&amp;amp;idx=1&amp;amp;sn=128fc0a3a68546736db59a1129ddfe75&quot;&gt;原文链接&lt;/a&gt;。&lt;br&gt;&lt;em&gt;字段信息等更新在&lt;a href=&quot;#UPDATE&quot;&gt;文末&lt;/a&gt;。&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
+      &lt;p&gt;本文首发于微信公众号 远见&lt;code&gt;farsightj&lt;/code&gt;，&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzAwMjUyMjA4Mw==&amp;amp;mid=2651734823&amp;amp;idx=1&amp;amp;sn=128fc0a3a68546736db59a1129ddfe75&quot;&gt;原文链接&lt;/a&gt;。&lt;br&gt;&lt;em&gt;字段信息等更新在&lt;a href=&quot;#补充信息&quot;&gt;文末&lt;/a&gt;。&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;微信原文&quot;&gt;&lt;a href=&quot;#微信原文&quot; class=&quot;headerlink&quot; title=&quot;微信原文&quot;&gt;&lt;/a&gt;微信原文&lt;/h3&gt;&lt;hr&gt;
 &lt;p&gt;新鲜出炉的2016全国POI，共约4500+万条。&lt;br&gt;分类齐全，位置精准，字段完整。展示如下：&lt;/p&gt;
     
     </summary>

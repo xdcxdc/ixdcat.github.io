@@ -2,16 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://i.xdc.at/2017/08/05/map-by-mapbox/</loc>
+    <loc>https://i.xdc.at/2017/06/23/poi-data-update-201706/</loc>
     
-    <lastmod>2017-08-06T06:40:24.525Z</lastmod>
+    <lastmod>2017-08-13T23:44:20.353Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2017/02/21/poi-data-update-201702/</loc>
+    
+    <lastmod>2017-08-13T23:44:09.198Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2016/11/20/poi-data-update-201611/</loc>
+    
+    <lastmod>2017-08-13T23:43:15.590Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2016/10/06/poi-data/</loc>
+    
+    <lastmod>2017-08-13T23:42:46.573Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/</loc>
+    
+    <lastmod>2017-08-13T14:53:32.409Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://i.xdc.at/2017/07/29/amap-routes-tool/</loc>
     
-    <lastmod>2017-08-06T06:11:43.696Z</lastmod>
+    <lastmod>2017-08-11T15:05:16.121Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://i.xdc.at/2017/08/05/map-by-mapbox/</loc>
+    
+    <lastmod>2017-08-11T15:02:18.128Z</lastmod>
     
   </url>
   
@@ -51,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://i.xdc.at/2017/06/23/poi-data-update-201706/</loc>
-    
-    <lastmod>2017-06-23T00:57:38.664Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://i.xdc.at/2016/10/05/geometry-in-SQL-Server/</loc>
     
     <lastmod>2017-06-17T08:28:14.135Z</lastmod>
@@ -65,30 +93,9 @@
   </url>
   
   <url>
-    <loc>https://i.xdc.at/2017/02/21/poi-data-update-201702/</loc>
-    
-    <lastmod>2017-05-25T05:31:08.264Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://i.xdc.at/2017/04/19/aoi-data/</loc>
     
     <lastmod>2017-04-19T13:12:31.565Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://i.xdc.at/2016/11/20/poi-data-update-201611/</loc>
-    
-    <lastmod>2017-03-03T08:43:53.396Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://i.xdc.at/2016/10/06/poi-data/</loc>
-    
-    <lastmod>2017-03-03T08:17:10.543Z</lastmod>
     
   </url>
   

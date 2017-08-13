@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <link rel="canonical" href="https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/">
+  
+  
+  <title>给右键菜单添加“在此处打开 Anaconda 命令行” | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="注册表,Anaconda,Python">
+  <meta name="description" content="问题描述出于种种需要，系统内可能安装了多了python运行环境，如：
+
+python.org 上下载的 Python 2.7 32bit（用于使用某些只支持32位的第三方库）
+ArcGIS 所用的 Python 2.7 32bit（以及 Python 2.7 64bit，如果安装了64位后台地理处理）
+Anaconda with Python 2 和/或 Anaconda with Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给右键菜单添加“在此处打开 Anaconda 命令行”">
+<meta property="og:url" content="https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/index.html">
+<meta property="og:site_name" content="谢栋灿's Blog">
+<meta property="og:description" content="问题描述出于种种需要，系统内可能安装了多了python运行环境，如：
+
+python.org 上下载的 Python 2.7 32bit（用于使用某些只支持32位的第三方库）
+ArcGIS 所用的 Python 2.7 32bit（以及 Python 2.7 64bit，如果安装了64位后台地理处理）
+Anaconda with Python 2 和/或 Anaconda with Python">
+<meta property="og:image" content="https://i.xdc.at/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/anaconda_install.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/context-menu.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/anaconda-prompt-windows.png">
+<meta property="og:updated_time" content="2017-08-13T14:53:32.409Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="给右键菜单添加“在此处打开 Anaconda 命令行”">
+<meta name="twitter:description" content="问题描述出于种种需要，系统内可能安装了多了python运行环境，如：
+
+python.org 上下载的 Python 2.7 32bit（用于使用某些只支持32位的第三方库）
+ArcGIS 所用的 Python 2.7 32bit（以及 Python 2.7 64bit，如果安装了64位后台地理处理）
+Anaconda with Python 2 和/或 Anaconda with Python">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/anaconda_install.png">
+  
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/avatar/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢栋灿</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+
+      <footer class="footer">
+  <p>沪ICP备<a onclick="window.open('http://xdc.at/u/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016 - 2017</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+  </div>
+</aside>
+
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">给右键菜单添加“在此处打开 Anaconda 命令行”</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">给右键菜单添加“在此处打开 Anaconda 命令行”</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-13T03:26:08.000Z" itemprop="datePublished" class="page-time">
+  2017-08-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#问题描述"><span class="post-toc-text">问题描述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方案"><span class="post-toc-text">解决方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用效果"><span class="post-toc-text">使用效果</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-add-anaconda-prompt-to-context-menu-of-explorer"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">给右键菜单添加“在此处打开 Anaconda 命令行”</h1>
+        <div class="post-meta">
+            <time datetime="2017-08-13T03:26:08.000Z" itemprop="datePublished" class="post-time">
+  2017-08-13
+</time>
+
+            
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>出于种种需要，系统内可能安装了多了python运行环境，如：</p>
+<ol>
+<li>python.org 上下载的 Python 2.7 32bit（用于使用某些只支持32位的第三方库）</li>
+<li>ArcGIS 所用的 Python 2.7 32bit（以及 Python 2.7 64bit，如果安装了64位后台地理处理）</li>
+<li>Anaconda with Python 2 和/或 Anaconda with Python 3</li>
+<li>WinPython 等其他 Python 发行版</li>
+</ol>
+<p>而默认情况下，即使系统变量<code>PATH</code>内填写了多了<code>python.exe</code>所在的路径，cmd内执行<code>python</code>的时候也只会执行所找到的第一个。另外，为了避免与ArcGIS冲突、影响ArcGIS内Python环境的使用，在安装Anaconda的时候取消勾选 <code>Add Anaconda to my PATH environment varialbe</code> 和 <code>Register Anaconda as my default Python 2.7</code>。这样的话，运行Anaconda命令行就只能从开始菜单打开相应的快捷方式了，而不能直接在文件夹内Shift+鼠标右键，打开命令行即用了。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/anaconda_install.png" alt="Anaconda" title="">
+                </div>
+                <div class="image-caption">Anaconda</div>
+            </figure>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>通过添加相应的注册表项，可以在右键菜单内添加一项“在此处打开 Anaconda 命令行”<code>Anaconda2 Prompt Here</code>。<br>具体步骤如下（假设Anaconda安装在 <code>D:\Anaconda2\</code> ）：<br>1. 在注册表 <code>HKEY_CLASSES_ROOT\Directory\Background\shell\</code> 下新建一项 <code>Anaconda2</code>，默认值为 <code>Anaconda2 Prompt Here</code> (此值为菜单项显示名称，可以自行修改)。在<code>Anaconda2</code>下新建字符串值<code>Icon</code>，数据为<code>D:\Anaconda2\Menu\Iconleak-Atrous-Console.ico</code>。<br>如果想要在同时按下Shift和鼠标右键才出现菜单项，而不是直接鼠标右键就出现，就在<code>Anaconda2</code>下新建字符串值<code>Extended</code>，数据留空。<br>2. 在<code>Anaconda2</code>下新建一项<code>command</code>，默认值填入<code>cmd.exe /s /k &quot;title Anaconda2&quot; &amp;&amp; D:\Anaconda2\Scripts\activate.bat D:\Anaconda2</code>。</p>
+<p>除了手动打开regedit.exe注册表编辑器执行以上操作的方法外，也可以将以下代码用记事本保存到<code>.reg</code>后缀的文件中，然后双击打开reg文件即可自动导入相应注册表内容。注意根据Anaconda的实际安装路径进行修改。</p>
+<blockquote>
+<p>Windows Registry Editor Version 5.00</p>
+<p></p><p></p><p><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2]<br>@=”Anaconda2 Prompt Here”<br>“Icon”=”D:\Anaconda2\Menu\Iconleak-Atrous-Console.ico”</p>
+<p></p><p></p><p><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2\command]<br>@=”cmd.exe /s /k \”title Anaconda2\” &amp;&amp; D:\Anaconda2\Scripts\activate.bat D:\Anaconda2”</p>
+</blockquote>
+<h3 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h3><p>在任意文件夹内空白处点击鼠标右键，效果如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/context-menu.png" alt="文件夹右键菜单" title="">
+                </div>
+                <div class="image-caption">文件夹右键菜单</div>
+            </figure>
+<p>点击<code>Anaconda2 Prompt Here</code>后，在打开的窗口内执行<code>python</code>，打开的就是Anaconda的python解释器了。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/add-anaconda-prompt-to-context-menu-of-explorer/anaconda-prompt-windows.png" alt="Anaconda命令提示行窗口" title="">
+                </div>
+                <div class="image-caption">Anaconda命令提示行窗口</div>
+            </figure></p>
+<p>而如果此时在文件夹右键菜单内打开系统的命令行并执行<code>python</code>，则打开的是在系统变量<code>PATH</code>内所指定的python解释器，与新添加的Anaconda命令行两者独立。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        本文地址：<a href="/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/" target="_blank" rel="external">https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/</a><br />本文作者：谢栋灿<br/>联系邮箱：<code><b>i</b><i>@</i><b>xdc.at</b></code>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Anaconda/">Anaconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/注册表/">注册表</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/&title=《给右键菜单添加“在此处打开 Anaconda 命令行”》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/&title=《给右键菜单添加“在此处打开 Anaconda 命令行”》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《给右键菜单添加“在此处打开 Anaconda 命令行”》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2048/10/24/top-pinned/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">【置顶】欢迎来到本站</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/05/map-by-mapbox/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">利用mapbox进行地图在线可视化</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
+
+
+
+<div class="global-share" id="globalShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/&title=《给右键菜单添加“在此处打开 Anaconda 命令行”》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/&title=《给右键菜单添加“在此处打开 Anaconda 命令行”》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《给右键菜单添加“在此处打开 Anaconda 命令行”》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrklEQVR42u3aQYrDMAwF0Ln/pTswq0Jp8iVZtAMvq9KExM8LS3z75ye+Hn/X8+/nf16ffH2+987kPQcuPDw8vNbQ313JoJPBVanvxpaPGQ8PD2+bl38yn5p3vGvMqWKDh4eH9w28avHIG/Sk2ODh4eH9X16Oz9/Ta6nx8PDwPsvLh3jd7PZi2XxqFrMWPDw8vJjX2wD77O/1/T08PDy81q76ZGMs37KabHTdjBAPDw9vgZe3tnmUkG9ZnZ2yKGvBw8PDW+Alwehk4Z4cTk3+iQB4eHh4Y17+aHULqpeOXAeyvSMFeHh4eBu8vPFNCkm1Ne8dWUgadDw8PLyzvLyFrW7h59FGNcIoTCUeHh7eAq/asObLd14GNmIRPDw8vG1esrAmEUAes56iRl/Ew8PDW+PNwafa8Un428xX8PDw8GJeHhZcxw29SUlC3tGTeHh4eAu8pD2d3O011r3pvql7eHh4eId4kwOgvZY6n9BJqcDDw8Pb4+XbWnm40AsmkpJTPUaAh4eHt8ebxKn5dPTCjl7cjIeHh7fH6wWvyRCrW1/VAwHlABcPDw/vEK/awk4C2V6ZORBG4OHh4a3xJi9Klvh5GWjGynh4eHhrvPzD84V+r7GO3Hh4eHgDXvKBaqtd3b6qHiDIixMeHh7eBi9Z0CdxQ3632jr37uLh4eHNefPPP+Irf3Peat98EQ8PD2+BVwhD4yerLXKvPDQ32/Dw8PDGvEfxyiPgfMpOxRxRjIuHh4c35lWX3V5hqG6SJQUjYePh4eHt8ZJikH+yN6x5C/4WiYeHh7fGy5fsebWphry9WAQPDw/vm3mnguDePzdfx8PDw/sor3oMq3q4Kt9Oy8eJh4eHt8fLw4hqGUgC3+rRgTyqwMPDw9vgTbapkqU/n7L8IEIU4OLh4eGd5/0C4awDJ6VV3+UAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.3.3" async></script>
+
+
+</body>
+</html>

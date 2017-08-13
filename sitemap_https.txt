@@ -17,6 +17,7 @@ https://i.xdc.at/2017/06/23/poi-data-update-201706/
 https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/
 https://i.xdc.at/2017/07/29/amap-routes-tool/
 https://i.xdc.at/2017/08/05/map-by-mapbox/
+https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/
 https://i.xdc.at/2048/10/24/top-pinned/
 https://i.xdc.at/about/
 https://i.xdc.at/archives/
@@ -45,6 +46,7 @@ https://i.xdc.at/categories/data-analysis/
 https://i.xdc.at/categories/software/
 https://i.xdc.at/page/2/
 https://i.xdc.at/tags/
+https://i.xdc.at/tags/Anaconda/
 https://i.xdc.at/tags/AOI/
 https://i.xdc.at/tags/ArcGIS/
 https://i.xdc.at/tags/Coding-net/
@@ -54,6 +56,7 @@ https://i.xdc.at/tags/Linux/
 https://i.xdc.at/tags/mapbox/
 https://i.xdc.at/tags/Markdown/
 https://i.xdc.at/tags/POI/
+https://i.xdc.at/tags/Python/
 https://i.xdc.at/tags/SQL-Server/
 https://i.xdc.at/tags/SSH/
 https://i.xdc.at/tags/tbx/
@@ -68,6 +71,7 @@ https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/
 https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/
 https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/
 https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/
+https://i.xdc.at/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/
 https://i.xdc.at/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/
 https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/
 https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/
