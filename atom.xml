@@ -146,10 +146,67 @@
     <link href="https://i.xdc.at/2017/07/29/amap-routes-tool/"/>
     <id>https://i.xdc.at/2017/07/29/amap-routes-tool/</id>
     <published>2017-07-29T12:32:33.000Z</published>
-    <updated>2017-08-11T15:05:16.121Z</updated>
+    <updated>2017-08-15T14:32:28.217Z</updated>
     
-    <content type="html"><![CDATA[<p>该工具利用高德地图的路线规划获取OD点之间的交通导航线路与时耗，并输出shapefile。</p>
-<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="image-bubble">
+    <content type="html"><![CDATA[<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该工具利用高德地图的路线规划API获取OD点之间的交通导航线路与时耗，并输出csv表格和shapefile。<br>v1.1.0版本支持多线程，可显著提高数据获取速度。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h4 id="输入界面"><a href="#输入界面" class="headerlink" title="输入界面"></a>输入界面</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/amap-routes-tool/setting-windows.png" alt="输入界面" title="">
+                </div>
+                <div class="image-caption">输入界面</div>
+            </figure>
+<h4 id="输入字段说明"><a href="#输入字段说明" class="headerlink" title="输入字段说明"></a>输入字段说明</h4><p>1. 输入交通OD的csv或txt表</p>
+<blockquote>
+<p>输入的表格应如以下结构：<br><code>ItemID,O_lng,O_lat,D_lng,D_lat</code><br>其中ItemID为该条OD的唯一标识ID，数字或字母均可<em>（同一表格内不要混用数字标识和字母标识，以免ArcGIS在识别字段类型时出错）</em>，可用于输出结果表与输入表的关联。<br>O_lng,O_lat,D_lng,D_lat分别为起点的经度、维度以及终点的经度、纬度。<br>输入的csv表可用Excel另存为csv文件得到。<br>输入表是否包含表头均可。</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/amap-routes-tool/input.png" alt="输入表格示例" title="">
+                </div>
+                <div class="image-caption">输入表格示例</div>
+            </figure>
+<p>2. 交通方式</p>
+<blockquote>
+<p>可选择三种交通方式：<br>drive：驾车<br>bus；公共交通<br>walk：步行<br><em>高德近期开始提供骑行路径API，工具待更新</em></p>
+</blockquote>
+<p>3. 使用带偏移的高德坐标系，而不是标准的WGS84坐标系？</p>
+<blockquote>
+<p>如果输入的坐标是带偏移的高德坐标（GCJ-02），请将该选项设置为Yes。否则将默认为无偏的WGS84坐标系。</p>
+</blockquote>
+<p>4. 是否仅输出多条推荐线路中的第一条</p>
+<blockquote>
+<p>输出属性表中包含out_order字段，为推荐线路的序号。<br>如果该项设置为Yes，则仅输出推荐线路的第一条，即out_order=1的记录。</p>
+</blockquote>
+<p>5. 输出csv表位置</p>
+<blockquote>
+<p>选择输出结果csv表格的位置。</p>
+</blockquote>
+<p>6. 输出交通线路Shapefile位置 (可选)</p>
+<blockquote>
+<p>选择输出交通线路shapefile文件的位置。</p>
+</blockquote>
+<p>7. 激活码（试用可留空） (可选)</p>
+<blockquote>
+<p>软件试用运行时会在运行信息中显示本机的机器码，请将机器码发送至邮箱 i@xdc.at 以获取激活码。<br>未激活版本每次最多输出10条结果。<br>获得授权后第一次使用工具需填写激活码，当运行后看到“激活码写入文件成功”的提示，以后使用就无需填写。请妥善保存您的激活码。</p>
+</blockquote>
+<h4 id="输出结果示例"><a href="#输出结果示例" class="headerlink" title="输出结果示例"></a>输出结果示例</h4><p><strong>输出表格如下：</strong><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/amap-routes-tool/output-csv.png" alt="输出表格" title="">
+                </div>
+                <div class="image-caption">输出表格</div>
+            </figure><br>其中，FID2与输出shp文件（如有）的FID相匹配。<br>如果选择了不只输出多条推荐线路中的第一条，则同一ItemID可能会有多条输出结果，以out_order排序。<br>输出 distance 和 duration 的单位分别为<strong>米</strong>和<strong>秒</strong>。</p>
+<p><strong>输出shapefile如下：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/amap-routes-tool/output-shp.jpg" alt="输出shapefile" title="">
+                </div>
+                <div class="image-caption">输出shapefile</div>
+            </figure>
+<h3 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/assets/images/map-by-mapbox/routes2shanghai.png" alt="全国县至上海路线可视化" title="">
@@ -157,22 +214,17 @@
                 <div class="image-caption">全国县至上海路线可视化</div>
             </figure>
 <p><a href="http://xdc.at/map/routes2shanghai.html" target="_blank" rel="external">全国县至上海路线在线可视化 点此查看</a></p>
-<h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 运行错误</p>
+<h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>软件试用运行时会在运行信息中显示本机的机器码，请将机器码发送至邮箱 i@xdc.at 以获取激活码。</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 路径获取到一定条数后报错</p>
 <blockquote>
-<blockquote>
-<blockquote>
-<p>32位程序</p>
-</blockquote>
-<p>333</p>
-</blockquote>
+<p>ArcMap是32位程序，而32位程序在Windows下可使用的内存是受限的，因此当获取到的路径折点总数达到一定量，导致arcmap.exe占用内存过大时，就会运行出错。根据OD点间距离的情况，单次可获取的路径线路条数在几千到几万不等。<br>如果不需要路径线路，可把输出shapefile留空，即可避免线路折点数据挤占内存导致运行出错。<br>如果确需要输出shapefile，则建议将输入表格拆分，一次输入适当行数的表格。（考虑到shapefile文件本身容量与性能也有限，建议单次运行控制数量）</p>
 </blockquote>
 <h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="http://xdc.at/d/?d=route1.1.0" target="_blank" rel="external">xdc交通线路与时耗抓取v1.1.0.tbx</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;该工具利用高德地图的路线规划获取OD点之间的交通导航线路与时耗，并输出shapefile。&lt;/p&gt;
-&lt;h3 id=&quot;使用说明&quot;&gt;&lt;a href=&quot;#使用说明&quot; class=&quot;headerlink&quot; title=&quot;使用说明&quot;&gt;&lt;/a&gt;使用说明&lt;/h3&gt;&lt;h3 id=&quot;使用案例
+      &lt;h3 id=&quot;软件介绍&quot;&gt;&lt;a href=&quot;#软件介绍&quot; class=&quot;headerlink&quot; title=&quot;软件介绍&quot;&gt;&lt;/a&gt;软件介绍&lt;/h3&gt;&lt;p&gt;该工具利用高德地图的路线规划API获取OD点之间的交通导航线路与时耗，并输出csv表格和shapefile。&lt;br&gt;v1.1
     
     </summary>
     
@@ -649,7 +701,7 @@
     <link href="https://i.xdc.at/2017/03/02/tianditu-poi-tbx/"/>
     <id>https://i.xdc.at/2017/03/02/tianditu-poi-tbx/</id>
     <published>2017-03-02T08:14:12.000Z</published>
-    <updated>2017-08-05T14:23:39.541Z</updated>
+    <updated>2017-08-15T13:29:36.081Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该工具最早发布于远见网站 <a href="http://farsightj.cn/blog/?p=185" target="_blank" rel="external">http://farsightj.cn/blog/?p=185</a><br>此版本为与<a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a>的合作版本。</p>
@@ -685,7 +737,7 @@
 </ol>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入激活码时可进行试用，试用过程中运行窗口会显示您的机器码。ArcGIS默认情况下运行窗口较小，您可能需要手动拉大窗口尺寸才能看到全部输出信息。<br>该软件是与 <a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a> 的合作版本，城市数据派会员可联系数据派管理员获取激活码。非数据派会员可发邮件至<code>i@xdc.at</code>与我联系。<br>激活码只需输入一次，后续使用无需再次输入。</p>
 <h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>1. 如果遇到输出文件错误，请尝试使用纯字母的文件名。<br>2. 如果连续多次使用均无法正常得到结果，则可能是数据接口变更，请发邮件至<code>i@xdc.at</code>与我联系。</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=tdt1.0.3" target="_blank">天地图POI下载v1.0.3.tbx</a></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=tdt1.0.4" target="_blank">天地图POI下载v1.0.4.tbx</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1664,9 +1716,9 @@
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
-      <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
-    
       <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+      <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
   </entry>
   
