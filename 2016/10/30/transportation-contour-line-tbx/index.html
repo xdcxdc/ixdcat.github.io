@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://i.xdc.at/assets/images/transportation-contourline-tbx/result.png">
 <meta property="og:image" content="https://i.xdc.at/assets/images/transportation-contourline-tbx/running-3.png">
 <meta property="og:image" content="https://i.xdc.at/assets/images/transportation-contourline-tbx/running-4.png">
-<meta property="og:updated_time" content="2017-08-05T14:59:54.233Z">
+<meta property="og:updated_time" content="2017-08-16T13:33:10.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于高德 API 的交通等时线划分工具">
 <meta name="twitter:description" content="该软件最早于 2016-04-06 发布在城市数据派网站xdc交通等时线工具箱
@@ -205,20 +205,20 @@ var _hmt = _hmt || [];
             <blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
 </blockquote>
-<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
+<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。<br><strong>更新：</strong> <a href="/2017/08/16/transportation-contourline-tbx-1.5/">v1.5.0版本</a>开始加入骑行方式支持。</p>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/assets/images/transportation-contourline-tbx/main-window.png" alt="主窗口" title="">
                 </div>
                 <div class="image-caption">主窗口</div>
-            </figure><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），在点击每一输入项时可以显示详细介绍（下图）。<br><figure class="image-bubble">
+            </figure><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），<strong>在点击每一输入项时可以显示详细介绍</strong>（下图）。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/assets/images/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="">
                 </div>
                 <div class="image-caption">帮助窗口</div>
-            </figure><br>各项输入的介绍请参考软件内的帮助信息。</p>
+            </figure><br>各项输入的介绍<strong>请参考软件内的帮助信息</strong>。<br>填入需要的输入项后点击确定开始运行。</p>
 <p>运行截图：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -266,8 +266,8 @@ var _hmt = _hmt || [];
 <h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CPFD&amp;dbname=CPFDLAST2017&amp;filename=ZHCG201609004064" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
 <p>引用格式参考：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
 <p>使用该工具的公开研究成果，请注明以上引用，和/或附上本页面网址 <code>http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</code> 。</p>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>v1.2.5 稳定版本发布<br>v1.3.1 支持自定义采样空间边界<br>v1.3.3 更新公交方式数据接口<br>v1.4.1 测试加入多线程支持</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=dsx1.3.3" target="_blank">xdc交通等时线工具箱v1.3.3.tbx</a><br><a href="http://xdc.at/d/?d=dsx1.4.1" target="_blank">xdc交通等时线工具箱v1.4.1.tbx（多线程测试版）</a></p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>v1.2.5 稳定版本发布<br>v1.3.1 支持自定义采样空间边界<br>v1.3.3 更新公交方式数据接口<br>v1.4.1 测试加入多线程支持<br>v1.5.0 添加骑行交通方式支持；支持自动选择最接近的投影坐标系</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=dsx1.3.3" target="_blank">xdc交通等时线工具箱v1.3.3.tbx</a><br><a href="http://xdc.at/d/?d=dsx1.4.1" target="_blank">xdc交通等时线工具箱v1.4.1.tbx（多线程测试版）</a><br><a href="http://xdc.at/d/?d=dsx1.5.0" target="_blank">xdc交通等时线工具箱v1.5.0.tbx（骑行方式测试版）</a></p>
 
         </div>
 

@@ -7,7 +7,7 @@
   <link rel="canonical" href="https://i.xdc.at/2017/07/29/amap-routes-tool/">
   
   
-  <title>高德导航路径与时耗获取工具 | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <title>【软件工具】高德导航路径与时耗获取工具 | 谢栋灿&#39;s Blog | i.xdc.at</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
@@ -17,7 +17,7 @@
   <meta name="description" content="软件介绍该工具利用高德地图的路线规划API获取OD点之间的交通导航线路与时耗，并输出csv表格和shapefile。v1.1.0版本支持多线程，可显著提高数据获取速度。该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 在 ArcGIS 内使用 tbx 工具箱 。
 使用说明输入界面">
 <meta property="og:type" content="article">
-<meta property="og:title" content="高德导航路径与时耗获取工具">
+<meta property="og:title" content="【软件工具】高德导航路径与时耗获取工具">
 <meta property="og:url" content="https://i.xdc.at/2017/07/29/amap-routes-tool/index.html">
 <meta property="og:site_name" content="谢栋灿's Blog">
 <meta property="og:description" content="软件介绍该工具利用高德地图的路线规划API获取OD点之间的交通导航线路与时耗，并输出csv表格和shapefile。v1.1.0版本支持多线程，可显著提高数据获取速度。该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 在 ArcGIS 内使用 tbx 工具箱 。
@@ -27,9 +27,9 @@
 <meta property="og:image" content="https://i.xdc.at/assets/images/amap-routes-tool/output-csv.png">
 <meta property="og:image" content="https://i.xdc.at/assets/images/amap-routes-tool/output-shp.jpg">
 <meta property="og:image" content="https://i.xdc.at/assets/images/map-by-mapbox/routes2shanghai.png">
-<meta property="og:updated_time" content="2017-08-15T14:32:28.217Z">
+<meta property="og:updated_time" content="2017-08-16T15:03:41.465Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="高德导航路径与时耗获取工具">
+<meta name="twitter:title" content="【软件工具】高德导航路径与时耗获取工具">
 <meta name="twitter:description" content="软件介绍该工具利用高德地图的路线规划API获取OD点之间的交通导航线路与时耗，并输出csv表格和shapefile。v1.1.0版本支持多线程，可显著提高数据获取速度。该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 在 ArcGIS 内使用 tbx 工具箱 。
 使用说明输入界面">
 <meta name="twitter:image" content="https://i.xdc.at/assets/images/amap-routes-tool/setting-windows.png">
@@ -130,7 +130,7 @@ var _hmt = _hmt || [];
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">高德导航路径与时耗获取工具</div>
+        <div class="flex-col header-title ellipsis">【软件工具】高德导航路径与时耗获取工具</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">高德导航路径与时耗获取工具</h1>
+        <h1 class="title">【软件工具】高德导航路径与时耗获取工具</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-07-29T12:32:33.000Z" itemprop="datePublished" class="page-time">
@@ -184,7 +184,7 @@ var _hmt = _hmt || [];
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">高德导航路径与时耗获取工具</h1>
+        <h1 class="post-card-title">【软件工具】高德导航路径与时耗获取工具</h1>
         <div class="post-meta">
             <time datetime="2017-07-29T12:32:33.000Z" itemprop="datePublished" class="post-time">
   2017-07-29
@@ -205,6 +205,7 @@ var _hmt = _hmt || [];
                 </div>
                 <div class="image-caption">输入界面</div>
             </figure>
+<p><strong> 如果帮助栏未显示，请点击窗口下方的“显示帮助”按钮打开右侧帮助栏，以便在点击各项输入框时查看对应的帮助信息 </strong></p>
 <h4 id="输入字段说明"><a href="#输入字段说明" class="headerlink" title="输入字段说明"></a>输入字段说明</h4><p>1. 输入交通OD的csv或txt表</p>
 <blockquote>
 <p>输入的表格应如以下结构：<br><code>ItemID,O_lng,O_lat,D_lng,D_lat</code><br>其中ItemID为该条OD的唯一标识ID，数字或字母均可<em>（同一表格内不要混用数字标识和字母标识，以免ArcGIS在识别字段类型时出错）</em>，可用于输出结果表与输入表的关联。<br>O_lng,O_lat,D_lng,D_lat分别为起点的经度、维度以及终点的经度、纬度。<br>输入的csv表可用Excel另存为csv文件得到。<br>输入表是否包含表头均可。</p>
@@ -303,7 +304,7 @@ var _hmt = _hmt || [];
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《高德导航路径与时耗获取工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《【软件工具】高德导航路径与时耗获取工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -313,7 +314,7 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《高德导航路径与时耗获取工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《【软件工具】高德导航路径与时耗获取工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -323,7 +324,7 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高德导航路径与时耗获取工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/07/29/amap-routes-tool/&via=https://i.xdc.at" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件工具】高德导航路径与时耗获取工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/07/29/amap-routes-tool/&via=https://i.xdc.at" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -415,7 +416,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《高德导航路径与时耗获取工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《【软件工具】高德导航路径与时耗获取工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -425,7 +426,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《高德导航路径与时耗获取工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/07/29/amap-routes-tool/&title=《【软件工具】高德导航路径与时耗获取工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -435,7 +436,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高德导航路径与时耗获取工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/07/29/amap-routes-tool/&via=https://i.xdc.at" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件工具】高德导航路径与时耗获取工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/07/29/amap-routes-tool/&via=https://i.xdc.at" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>

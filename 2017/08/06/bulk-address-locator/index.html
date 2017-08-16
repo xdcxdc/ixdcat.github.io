@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <link rel="canonical" href="https://i.xdc.at/2017/08/06/bulk-address-locator/">
+  
+  
+  <title>【软件工具】地址批量定位工具 | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="高德,ArcGIS,tbx,工具箱,地理编码">
+  <meta name="description" content="软件介绍该工具利用高德的地理编码接口，将输入的地址转换为经纬度坐标，并可生成shp文件。v1.1.0测试版支持多线程，可显著提高数据获取速度。该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 在 ArcGIS 内使用 tbx 工具箱 。
+使用说明输入界面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【软件工具】地址批量定位工具">
+<meta property="og:url" content="https://i.xdc.at/2017/08/06/bulk-address-locator/index.html">
+<meta property="og:site_name" content="谢栋灿's Blog">
+<meta property="og:description" content="软件介绍该工具利用高德的地理编码接口，将输入的地址转换为经纬度坐标，并可生成shp文件。v1.1.0测试版支持多线程，可显著提高数据获取速度。该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 在 ArcGIS 内使用 tbx 工具箱 。
+使用说明输入界面">
+<meta property="og:image" content="https://i.xdc.at/assets/images\bulk-address-locator/setting-window.png">
+<meta property="og:updated_time" content="2017-08-16T15:02:40.696Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【软件工具】地址批量定位工具">
+<meta name="twitter:description" content="软件介绍该工具利用高德的地理编码接口，将输入的地址转换为经纬度坐标，并可生成shp文件。v1.1.0测试版支持多线程，可显著提高数据获取速度。该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 在 ArcGIS 内使用 tbx 工具箱 。
+使用说明输入界面">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images\bulk-address-locator/setting-window.png">
+  
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/avatar/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢栋灿</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+
+      <footer class="footer">
+  <p>沪ICP备<a onclick="window.open('http://xdc.at/u/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016 - 2017</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+  </div>
+</aside>
+
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">【软件工具】地址批量定位工具</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">【软件工具】地址批量定位工具</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-06T15:07:00.000Z" itemprop="datePublished" class="page-time">
+  2017-08-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/software/">软件工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件介绍"><span class="post-toc-text">软件介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用说明"><span class="post-toc-text">使用说明</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输入界面"><span class="post-toc-text">输入界面</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输入字段说明"><span class="post-toc-text">输入字段说明</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输出结果"><span class="post-toc-text">输出结果</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取激活码"><span class="post-toc-text">获取激活码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载地址"><span class="post-toc-text">下载地址</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-bulk-address-locator"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">【软件工具】地址批量定位工具</h1>
+        <div class="post-meta">
+            <time datetime="2017-08-06T15:07:00.000Z" itemprop="datePublished" class="post-time">
+  2017-08-06
+</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/software/">软件工具</a></li></ul>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该工具利用高德的地理编码接口，将输入的地址转换为经纬度坐标，并可生成shp文件。<br>v1.1.0测试版支持多线程，可显著提高数据获取速度。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h4 id="输入界面"><a href="#输入界面" class="headerlink" title="输入界面"></a>输入界面</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images\bulk-address-locator/setting-window.png" alt="输入界面" title="">
+                </div>
+                <div class="image-caption">输入界面</div>
+            </figure>
+<p><strong> 如果帮助栏未显示，请点击窗口下方的“显示帮助”按钮打开右侧帮助栏，以便在点击各项输入框时查看对应的帮助信息 </strong></p>
+<h4 id="输入字段说明"><a href="#输入字段说明" class="headerlink" title="输入字段说明"></a>输入字段说明</h4><p>1. 输入txt文件的位置</p>
+<blockquote>
+<p>输入文件应为一个txt文档，每行一个地址，不必包含表头。txt文档的编码为gb2312,gbk,utf-8均可。<br>输入地名可以是地点名（如上海市人民广场），也可以是包含路名的地址（如上海市四平路1239号）。</p>
+</blockquote>
+<p>2. 位置点所在城市（如：上海市，如果txt内地址已包含城市名该项可留空） (可选)</p>
+<blockquote>
+<p>如果txt文档内的地址不包含城市名称，请在此处输入城市名称。</p>
+</blockquote>
+<p>3. 输出使用高德坐标系，而不是WGS84坐标系？</p>
+<blockquote>
+<p>如果需要和带偏移的高德地图进行匹配，请将该选项设置为Yes。否则将默认纠偏为WGS84坐标系。</p>
+</blockquote>
+<p>4. 输出txt文件位置（与输出shp文件至少二选一） (可选)</p>
+<blockquote>
+<p>将结果输出为txt文档。</p>
+</blockquote>
+<p>5. 输出shp文件位置（与输出txt文件至少二选一） (可选)</p>
+<blockquote>
+<p>将结果输出为shapefile。</p>
+</blockquote>
+<p>6. 激活码 (可选)</p>
+<blockquote>
+<p>未激活版本每次最多输出10个点。<br>获得授权后第一次使用工具需填写激活码，当运行后看到“激活码写入文件成功”的提示，以后使用就无需填写。请妥善保存您的激活码。<br>城市数据派会员获取激活码请联系数据派管理员。 非数据派会员请发邮件至 i@xdc.at </p>
+</blockquote>
+<h4 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h4><p>输出结果包含以下字段：<br><code>input_name</code> 输入地址名，<code>lng</code>经度，<code>lat</code>纬度（默认纠偏为标准的WGS 1984坐标），<code>address</code>格式化的地址字符串，<code>province</code>省份，<code>city</code>城市名，<code>district</code>区县名。<br>如果输入的某行是不存在的地址，则txt内仍会按顺序输出一行（字段值为0或空），以方便与原输入表对齐。但shp文件内只会输出能够定位的点。</p>
+<h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>软件试用运行时会在运行信息中显示本机的机器码，城市数据派会员获取激活码请联系数据派管理员。<br>非数据派会员请将机器码发送至邮箱 i@xdc.at 以获取激活码。</p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="http://xdc.at/d/?d=addr1.1.0" target="_blank" rel="external">xdc地址批量定位v1.1.0.tbx（测试版）</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        本文地址：<a href="/2017/08/06/bulk-address-locator/" target="_blank" rel="external">https://i.xdc.at/2017/08/06/bulk-address-locator/</a><br />本文作者：谢栋灿<br/>联系邮箱：<code><b>i</b><i>@</i><b>xdc.at</b></code>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tbx/">tbx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/地理编码/">地理编码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具箱/">工具箱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高德/">高德</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/08/06/bulk-address-locator/&title=《【软件工具】地址批量定位工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/08/06/bulk-address-locator/&title=《【软件工具】地址批量定位工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/08/06/bulk-address-locator/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件工具】地址批量定位工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/08/06/bulk-address-locator/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/08/06/bulk-address-locator/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">给右键菜单添加“在此处打开 Anaconda 命令行”</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/05/map-by-mapbox/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">利用mapbox进行地图在线可视化</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
+
+
+
+<div class="global-share" id="globalShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/08/06/bulk-address-locator/&title=《【软件工具】地址批量定位工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/08/06/bulk-address-locator/&title=《【软件工具】地址批量定位工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/08/06/bulk-address-locator/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件工具】地址批量定位工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/08/06/bulk-address-locator/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/08/06/bulk-address-locator/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3a0U7DMAwF0P3/TxeJpyGxcO20SHVPnqZRmp4iGTv26xWv43utv3n//n3lv7W+5oSFgYFxW8axXMk2n75ZY/J919dgYGA8h1ENgnlgrYbgJPhiYGBgJI/SC9Dr14GBgYFxVsA9NxFc3wEDAwNjZ5veAVzygi6vxTEwMG7IqDYG/vPzhf0NDAyMmzCO1qomc/k9e0+FgYExm/EpIdsfv+gd4eUJ5SvJQDEwMAYxkgKyV1Luj2jkhTEGBsZURhLmeoNcvYdrFrQYGBijGdXAmoPzO/daC79cj4GB8UjGuYMXPczWcRsGBsZQRrVwTUJkdQijWk5jYGA8jVENwUk5mhSieUmMgYHxNEY1qFUTxORzfs8/ylcMDIyhjJ32wM7ARHOQYr0jBgbGaEYv+esd7ucHatUQj4GBMZWRbFk9CMtXtcQt/xgDA2ME46xHP2ssY6epgIGBMZVRzR8TapIs5g8aPRsGBsZoxk7xmR+rJUMbOa/8fwMDA2MEIy9Nt8a2Lihuy+8SAwNjEKOXouVNgnxEo7AjBgbGaEaeIPaC8hXDFs2LMDAwbsg4iqsaXqshtUr90RjAwMAYyqhWiDtlZ17i5mNhGBgYz2HkR/Z5G3Jn2Kva4MTAwHgOo9e8vKIMrjYwMDAwMPJrks3ysdQyGAMDA6M1qpW3B3ZaBRgYGM9h5K3HXt+w2trEwMDAqK4k1eu1MKtthhP+YhgYGHdifAGP1bJQ8j87UAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.3.3" async></script>
+
+
+</body>
+</html>

@@ -17,7 +17,9 @@ http://i.xdc.at/2017/06/23/poi-data-update-201706/
 http://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/
 http://i.xdc.at/2017/07/29/amap-routes-tool/
 http://i.xdc.at/2017/08/05/map-by-mapbox/
+http://i.xdc.at/2017/08/06/bulk-address-locator/
 http://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/
+http://i.xdc.at/2017/08/16/transportation-contourline-tbx-1.5/
 http://i.xdc.at/2048/10/24/top-pinned/
 http://i.xdc.at/about/
 http://i.xdc.at/archives/
@@ -65,6 +67,7 @@ http://i.xdc.at/tags/%E4%BA%A4%E9%80%9A%E7%AD%89%E6%97%B6%E7%BA%BF/
 http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/
 http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/
 http://i.xdc.at/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
+http://i.xdc.at/tags/%E5%9C%B0%E7%90%86%E7%BC%96%E7%A0%81/
 http://i.xdc.at/tags/%E5%9C%B0%E9%93%81/
 http://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/
 http://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/
@@ -74,4 +77,5 @@ http://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/
 http://i.xdc.at/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/
 http://i.xdc.at/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/
 http://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/
+http://i.xdc.at/tags/%E9%AA%91%E8%A1%8C/
 http://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/

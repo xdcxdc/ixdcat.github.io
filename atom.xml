@@ -35,6 +35,57 @@
   </entry>
   
   <entry>
+    <title>【软件更新】基于高德 API 的交通等时线划分工具 v1.5.0</title>
+    <link href="https://i.xdc.at/2017/08/16/transportation-contourline-tbx-1.5/"/>
+    <id>https://i.xdc.at/2017/08/16/transportation-contourline-tbx-1.5/</id>
+    <published>2017-08-16T13:56:00.000Z</published>
+    <updated>2017-08-16T15:02:57.581Z</updated>
+    
+    <content type="html"><![CDATA[<p>软件初始版本介绍见 <a href="/2016/10/30/transportation-contour-line-tbx/">基于高德 API 的交通等时线划分工具</a>（xdc交通等时线工具箱）。</p>
+<hr>
+<h3 id="此版本主要特性"><a href="#此版本主要特性" class="headerlink" title="此版本主要特性"></a>此版本主要特性</h3><p><strong> 1. 生成等时线范围可设置为时间范围或空间范围 </strong><br>除了可以设置时间范围（分钟）来作为生成等时线的范围外，还可以输入一个面作为采样点的空间四至边界（与输入时间范围方式二选一）。<br>输入的面必须为 GCS_WGS_1984 坐标系，可通过创建一个新的shapefile或将现有其他坐标系的面转换投影等方法获得。<br>输入的中心点可以在输入的边界面外。</p>
+<p><strong> 2. 支持多线程获取数据 </strong><br>多线程并发获取采样点交通时间数据，网络环境较好状况下每秒可完成数十次请求。</p>
+<p><strong> 3. 交通方式加入骑行 </strong><br>现支持获取驾车、步行、公交、骑行四种交通方式的等时线。</p>
+<p><strong> 4. 自动选择合适的投影坐标系 </strong><br>如果投影坐标系一项输入留空，则会自动选择条带最接近的UTM坐标系。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/transportation-contourline-tbx-1.5/window.png" alt="v1.5.0版输入界面" title="">
+                </div>
+                <div class="image-caption">v1.5.0版输入界面</div>
+            </figure>
+<p><strong> 如果帮助栏未显示，请点击窗口下方的“显示帮助”按钮打开右侧帮助栏，以便在点击各项输入框时查看对应的帮助信息 </strong></p>
+<h3 id="更新历史"><a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h3><p>v1.3.1 支持自定义采样空间边界<br>v1.3.3 更新公交方式数据接口<br>v1.4.1 测试加入多线程支持<br>v1.5.0 添加骑行交通方式支持；支持自动选择最接近的投影坐标系</p>
+<hr>
+<p>下载地址仍在 <a href="/2016/10/30/transportation-contour-line-tbx/#下载">原软件介绍页面</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;软件初始版本介绍见 &lt;a href=&quot;/2016/10/30/transportation-contour-line-tbx/&quot;&gt;基于高德 API 的交通等时线划分工具&lt;/a&gt;（xdc交通等时线工具箱）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;此版本主要特性&quot;&gt;&lt;a href=
+    
+    </summary>
+    
+      <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
+    
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
+    
+      <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="交通等时线" scheme="https://i.xdc.at/tags/%E4%BA%A4%E9%80%9A%E7%AD%89%E6%97%B6%E7%BA%BF/"/>
+    
+      <category term="骑行" scheme="https://i.xdc.at/tags/%E9%AA%91%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>给右键菜单添加“在此处打开 Anaconda 命令行”</title>
     <link href="https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/"/>
     <id>https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/</id>
@@ -99,6 +150,72 @@
   </entry>
   
   <entry>
+    <title>【软件工具】地址批量定位工具</title>
+    <link href="https://i.xdc.at/2017/08/06/bulk-address-locator/"/>
+    <id>https://i.xdc.at/2017/08/06/bulk-address-locator/</id>
+    <published>2017-08-06T15:07:00.000Z</published>
+    <updated>2017-08-16T15:02:40.696Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该工具利用高德的地理编码接口，将输入的地址转换为经纬度坐标，并可生成shp文件。<br>v1.1.0测试版支持多线程，可显著提高数据获取速度。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h4 id="输入界面"><a href="#输入界面" class="headerlink" title="输入界面"></a>输入界面</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images\bulk-address-locator/setting-window.png" alt="输入界面" title="">
+                </div>
+                <div class="image-caption">输入界面</div>
+            </figure>
+<p><strong> 如果帮助栏未显示，请点击窗口下方的“显示帮助”按钮打开右侧帮助栏，以便在点击各项输入框时查看对应的帮助信息 </strong></p>
+<h4 id="输入字段说明"><a href="#输入字段说明" class="headerlink" title="输入字段说明"></a>输入字段说明</h4><p>1. 输入txt文件的位置</p>
+<blockquote>
+<p>输入文件应为一个txt文档，每行一个地址，不必包含表头。txt文档的编码为gb2312,gbk,utf-8均可。<br>输入地名可以是地点名（如上海市人民广场），也可以是包含路名的地址（如上海市四平路1239号）。</p>
+</blockquote>
+<p>2. 位置点所在城市（如：上海市，如果txt内地址已包含城市名该项可留空） (可选)</p>
+<blockquote>
+<p>如果txt文档内的地址不包含城市名称，请在此处输入城市名称。</p>
+</blockquote>
+<p>3. 输出使用高德坐标系，而不是WGS84坐标系？</p>
+<blockquote>
+<p>如果需要和带偏移的高德地图进行匹配，请将该选项设置为Yes。否则将默认纠偏为WGS84坐标系。</p>
+</blockquote>
+<p>4. 输出txt文件位置（与输出shp文件至少二选一） (可选)</p>
+<blockquote>
+<p>将结果输出为txt文档。</p>
+</blockquote>
+<p>5. 输出shp文件位置（与输出txt文件至少二选一） (可选)</p>
+<blockquote>
+<p>将结果输出为shapefile。</p>
+</blockquote>
+<p>6. 激活码 (可选)</p>
+<blockquote>
+<p>未激活版本每次最多输出10个点。<br>获得授权后第一次使用工具需填写激活码，当运行后看到“激活码写入文件成功”的提示，以后使用就无需填写。请妥善保存您的激活码。<br>城市数据派会员获取激活码请联系数据派管理员。 非数据派会员请发邮件至 i@xdc.at </p>
+</blockquote>
+<h4 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h4><p>输出结果包含以下字段：<br><code>input_name</code> 输入地址名，<code>lng</code>经度，<code>lat</code>纬度（默认纠偏为标准的WGS 1984坐标），<code>address</code>格式化的地址字符串，<code>province</code>省份，<code>city</code>城市名，<code>district</code>区县名。<br>如果输入的某行是不存在的地址，则txt内仍会按顺序输出一行（字段值为0或空），以方便与原输入表对齐。但shp文件内只会输出能够定位的点。</p>
+<h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>软件试用运行时会在运行信息中显示本机的机器码，城市数据派会员获取激活码请联系数据派管理员。<br>非数据派会员请将机器码发送至邮箱 i@xdc.at 以获取激活码。</p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="http://xdc.at/d/?d=addr1.1.0" target="_blank" rel="external">xdc地址批量定位v1.1.0.tbx（测试版）</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;软件介绍&quot;&gt;&lt;a href=&quot;#软件介绍&quot; class=&quot;headerlink&quot; title=&quot;软件介绍&quot;&gt;&lt;/a&gt;软件介绍&lt;/h3&gt;&lt;p&gt;该工具利用高德的地理编码接口，将输入的地址转换为经纬度坐标，并可生成shp文件。&lt;br&gt;v1.1.0测试版支持多线程，可显著
+    
+    </summary>
+    
+      <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
+    
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
+    
+      <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="地理编码" scheme="https://i.xdc.at/tags/%E5%9C%B0%E7%90%86%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用mapbox进行地图在线可视化</title>
     <link href="https://i.xdc.at/2017/08/05/map-by-mapbox/"/>
     <id>https://i.xdc.at/2017/08/05/map-by-mapbox/</id>
@@ -142,11 +259,11 @@
   </entry>
   
   <entry>
-    <title>高德导航路径与时耗获取工具</title>
+    <title>【软件工具】高德导航路径与时耗获取工具</title>
     <link href="https://i.xdc.at/2017/07/29/amap-routes-tool/"/>
     <id>https://i.xdc.at/2017/07/29/amap-routes-tool/</id>
     <published>2017-07-29T12:32:33.000Z</published>
-    <updated>2017-08-15T14:32:28.217Z</updated>
+    <updated>2017-08-16T15:03:41.465Z</updated>
     
     <content type="html"><![CDATA[<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该工具利用高德地图的路线规划API获取OD点之间的交通导航线路与时耗，并输出csv表格和shapefile。<br>v1.1.0版本支持多线程，可显著提高数据获取速度。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h4 id="输入界面"><a href="#输入界面" class="headerlink" title="输入界面"></a>输入界面</h4><figure class="image-bubble">
@@ -156,6 +273,7 @@
                 </div>
                 <div class="image-caption">输入界面</div>
             </figure>
+<p><strong> 如果帮助栏未显示，请点击窗口下方的“显示帮助”按钮打开右侧帮助栏，以便在点击各项输入框时查看对应的帮助信息 </strong></p>
 <h4 id="输入字段说明"><a href="#输入字段说明" class="headerlink" title="输入字段说明"></a>输入字段说明</h4><p>1. 输入交通OD的csv或txt表</p>
 <blockquote>
 <p>输入的表格应如以下结构：<br><code>ItemID,O_lng,O_lat,D_lng,D_lat</code><br>其中ItemID为该条OD的唯一标识ID，数字或字母均可<em>（同一表格内不要混用数字标识和字母标识，以免ArcGIS在识别字段类型时出错）</em>，可用于输出结果表与输入表的关联。<br>O_lng,O_lat,D_lng,D_lat分别为起点的经度、维度以及终点的经度、纬度。<br>输入的csv表可用Excel另存为csv文件得到。<br>输入表是否包含表头均可。</p>
@@ -697,11 +815,11 @@
   </entry>
   
   <entry>
-    <title>天地图POI下载工具</title>
+    <title>【软件工具】天地图POI下载工具</title>
     <link href="https://i.xdc.at/2017/03/02/tianditu-poi-tbx/"/>
     <id>https://i.xdc.at/2017/03/02/tianditu-poi-tbx/</id>
     <published>2017-03-02T08:14:12.000Z</published>
-    <updated>2017-08-15T13:29:36.081Z</updated>
+    <updated>2017-08-16T14:50:27.333Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该工具最早发布于远见网站 <a href="http://farsightj.cn/blog/?p=185" target="_blank" rel="external">http://farsightj.cn/blog/?p=185</a><br>此版本为与<a href="http://www.udparty.com/" target="_blank" rel="external">城市数据派</a>的合作版本。</p>
@@ -1487,25 +1605,25 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:00.000Z</published>
-    <updated>2017-08-05T14:59:54.233Z</updated>
+    <updated>2017-08-16T13:33:10.015Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
 </blockquote>
-<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
+<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该软件借助高德路径规划的 API 来获取点到点之间的交通时耗数据，然后在 ArcGIS 内生成等时线。<br>该工具的优势在于不必事先获取研究所用的路网并进行烦累的数据预处理。并且借助于高德地图的服务，路网等的质量会比自己做路网数据更好。<br>支持驾车、公共交通、步行三种交通方式。驾车方式可以考虑高架出入口等，公共交通方式包括步行到车站以及下车后步行到目的地的时间。交通时耗数据根据实时路况会有所变动，因此不同时间运行得到的结果会有所不同。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。<br><strong>更新：</strong> <a href="/2017/08/16/transportation-contourline-tbx-1.5/">v1.5.0版本</a>开始加入骑行方式支持。</p>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 打开工具箱后，可看到如下界面。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/assets/images/transportation-contourline-tbx/main-window.png" alt="主窗口" title="">
                 </div>
                 <div class="image-caption">主窗口</div>
-            </figure><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），在点击每一输入项时可以显示详细介绍（下图）。<br><figure class="image-bubble">
+            </figure><br>点击窗口下方的“显示帮助”(Show Help&gt;&gt;)按钮（上图），<strong>在点击每一输入项时可以显示详细介绍</strong>（下图）。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/assets/images/transportation-contourline-tbx/help-window.png" alt="帮助窗口" title="">
                 </div>
                 <div class="image-caption">帮助窗口</div>
-            </figure><br>各项输入的介绍请参考软件内的帮助信息。</p>
+            </figure><br>各项输入的介绍<strong>请参考软件内的帮助信息</strong>。<br>填入需要的输入项后点击确定开始运行。</p>
 <p>运行截图：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -1553,8 +1671,8 @@
 <h3 id="相关论文"><a href="#相关论文" class="headerlink" title="相关论文"></a>相关论文</h3><p><a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CPFD&amp;dbname=CPFDLAST2017&amp;filename=ZHCG201609004064" target="_blank" rel="external">基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例【中国知网】</a></p>
 <p>引用格式参考：<br><code>谢栋灿. 基于互联网地图服务的城市一日交流圈分析——以沪宁杭三市为例: 2016中国城市规划年会, 中国辽宁沈阳, 2016[C].</code></p>
 <p>使用该工具的公开研究成果，请注明以上引用，和/或附上本页面网址 <code>http://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</code> 。</p>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>v1.2.5 稳定版本发布<br>v1.3.1 支持自定义采样空间边界<br>v1.3.3 更新公交方式数据接口<br>v1.4.1 测试加入多线程支持</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=dsx1.3.3" target="_blank">xdc交通等时线工具箱v1.3.3.tbx</a><br><a href="http://xdc.at/d/?d=dsx1.4.1" target="_blank">xdc交通等时线工具箱v1.4.1.tbx（多线程测试版）</a></p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>v1.2.5 稳定版本发布<br>v1.3.1 支持自定义采样空间边界<br>v1.3.3 更新公交方式数据接口<br>v1.4.1 测试加入多线程支持<br>v1.5.0 添加骑行交通方式支持；支持自动选择最接近的投影坐标系</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://xdc.at/d/?d=dsx1.3.3" target="_blank">xdc交通等时线工具箱v1.3.3.tbx</a><br><a href="http://xdc.at/d/?d=dsx1.4.1" target="_blank">xdc交通等时线工具箱v1.4.1.tbx（多线程测试版）</a><br><a href="http://xdc.at/d/?d=dsx1.5.0" target="_blank">xdc交通等时线工具箱v1.5.0.tbx（骑行方式测试版）</a></p>
 ]]></content>
     
     <summary type="html">
@@ -1716,9 +1834,9 @@
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
-      <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
       <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
+    
+      <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
