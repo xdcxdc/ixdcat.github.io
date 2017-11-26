@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <link rel="canonical" href="https://i.xdc.at/2017/11/05/amap-district-to-shapefile/">
+  
+  
+  <title>高德行政区边界获取与整理（shp格式） | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="ArcGIS,高德,行政区,shapefile">
+  <meta name="description" content="高德地图提供了 行政区域查询 API 来获取区县及以上行政区域的矢量边界，以及街镇及以上行政单元的中心点（非几何中心，一般是政府所在地）。高德拥有甲级导航电子地图测绘资质，在行政边界的准确度上更高。尤其是在国界线问题上，网上很多能找到的矢量文件可能来自于国外，自然在中国国界线上会有出入，甚至不乏一些公开发表的论文上也使用了错误的国界线。
+由于行政边界存在动态变化，尤其是在基层行政单元上，镇的区划调">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高德行政区边界获取与整理（shp格式）">
+<meta property="og:url" content="https://i.xdc.at/2017/11/05/amap-district-to-shapefile/index.html">
+<meta property="og:site_name" content="谢栋灿's Blog">
+<meta property="og:description" content="高德地图提供了 行政区域查询 API 来获取区县及以上行政区域的矢量边界，以及街镇及以上行政单元的中心点（非几何中心，一般是政府所在地）。高德拥有甲级导航电子地图测绘资质，在行政边界的准确度上更高。尤其是在国界线问题上，网上很多能找到的矢量文件可能来自于国外，自然在中国国界线上会有出入，甚至不乏一些公开发表的论文上也使用了错误的国界线。
+由于行政边界存在动态变化，尤其是在基层行政单元上，镇的区划调">
+<meta property="og:image" content="https://i.xdc.at/assets/images/amap-district-to-shapefile/districts-of-china.jpg">
+<meta property="og:updated_time" content="2017-11-26T12:15:35.057Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="高德行政区边界获取与整理（shp格式）">
+<meta name="twitter:description" content="高德地图提供了 行政区域查询 API 来获取区县及以上行政区域的矢量边界，以及街镇及以上行政单元的中心点（非几何中心，一般是政府所在地）。高德拥有甲级导航电子地图测绘资质，在行政边界的准确度上更高。尤其是在国界线问题上，网上很多能找到的矢量文件可能来自于国外，自然在中国国界线上会有出入，甚至不乏一些公开发表的论文上也使用了错误的国界线。
+由于行政边界存在动态变化，尤其是在基层行政单元上，镇的区划调">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images/amap-district-to-shapefile/districts-of-china.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/avatar/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢栋灿</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+
+      <footer class="footer">
+  <p>沪ICP备<a onclick="window.open('http://xdc.at/u/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016 - 2017</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+  </div>
+</aside>
+
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">高德行政区边界获取与整理（shp格式）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">高德行政区边界获取与整理（shp格式）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-11-05T06:28:00.000Z" itemprop="datePublished" class="page-time">
+  2017-11-05
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data/">数据介绍</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取过程"><span class="post-toc-text">获取过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#整理结果"><span class="post-toc-text">整理结果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载"><span class="post-toc-text">下载</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-amap-district-to-shapefile"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">高德行政区边界获取与整理（shp格式）</h1>
+        <div class="post-meta">
+            <time datetime="2017-11-05T06:28:00.000Z" itemprop="datePublished" class="post-time">
+  2017-11-05
+</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data/">数据介绍</a></li></ul>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>高德地图提供了 <a href="http://lbs.amap.com/api/webservice/guide/api/district" target="_blank" rel="external">行政区域查询 API</a> 来获取区县及以上行政区域的矢量边界，以及街镇及以上行政单元的中心点（非几何中心，一般是政府所在地）。高德拥有甲级导航电子地图测绘资质，在行政边界的准确度上更高。尤其是在国界线问题上，网上很多能找到的矢量文件可能来自于国外，自然在中国国界线上会有出入，甚至不乏一些公开发表的论文上也使用了错误的国界线。</p>
+<p>由于行政边界存在动态变化，尤其是在基层行政单元上，镇的区划调整会比较常见。另外也存在一些特殊的行政单元，如神农架林区、中山市等。</p>
+<blockquote>
+<p>中山市的行政区划是市、镇两级建制，是全国五个不设县（区、县级市）级编制之地级市之一（另外四个为广东省东莞市、甘肃省嘉峪关市、海南省三沙市和儋州市）  –wikipedia</p>
+</blockquote>
+<p>在县这个级别上并不能做到空间全覆盖。另外API 介绍页面上也明确指出：在区县级别，有28个区县不能返回中心点，在乡镇/街道界别，有9262个乡镇/街道不能返回中心点。</p>
+<h3 id="获取过程"><a href="#获取过程" class="headerlink" title="获取过程"></a>获取过程</h3><p>为了使省、市、县各级的边界图整理结果都能做到空间全覆盖，如果某行政单元没有子单元，那么在下一级的边界图上就仍用该级边界来代替。如在区县边界图上，中山市的位置上用的是市一级的中山市边界。<br>另外，从 API 获取到边界坐标要进行一次纠偏，来与标准的 WGS 1984 坐标系匹配。</p>
+<h3 id="整理结果"><a href="#整理结果" class="headerlink" title="整理结果"></a>整理结果</h3><p>以下是整理好的省、市、县边界图， WGS_1984_Web_Mercator_Auxiliary_Sphere 投影。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/amap-district-to-shapefile/districts-of-china.jpg" alt="中国行政区边界" title="">
+                </div>
+                <div class="image-caption">中国行政区边界</div>
+            </figure>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载链接：<br><a href="http://xdc.at/d/?d=amapChina" target="_blank" rel="external">高德国界shp文件（20171101）</a><br><a href="http://xdc.at/d/?d=amapProvinces" target="_blank" rel="external">高德省界shp文件（20171101）</a><br>使用以上shp文件的研究成果（论文等）请注明引用来源，引用格式参考：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">谢栋灿. 高德行政区边界获取与整理（shp格式）[EB/OL]. [2017.11.05]. http://i.xdc.at/2017/11/05/amap-district-to-shapefile/.</div></pre></td></tr></table></figure></p>
+<p>如需更详细数据（市、县边界面，市、县、街镇点），可发邮件至 <code>i@xdc.at</code> 与我联系。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        本文地址：<a href="/2017/11/05/amap-district-to-shapefile/" target="_blank" rel="external">https://i.xdc.at/2017/11/05/amap-district-to-shapefile/</a><br />本文作者：谢栋灿<br/>联系邮箱：<code><b>i</b><i>@</i><b>xdc.at</b></code>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shapefile/">shapefile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/行政区/">行政区</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高德/">高德</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/&title=《高德行政区边界获取与整理（shp格式）》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/&title=《高德行政区边界获取与整理（shp格式）》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高德行政区边界获取与整理（shp格式）》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/11/26/word-cloud-of-keywords-in-anpc-papers/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">规划年会论文关键词词云分析（2014-2017）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/10/28/add-google-map-to-arcmap/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">不借助插件在ArcMap中添加Google地图图层</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
+
+
+
+<div class="global-share" id="globalShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/&title=《高德行政区边界获取与整理（shp格式）》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/&title=《高德行政区边界获取与整理（shp格式）》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高德行政区边界获取与整理（shp格式）》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/11/05/amap-district-to-shapefile/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aS3KEMAxFUfa/aXoBXZj7JBggX49SxAU+GSjW5zjwOv/W+rf/e9K3HW8sGTJkfJZxLldtDz/0eg/5rgwZMvZhXL2aBEECSCMnP5sMGTJkkD3rcFnbKUOGDBkdxlO5cv/PJ0OGjN0YPCCSJyTFXYfjF3NxGTJkfJDRSSzf/vmV/oYMGTI+xTjDxcttnfQ1PpUMGTJGM3iASwcjOJ4/v3m/DBkyRjNqiSgfuUjbAGnCLEOGjB0YtQSyNorBS2zkK5f/N2TIkLENgye0tTBN0uDgcilDhozRDF4U4ykrHyNL77DobitDhoxxjLcvdjxo1sKuDBkydmCkAZFfE589aFA7lCFDxiDGs4MUKZi3JG+SXhkyZIxm8EJ/p3lJvsIDdzxmIUOGjBGMWjBNP8aHKh4etpAhQ8bHGSSA9kMnL9txzOUNV4YMGZsx0vSSA/qlfxkyZOzD4GMN6XHJk7SFcPMGGTJkbMAgobZfYnujzCdDhozdGGnpbR1MCbI2wIGKbjJkyBjHIFc0Hv7S62B6iYyH32TIkDGCwYtitfZkujO+SsqQIWMo4wwXD4WddkJ6rZQhQ8ZsRq1lWDsiP1xt4EOGDBmzGbUyGS+i8edp+ipDhozdGJ0L3FN1sFrolyFDhgzeKuCBOG0/IKoMGTJkNFJNnga3GqIyZMjYgMGbAWmLsQaIGw8yZMgYzUhHHDrDE7xVQAK6DBkyNmD8ABtU+gjzZPZ+AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.3.3" async></script>
+
+
+</body>
+</html>

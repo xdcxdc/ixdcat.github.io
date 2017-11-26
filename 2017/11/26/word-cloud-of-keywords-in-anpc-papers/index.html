@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <link rel="canonical" href="https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/">
+  
+  
+  <title>规划年会论文关键词词云分析（2014-2017） | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="规划年会,关键词,词云">
+  <meta name="description" content="2017中国城市规划年会已经过去一周了，那么今年规划界在主要关注些什么呢？正好年会提供了《2017中国城市规划年会论文集》的光盘，通过这些论文的关键词分布情况来分析今年的关注点，是一个可行的方法。另外手头也有从2014年起每年的论文集，也能做个逐年的对比了。
+分析方法年会论文集里的论文一般都是 PDF 格式，可以用 pdfminer3k 这个第三方 python 库来获取文本内容（少部分 PDF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="规划年会论文关键词词云分析（2014-2017）">
+<meta property="og:url" content="https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/index.html">
+<meta property="og:site_name" content="谢栋灿's Blog">
+<meta property="og:description" content="2017中国城市规划年会已经过去一周了，那么今年规划界在主要关注些什么呢？正好年会提供了《2017中国城市规划年会论文集》的光盘，通过这些论文的关键词分布情况来分析今年的关注点，是一个可行的方法。另外手头也有从2014年起每年的论文集，也能做个逐年的对比了。
+分析方法年会论文集里的论文一般都是 PDF 格式，可以用 pdfminer3k 这个第三方 python 库来获取文本内容（少部分 PDF">
+<meta property="og:image" content="https://i.xdc.at/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2014.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2015.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2016.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2017.jpg">
+<meta property="og:updated_time" content="2017-11-26T14:49:32.639Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="规划年会论文关键词词云分析（2014-2017）">
+<meta name="twitter:description" content="2017中国城市规划年会已经过去一周了，那么今年规划界在主要关注些什么呢？正好年会提供了《2017中国城市规划年会论文集》的光盘，通过这些论文的关键词分布情况来分析今年的关注点，是一个可行的方法。另外手头也有从2014年起每年的论文集，也能做个逐年的对比了。
+分析方法年会论文集里的论文一般都是 PDF 格式，可以用 pdfminer3k 这个第三方 python 库来获取文本内容（少部分 PDF">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2014.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/avatar/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢栋灿</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+
+      <footer class="footer">
+  <p>沪ICP备<a onclick="window.open('http://xdc.at/u/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016 - 2017</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+  </div>
+</aside>
+
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">规划年会论文关键词词云分析（2014-2017）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">规划年会论文关键词词云分析（2014-2017）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-11-26T08:58:00.000Z" itemprop="datePublished" class="page-time">
+  2017-11-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分析方法"><span class="post-toc-text">分析方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分析结果"><span class="post-toc-text">分析结果</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-word-cloud-of-keywords-in-anpc-papers"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">规划年会论文关键词词云分析（2014-2017）</h1>
+        <div class="post-meta">
+            <time datetime="2017-11-26T08:58:00.000Z" itemprop="datePublished" class="post-time">
+  2017-11-26
+</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/data-analysis/">数据分析</a></li></ul>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>2017中国城市规划年会已经过去一周了，那么今年规划界在主要关注些什么呢？正好年会提供了《2017中国城市规划年会论文集》的光盘，通过这些论文的关键词分布情况来分析今年的关注点，是一个可行的方法。另外手头也有从2014年起每年的论文集，也能做个逐年的对比了。</p>
+<h3 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h3><p>年会论文集里的论文一般都是 PDF 格式，可以用 <a href="https://pypi.python.org/pypi/pdfminer3k" target="_blank" rel="external">pdfminer3k</a> 这个第三方 python 库来获取文本内容（<em>少部分 PDF 文件获取文本失败，可能1000多个文件是不同的人用不同的软件转换的，pdfminer3k 对某些类型的支持不是很好</em>），并从中提取出文中列出的关键词。<br>关键词的统计结果采用词云的方式进行可视化。词云使用 <a href="https://wordart.com/" target="_blank" rel="external">WordArt.com</a> 该网站来生成，频率排名前300的关键词使用不同的字体大小显示。</p>
+<h3 id="分析结果"><a href="#分析结果" class="headerlink" title="分析结果"></a>分析结果</h3><p>以下为2014-2017年逐年的关键词词云。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2014.jpg" alt="2014年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2014年规划年会论文关键词词云</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2015.jpg" alt="2015年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2015年规划年会论文关键词词云</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2016.jpg" alt="2016年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2016年规划年会论文关键词词云</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2017.jpg" alt="2017年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2017年规划年会论文关键词词云</div>
+            </figure>
+<p>很明显，城市更新是今年关注的一大重点。另外，通过逐年的对比，也可以发现一些有趣的地方。</p>
+<ol>
+<li>新型城镇化是2014年的最大热点，但近几年关注度在逐渐下降。</li>
+<li>城市更新的热度逐年上涨，并在今年成为最大热点。</li>
+<li>新常态昙花一现，潮流来得快去的也快。</li>
+<li>公众参与一直是广受关注的一个话题。</li>
+<li>GIS一直是规划领域的重要分析工具。</li>
+</ol>
+<p>更多等你来发现…</p>
+<p>欢迎交流~ （E-mail: <code>i@xdc.at</code>）</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        本文地址：<a href="/2017/11/26/word-cloud-of-keywords-in-anpc-papers/" target="_blank" rel="external">https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/</a><br />本文作者：谢栋灿<br/>联系邮箱：<code><b>i</b><i>@</i><b>xdc.at</b></code>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/关键词/">关键词</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/规划年会/">规划年会</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/词云/">词云</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/&title=《规划年会论文关键词词云分析（2014-2017）》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/&title=《规划年会论文关键词词云分析（2014-2017）》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《规划年会论文关键词词云分析（2014-2017）》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2048/10/24/top-pinned/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">【置顶】欢迎来到本站</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/11/05/amap-district-to-shapefile/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">高德行政区边界获取与整理（shp格式）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
+
+
+
+<div class="global-share" id="globalShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/&title=《规划年会论文关键词词云分析（2014-2017）》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/&title=《规划年会论文关键词词云分析（2014-2017）》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《规划年会论文关键词词云分析（2014-2017）》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3a0WoCQQwF0P7/T7fQJ6Gse5NM1MLZJ5F1nLPCJCb5+oqv79/r8fXjO3/v7N2fr3n4wsPDw2tt/epKNlH94uT+qz3ke8bDw8Pb5vWCQZWdhI3njzjfMx4eHt4n8JIjO39M+Zr5N+Lh4eH9L141US5s8RMCAx4eHl6rGDH5VLWU8IZaCx4eHl7M6zXA3vt6vb+Hh4eH1+qqT47s5+vPhxKi3eLh4eEt8PKGUz4CVW1oJe/3Rg3w8PDw9ni9csOpI34+ppCMLODh4eFt8OajUadCS6/aUFgZDw8Pb41XPbLLTf3WCkkYwMPDw9vm5Q2nfGQqP7Kr4afwK+Hh4eGt8c4e03nRId9DldqMe3h4eHhFXp6qVksPefFiXqq46fLh4eHhHeLlm54MBPRS9gONNzw8PLwFXq/YmoDzo7/cxOoVI/Dw8PDGvOqhnye+1QR99G/gyoKHh4e3wDuVKCefrQaAvN11E4rw8PDwjvJyWK/QkAeDXgHiZid4eHh4L+FVk9q8UNuMWsXxhZvAgIeHhzfmVdtO8yGqBFN9TNE/Bjw8PLyjvF6769jBfehT5dIwHh4eXouXp7x5ipwc1s+33kv0o9YXHh4e3iFeL8Htpbx5AEge0M2aeHh4eAu8vIV/aoygF4RGo2B4eHh4R3nVsackVPSaXtV1ohCCh4eHt8yrJr7VI3uvMXb5jXh4eHgLvGrhtdq+yleYlHGjYIaHh4d3iDcZtKqWceczDvmDu0mp8fDw8Aa8eTzJqb0mVnVlPDw8vNfwJsEgL/VWx7nmjTc8PDy8bV61kZ+XGCZpcTmCXZUk8PDw8N7ES9LcXuqctNZ6DTw8PDy8z+FVMXlJt5c63xQj8PDw8BZ41dGBSdssb5jNW254eHh4G7zRrFawrXz956EiKtr2Ljw8PLyU9wPLgJKX/zS6QwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.3.3" async></script>
+
+
+</body>
+</html>

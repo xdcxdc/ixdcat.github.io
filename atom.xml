@@ -35,6 +35,204 @@
   </entry>
   
   <entry>
+    <title>规划年会论文关键词词云分析（2014-2017）</title>
+    <link href="https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/"/>
+    <id>https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/</id>
+    <published>2017-11-26T08:58:00.000Z</published>
+    <updated>2017-11-26T14:49:32.639Z</updated>
+    
+    <content type="html"><![CDATA[<p>2017中国城市规划年会已经过去一周了，那么今年规划界在主要关注些什么呢？正好年会提供了《2017中国城市规划年会论文集》的光盘，通过这些论文的关键词分布情况来分析今年的关注点，是一个可行的方法。另外手头也有从2014年起每年的论文集，也能做个逐年的对比了。</p>
+<h3 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h3><p>年会论文集里的论文一般都是 PDF 格式，可以用 <a href="https://pypi.python.org/pypi/pdfminer3k" target="_blank" rel="external">pdfminer3k</a> 这个第三方 python 库来获取文本内容（<em>少部分 PDF 文件获取文本失败，可能1000多个文件是不同的人用不同的软件转换的，pdfminer3k 对某些类型的支持不是很好</em>），并从中提取出文中列出的关键词。<br>关键词的统计结果采用词云的方式进行可视化。词云使用 <a href="https://wordart.com/" target="_blank" rel="external">WordArt.com</a> 该网站来生成，频率排名前300的关键词使用不同的字体大小显示。</p>
+<h3 id="分析结果"><a href="#分析结果" class="headerlink" title="分析结果"></a>分析结果</h3><p>以下为2014-2017年逐年的关键词词云。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2014.jpg" alt="2014年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2014年规划年会论文关键词词云</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2015.jpg" alt="2015年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2015年规划年会论文关键词词云</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2016.jpg" alt="2016年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2016年规划年会论文关键词词云</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/word-cloud-of-keywords-in-anpc-papers/WordCloud2017.jpg" alt="2017年规划年会论文关键词词云" title="">
+                </div>
+                <div class="image-caption">2017年规划年会论文关键词词云</div>
+            </figure>
+<p>很明显，城市更新是今年关注的一大重点。另外，通过逐年的对比，也可以发现一些有趣的地方。</p>
+<ol>
+<li>新型城镇化是2014年的最大热点，但近几年关注度在逐渐下降。</li>
+<li>城市更新的热度逐年上涨，并在今年成为最大热点。</li>
+<li>新常态昙花一现，潮流来得快去的也快。</li>
+<li>公众参与一直是广受关注的一个话题。</li>
+<li>GIS一直是规划领域的重要分析工具。</li>
+</ol>
+<p>更多等你来发现…</p>
+<p>欢迎交流~ （E-mail: <code>i@xdc.at</code>）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2017中国城市规划年会已经过去一周了，那么今年规划界在主要关注些什么呢？正好年会提供了《2017中国城市规划年会论文集》的光盘，通过这些论文的关键词分布情况来分析今年的关注点，是一个可行的方法。另外手头也有从2014年起每年的论文集，也能做个逐年的对比了。&lt;/p&gt;
+&lt;h3
+    
+    </summary>
+    
+      <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
+    
+    
+      <category term="规划年会" scheme="https://i.xdc.at/tags/%E8%A7%84%E5%88%92%E5%B9%B4%E4%BC%9A/"/>
+    
+      <category term="关键词" scheme="https://i.xdc.at/tags/%E5%85%B3%E9%94%AE%E8%AF%8D/"/>
+    
+      <category term="词云" scheme="https://i.xdc.at/tags/%E8%AF%8D%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高德行政区边界获取与整理（shp格式）</title>
+    <link href="https://i.xdc.at/2017/11/05/amap-district-to-shapefile/"/>
+    <id>https://i.xdc.at/2017/11/05/amap-district-to-shapefile/</id>
+    <published>2017-11-05T06:28:00.000Z</published>
+    <updated>2017-11-26T12:15:35.057Z</updated>
+    
+    <content type="html"><![CDATA[<p>高德地图提供了 <a href="http://lbs.amap.com/api/webservice/guide/api/district" target="_blank" rel="external">行政区域查询 API</a> 来获取区县及以上行政区域的矢量边界，以及街镇及以上行政单元的中心点（非几何中心，一般是政府所在地）。高德拥有甲级导航电子地图测绘资质，在行政边界的准确度上更高。尤其是在国界线问题上，网上很多能找到的矢量文件可能来自于国外，自然在中国国界线上会有出入，甚至不乏一些公开发表的论文上也使用了错误的国界线。</p>
+<p>由于行政边界存在动态变化，尤其是在基层行政单元上，镇的区划调整会比较常见。另外也存在一些特殊的行政单元，如神农架林区、中山市等。</p>
+<blockquote>
+<p>中山市的行政区划是市、镇两级建制，是全国五个不设县（区、县级市）级编制之地级市之一（另外四个为广东省东莞市、甘肃省嘉峪关市、海南省三沙市和儋州市）  –wikipedia</p>
+</blockquote>
+<p>在县这个级别上并不能做到空间全覆盖。另外API 介绍页面上也明确指出：在区县级别，有28个区县不能返回中心点，在乡镇/街道界别，有9262个乡镇/街道不能返回中心点。</p>
+<h3 id="获取过程"><a href="#获取过程" class="headerlink" title="获取过程"></a>获取过程</h3><p>为了使省、市、县各级的边界图整理结果都能做到空间全覆盖，如果某行政单元没有子单元，那么在下一级的边界图上就仍用该级边界来代替。如在区县边界图上，中山市的位置上用的是市一级的中山市边界。<br>另外，从 API 获取到边界坐标要进行一次纠偏，来与标准的 WGS 1984 坐标系匹配。</p>
+<h3 id="整理结果"><a href="#整理结果" class="headerlink" title="整理结果"></a>整理结果</h3><p>以下是整理好的省、市、县边界图， WGS_1984_Web_Mercator_Auxiliary_Sphere 投影。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/amap-district-to-shapefile/districts-of-china.jpg" alt="中国行政区边界" title="">
+                </div>
+                <div class="image-caption">中国行政区边界</div>
+            </figure>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载链接：<br><a href="http://xdc.at/d/?d=amapChina" target="_blank" rel="external">高德国界shp文件（20171101）</a><br><a href="http://xdc.at/d/?d=amapProvinces" target="_blank" rel="external">高德省界shp文件（20171101）</a><br>使用以上shp文件的研究成果（论文等）请注明引用来源，引用格式参考：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">谢栋灿. 高德行政区边界获取与整理（shp格式）[EB/OL]. [2017.11.05]. http://i.xdc.at/2017/11/05/amap-district-to-shapefile/.</div></pre></td></tr></table></figure></p>
+<p>如需更详细数据（市、县边界面，市、县、街镇点），可发邮件至 <code>i@xdc.at</code> 与我联系。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;高德地图提供了 &lt;a href=&quot;http://lbs.amap.com/api/webservice/guide/api/district&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;行政区域查询 API&lt;/a&gt; 来获取区县及以上行政区域的矢量边界，以
+    
+    </summary>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
+    
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="行政区" scheme="https://i.xdc.at/tags/%E8%A1%8C%E6%94%BF%E5%8C%BA/"/>
+    
+      <category term="shapefile" scheme="https://i.xdc.at/tags/shapefile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不借助插件在ArcMap中添加Google地图图层</title>
+    <link href="https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/"/>
+    <id>https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/</id>
+    <published>2017-10-28T12:40:00.000Z</published>
+    <updated>2017-11-26T12:29:16.098Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 ArcMap 中使用在线地图图层，一般来说，除了借助 ArcBruTile 之类的第三方软件外，可以添加 WMS/WMTS 服务（天地图等提供相关服务，但天地图的卫星图时效性不高）。<br>其实，ArcMap 也是支持瓦片图层（<code>切片的 Internet 图层</code>）的，只是没有提供添加界面。但 ArcGIS Online 却提供这样的功能，同时 ArcGIS Online 上添加的自定义瓦片图层可以下载相应的文件在 ArcMap 内打开。于是就有了这么一个“曲线救国”的方法：在 ArcGIS Online 上添加瓦片图层（如 Google 卫星图 <code>http://mt0.google.com/vt/lyrs=s&amp;x={col}&amp;y={row}&amp;z={level}</code>），然后再到 ArcMap 内打开。<br>我已经导出了 Google 地图几种类型的图层（<code>.lyr</code>）文件，可直接拖到 ArcMap 里打开，下载地址在文末。由于众所周知的原因，你需要自行解决如何成功 Google 服务器的问题。</p>
+<h3 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h3><p>经过测试， ArcMap 会同时打开8个连接来向服务器请求瓦片内容，因此只要网速不是太慢，加载速度还是很快的。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/add-google-map-to-arcmap/google-satellite-in-arcgis.jpg" alt="ArcMap内添加Google卫星图层" title="">
+                </div>
+                <div class="image-caption">ArcMap内添加Google卫星图层</div>
+            </figure>
+<h3 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h3><p>图层文件下载链接：<br><a href="http://xdc.at/d/?d=gmap-layers" target="_blank" rel="external">Google地图与卫星图ArcMap图层.zip</a><br>里面包含4个图层文件：</p>
+<ol>
+<li>Google Satellite 卫星图</li>
+<li>Google Streets 标准街道地图</li>
+<li>Google Hybrid Map 卫星与街道混合图</li>
+<li>Google Terrain 地形图</li>
+</ol>
+<p>由于 Google 街道地图的中国部分数据源来自国内，因此存在偏移。但卫星图是无偏的。</p>
+<p>欢迎交流~ （E-mail: <code>i@xdc.at</code>）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 ArcMap 中使用在线地图图层，一般来说，除了借助 ArcBruTile 之类的第三方软件外，可以添加 WMS/WMTS 服务（天地图等提供相关服务，但天地图的卫星图时效性不高）。&lt;br&gt;其实，ArcMap 也是支持瓦片图层（&lt;code&gt;切片的 Internet 图层
+    
+    </summary>
+    
+    
+      <category term="ArcMap" scheme="https://i.xdc.at/tags/ArcMap/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="切片图层" scheme="https://i.xdc.at/tags/%E5%88%87%E7%89%87%E5%9B%BE%E5%B1%82/"/>
+    
+      <category term="Google" scheme="https://i.xdc.at/tags/Google/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高德建筑3D轮廓获取尝试</title>
+    <link href="https://i.xdc.at/2017/10/03/get-3d-buildings-from-amap/"/>
+    <id>https://i.xdc.at/2017/10/03/get-3d-buildings-from-amap/</id>
+    <published>2017-10-03T04:46:00.000Z</published>
+    <updated>2017-11-26T13:52:55.290Z</updated>
+    
+    <content type="html"><![CDATA[<p>高德开放过获取建筑轮廓的接口，可以获取指定瓦片内的建筑物轮廓（像素坐标形式）以及相应层数。 通过构造爬虫，批量获取一定范围内的建筑物轮廓信息，再经过坐标转换和纠偏，即可得到矢量的建筑物3D轮廓数据，可以在 ArcMap、ArcScene 内显示，也可以导出到 Google Earth 等软件查看。</p>
+<a id="more"></a>
+<h3 id="数据效果"><a href="#数据效果" class="headerlink" title="数据效果"></a>数据效果</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/get-3d-buildings-from-amap/amap-buildings-in-arcmap.jpg" alt="ArcMap内平面显示" title="">
+                </div>
+                <div class="image-caption">ArcMap内平面显示</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/get-3d-buildings-from-amap/amap-buildings-in-arcscene.jpg" alt="ArcScene内三维显示" title="">
+                </div>
+                <div class="image-caption">ArcScene内三维显示</div>
+            </figure>
+<p>欢迎交流~ （E-mail: <code>i@xdc.at</code>）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;高德开放过获取建筑轮廓的接口，可以获取指定瓦片内的建筑物轮廓（像素坐标形式）以及相应层数。 通过构造爬虫，批量获取一定范围内的建筑物轮廓信息，再经过坐标转换和纠偏，即可得到矢量的建筑物3D轮廓数据，可以在 ArcMap、ArcScene 内显示，也可以导出到 Google Earth 等软件查看。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
+    
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="建筑轮廓" scheme="https://i.xdc.at/tags/%E5%BB%BA%E7%AD%91%E8%BD%AE%E5%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【软件更新】基于高德 API 的交通等时线划分工具 v1.5.0</title>
     <link href="https://i.xdc.at/2017/08/16/transportation-contourline-tbx-1.5/"/>
     <id>https://i.xdc.at/2017/08/16/transportation-contourline-tbx-1.5/</id>
@@ -71,9 +269,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -90,7 +288,7 @@
     <link href="https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/"/>
     <id>https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/</id>
     <published>2017-08-13T03:26:08.000Z</published>
-    <updated>2017-08-13T14:53:32.409Z</updated>
+    <updated>2017-11-26T08:31:29.861Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>出于种种需要，系统内可能安装了多了python运行环境，如：</p>
 <ol>
@@ -109,11 +307,7 @@
             </figure>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>通过添加相应的注册表项，可以在右键菜单内添加一项“在此处打开 Anaconda 命令行”<code>Anaconda2 Prompt Here</code>。<br>具体步骤如下（假设Anaconda安装在 <code>D:\Anaconda2\</code> ）：<br>1. 在注册表 <code>HKEY_CLASSES_ROOT\Directory\Background\shell\</code> 下新建一项 <code>Anaconda2</code>，默认值为 <code>Anaconda2 Prompt Here</code> (此值为菜单项显示名称，可以自行修改)。在<code>Anaconda2</code>下新建字符串值<code>Icon</code>，数据为<code>D:\Anaconda2\Menu\Iconleak-Atrous-Console.ico</code>。<br>如果想要在同时按下Shift和鼠标右键才出现菜单项，而不是直接鼠标右键就出现，就在<code>Anaconda2</code>下新建字符串值<code>Extended</code>，数据留空。<br>2. 在<code>Anaconda2</code>下新建一项<code>command</code>，默认值填入<code>cmd.exe /s /k &quot;title Anaconda2&quot; &amp;&amp; D:\Anaconda2\Scripts\activate.bat D:\Anaconda2</code>。</p>
 <p>除了手动打开regedit.exe注册表编辑器执行以上操作的方法外，也可以将以下代码用记事本保存到<code>.reg</code>后缀的文件中，然后双击打开reg文件即可自动导入相应注册表内容。注意根据Anaconda的实际安装路径进行修改。</p>
-<blockquote>
-<p>Windows Registry Editor Version 5.00</p>
-<p></p><p></p><p><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2]<br>@=”Anaconda2 Prompt Here”<br>“Icon”=”D:\Anaconda2\Menu\Iconleak-Atrous-Console.ico”</p>
-<p></p><p></p><p><br>[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2\command]<br>@=”cmd.exe /s /k \”title Anaconda2\” &amp;&amp; D:\Anaconda2\Scripts\activate.bat D:\Anaconda2”</p>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Windows Registry Editor Version 5.00</div><div class="line"></div><div class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2]</div><div class="line">@=&quot;Anaconda2 Prompt Here&quot;</div><div class="line">&quot;Icon&quot;=&quot;D:\\Anaconda2\\Menu\\Iconleak-Atrous-Console.ico&quot;</div><div class="line"></div><div class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda2\command]</div><div class="line">@=&quot;cmd.exe /s /k \&quot;title Anaconda2\&quot; &amp;&amp; D:\\Anaconda2\\Scripts\\activate.bat D:\\Anaconda2&quot;</div></pre></td></tr></table></figure>
 <h3 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h3><p>在任意文件夹内空白处点击鼠标右键，效果如下：</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -203,9 +397,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -349,11 +543,11 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="路径规划" scheme="https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/"/>
-    
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -746,9 +940,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -806,11 +1000,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="AOI" scheme="https://i.xdc.at/tags/AOI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="AOI" scheme="https://i.xdc.at/tags/AOI/"/>
     
   </entry>
   
@@ -1685,9 +1879,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -1828,15 +2022,15 @@
       <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+      <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
       <category term="数据分析" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    
-      <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
   </entry>
   
@@ -1910,15 +2104,15 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
       <category term="地铁" scheme="https://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
     
   </entry>
   
