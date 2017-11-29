@@ -318,7 +318,7 @@ var _hmt = _hmt || [];
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/10/28/add-google-map-to-arcmap/">不借助插件在ArcMap中添加Google地图图层</a>
+      <a class="post-title-link" href="/2017/10/28/add-google-map-to-arcmap/">在ArcMap中添加在线地图图层（无需插件）</a>
     </h3>
   
 
@@ -328,7 +328,7 @@ var _hmt = _hmt || [];
     <div class="post-content" id="post-content" itemprop="postContent" >
 
     
-        在 ArcMap 中使用在线地图图层，一般来说，除了借助 ArcBruTile 之类的第三方软件外，可以添加 WMS/WMTS 服务（天地图等提供相关服务，但天地图的卫星图时效性不高）。其实，ArcMap 也是支持瓦片图层（切片的 Internet 图层）的，只是没有提供添加界面。但 ArcGIS Online 却提供这样的功能，同时 ArcGIS Online 上添加的自定义瓦片图层可以下...
+        考虑到在线地图瓦片大部分用的是同样的切片规则（国内部分地图除外），而 WMTS 又是瓦片地图服务的开放协议，因此明明可以用 WMTS 解决 ArcMap 显示在线地图瓦片的问题，为什么偏偏还要各种插件呢？然而事实是，并不是每家地图都直接提供 WMTS 服务。但既然都是开放的协议，就自己动手搭建一个吧。我搭建的 WMTS 服务器如下：服务URL：点击网页下方打赏按钮，扫码关注远见公众号，回复 ...
     
 
         <a href="/2017/10/28/add-google-map-to-arcmap/" class="post-more waves-effect waves-button">

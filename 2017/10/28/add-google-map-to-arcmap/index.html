@@ -7,24 +7,24 @@
   <link rel="canonical" href="https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/">
   
   
-  <title>不借助插件在ArcMap中添加Google地图图层 | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <title>在ArcMap中添加在线地图图层（无需插件） | 谢栋灿&#39;s Blog | i.xdc.at</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
   <meta name="keywords" content="ArcMap,ArcGIS,切片图层,Google">
-  <meta name="description" content="在 ArcMap 中使用在线地图图层，一般来说，除了借助 ArcBruTile 之类的第三方软件外，可以添加 WMS/WMTS 服务（天地图等提供相关服务，但天地图的卫星图时效性不高）。其实，ArcMap 也是支持瓦片图层（切片的 Internet 图层）的，只是没有提供添加界面。但 ArcGIS Online 却提供这样的功能，同时 ArcGIS Online 上添加的自定义瓦片图层可以下载相应">
+  <meta name="description" content="考虑到在线地图瓦片大部分用的是同样的切片规则（国内部分地图除外），而 WMTS 又是瓦片地图服务的开放协议，因此明明可以用 WMTS 解决 ArcMap 显示在线地图瓦片的问题，为什么偏偏还要各种插件呢？然而事实是，并不是每家地图都直接提供 WMTS 服务。但既然都是开放的协议，就自己动手搭建一个吧。我搭建的 WMTS 服务器如下：服务URL：点击网页下方打赏按钮，扫码关注远见公众号，回复 WMT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不借助插件在ArcMap中添加Google地图图层">
+<meta property="og:title" content="在ArcMap中添加在线地图图层（无需插件）">
 <meta property="og:url" content="https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/index.html">
 <meta property="og:site_name" content="谢栋灿's Blog">
-<meta property="og:description" content="在 ArcMap 中使用在线地图图层，一般来说，除了借助 ArcBruTile 之类的第三方软件外，可以添加 WMS/WMTS 服务（天地图等提供相关服务，但天地图的卫星图时效性不高）。其实，ArcMap 也是支持瓦片图层（切片的 Internet 图层）的，只是没有提供添加界面。但 ArcGIS Online 却提供这样的功能，同时 ArcGIS Online 上添加的自定义瓦片图层可以下载相应">
+<meta property="og:description" content="考虑到在线地图瓦片大部分用的是同样的切片规则（国内部分地图除外），而 WMTS 又是瓦片地图服务的开放协议，因此明明可以用 WMTS 解决 ArcMap 显示在线地图瓦片的问题，为什么偏偏还要各种插件呢？然而事实是，并不是每家地图都直接提供 WMTS 服务。但既然都是开放的协议，就自己动手搭建一个吧。我搭建的 WMTS 服务器如下：服务URL：点击网页下方打赏按钮，扫码关注远见公众号，回复 WMT">
 <meta property="og:image" content="https://i.xdc.at/assets/images/add-google-map-to-arcmap/google-satellite-in-arcgis.jpg">
-<meta property="og:updated_time" content="2017-11-26T12:29:16.098Z">
+<meta property="og:updated_time" content="2017-11-29T15:34:49.592Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不借助插件在ArcMap中添加Google地图图层">
-<meta name="twitter:description" content="在 ArcMap 中使用在线地图图层，一般来说，除了借助 ArcBruTile 之类的第三方软件外，可以添加 WMS/WMTS 服务（天地图等提供相关服务，但天地图的卫星图时效性不高）。其实，ArcMap 也是支持瓦片图层（切片的 Internet 图层）的，只是没有提供添加界面。但 ArcGIS Online 却提供这样的功能，同时 ArcGIS Online 上添加的自定义瓦片图层可以下载相应">
+<meta name="twitter:title" content="在ArcMap中添加在线地图图层（无需插件）">
+<meta name="twitter:description" content="考虑到在线地图瓦片大部分用的是同样的切片规则（国内部分地图除外），而 WMTS 又是瓦片地图服务的开放协议，因此明明可以用 WMTS 解决 ArcMap 显示在线地图瓦片的问题，为什么偏偏还要各种插件呢？然而事实是，并不是每家地图都直接提供 WMTS 服务。但既然都是开放的协议，就自己动手搭建一个吧。我搭建的 WMTS 服务器如下：服务URL：点击网页下方打赏按钮，扫码关注远见公众号，回复 WMT">
 <meta name="twitter:image" content="https://i.xdc.at/assets/images/add-google-map-to-arcmap/google-satellite-in-arcgis.jpg">
   
     <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">不借助插件在ArcMap中添加Google地图图层</div>
+        <div class="flex-col header-title ellipsis">在ArcMap中添加在线地图图层（无需插件）</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">不借助插件在ArcMap中添加Google地图图层</h1>
+        <h1 class="title">在ArcMap中添加在线地图图层（无需插件）</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-10-28T12:40:00.000Z" itemprop="datePublished" class="page-time">
@@ -167,7 +167,7 @@ var _hmt = _hmt || [];
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用效果"><span class="post-toc-text">使用效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件下载"><span class="post-toc-text">文件下载</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用方法"><span class="post-toc-text">使用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用效果"><span class="post-toc-text">使用效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TIPS"><span class="post-toc-text">TIPS</span></a></li></ol>
         </nav>
     </aside>
     
@@ -175,7 +175,7 @@ var _hmt = _hmt || [];
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">不借助插件在ArcMap中添加Google地图图层</h1>
+        <h1 class="post-card-title">在ArcMap中添加在线地图图层（无需插件）</h1>
         <div class="post-meta">
             <time datetime="2017-10-28T12:40:00.000Z" itemprop="datePublished" class="post-time">
   2017-10-28
@@ -186,7 +186,14 @@ var _hmt = _hmt || [];
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>在 ArcMap 中使用在线地图图层，一般来说，除了借助 ArcBruTile 之类的第三方软件外，可以添加 WMS/WMTS 服务（天地图等提供相关服务，但天地图的卫星图时效性不高）。<br>其实，ArcMap 也是支持瓦片图层（<code>切片的 Internet 图层</code>）的，只是没有提供添加界面。但 ArcGIS Online 却提供这样的功能，同时 ArcGIS Online 上添加的自定义瓦片图层可以下载相应的文件在 ArcMap 内打开。于是就有了这么一个“曲线救国”的方法：在 ArcGIS Online 上添加瓦片图层（如 Google 卫星图 <code>http://mt0.google.com/vt/lyrs=s&amp;x={col}&amp;y={row}&amp;z={level}</code>），然后再到 ArcMap 内打开。<br>我已经导出了 Google 地图几种类型的图层（<code>.lyr</code>）文件，可直接拖到 ArcMap 里打开，下载地址在文末。由于众所周知的原因，你需要自行解决如何成功 Google 服务器的问题。</p>
+            <p>考虑到在线地图瓦片大部分用的是同样的切片规则（国内部分地图除外），而 WMTS 又是瓦片地图服务的开放协议，因此明明可以用 WMTS 解决 ArcMap 显示在线地图瓦片的问题，为什么偏偏还要各种插件呢？<br>然而事实是，并不是每家地图都直接提供 WMTS 服务。但既然都是开放的协议，就自己动手搭建一个吧。我搭建的 WMTS 服务器如下：<br><strong>服务URL：</strong><code>点击网页下方打赏按钮，扫码关注远见公众号，回复 WMTS 获取</code></p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
+<li>打开ArcMap，在<code>目录</code>窗口中，找到<code>GIS 服务器</code>并双击展开，然后双击<code>添加 WMTS 服务器</code>；</li>
+<li>在弹出的窗口中，<code>URL(U):</code>一栏输入服务URL，获取方法见上。然后点击<code>获取图层</code>，即出现支持的图层列表。目前支持OpenStreetMap、Google地图与卫星图、高德地图、天地图街道地图与影像图、ESRI卫星影像等，还将继续更新；</li>
+<li>点击<code>确定</code>，可以发现<code>GIS 服务器</code>下多了一项<code>WMTS Collection by xdc，在 *** 上</code>。双击展开<code>WMTS Collection by xdc，在 *** 上</code>，即为支持的各个地图图层，选中任意一个，鼠标拖拽到<code>内容列表</code>或地图窗口即可加载显示。</li>
+<li>如要查看最新支持的图层列表，可鼠标右击<code>WMTS Collection by xdc，在 *** 上</code>，选择<code>刷新</code>即可。</li>
+</ol>
+<p>至此，在 ArcMap 中添加在线地图图层已完成。</p>
 <h3 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h3><p>经过测试， ArcMap 会同时打开8个连接来向服务器请求瓦片内容，因此只要网速不是太慢，加载速度还是很快的。</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -195,14 +202,7 @@ var _hmt = _hmt || [];
                 </div>
                 <div class="image-caption">ArcMap内添加Google卫星图层</div>
             </figure>
-<h3 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h3><p>图层文件下载链接：<br><a href="http://xdc.at/d/?d=gmap-layers" target="_blank" rel="external">Google地图与卫星图ArcMap图层.zip</a><br>里面包含4个图层文件：</p>
-<ol>
-<li>Google Satellite 卫星图</li>
-<li>Google Streets 标准街道地图</li>
-<li>Google Hybrid Map 卫星与街道混合图</li>
-<li>Google Terrain 地形图</li>
-</ol>
-<p>由于 Google 街道地图的中国部分数据源来自国内，因此存在偏移。但卫星图是无偏的。</p>
+<h3 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h3><p>注1：高德（amap）地图采用GCJ02加偏，与其他标准地图之间存在偏差。由于 Google 街道地图的中国部分数据源来自国内，因此也存在偏移。但卫星图是无偏的。<br>注2：由于众所周知的原因，使用Google地图和卫星图时，你需要自行解决如何成功连接 Google 服务器的问题。<br>注3：无法使用Google卫星图的情况下，可以使用天地图卫星图和ESRI世界影像图。不过天地图上可能会有比较多被云层遮挡的情况。ESRI的影像图清晰度还是非常高的。</p>
 <p>欢迎交流~ （E-mail: <code>i@xdc.at</code>）</p>
 
         </div>
@@ -238,7 +238,7 @@ var _hmt = _hmt || [];
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《不借助插件在ArcMap中添加Google地图图层》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《在ArcMap中添加在线地图图层（无需插件）》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -248,7 +248,7 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《不借助插件在ArcMap中添加Google地图图层》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《在ArcMap中添加在线地图图层（无需插件）》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -258,7 +258,7 @@ var _hmt = _hmt || [];
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不借助插件在ArcMap中添加Google地图图层》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&via=https://i.xdc.at" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《在ArcMap中添加在线地图图层（无需插件）》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&via=https://i.xdc.at" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -350,7 +350,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《不借助插件在ArcMap中添加Google地图图层》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《在ArcMap中添加在线地图图层（无需插件）》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -360,7 +360,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《不借助插件在ArcMap中添加Google地图图层》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&title=《在ArcMap中添加在线地图图层（无需插件）》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -370,7 +370,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不借助插件在ArcMap中添加Google地图图层》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&via=https://i.xdc.at" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《在ArcMap中添加在线地图图层（无需插件）》 — 谢栋灿's Blog&url=https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/&via=https://i.xdc.at" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
