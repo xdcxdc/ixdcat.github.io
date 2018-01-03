@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <link rel="canonical" href="https://i.xdc.at/2018/01/01/coordinate-transformation-tool/">
+  
+  
+  <title>【软件工具】ArcGIS空间数据坐标转换工具 | 谢栋灿&#39;s Blog | i.xdc.at</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="theme-color" content="#3F51B5">
+  
+  
+  <meta name="keywords" content="ArcGIS,tbx,工具箱,坐标转换,WGS84,GCJ02,BD09">
+  <meta name="description" content="众所周知，国内在线地图中，大部分使用的坐标都与标准的WGS 1984之间有偏差（除了天地图）。以之前分享的 WMTS服务 为例，其中就有不少图层采用 GCJ02 坐标，与采用标准WGS 1984的图层之间存在数百米的偏差。具体可参考维基百科 中华人民共和国测绘限制几种坐标之间的差别简要概括如下：
+
+WGS84：即最广泛使用的、国际通用的地理坐标系，由经、纬度确定地球表面的点的位置。因GPS设备采用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【软件工具】ArcGIS空间数据坐标转换工具">
+<meta property="og:url" content="https://i.xdc.at/2018/01/01/coordinate-transformation-tool/index.html">
+<meta property="og:site_name" content="谢栋灿's Blog">
+<meta property="og:description" content="众所周知，国内在线地图中，大部分使用的坐标都与标准的WGS 1984之间有偏差（除了天地图）。以之前分享的 WMTS服务 为例，其中就有不少图层采用 GCJ02 坐标，与采用标准WGS 1984的图层之间存在数百米的偏差。具体可参考维基百科 中华人民共和国测绘限制几种坐标之间的差别简要概括如下：
+
+WGS84：即最广泛使用的、国际通用的地理坐标系，由经、纬度确定地球表面的点的位置。因GPS设备采用">
+<meta property="og:image" content="https://i.xdc.at/assets/images/coordinate-transformation-tool/tbx-in-catalog.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/coordinate-transformation-tool/input-window.png">
+<meta property="og:image" content="https://i.xdc.at/assets/images/coordinate-transformation-tool/wgs84.jpg">
+<meta property="og:image" content="https://i.xdc.at/assets/images/coordinate-transformation-tool/gcj02.jpg">
+<meta property="og:updated_time" content="2018-01-03T12:04:59.543Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【软件工具】ArcGIS空间数据坐标转换工具">
+<meta name="twitter:description" content="众所周知，国内在线地图中，大部分使用的坐标都与标准的WGS 1984之间有偏差（除了天地图）。以之前分享的 WMTS服务 为例，其中就有不少图层采用 GCJ02 坐标，与采用标准WGS 1984的图层之间存在数百米的偏差。具体可参考维基百科 中华人民共和国测绘限制几种坐标之间的差别简要概括如下：
+
+WGS84：即最广泛使用的、国际通用的地理坐标系，由经、纬度确定地球表面的点的位置。因GPS设备采用">
+<meta name="twitter:image" content="https://i.xdc.at/assets/images/coordinate-transformation-tool/tbx-in-catalog.png">
+  
+    <link rel="alternative" href="/atom.xml" title="谢栋灿&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=1.3.3">
+  <script>window.lazyScripts=[]</script>
+  
+
+</head>
+
+<body>
+  <div id="loading" class="active"></div>
+
+  <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/assets/avatar/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢栋灿</h5>
+          <a href="mailto:i@xdc.at" title="i@xdc.at" class="mail">i@xdc.at</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                所有文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about/"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+
+      <footer class="footer">
+  <p>沪ICP备<a onclick="window.open('http://xdc.at/u/gongxinbu','newwindow','width=600,height=600,left=200,top=50,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes')" style="cursor:pointer">16039129</a>号-1</p>
+  <p>谢栋灿&#39;s Blog &copy; 2016 - 2018</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0931cdae25df255fcb0859beeb5183";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    </div>
+  </div>
+</aside>
+
+  <main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">【软件工具】ArcGIS空间数据坐标转换工具</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">【软件工具】ArcGIS空间数据坐标转换工具</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-01-01T06:06:00.000Z" itemprop="datePublished" class="page-time">
+  2018-01-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/software/">软件工具</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用说明"><span class="post-toc-text">使用说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用场景示例"><span class="post-toc-text">使用场景示例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载地址"><span class="post-toc-text">下载地址</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-coordinate-transformation-tool"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">【软件工具】ArcGIS空间数据坐标转换工具</h1>
+        <div class="post-meta">
+            <time datetime="2018-01-01T06:06:00.000Z" itemprop="datePublished" class="post-time">
+  2018-01-01
+</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/software/">软件工具</a></li></ul>
+
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>众所周知，国内在线地图中，大部分使用的坐标都与标准的WGS 1984之间有偏差（除了天地图）。以之前分享的 <a href="/2017/10/28/add-google-map-to-arcmap/">WMTS服务</a> 为例，其中就有不少图层采用 GCJ02 坐标，与采用标准WGS 1984的图层之间存在数百米的偏差。具体可参考维基百科 <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B5%8B%E7%BB%98%E9%99%90%E5%88%B6" target="_blank" rel="external">中华人民共和国测绘限制</a><br>几种坐标之间的差别简要概括如下：</p>
+<blockquote>
+<p>WGS84：即最广泛使用的、国际通用的地理坐标系，由经、纬度确定地球表面的点的位置。因GPS设备采用该坐标系，因此也将采用WGS84坐标系的坐标称为GPS坐标。<br>GCJ02：由中国国测局制定，在WGS84坐标的基础上，其所采用的混淆算法会在经纬度中加入看似随机的偏移，号称可以促进national安全。坊间也有称火星坐标。高德地图、谷歌中国地图等采用。<br>BD09：百度地图使用的经纬坐标系统，其在GCJ02上多增加了一次变换，号称“有助保护用户隐私”。</p>
+</blockquote>
+<p>以本人愚见，这种坐标加偏除了给开发者、研究人员造成麻烦以及加深封闭之外，实在与安全和保护隐私无关。保护安全，应该是在数据层面，不要在地图上公开出现机密信息即可，也还没见哪些地方测绘部门使用这种坐标加偏来“保护安全”的，更何况由国家测绘地理信息局监制的天地图使用的还是标准的WGS84坐标系。“保护用户隐私”更是无稽之谈，在非必要情况下不要使用精确坐标以及确保数据加密传输和存储才是正道，坐标加偏实属掩耳盗铃。</p>
+<p>不过既然“上有政策”，自然“下有对策”，毕竟不同数据源之间匹配是个硬需求。相关转换算法在业内已是公开的秘密，相信很多人也用过相关的转换算法或转换软件。不过这些软件一般是对输入的x,y坐标值计算处理后输出转换后的坐标值，只能处理表格，并不能处理空间数据。远见很早前也曾发布过一个转换工具，但当时的版本只能够处理点数据。而本次发布的版本，全面<strong>支持点、线、面要素</strong>，对<strong>多部件、有孔洞</strong>的要素也能完整处理，并且<strong>原样保留属性表</strong>。</p>
+<p>另外，本工具内置的转换函数在部分公开代码的基础上，也进行了一定的修改，理论上能提高互转的精度。但由于高德API和百度API中对于WGS84转GCJ02的返回结果还不一样，所以也很难找到个“绝对准确”的参考，只是希望能够尽可能的减小误差，肯定要比在ArcGIS内肉眼比对进行空间校正要精确得多。这里不对具体的转换算法做过多讨论。<br>除了WGS84、GCJ02、BD09的互转，软件还支持输入自定义转换函数（python脚本），因此可以作为一个通用的空间数据坐标转换工具使用。</p>
+<p>下载地址见文末，使用前请先阅读下文使用说明。</p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>下载压缩包后，将解压出的tbx文件放在任一文件夹内，只要能够在ArcMap的目录窗口内找到即可，否则可能需要添加新的文件夹连接。<br>双击tbx文件，展开工具箱。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/tbx-in-catalog.png" alt="工具箱" title="">
+                </div>
+                <div class="image-caption">工具箱</div>
+            </figure><br>再双击工具“xdc坐标转换工具”打开输入界面。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/input-window.png" alt="输入界面" title="">
+                </div>
+                <div class="image-caption">输入界面</div>
+            </figure></p>
+<blockquote>
+<p>如果没有显示右侧帮助栏，请点击右下角的“显示帮助&gt;&gt;”按钮展开帮助信息。<br>点击每个输入框，均会在帮助侧栏内显示相应的帮助信息。</p>
+</blockquote>
+<p>输入必需的参数后，点击确定即可运行。</p>
+<blockquote>
+<p><strong>重要提示：</strong>如果运行窗口较小，请手动调整窗口大小，以便查看运行过程中的提示信息。</p>
+</blockquote>
+<p>以下为示例数据转换前后的情况。<br>转换前的示例数据，包含点、线、面（多部件面、带孔洞面），WGS84坐标系，底图为天地图。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/wgs84.jpg" alt="转换前（WGS84）" title="">
+                </div>
+                <div class="image-caption">转换前（WGS84）</div>
+            </figure></p>
+<p>示例数据坐标转GCJ02后，底图为高德地图。可以看到与原图形之间有数百米的偏移。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/gcj02.jpg" alt="转换后（GCJ02）" title="">
+                </div>
+                <div class="image-caption">转换后（GCJ02）</div>
+            </figure></p>
+<h3 id="使用场景示例"><a href="#使用场景示例" class="headerlink" title="使用场景示例"></a>使用场景示例</h3><p><strong> 1）高德地图数据转WGS84 </strong><br>从高德地图获取到的点数据（如POI）、线数据（如导航路径）、面数据（如行政边界面）等其坐标均为GCJ02，可利用该工具转为标准的WGS84坐标。</p>
+<blockquote>
+<p>注意：GCJ02和BD09只是在WGS84的基础上进行了坐标值的偏移，并不是两种新的ArcGIS内概念的“坐标系”，相关空间数据在存储时坐标系选择<code>GCS_WGS_1984</code>即可。<br>亦即：内置的6种转换方式只是坐标值之间的偏移，不涉及“坐标系”的变化，转换前后的shp文件的坐标系（空间参考）都应是<code>GCS_WGS_1984</code>。</p>
+</blockquote>
+<p><strong> 2）地方坐标转WGS84再转GCJ02 </strong><br>一般该需求来源于将地方测绘相关数据放到Web平台上，使用高德地图作为底图。<br>地方坐标转WGS84这一步使用ArcGIS的投影工具即可完成，根据各地情况不同，可能需要选择合适的地理变换。可借助之前分享的 <a href="/2017/10/28/add-google-map-to-arcmap/">WMTS服务</a> 添加WGS84的底图来检验投影结果。<br>将投影的数据再进行WGS84转GCJ02，即可放到Web平台上与高德地图匹配。</p>
+<p><strong> 3）百度像素坐标转BD09再转WGS84 </strong><br>以抓取百度地图建筑轮廓为例，从百度地图17级上获取到的建筑轮廓点坐标为像素坐标，因此由轮廓点集构建的面数据需先进行一次转换将像素坐标转为百度BD09经纬坐标。该步转换所需的自定义转换函数已包含在提供下载的压缩包内，另外注意此步输出要素的坐标系（空间参考）应选择<code>GCS_WGS_1984</code>。<br>再将转换得到的BD09坐标的面数据使用内置转换方式转为WGS84坐标即可。</p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p>在远见（@farsightj）公众号内回复 <strong>坐标转换</strong> 获取下载地址。<br>软件虽经过一定的测试，但因系统环境和ArcGIS版本等原因，仍有可能出现无法正常使用的情况。理论上，Windows 最低版本要求为 Windows 7，ArcGIS 最低版本为10.1 。<br>使用过程中遇到问题请先参照运行提示进行处理，如仍无法解决可联系邮箱 <code>i@xdc.at</code>，反馈问题时请提供操作系统版本、ArcGIS版本等信息，并附上运行截图。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        本文地址：<a href="/2018/01/01/coordinate-transformation-tool/" target="_blank" rel="external">https://i.xdc.at/2018/01/01/coordinate-transformation-tool/</a><br />本文作者：谢栋灿<br/>联系邮箱：<code><b>i</b><i>@</i><b>xdc.at</b></code>
+    </div>
+    <footer>
+        <a href="https://i.xdc.at">
+            <img src="/assets/avatar/avatar.jpg" alt="谢栋灿">
+            谢栋灿
+        </a>
+    </footer>
+</blockquote>
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArcGIS/">ArcGIS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BD09/">BD09</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GCJ02/">GCJ02</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WGS84/">WGS84</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tbx/">tbx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/坐标转换/">坐标转换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具箱/">工具箱</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/&title=《【软件工具】ArcGIS空间数据坐标转换工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/&title=《【软件工具】ArcGIS空间数据坐标转换工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件工具】ArcGIS空间数据坐标转换工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2048/10/24/top-pinned/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">【置顶】欢迎来到本站</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/11/26/word-cloud-of-keywords-in-anpc-papers/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">规划年会论文关键词词云分析（2014-2017）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        左图关注公众号，右图支付宝转账
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/assets/qrcode/wx-farsightj.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/assets/qrcode/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+  </main>
+  <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
+
+
+
+<div class="global-share" id="globalShare">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/&title=《【软件工具】ArcGIS空间数据坐标转换工具》 — 谢栋灿's Blog&pic=https://i.xdc.at/assets/avatar/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/&title=《【软件工具】ArcGIS空间数据坐标转换工具》 — 谢栋灿's Blog&source=谢栋灿的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【软件工具】ArcGIS空间数据坐标转换工具》 — 谢栋灿's Blog&url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/&via=https://i.xdc.at" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://i.xdc.at/2018/01/01/coordinate-transformation-tool/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aS47CMBAFQO5/aWY7EiK81wYk7MoKhSS4smjcn9stPu7/jsfzj9c8Xnl917Nv33xgYGD8LON+eVwv8dk1+a8kz7++FwMD4xzGLCwmpGtqEsSv14aBgYGRfE7CcfsKMDAwMNYD7icS4/ZFYGBgnMbIQ2dSVmuX+NVcHAMD4wcZeXD8/ueP9DcwMDB+inEvj5WkN9/k1avCwMDYmpEHuLxAlix9PeBiYGCcxnjXYMT1D8wanEmbEwMD4wRGa22TzLyENxv4wMDAOI2Rp6xtA6AN023jAQMDY2/GrECWb/7a7ebSCAgGBsZ2jJXRiryFkI9HJC8umhbBwMDYiNE+NNnYJYE4L/G37U8MDIz9GLNltYWwdw1ePD2PgYFxDKNNI2eNzJX2w4uBMAwMjK0Z7xqAaMc1ZoW8onmJgYGxHWM2ADEbtshDdnQGAwNja8b6OEVbSpudiV4lBgbGAYz1dmPbCp2luMOMHAMD48cZs6iVj4Xly52FbAwMjBMY7XYtbwa0xbv226f/GxgYGJsyVmrsbbmtHaeop9gwMDA2ZbRNx9mYxWz7GF2PgYGxKeNeHrOi2EoIjsI9BgbG1ozZ9m620VwvwLWjaRgYGDsx1reG7dLz8Y7ifWNgYBzAmIXOlbtm274X+1wMDAyMMhFdCfR1EouBgYFRbuySNLhtNry4EgMD4wBGEuza0bHr57eJNAYGxsmMpdSx7DwkyXA+moaBgXEA4w+aPXRyNVg45QAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+  <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+
+
+
+
+
+<script src="/js/main.min.js?v=1.3.3"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.3.3" async></script>
+
+
+</body>
+</html>

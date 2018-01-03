@@ -24,6 +24,7 @@ http://i.xdc.at/2017/10/03/get-3d-buildings-from-amap/
 http://i.xdc.at/2017/10/28/add-google-map-to-arcmap/
 http://i.xdc.at/2017/11/05/amap-district-to-shapefile/
 http://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/
+http://i.xdc.at/2018/01/01/coordinate-transformation-tool/
 http://i.xdc.at/2048/10/24/top-pinned/
 http://i.xdc.at/about/
 http://i.xdc.at/archives/
@@ -40,6 +41,8 @@ http://i.xdc.at/archives/2017/07/
 http://i.xdc.at/archives/2017/08/
 http://i.xdc.at/archives/2017/10/
 http://i.xdc.at/archives/2017/11/
+http://i.xdc.at/archives/2018/
+http://i.xdc.at/archives/2018/01/
 http://i.xdc.at/archives/2048/
 http://i.xdc.at/archives/2048/10/
 http://i.xdc.at/archives/page/2/
@@ -58,7 +61,9 @@ http://i.xdc.at/tags/Anaconda/
 http://i.xdc.at/tags/AOI/
 http://i.xdc.at/tags/ArcGIS/
 http://i.xdc.at/tags/ArcMap/
+http://i.xdc.at/tags/BD09/
 http://i.xdc.at/tags/Coding-net/
+http://i.xdc.at/tags/GCJ02/
 http://i.xdc.at/tags/GitHub/
 http://i.xdc.at/tags/Google/
 http://i.xdc.at/tags/Hexo/
@@ -71,6 +76,7 @@ http://i.xdc.at/tags/shapefile/
 http://i.xdc.at/tags/SQL-Server/
 http://i.xdc.at/tags/SSH/
 http://i.xdc.at/tags/tbx/
+http://i.xdc.at/tags/WGS84/
 http://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/
 http://i.xdc.at/tags/%E4%BA%A4%E9%80%9A%E7%AD%89%E6%97%B6%E7%BA%BF/
 http://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/
@@ -80,6 +86,7 @@ http://i.xdc.at/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
 http://i.xdc.at/tags/%E5%88%87%E7%89%87%E5%9B%BE%E5%B1%82/
 http://i.xdc.at/tags/%E5%9C%B0%E7%90%86%E7%BC%96%E7%A0%81/
 http://i.xdc.at/tags/%E5%9C%B0%E9%93%81/
+http://i.xdc.at/tags/%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/
 http://i.xdc.at/tags/%E5%A4%A9%E5%9C%B0%E5%9B%BE/
 http://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/
 http://i.xdc.at/tags/%E5%BB%BA%E7%AD%91%E8%BD%AE%E5%BB%93/

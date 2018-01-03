@@ -35,6 +35,89 @@
   </entry>
   
   <entry>
+    <title>【软件工具】ArcGIS空间数据坐标转换工具</title>
+    <link href="https://i.xdc.at/2018/01/01/coordinate-transformation-tool/"/>
+    <id>https://i.xdc.at/2018/01/01/coordinate-transformation-tool/</id>
+    <published>2018-01-01T06:06:00.000Z</published>
+    <updated>2018-01-03T12:04:59.543Z</updated>
+    
+    <content type="html"><![CDATA[<p>众所周知，国内在线地图中，大部分使用的坐标都与标准的WGS 1984之间有偏差（除了天地图）。以之前分享的 <a href="/2017/10/28/add-google-map-to-arcmap/">WMTS服务</a> 为例，其中就有不少图层采用 GCJ02 坐标，与采用标准WGS 1984的图层之间存在数百米的偏差。具体可参考维基百科 <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B5%8B%E7%BB%98%E9%99%90%E5%88%B6" target="_blank" rel="external">中华人民共和国测绘限制</a><br>几种坐标之间的差别简要概括如下：</p>
+<blockquote>
+<p>WGS84：即最广泛使用的、国际通用的地理坐标系，由经、纬度确定地球表面的点的位置。因GPS设备采用该坐标系，因此也将采用WGS84坐标系的坐标称为GPS坐标。<br>GCJ02：由中国国测局制定，在WGS84坐标的基础上，其所采用的混淆算法会在经纬度中加入看似随机的偏移，号称可以促进national安全。坊间也有称火星坐标。高德地图、谷歌中国地图等采用。<br>BD09：百度地图使用的经纬坐标系统，其在GCJ02上多增加了一次变换，号称“有助保护用户隐私”。</p>
+</blockquote>
+<p>以本人愚见，这种坐标加偏除了给开发者、研究人员造成麻烦以及加深封闭之外，实在与安全和保护隐私无关。保护安全，应该是在数据层面，不要在地图上公开出现机密信息即可，也还没见哪些地方测绘部门使用这种坐标加偏来“保护安全”的，更何况由国家测绘地理信息局监制的天地图使用的还是标准的WGS84坐标系。“保护用户隐私”更是无稽之谈，在非必要情况下不要使用精确坐标以及确保数据加密传输和存储才是正道，坐标加偏实属掩耳盗铃。</p>
+<p>不过既然“上有政策”，自然“下有对策”，毕竟不同数据源之间匹配是个硬需求。相关转换算法在业内已是公开的秘密，相信很多人也用过相关的转换算法或转换软件。不过这些软件一般是对输入的x,y坐标值计算处理后输出转换后的坐标值，只能处理表格，并不能处理空间数据。远见很早前也曾发布过一个转换工具，但当时的版本只能够处理点数据。而本次发布的版本，全面<strong>支持点、线、面要素</strong>，对<strong>多部件、有孔洞</strong>的要素也能完整处理，并且<strong>原样保留属性表</strong>。</p>
+<p>另外，本工具内置的转换函数在部分公开代码的基础上，也进行了一定的修改，理论上能提高互转的精度。但由于高德API和百度API中对于WGS84转GCJ02的返回结果还不一样，所以也很难找到个“绝对准确”的参考，只是希望能够尽可能的减小误差，肯定要比在ArcGIS内肉眼比对进行空间校正要精确得多。这里不对具体的转换算法做过多讨论。<br>除了WGS84、GCJ02、BD09的互转，软件还支持输入自定义转换函数（python脚本），因此可以作为一个通用的空间数据坐标转换工具使用。</p>
+<p>下载地址见文末，使用前请先阅读下文使用说明。</p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>下载压缩包后，将解压出的tbx文件放在任一文件夹内，只要能够在ArcMap的目录窗口内找到即可，否则可能需要添加新的文件夹连接。<br>双击tbx文件，展开工具箱。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/tbx-in-catalog.png" alt="工具箱" title="">
+                </div>
+                <div class="image-caption">工具箱</div>
+            </figure><br>再双击工具“xdc坐标转换工具”打开输入界面。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/input-window.png" alt="输入界面" title="">
+                </div>
+                <div class="image-caption">输入界面</div>
+            </figure></p>
+<blockquote>
+<p>如果没有显示右侧帮助栏，请点击右下角的“显示帮助&gt;&gt;”按钮展开帮助信息。<br>点击每个输入框，均会在帮助侧栏内显示相应的帮助信息。</p>
+</blockquote>
+<p>输入必需的参数后，点击确定即可运行。</p>
+<blockquote>
+<p><strong>重要提示：</strong>如果运行窗口较小，请手动调整窗口大小，以便查看运行过程中的提示信息。</p>
+</blockquote>
+<p>以下为示例数据转换前后的情况。<br>转换前的示例数据，包含点、线、面（多部件面、带孔洞面），WGS84坐标系，底图为天地图。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/wgs84.jpg" alt="转换前（WGS84）" title="">
+                </div>
+                <div class="image-caption">转换前（WGS84）</div>
+            </figure></p>
+<p>示例数据坐标转GCJ02后，底图为高德地图。可以看到与原图形之间有数百米的偏移。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/assets/images/coordinate-transformation-tool/gcj02.jpg" alt="转换后（GCJ02）" title="">
+                </div>
+                <div class="image-caption">转换后（GCJ02）</div>
+            </figure></p>
+<h3 id="使用场景示例"><a href="#使用场景示例" class="headerlink" title="使用场景示例"></a>使用场景示例</h3><p><strong> 1）高德地图数据转WGS84 </strong><br>从高德地图获取到的点数据（如POI）、线数据（如导航路径）、面数据（如行政边界面）等其坐标均为GCJ02，可利用该工具转为标准的WGS84坐标。</p>
+<blockquote>
+<p>注意：GCJ02和BD09只是在WGS84的基础上进行了坐标值的偏移，并不是两种新的ArcGIS内概念的“坐标系”，相关空间数据在存储时坐标系选择<code>GCS_WGS_1984</code>即可。<br>亦即：内置的6种转换方式只是坐标值之间的偏移，不涉及“坐标系”的变化，转换前后的shp文件的坐标系（空间参考）都应是<code>GCS_WGS_1984</code>。</p>
+</blockquote>
+<p><strong> 2）地方坐标转WGS84再转GCJ02 </strong><br>一般该需求来源于将地方测绘相关数据放到Web平台上，使用高德地图作为底图。<br>地方坐标转WGS84这一步使用ArcGIS的投影工具即可完成，根据各地情况不同，可能需要选择合适的地理变换。可借助之前分享的 <a href="/2017/10/28/add-google-map-to-arcmap/">WMTS服务</a> 添加WGS84的底图来检验投影结果。<br>将投影的数据再进行WGS84转GCJ02，即可放到Web平台上与高德地图匹配。</p>
+<p><strong> 3）百度像素坐标转BD09再转WGS84 </strong><br>以抓取百度地图建筑轮廓为例，从百度地图17级上获取到的建筑轮廓点坐标为像素坐标，因此由轮廓点集构建的面数据需先进行一次转换将像素坐标转为百度BD09经纬坐标。该步转换所需的自定义转换函数已包含在提供下载的压缩包内，另外注意此步输出要素的坐标系（空间参考）应选择<code>GCS_WGS_1984</code>。<br>再将转换得到的BD09坐标的面数据使用内置转换方式转为WGS84坐标即可。</p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p>在远见（@farsightj）公众号内回复 <strong>坐标转换</strong> 获取下载地址。<br>软件虽经过一定的测试，但因系统环境和ArcGIS版本等原因，仍有可能出现无法正常使用的情况。理论上，Windows 最低版本要求为 Windows 7，ArcGIS 最低版本为10.1 。<br>使用过程中遇到问题请先参照运行提示进行处理，如仍无法解决可联系邮箱 <code>i@xdc.at</code>，反馈问题时请提供操作系统版本、ArcGIS版本等信息，并附上运行截图。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;众所周知，国内在线地图中，大部分使用的坐标都与标准的WGS 1984之间有偏差（除了天地图）。以之前分享的 &lt;a href=&quot;/2017/10/28/add-google-map-to-arcmap/&quot;&gt;WMTS服务&lt;/a&gt; 为例，其中就有不少图层采用 GCJ02 坐标，与
+    
+    </summary>
+    
+      <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
+    
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
+    
+      <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="坐标转换" scheme="https://i.xdc.at/tags/%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/"/>
+    
+      <category term="WGS84" scheme="https://i.xdc.at/tags/WGS84/"/>
+    
+      <category term="GCJ02" scheme="https://i.xdc.at/tags/GCJ02/"/>
+    
+      <category term="BD09" scheme="https://i.xdc.at/tags/BD09/"/>
+    
+  </entry>
+  
+  <entry>
     <title>规划年会论文关键词词云分析（2014-2017）</title>
     <link href="https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/"/>
     <id>https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/</id>
@@ -401,11 +484,11 @@
     
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
+      <category term="地理编码" scheme="https://i.xdc.at/tags/%E5%9C%B0%E7%90%86%E7%BC%96%E7%A0%81/"/>
+    
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
-    
-      <category term="地理编码" scheme="https://i.xdc.at/tags/%E5%9C%B0%E7%90%86%E7%BC%96%E7%A0%81/"/>
     
   </entry>
   
@@ -547,11 +630,11 @@
     
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
-      <category term="路径规划" scheme="https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/"/>
-    
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="路径规划" scheme="https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
@@ -1799,7 +1882,7 @@
     <link href="https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/"/>
     <id>https://i.xdc.at/2016/10/30/transportation-contour-line-tbx/</id>
     <published>2016-10-30T05:59:00.000Z</published>
-    <updated>2017-08-16T13:33:10.015Z</updated>
+    <updated>2018-01-01T06:20:40.576Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>该软件最早于 2016-04-06 发布在城市数据派网站<br><a href="http://www.udparty.com/topic/1758.html" target="_blank" rel="external">xdc交通等时线工具箱</a></p>
@@ -1843,7 +1926,8 @@
                 <div class="image-caption">运行结果</div>
             </figure></p>
 <blockquote>
-<p>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。<br>如果以上链接打开有问题，也可 <a href="http://xdc.at/d/?d=PcArcBruTile" target="_blank">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。<br>该插件与本人没有任何关系。</p>
+<p><del>PS：如果需要网络地图作为底图，这里有一个免费的ArcGIS插件 <a href="https://github.com/xiaoqqchen/PcArcBruTile" target="_blank" rel="external">https://github.com/xiaoqqchen/PcArcBruTile</a>。如果以上链接打开有问题，也可 <a href="http://xdc.at/d/?d=PcArcBruTile" target="_blank">点此下载</a> 。安装时需要解压后以管理员身份运行<code>ArcBruTileSetup_setup_0.4.exe</code>。可能只适用于某几个ArcGIS版本。该插件与本人没有任何关系。</del></p>
+<p>PPS：【更新】加载网络底图也可以借助于 WMTS 服务，理论上适用于ArcGIS 10.1及以上所有版本，详情参见 <a href="/2017/10/28/add-google-map-to-arcmap/">在ArcMap中添加在线地图图层（无需插件）</a></p>
 </blockquote>
 <h3 id="获取激活码"><a href="#获取激活码" class="headerlink" title="获取激活码"></a>获取激活码</h3><p>未输入过激活码时，可在任意机器上使用到2016年4月15日（该工具最早发布于2016年4月初）。之后使用需要输入与机器码对应的激活码，试用运行时，会在运行过程中显示出机器码。在Win7以上系统中，激活码可自动写入到用户文件夹，因此输入一次即可。</p>
 <figure class="image-bubble">
@@ -2246,7 +2330,7 @@
     <link href="https://i.xdc.at/2016/10/04/markdown-test/"/>
     <id>https://i.xdc.at/2016/10/04/markdown-test/</id>
     <published>2016-10-04T09:04:12.000Z</published>
-    <updated>2016-11-26T01:51:13.263Z</updated>
+    <updated>2018-01-01T06:24:18.200Z</updated>
     
     <content type="html"><![CDATA[<p>标题</p>
 <p>标题直接以1个或多个<code>#</code>开头，表示不同等级。</p>
@@ -2283,8 +2367,8 @@
             </figure>
 <p>测试插入连接<br><code>[链接文字](http://i.xdc.at/ &quot;链接标题&quot;)</code><br><a href="http://i.xdc.at/" title="链接标题">主页</a><br>链接标题可省略</p>
 <hr>
-<p>粗体 <code>**这里是粗体**</code><br>斜体 <code>*这里是斜体*</code></p>
-<p><strong>这里是粗体</strong><br><em>这里是斜体</em></p>
+<p>粗体 <code>**这里是粗体**</code><br>斜体 <code>*这里是斜体*</code><br>删除线 <code>~~带删除线~~</code></p>
+<p><strong>这里是粗体</strong><br><em>这里是斜体</em><br><del>带删除线</del></p>
 <hr>
 <p>表格</p>
 <pre><code>|表头1|表头2|表头3|
@@ -2321,7 +2405,7 @@ print time.ctime()
 <hr>
 <p>分割线<br>三个<code>-</code>、<code>_</code>或<code>*</code></p>
 <hr>
-<p>教程来自<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a></p>
+<p>教程来自<a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown——入门指南</a><br>其他参考 <a href="http://xianbai.me/learn-md/index.html" target="_blank" rel="external">Learning-Markdown (Markdown 入门参考)</a></p>
 ]]></content>
     
     <summary type="html">
