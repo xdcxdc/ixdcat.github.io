@@ -220,11 +220,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="行政区" scheme="https://i.xdc.at/tags/%E8%A1%8C%E6%94%BF%E5%8C%BA/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="shapefile" scheme="https://i.xdc.at/tags/shapefile/"/>
     
@@ -264,9 +264,9 @@
     </summary>
     
     
-      <category term="ArcMap" scheme="https://i.xdc.at/tags/ArcMap/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="ArcMap" scheme="https://i.xdc.at/tags/ArcMap/"/>
     
       <category term="切片图层" scheme="https://i.xdc.at/tags/%E5%88%87%E7%89%87%E5%9B%BE%E5%B1%82/"/>
     
@@ -352,9 +352,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -480,15 +480,15 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
-      <category term="地理编码" scheme="https://i.xdc.at/tags/%E5%9C%B0%E7%90%86%E7%BC%96%E7%A0%81/"/>
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    
+      <category term="地理编码" scheme="https://i.xdc.at/tags/%E5%9C%B0%E7%90%86%E7%BC%96%E7%A0%81/"/>
     
   </entry>
   
@@ -626,15 +626,15 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+      <category term="路径规划" scheme="https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
       <category term="工具箱" scheme="https://i.xdc.at/tags/%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
-    
-      <category term="路径规划" scheme="https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
@@ -1023,9 +1023,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -1083,11 +1083,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="AOI" scheme="https://i.xdc.at/tags/AOI/"/>
+    
       <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
-    
-      <category term="AOI" scheme="https://i.xdc.at/tags/AOI/"/>
     
   </entry>
   
@@ -1963,9 +1963,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -2106,11 +2106,11 @@
       <category term="数据分析" scheme="https://i.xdc.at/categories/data-analysis/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
     
       <category term="上海市" scheme="https://i.xdc.at/tags/%E4%B8%8A%E6%B5%B7%E5%B8%82/"/>
     
@@ -2188,15 +2188,15 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
+    
       <category term="公交线路" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4%E7%BA%BF%E8%B7%AF/"/>
     
       <category term="公交" scheme="https://i.xdc.at/tags/%E5%85%AC%E4%BA%A4/"/>
     
       <category term="地铁" scheme="https://i.xdc.at/tags/%E5%9C%B0%E9%93%81/"/>
-    
-      <category term="开放数据" scheme="https://i.xdc.at/tags/%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="数据介绍" scheme="https://i.xdc.at/tags/%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D/"/>
     
   </entry>
   
