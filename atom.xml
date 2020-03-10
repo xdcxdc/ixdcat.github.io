@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>谢栋灿&#39;s Blog</title>
+  <title>xdc&#39;s Blog</title>
   <subtitle>i.xdc.at</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>https://i.xdc.at/</id>
   
   <author>
-    <name>谢栋灿</name>
+    <name>xdc</name>
     <email>i@xdc.at</email>
   </author>
   
@@ -39,7 +39,7 @@
     <link href="https://i.xdc.at/2018/01/01/coordinate-transformation-tool/"/>
     <id>https://i.xdc.at/2018/01/01/coordinate-transformation-tool/</id>
     <published>2018-01-01T06:06:00.000Z</published>
-    <updated>2018-01-03T12:04:59.543Z</updated>
+    <updated>2020-03-10T13:51:11.049Z</updated>
     
     <content type="html"><![CDATA[<p>众所周知，国内在线地图中，大部分使用的坐标都与标准的WGS 1984之间有偏差（除了天地图）。以之前分享的 <a href="/2017/10/28/add-google-map-to-arcmap/">WMTS服务</a> 为例，其中就有不少图层采用 GCJ02 坐标，与采用标准WGS 1984的图层之间存在数百米的偏差。具体可参考维基百科 <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%B5%8B%E7%BB%98%E9%99%90%E5%88%B6" target="_blank" rel="external">中华人民共和国测绘限制</a><br>几种坐标之间的差别简要概括如下：</p>
 <blockquote>
@@ -122,7 +122,7 @@
     <link href="https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/"/>
     <id>https://i.xdc.at/2017/11/26/word-cloud-of-keywords-in-anpc-papers/</id>
     <published>2017-11-26T08:58:00.000Z</published>
-    <updated>2017-11-26T14:49:32.639Z</updated>
+    <updated>2020-03-10T13:51:11.156Z</updated>
     
     <content type="html"><![CDATA[<p>2017中国城市规划年会已经过去一周了，那么今年规划界在主要关注些什么呢？正好年会提供了《2017中国城市规划年会论文集》的光盘，通过这些论文的关键词分布情况来分析今年的关注点，是一个可行的方法。另外手头也有从2014年起每年的论文集，也能做个逐年的对比了。</p>
 <h3 id="分析方法"><a href="#分析方法" class="headerlink" title="分析方法"></a>分析方法</h3><p>年会论文集里的论文一般都是 PDF 格式，可以用 <a href="https://pypi.python.org/pypi/pdfminer3k" target="_blank" rel="external">pdfminer3k</a> 这个第三方 python 库来获取文本内容（<em>少部分 PDF 文件获取文本失败，可能1000多个文件是不同的人用不同的软件转换的，pdfminer3k 对某些类型的支持不是很好</em>），并从中提取出文中列出的关键词。<br>关键词的统计结果采用词云的方式进行可视化。词云使用 <a href="https://wordart.com/" target="_blank" rel="external">WordArt.com</a> 该网站来生成，频率排名前300的关键词使用不同的字体大小显示。</p>
@@ -190,7 +190,7 @@
     <link href="https://i.xdc.at/2017/11/05/amap-district-to-shapefile/"/>
     <id>https://i.xdc.at/2017/11/05/amap-district-to-shapefile/</id>
     <published>2017-11-05T06:28:00.000Z</published>
-    <updated>2017-11-26T12:15:35.057Z</updated>
+    <updated>2020-03-10T13:51:10.993Z</updated>
     
     <content type="html"><![CDATA[<p>高德地图提供了 <a href="http://lbs.amap.com/api/webservice/guide/api/district" target="_blank" rel="external">行政区域查询 API</a> 来获取区县及以上行政区域的矢量边界，以及街镇及以上行政单元的中心点（非几何中心，一般是政府所在地）。高德拥有甲级导航电子地图测绘资质，在行政边界的准确度上更高。尤其是在国界线问题上，网上很多能找到的矢量文件可能来自于国外，自然在中国国界线上会有出入，甚至不乏一些公开发表的论文上也使用了错误的国界线。</p>
 <p>由于行政边界存在动态变化，尤其是在基层行政单元上，镇的区划调整会比较常见。另外也存在一些特殊的行政单元，如神农架林区、中山市等。</p>
@@ -220,11 +220,11 @@
       <category term="数据介绍" scheme="https://i.xdc.at/categories/data/"/>
     
     
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
       <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="行政区" scheme="https://i.xdc.at/tags/%E8%A1%8C%E6%94%BF%E5%8C%BA/"/>
-    
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="shapefile" scheme="https://i.xdc.at/tags/shapefile/"/>
     
@@ -235,7 +235,7 @@
     <link href="https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/"/>
     <id>https://i.xdc.at/2017/10/28/add-google-map-to-arcmap/</id>
     <published>2017-10-28T12:40:00.000Z</published>
-    <updated>2017-11-29T15:34:49.592Z</updated>
+    <updated>2020-03-10T13:51:10.982Z</updated>
     
     <content type="html"><![CDATA[<p>考虑到在线地图瓦片大部分用的是同样的切片规则（国内部分地图除外），而 WMTS 又是瓦片地图服务的开放协议，因此明明可以用 WMTS 解决 ArcMap 显示在线地图瓦片的问题，为什么偏偏还要各种插件呢？<br>然而事实是，并不是每家地图都直接提供 WMTS 服务。但既然都是开放的协议，就自己动手搭建一个吧。我搭建的 WMTS 服务器如下：<br><strong>服务URL：</strong><code>点击网页下方打赏按钮，扫码关注远见公众号，回复 WMTS 获取</code></p>
 <h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
@@ -264,9 +264,9 @@
     </summary>
     
     
-      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
-    
       <category term="ArcMap" scheme="https://i.xdc.at/tags/ArcMap/"/>
+    
+      <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
     
       <category term="切片图层" scheme="https://i.xdc.at/tags/%E5%88%87%E7%89%87%E5%9B%BE%E5%B1%82/"/>
     
@@ -279,7 +279,7 @@
     <link href="https://i.xdc.at/2017/10/03/get-3d-buildings-from-amap/"/>
     <id>https://i.xdc.at/2017/10/03/get-3d-buildings-from-amap/</id>
     <published>2017-10-03T04:46:00.000Z</published>
-    <updated>2017-11-26T13:52:55.290Z</updated>
+    <updated>2020-03-10T13:51:11.073Z</updated>
     
     <content type="html"><![CDATA[<p>高德开放过获取建筑轮廓的接口，可以获取指定瓦片内的建筑物轮廓（像素坐标形式）以及相应层数。 通过构造爬虫，批量获取一定范围内的建筑物轮廓信息，再经过坐标转换和纠偏，即可得到矢量的建筑物3D轮廓数据，可以在 ArcMap、ArcScene 内显示，也可以导出到 Google Earth 等软件查看。</p>
 <a id="more"></a>
@@ -352,9 +352,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -371,7 +371,7 @@
     <link href="https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/"/>
     <id>https://i.xdc.at/2017/08/13/add-anaconda-prompt-to-context-menu-of-explorer/</id>
     <published>2017-08-13T03:26:08.000Z</published>
-    <updated>2017-11-26T08:31:29.861Z</updated>
+    <updated>2020-03-10T13:51:10.935Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>出于种种需要，系统内可能安装了多了python运行环境，如：</p>
 <ol>
@@ -431,7 +431,7 @@
     <link href="https://i.xdc.at/2017/08/06/bulk-address-locator/"/>
     <id>https://i.xdc.at/2017/08/06/bulk-address-locator/</id>
     <published>2017-08-06T15:07:00.000Z</published>
-    <updated>2017-08-16T15:02:40.696Z</updated>
+    <updated>2020-03-10T13:51:11.017Z</updated>
     
     <content type="html"><![CDATA[<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该工具利用高德的地理编码接口，将输入的地址转换为经纬度坐标，并可生成shp文件。<br>v1.1.0测试版支持多线程，可显著提高数据获取速度。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h4 id="输入界面"><a href="#输入界面" class="headerlink" title="输入界面"></a>输入界面</h4><figure class="image-bubble">
@@ -480,9 +480,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -497,7 +497,7 @@
     <link href="https://i.xdc.at/2017/08/05/map-by-mapbox/"/>
     <id>https://i.xdc.at/2017/08/05/map-by-mapbox/</id>
     <published>2017-08-05T12:48:00.000Z</published>
-    <updated>2017-08-11T15:02:18.128Z</updated>
+    <updated>2020-03-10T13:51:18.471Z</updated>
     
     <content type="html"><![CDATA[<p>mapbox提供了可对地图样式进行自定义编辑，并且可以上传自己的地理数据作为叠加图层。</p>
 <p>此处为几个测试成果：</p>
@@ -540,7 +540,7 @@
     <link href="https://i.xdc.at/2017/07/29/amap-routes-tool/"/>
     <id>https://i.xdc.at/2017/07/29/amap-routes-tool/</id>
     <published>2017-07-29T12:32:33.000Z</published>
-    <updated>2017-08-17T13:08:15.847Z</updated>
+    <updated>2020-03-10T13:51:11.001Z</updated>
     
     <content type="html"><![CDATA[<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>该工具利用高德地图的路线规划API获取OD点之间的交通导航线路与时耗，并输出csv表格和shapefile。<br>v1.1.0版本支持多线程，可显著提高数据获取速度。<br>该工具以 ArcGIS 工具箱的形式提供，使用方法可参考 <a href="/2016/10/31/tbx-in-ArcGIS/">在 ArcGIS 内使用 tbx 工具箱</a> 。</p>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h4 id="输入界面"><a href="#输入界面" class="headerlink" title="输入界面"></a>输入界面</h4><figure class="image-bubble">
@@ -626,9 +626,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="路径规划" scheme="https://i.xdc.at/tags/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/"/>
     
@@ -643,7 +643,7 @@
     <link href="https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/"/>
     <id>https://i.xdc.at/2017/06/27/shaxian-vs-lanzhou/</id>
     <published>2017-06-27T03:53:00.000Z</published>
-    <updated>2017-08-06T05:52:06.209Z</updated>
+    <updated>2020-03-10T13:51:11.120Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://www.zhihu.com/question/20349372/answer/189819493" target="_blank" rel="external">兰州拉面和沙县小吃，哪个是中国最火的餐饮？ - 知乎</a><br><a href="https://www.zhihu.com/question/46653861/answer/189820105" target="_blank" rel="external">为什么兰州拉面旁边必定有一家沙县小吃？ - 知乎</a><br>以下分析主要是对上面两个知乎问题的回答，所使用的数据来自 <a href="/2017/06/23/poi-data-update-201706/">全国POI数据2017年6月更新</a>。</p>
 <h3 id="沙县小吃与兰州拉面火热程度对比"><a href="#沙县小吃与兰州拉面火热程度对比" class="headerlink" title="沙县小吃与兰州拉面火热程度对比"></a>沙县小吃与兰州拉面火热程度对比</h3><p>以当前2017年上半年的情况来看，还是沙县小吃更胜一筹。</p>
@@ -1023,9 +1023,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
@@ -1963,9 +1963,9 @@
       <category term="软件工具" scheme="https://i.xdc.at/categories/software/"/>
     
     
-      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
-    
       <category term="ArcGIS" scheme="https://i.xdc.at/tags/ArcGIS/"/>
+    
+      <category term="高德" scheme="https://i.xdc.at/tags/%E9%AB%98%E5%BE%B7/"/>
     
       <category term="tbx" scheme="https://i.xdc.at/tags/tbx/"/>
     
